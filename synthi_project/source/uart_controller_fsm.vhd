@@ -1,10 +1,8 @@
 -------------------------------------------
--- Block code:  uart_controller_fsm.vhd
+-- Block code:  fsm_template.vhd
 -- History:     15.Jan.2017 - 1st version (dqtm)
 --              19.Jan.2017 - further reduction for SEP HS17
---					 30.Nov.2022 - added state logic and output logic for uart_controller (gerbedor, nueesflo)
---                 <date> - <changes>  (<author>)
---					 05.Dez.2022 - lab11 (Gerber, Nueesch)
+--              21.Nov.2022 - mini projekt (spulejan)
 -- Function: fsm and registers for UART-RX in DTP1 Mini-project alternative implementation.
 --                      This block is the central piece of the UART-RX, coordinating byte reception and storage of 1 byte.
 -------------------------------------------
@@ -19,16 +17,16 @@ use ieee.numeric_std.all;
 -------------------------------------------
 entity uart_controller_fsm is
 
-  port(clk              : in std_logic;
-       reset_n          : in std_logic;
-       falling_pulse   	: in std_logic;
-       baud_tick        : in std_logic;
-       bit_count        : in std_logic_vector(3 downto 0);
-       parallel_data    : in std_logic_vector(9 downto 0);
-		 
-       shift_enable     : out std_logic;
-       start_pulse      : out std_logic;
-       data_valid       : out std_logic);
+  port(clk      				: in  std_logic;
+       reset_n 				: in  std_logic;
+		 falling_pulse			: in  std_logic;
+		 baud_tick				: in  std_logic;
+		 bit_count				: in  std_logic_vector(3 downto 0);
+		 parallel_data			: in  std_logic_vector(9 downto 0);
+		 shift_enable			: out std_logic;
+		 start_bit				: out std_logic;
+		 data_valid				: out std_logic	 
+       );
 end uart_controller_fsm;
 
 -- Architecture Declaration
@@ -36,7 +34,7 @@ end uart_controller_fsm;
 architecture rtl of uart_controller_fsm is
 -- Signals & Constants Declaration�
 -------------------------------------------
-  type fsm_type is (st_idle, st_start_pulse, st_wait_rx_byte, st_check_rx);  -- st_check_rx is also used for storage
+  type fsm_type is (st_idle, st_state1, st_wait_rx_byte, st_state3);  -- st_check_rx is also used for storage
   signal fsm_state, next_fsm_state : fsm_type;
 
   -- shifted into shift register
@@ -66,38 +64,35 @@ begin
   state_logic : process (all)
   begin
     -- default statements (hold current value)
-    next_fsm_state <= fsm_state; 
-	 
-	 -- clear start pulse
-	 start_pulse <= '0';
-
+    next_fsm_state <= fsm_state;
+	 data_valid <= '0';
+	 start_bit <= '0';
     case fsm_state is
       when st_idle =>
-			if falling_pulse = '1' then
-				next_fsm_state <= st_start_pulse;
-			end if;
+			IF (falling_pulse = '1') then 
+			next_fsm_state <= st_state1;
+			start_bit <= '1';
+			end IF;
+       
+      when st_state1 => 
+		next_fsm_state <= st_wait_rx_byte;
+          
 
-      when st_start_pulse =>
-			 -- generate start pulse
-			start_pulse <= '1';
-			
-			next_fsm_state <= st_wait_rx_byte;
-			
       when st_wait_rx_byte =>
-			if bit_count = "1001" and baud_tick = '1' then
-				next_fsm_state <= st_check_rx;
+		if bit_count = "1001" and baud_tick = '1' then next_fsm_state <= st_state3;
 			end if;
 
-      when st_check_rx =>
-			if parallel_data(9) = '1' and parallel_data(0) = '0' then
-				next_fsm_state <= st_idle;
+      when st_state3 =>
+			if (parallel_data(0)) = '0'then
+				if (parallel_data(9)) = '1' then data_valid <= '1';
+				end if;
 			end if;
-
+			next_fsm_state <= st_idle;
+			
       when others =>
         next_fsm_state <= fsm_state;
 
     end case;
-
   end process state_logic;
 
   
@@ -107,20 +102,15 @@ begin
   fsm_out_logic : process (all)
   begin
     -- default statements
-    data_valid <= '0';
+   --default_signal1 <= '0';
+    --default_signal2 <= '0';
 	 shift_enable <= '0';
 
     case fsm_state is
+	 
       when st_wait_rx_byte =>
-			if baud_tick = '1' then
-				shift_enable <= '1';
-			end if;
-		
-		when st_check_rx =>
-			if parallel_data(9) = '1' and parallel_data(0) = '0' then
-				data_valid <= '1';
-			end if;
-			
+		if baud_tick = '1' then shift_enable <= '1';
+      end if;
       when others => null;
                      
     end case;
@@ -131,3 +121,4 @@ begin
 -- End Architecture 
 ------------------------------------------- 
 end rtl;
+

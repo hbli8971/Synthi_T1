@@ -15,7 +15,7 @@
 
 -- PROGRAM		"Quartus Prime"
 -- VERSION		"Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition"
--- CREATED		"Tue Dec  6 11:51:23 2022"
+-- CREATED		"Tue Dec  6 10:06:08 2022"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -29,14 +29,42 @@ ENTITY uart_top IS
 		KEY_0 :  IN  STD_LOGIC;
 		ARDUINO_IO_11 :  IN  STD_LOGIC;
 		LEDR_9 :  OUT  STD_LOGIC;
-		ARDUINO_IO_12 :  OUT  STD_LOGIC;
-		ARDUINO_IO_10 :  OUT  STD_LOGIC;
 		HEX0 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
 		HEX1 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
 END uart_top;
 
 ARCHITECTURE bdf_type OF uart_top IS 
+
+COMPONENT baud_tick
+GENERIC (width : INTEGER
+			);
+	PORT(clk : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
+		 start_bit : IN STD_LOGIC;
+		 baud_tick : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+COMPONENT shiftreg_uart
+GENERIC (width : INTEGER
+			);
+	PORT(clk : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
+		 serial_in : IN STD_LOGIC;
+		 load_in : IN STD_LOGIC;
+		 shift_enable : IN STD_LOGIC;
+		 parallel_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 serial_out : OUT STD_LOGIC;
+		 parallel_out : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT bus_hex2sevseg
+	PORT(data_in : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		 seg_o : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+	);
+END COMPONENT;
 
 COMPONENT flanken_detekt_vhdl
 	PORT(data_in : IN STD_LOGIC;
@@ -55,13 +83,9 @@ COMPONENT signal_checker
 	);
 END COMPONENT;
 
-COMPONENT vhdl_hex2sevseg
-	PORT(lt_n : IN STD_LOGIC;
-		 blank_n : IN STD_LOGIC;
-		 rbi_n : IN STD_LOGIC;
-		 data_in : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		 rbo_n : OUT STD_LOGIC;
-		 seg_o : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+COMPONENT modulo_divider
+	PORT(clk : IN STD_LOGIC;
+		 clk_6m : OUT STD_LOGIC
 	);
 END COMPONENT;
 
@@ -69,29 +93,6 @@ COMPONENT clock_sync
 	PORT(data_in : IN STD_LOGIC;
 		 clk : IN STD_LOGIC;
 		 sync_out : OUT STD_LOGIC
-	);
-END COMPONENT;
-
-COMPONENT uart_controller_fsm
-	PORT(clk : IN STD_LOGIC;
-		 reset_n : IN STD_LOGIC;
-		 falling_pulse : IN STD_LOGIC;
-		 baud_tick : IN STD_LOGIC;
-		 bit_count : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		 parallel_data : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-		 shift_enable : OUT STD_LOGIC;
-		 start_pulse : OUT STD_LOGIC;
-		 data_valid : OUT STD_LOGIC
-	);
-END COMPONENT;
-
-COMPONENT baud_tick
-GENERIC (width : INTEGER
-			);
-	PORT(clk : IN STD_LOGIC;
-		 reset_n : IN STD_LOGIC;
-		 start_bit : IN STD_LOGIC;
-		 baud_tick : OUT STD_LOGIC
 	);
 END COMPONENT;
 
@@ -106,17 +107,16 @@ GENERIC (width : INTEGER
 	);
 END COMPONENT;
 
-COMPONENT shiftreg_uart
-GENERIC (width : INTEGER
-			);
+COMPONENT uart_controller_fsm
 	PORT(clk : IN STD_LOGIC;
 		 reset_n : IN STD_LOGIC;
-		 load_in : IN STD_LOGIC;
-		 serial_in : IN STD_LOGIC;
-		 shift_enable : IN STD_LOGIC;
-		 parallel_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-		 serial_out : OUT STD_LOGIC;
-		 parallel_out : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+		 falling_pulse : IN STD_LOGIC;
+		 baud_tick : IN STD_LOGIC;
+		 bit_count : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		 parallel_data : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 shift_enable : OUT STD_LOGIC;
+		 start_bit : OUT STD_LOGIC;
+		 data_valid : OUT STD_LOGIC
 	);
 END COMPONENT;
 
@@ -124,166 +124,131 @@ COMPONENT output_register
 GENERIC (width : INTEGER
 			);
 	PORT(clk : IN STD_LOGIC;
-		 reset_n : IN STD_LOGIC;
 		 data_valid : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
 		 parallel_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 		 hex_lsb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 		 hex_msb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
 
-COMPONENT modulo_divider
-	PORT(clk : IN STD_LOGIC;
-		 clk_6m : OUT STD_LOGIC
-	);
-END COMPONENT;
-
-SIGNAL	baud_tick_sig :  STD_LOGIC;
+SIGNAL	baud_tick1 :  STD_LOGIC;
 SIGNAL	bit_count :  STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL	clk_6m :  STD_LOGIC;
-SIGNAL	data_valid :  STD_LOGIC;
-SIGNAL	reset_n :  STD_LOGIC;
+SIGNAL	reset :  STD_LOGIC;
 SIGNAL	shift_enable :  STD_LOGIC;
-SIGNAL	start_bit_sig :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_15 :  STD_LOGIC;
+SIGNAL	start_bit :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_10 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC_VECTOR(0 TO 9);
+SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL	SYNTHESIZED_WIRE_4 :  STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_5 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_6 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_7 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_8 :  STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_9 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_16 :  STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_11 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_13 :  STD_LOGIC_VECTOR(0 TO 9);
+SIGNAL	SYNTHESIZED_WIRE_11 :  STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_8 :  STD_LOGIC;
 
 
 BEGIN 
-ARDUINO_IO_12 <= KEY_0;
-ARDUINO_IO_10 <= '0';
 SYNTHESIZED_WIRE_1 <= '0';
-SYNTHESIZED_WIRE_2 <= '0';
-SYNTHESIZED_WIRE_3 <= '0';
-SYNTHESIZED_WIRE_5 <= '0';
-SYNTHESIZED_WIRE_6 <= '0';
-SYNTHESIZED_WIRE_7 <= '0';
-SYNTHESIZED_WIRE_11 <= '0';
-SYNTHESIZED_WIRE_13 <= "0000000000";
+SYNTHESIZED_WIRE_2 <= "0000000000";
 
 
 
-b2v_inst : flanken_detekt_vhdl
-PORT MAP(data_in => SYNTHESIZED_WIRE_15,
-		 clk => clk_6m,
-		 reset_n => reset_n,
-		 falling_pulse => SYNTHESIZED_WIRE_9);
+b2v_inst : baud_tick
+GENERIC MAP(width => 6
+			)
+PORT MAP(clk => clk_6m,
+		 reset_n => reset,
+		 start_bit => start_bit,
+		 baud_tick => baud_tick1);
 
 
-b2v_inst1 : signal_checker
+b2v_inst1 : shiftreg_uart
+GENERIC MAP(width => 10
+			)
+PORT MAP(clk => clk_6m,
+		 reset_n => reset,
+		 serial_in => SYNTHESIZED_WIRE_10,
+		 load_in => SYNTHESIZED_WIRE_1,
+		 shift_enable => shift_enable,
+		 parallel_in => SYNTHESIZED_WIRE_2,
+		 parallel_out => SYNTHESIZED_WIRE_11);
+
+
+
+
+b2v_inst16 : bus_hex2sevseg
+PORT MAP(data_in => SYNTHESIZED_WIRE_3,
+		 seg_o => HEX0);
+
+
+b2v_inst17 : bus_hex2sevseg
+PORT MAP(data_in => SYNTHESIZED_WIRE_4,
+		 seg_o => HEX1);
+
+
+b2v_inst18 : flanken_detekt_vhdl
+PORT MAP(data_in => SYNTHESIZED_WIRE_10,
+		 clk => reset,
+		 reset_n => clk_6m,
+		 falling_pulse => SYNTHESIZED_WIRE_6);
+
+
+b2v_inst2 : signal_checker
 PORT MAP(clk => CLOCK_50,
 		 reset_n => KEY_0,
 		 data_in => ARDUINO_IO_11,
 		 led_blink => LEDR_9);
 
 
-
-b2v_inst11 : vhdl_hex2sevseg
-PORT MAP(lt_n => SYNTHESIZED_WIRE_1,
-		 blank_n => SYNTHESIZED_WIRE_2,
-		 rbi_n => SYNTHESIZED_WIRE_3,
-		 data_in => SYNTHESIZED_WIRE_4,
-		 seg_o => HEX0);
+b2v_inst3 : modulo_divider
+PORT MAP(clk => CLOCK_50,
+		 clk_6m => clk_6m);
 
 
-b2v_inst12 : vhdl_hex2sevseg
-PORT MAP(lt_n => SYNTHESIZED_WIRE_5,
-		 blank_n => SYNTHESIZED_WIRE_6,
-		 rbi_n => SYNTHESIZED_WIRE_7,
-		 data_in => SYNTHESIZED_WIRE_8,
-		 seg_o => HEX1);
-
-
-
-
-b2v_inst15 : clock_sync
+b2v_inst4 : clock_sync
 PORT MAP(data_in => KEY_0,
 		 clk => clk_6m,
-		 sync_out => reset_n);
+		 sync_out => reset);
 
 
-b2v_inst16 : clock_sync
+b2v_inst5 : clock_sync
 PORT MAP(data_in => ARDUINO_IO_11,
 		 clk => clk_6m,
-		 sync_out => SYNTHESIZED_WIRE_15);
-
-
-
-
-
-b2v_inst2 : uart_controller_fsm
-PORT MAP(clk => clk_6m,
-		 reset_n => reset_n,
-		 falling_pulse => SYNTHESIZED_WIRE_9,
-		 baud_tick => baud_tick_sig,
-		 bit_count => bit_count,
-		 parallel_data => SYNTHESIZED_WIRE_16,
-		 shift_enable => shift_enable,
-		 start_pulse => start_bit_sig,
-		 data_valid => data_valid);
-
-
-
-
-
-
-
-b2v_inst5 : baud_tick
-GENERIC MAP(width => 6
-			)
-PORT MAP(clk => clk_6m,
-		 reset_n => reset_n,
-		 start_bit => start_bit_sig,
-		 baud_tick => baud_tick_sig);
+		 sync_out => SYNTHESIZED_WIRE_10);
 
 
 b2v_inst6 : bit_counter
 GENERIC MAP(width => 4
 			)
 PORT MAP(clk => clk_6m,
-		 reset_n => reset_n,
-		 start_bit => start_bit_sig,
-		 baud_tick => baud_tick_sig,
+		 reset_n => reset,
+		 start_bit => start_bit,
+		 baud_tick => baud_tick1,
 		 bit_count => bit_count);
 
 
-b2v_inst7 : shiftreg_uart
-GENERIC MAP(width => 10
-			)
+b2v_inst7 : uart_controller_fsm
 PORT MAP(clk => clk_6m,
-		 reset_n => reset_n,
-		 load_in => SYNTHESIZED_WIRE_11,
-		 serial_in => SYNTHESIZED_WIRE_15,
+		 reset_n => reset,
+		 falling_pulse => SYNTHESIZED_WIRE_6,
+		 baud_tick => baud_tick1,
+		 bit_count => bit_count,
+		 parallel_data => SYNTHESIZED_WIRE_11,
 		 shift_enable => shift_enable,
-		 parallel_in => SYNTHESIZED_WIRE_13,
-		 parallel_out => SYNTHESIZED_WIRE_16);
+		 start_bit => start_bit,
+		 data_valid => SYNTHESIZED_WIRE_8);
 
 
 b2v_inst8 : output_register
 GENERIC MAP(width => 10
 			)
 PORT MAP(clk => clk_6m,
-		 reset_n => reset_n,
-		 data_valid => data_valid,
-		 parallel_in => SYNTHESIZED_WIRE_16,
-		 hex_lsb_out => SYNTHESIZED_WIRE_4,
-		 hex_msb_out => SYNTHESIZED_WIRE_8);
-
-
-b2v_inst9 : modulo_divider
-PORT MAP(clk => CLOCK_50,
-		 clk_6m => clk_6m);
+		 data_valid => SYNTHESIZED_WIRE_8,
+		 reset_n => reset,
+		 parallel_in => SYNTHESIZED_WIRE_11,
+		 hex_lsb_out => SYNTHESIZED_WIRE_3,
+		 hex_msb_out => SYNTHESIZED_WIRE_4);
 
 
 END bdf_type;

@@ -15,7 +15,7 @@
 
 -- PROGRAM		"Quartus Prime"
 -- VERSION		"Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition"
--- CREATED		"Tue Dec  6 11:51:23 2022"
+-- CREATED		"Wed Feb 22 10:24:19 2023"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -25,196 +25,203 @@ LIBRARY work;
 ENTITY uart_top IS 
 	PORT
 	(
-		clk_6m 		:  IN  STD_LOGIC;
-		reset_n 		:  IN  STD_LOGIC;
-		serial_in 	:  IN  STD_LOGIC;
-		rx_data 		:  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+		clk_6m :  IN  STD_LOGIC;
+		reset_n :  IN  STD_LOGIC;
+		serial_in :  IN  STD_LOGIC;
+		rx_data :  OUT  STD_LOGIC_VECTOR(7 downto 0);
 		rx_data_rdy :  OUT  STD_LOGIC;
-		HEX0 			:  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
-		HEX1 			:  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0)
+		hex0 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+		hex1 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
 END uart_top;
 
-ARCHITECTURE bdf_type OF uart_top IS
+ARCHITECTURE bdf_type OF uart_top IS 
 
 COMPONENT baud_tick
-GENERIC (width : INTEGER);
-	PORT(
-			clk 			: IN STD_LOGIC;
-			reset_n 		: IN STD_LOGIC;
-			start_pulse : IN STD_LOGIC;
-			baud_tick 	: OUT STD_LOGIC
-		 );
-END COMPONENT;
-
-COMPONENT flanken_detekt_vhdl
-	PORT(	
-			data_in 			: IN STD_LOGIC;
-			clk 				: IN STD_LOGIC;
-			reset_n 			: IN STD_LOGIC;
-			falling_pulse 	: OUT STD_LOGIC;
-			rising_pulse 	: OUT STD_LOGIC
-		 );
-END COMPONENT;
-
-COMPONENT uart_controller_fsm
-	PORT(
-			clk 				: IN STD_LOGIC;
-			reset_n 			: IN STD_LOGIC;
-			falling_pulse 	: IN STD_LOGIC;
-			baud_tick 		: IN STD_LOGIC;
-			bit_count 		: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-			parallel_data 	: IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-			shift_enable 	: OUT STD_LOGIC;
-			start_pulse 	: OUT STD_LOGIC;
-			data_valid 		: OUT STD_LOGIC
-		 );
-END COMPONENT;
-
-COMPONENT bit_counter
-GENERIC (width : INTEGER);
-	PORT(
-			clk 			: IN STD_LOGIC;
-			reset_n 		: IN STD_LOGIC;
-			start_pulse : IN STD_LOGIC;
-			baud_tick 	: IN STD_LOGIC;
-			bit_count 	: OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
-		 );
+GENERIC (width : INTEGER
+			);
+	PORT(clk : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
+		 start_bit : IN STD_LOGIC;
+		 baud_tick : OUT STD_LOGIC
+	);
 END COMPONENT;
 
 COMPONENT shiftreg_uart
-GENERIC (width : INTEGER);
-	PORT(
-			clk 				: IN STD_LOGIC;
-			reset_n 			: IN STD_LOGIC;
-			load_in 			: IN STD_LOGIC;
-			serial_in 		: IN STD_LOGIC;
-			shift_enable 	: IN STD_LOGIC;
-			parallel_in 	: IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-			serial_out 		: OUT STD_LOGIC;
-			parallel_out 	: OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
-		 );
-END COMPONENT;
-
-COMPONENT output_register
-GENERIC (width : INTEGER);
-	PORT(
-			clk 			: IN STD_LOGIC;
-			reset_n 		: IN STD_LOGIC;
-			data_valid 	: IN STD_LOGIC;
-			parallel_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-			hex_lsb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-			hex_msb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
-		 );
+GENERIC (width : INTEGER
+			);
+	PORT(clk : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
+		 serial_in : IN STD_LOGIC;
+		 load_in : IN STD_LOGIC;
+		 shift_enable : IN STD_LOGIC;
+		 parallel_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 serial_out : OUT STD_LOGIC;
+		 parallel_out : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	);
 END COMPONENT;
 
 COMPONENT vhdl_hex2sevseg
-	PORT(
-			data_in : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-			seg_out : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
-		 );
+	PORT(data_in : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		 seg_o : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		 lt_n : IN std_logic;
+		 blank_n : IN std_logic;
+		 rbi_n : IN std_logic
+		 
+		 
+	);
 END COMPONENT;
 
-SIGNAL	start_pulse_sig 	:  STD_LOGIC;
-SIGNAL	baud_tick_sig 		:  STD_LOGIC;
-SIGNAL	falling_pulse_sig :  STD_LOGIC;
-SIGNAL	bit_count_sig 		:  STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL	parallel_data_sig :  STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL	shift_enable_sig 	:  STD_LOGIC;
-SIGNAL	data_valid_sig 	:  STD_LOGIC;
-SIGNAL	load_in_sig 		:  STD_LOGIC;
-SIGNAL	serial_in_sig 		:  STD_LOGIC;
-SIGNAL	parallel_in_sig	:  STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL	hex_lsb_out_sig	:  STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL	hex_msb_out_sig	:  STD_LOGIC_VECTOR(3 DOWNTO 0);
+COMPONENT flanken_detekt_vhdl
+	PORT(data_in : IN STD_LOGIC;
+		 clk : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
+		 rising_pulse : OUT STD_LOGIC;
+		 falling_pulse : OUT STD_LOGIC
+	);
+END COMPONENT;
 
 
+COMPONENT bit_counter
+GENERIC (width : INTEGER
+			);
+	PORT(clk : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
+		 start_bit : IN STD_LOGIC;
+		 baud_tick : IN STD_LOGIC;
+		 bit_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT uart_controller_fsm
+	PORT(clk : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
+		 falling_pulse : IN STD_LOGIC;
+		 baud_tick : IN STD_LOGIC;
+		 bit_count : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		 parallel_data : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 shift_enable : OUT STD_LOGIC;
+		 start_bit : OUT STD_LOGIC;
+		 data_valid : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+COMPONENT output_register
+GENERIC (width : INTEGER
+			);
+	PORT(clk : IN STD_LOGIC;
+		 data_valid : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
+		 parallel_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 hex_lsb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		 hex_msb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END COMPONENT;
+
+SIGNAL	start_bit_sig :  STD_LOGIC;
+SIGNAL	baud_tick1 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC_VECTOR(0 TO 9);
+SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_4 :  STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL	bit_count :  STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL	reset :  STD_LOGIC;
+SIGNAL	shift_enable :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_6 :  STD_LOGIC;
+SIGNAL 	bit_data : STD_LOGIC_VECTOR(9 downto 0);
+SIGNAL   data_ready : STD_LOGIC;
+SIGNAL	LT_sig:STD_LOGIC;
+SIGNAL	blank_sig:STD_LOGIC;
+SIGNAL	rbi_sig:STD_LOGIC;
 
 BEGIN 
-
--- Signale auf GND setzen
-load_in_sig <= '0';
-serial_in_sig <= '0';
-parallel_in_sig <= "0000000000";
-
-
-inst_1 : baud_tick
-GENERIC MAP(width => 6)
-PORT MAP(
-				clk 			=> clk_6m,
-				reset_n 		=> reset_n,
-				start_pulse => start_pulse_sig,
-				baud_tick 	=> baud_tick_sig
-				
-		  );
-
-inst_2 : flanken_detekt_vhdl
-PORT MAP(
-				data_in 			=> serial_in,
-				clk 				=> clk_6m,
-				reset_n 			=> reset_n,
-				falling_pulse 	=> falling_pulse_sig
-			);
-
-inst_3 : uart_controller_fsm
-PORT MAP(	
-				clk 				=> clk_6m,
-				reset_n 			=> reset_n,
-				falling_pulse 	=> falling_pulse_sig,
-				baud_tick 		=> baud_tick_sig,
-				bit_count 		=> bit_count_sig,
-				parallel_data 	=> parallel_data_sig,
-				shift_enable 	=> shift_enable_sig,
-				start_pulse 	=> start_pulse_sig,
-				data_valid 		=> data_valid_sig
-			);
-
-inst_4 : bit_counter
-GENERIC MAP(width => 4)
-PORT MAP(
-				clk 			=> clk_6m,
-				reset_n 		=> reset_n,
-				start_pulse => start_pulse_sig,
-				baud_tick 	=> baud_tick_sig,
-				bit_count 	=> bit_count_sig
-			);
-
-inst_5 : shiftreg_uart
-GENERIC MAP(width => 10)
-PORT MAP(
-				clk 				=> clk_6m,
-				reset_n 			=> reset_n,
-				shift_enable 	=> shift_enable,
-				load_in 			=> load_in_sig,
-				serial_in 		=> serial_in_sig,
-				parallel_in 	=> parallel_in_sig,
-				parallel_out 	=> parallel_data_sig
-			);
-			
-inst_6 : output_register
-GENERIC MAP(width => 10)
-PORT MAP(
-				clk 			=> clk_6m,
-				reset_n 		=> reset_n,
-				data_valid 	=> data_valid_sig,
-				parallel_in => parallel_in_sig,
-				hex_lsb_out => hex_lsb_out_sig,
-				hex_msb_out => hex_msb_out_sig
-			); 
-			
-		 
-inst_7 : vhdl_hex2sevseg
-PORT MAP(
-				data_in => hex_lsb_out_sig,
-				seg_out => hex0
-			);
+SYNTHESIZED_WIRE_1 <= '0';
+SYNTHESIZED_WIRE_2 <= "0000000000";
+rx_data <= bit_data(8 downto 1);
+rx_data_rdy <= data_ready;
+reset <= reset_n;
+LT_sig<='0';
+blank_sig<='0';
+rbi_sig<='0';
 
 
-inst_8 : vhdl_hex2sevseg
-PORT MAP(
-				data_in => hex_msb_out_sig,
-				seg_out => hex1
-			);
-		 
+b2v_inst : baud_tick
+GENERIC MAP(width => 6
+			)
+PORT MAP(clk => clk_6m,
+		 reset_n => reset,
+		 start_bit => start_bit_sig,		
+		 baud_tick => baud_tick1);
+
+
+b2v_inst1 : shiftreg_uart
+GENERIC MAP(width => 10
+			)
+PORT MAP(clk => clk_6m,
+		 reset_n => reset,
+		 serial_in => serial_in,
+		 load_in => SYNTHESIZED_WIRE_1,
+		 shift_enable => shift_enable,
+		 parallel_in => SYNTHESIZED_WIRE_2,
+		 parallel_out => bit_data);
+
+
+
+
+b2v_inst16 : vhdl_hex2sevseg
+PORT MAP(data_in => SYNTHESIZED_WIRE_3,
+		 seg_o => hex0,
+		 lt_n => LT_sig,
+		 blank_n => blank_sig,
+		 rbi_n => rbi_sig);
+
+
+b2v_inst17 : vhdl_hex2sevseg
+PORT MAP(data_in => SYNTHESIZED_WIRE_4,
+		 seg_o => hex1,
+		 lt_n => LT_sig,
+		 blank_n => blank_sig,
+		 rbi_n => rbi_sig);
+
+b2v_inst18 : flanken_detekt_vhdl
+PORT MAP(data_in => serial_in,
+		 clk => clk_6m,
+		 reset_n => reset,
+		 falling_pulse => SYNTHESIZED_WIRE_6);
+
+
+b2v_inst6 : bit_counter
+GENERIC MAP(width => 4
+			)
+PORT MAP(clk => clk_6m,
+		 reset_n => reset,
+		 start_bit => start_bit_sig,
+		 baud_tick => baud_tick1,
+		 bit_count => bit_count);
+
+
+b2v_inst7 : uart_controller_fsm
+PORT MAP(clk => clk_6m,
+		 reset_n => reset,
+		 falling_pulse => SYNTHESIZED_WIRE_6,
+		 baud_tick => baud_tick1,
+		 bit_count => bit_count,
+		 parallel_data => bit_data,
+		 shift_enable => shift_enable,
+		 start_bit => start_bit_sig,
+		 data_valid => data_ready);
+
+
+b2v_inst8 : output_register
+GENERIC MAP(width => 10
+			)
+PORT MAP(clk => clk_6m,
+		 data_valid => data_ready,
+		 reset_n => reset,
+		 parallel_in => bit_data,
+		 hex_lsb_out => SYNTHESIZED_WIRE_4,
+		 hex_msb_out => SYNTHESIZED_WIRE_3);
+
+
 
 END bdf_type;

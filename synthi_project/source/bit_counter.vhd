@@ -1,7 +1,15 @@
 -------------------------------------------
--- Block code:  bit_counter.vhd
+-- Block code:  count_down.vhd
 -- History: 	12.Nov.2013 - 1st version (dqtm)
---             29.Nov.2022 - Mini-Projekt lab11 (Gerber, Nueesch)
+--                 <date> - <changes>  (<author>)
+-- Function: down-counter, with start input and count output. 
+-- 			The input start should be a pulse which causes the 
+--			counter to load its max-value. When start is off,
+--			the counter decrements by one every clock cycle till 
+--			count_o equals 0. Once the count_o reachs 0, the counter
+--			freezes and wait till next start pulse. 
+--			Can be used as enable for other blocks where need to 
+--			count number of iterations.
 -------------------------------------------
 
 
@@ -18,8 +26,8 @@ ENTITY bit_counter IS
 GENERIC (width : positive := 4);
   PORT( clk,reset_n		: IN    std_logic;
   		start_bit			: IN    std_logic;
-		baud_tick 		: IN    std_logic;
-    	bit_count     	: OUT   std_logic_vector(width-1 downto 0)
+		baud_tick			: in 	  std_logic;
+    	bit_count     		: OUT   std_logic_vector(width-1 downto 0)
     	);
 END bit_counter;
 
@@ -29,8 +37,9 @@ END bit_counter;
 ARCHITECTURE rtl OF bit_counter IS
 -- Signals & Constants Declaration
 -------------------------------------------
-CONSTANT  	start_val: 			unsigned(width-1 downto 0):= to_unsigned(0,width); -- convert integer value 4 to unsigned with 4bits
+CONSTANT  	max_val: 			unsigned(width-1 downto 0):= to_unsigned(4,width); -- convert integer value 4 to unsigned with 4bits
 SIGNAL 		count, next_count: 	unsigned(width-1 downto 0);	 
+SIGNAL 		next_bit_count:	unsigned(width-1 downto 0);
 
 
 -- Begin Architecture
@@ -43,21 +52,26 @@ BEGIN
   --------------------------------------------------
   comb_logic: PROCESS(all)
   BEGIN	
-  	-- reset	
+	-- load	
+	
+	
+	-- load	
 	IF (start_bit = '1') THEN
-		next_count <= start_val;
-	END IF;
+		next_count <= "0000";
+	
   	-- increment
-  	IF (count < 9 and baud_tick = '1') THEN
+  	ELSIF (baud_tick='1') and (count < "1001") THEN
   		next_count <= count + 1 ;
+  	
   	-- freezes
-	ELSIF (start_bit = '0') THEN
+  	ELSE
   		next_count <= count;
   	END IF;
-	
 
-	
   END PROCESS comb_logic;   
+  
+  
+  
   
   --------------------------------------------------
   -- PROCESS FOR REGISTERS
