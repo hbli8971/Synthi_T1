@@ -102,11 +102,11 @@ architecture struct of synthi_top is
       hex1        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
   end component uart_top;
   
-	SIGNAL clock_6m 			: STD_LOGIC;  
-	SIGNAL reset_n 			: STD_LOGIC;
-	SIGNAL rx_data_sig 		: STD_LOGIC_VECTOR(7 downto 0);
-	SIGNAL serial_in 			: STD_LOGIC;
-	SIGNAL rx_data_rdy_sig 	: STD_LOGIC;
+SIGNAL clock_6m : STD_LOGIC;  
+SIGNAL reset_n : STD_LOGIC;
+SIGNAL rx_data_sig : STD_LOGIC_VECTOR(7 downto 0);
+SIGNAL serial_in :STD_LOGIC;
+SIGNAL rx_data_rdy_sig :STD_LOGIC;
 
 
   
