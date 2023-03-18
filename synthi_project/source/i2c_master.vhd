@@ -21,17 +21,17 @@ library ieee;
 
 entity i2c_master is
         port(
-            clk         : in    std_logic;
-            reset_n     : in    std_logic;
+            clk         : in    	std_logic;
+            reset_n     : in    	std_logic;
 
-            write_i     : in    std_logic;
-			write_data_i: in	std_logic_vector(15 downto 0);
+            write_i     : in    	std_logic;
+				write_data_i: in		std_logic_vector(15 downto 0);
 			
-			sda_io		: inout	std_logic;
-			scl_o		: out   std_logic;
+				sda_io		: inout	std_logic;
+				scl_o			: out   	std_logic;
 			
-			write_done_o: out	std_logic;
-			ack_error_o	: out	std_logic
+				write_done_o: out		std_logic;
+				ack_error_o	: out		std_logic
         );
 end entity;
 
@@ -77,18 +77,18 @@ type t_fsm_states is (
 -- Signal Declaration
 -------------------------------------------------------------------------------
 -- Current and Next Register State
-signal fsm_state, next_fsm_state       		: t_fsm_states;
-signal clk_divider, next_clk_divider   		: std_logic_vector(C_DIVIDER_VALUE-1 downto 0);
+signal fsm_state, next_fsm_state       	: t_fsm_states;
+signal clk_divider, next_clk_divider   	: std_logic_vector(C_DIVIDER_VALUE-1 downto 0);
 signal clk_mask, next_clk_mask        		: std_logic_vector(1 downto 0);
-signal clk_edge_mask, next_clk_edge_mask  	: std_logic_vector(2 downto 0);
+signal clk_edge_mask, next_clk_edge_mask  : std_logic_vector(2 downto 0);
 signal scl, next_scl             			: std_logic;
 signal sda, next_sda             			: std_logic;
 signal data, next_data            			: std_logic_vector(C_DATA_BUFFER_SIZE-1 downto 0);
-signal bit_count, next_bit_count       		: unsigned(C_BIT_COUNT_SIZE-1 downto 0);
+signal bit_count, next_bit_count       	: unsigned(C_BIT_COUNT_SIZE-1 downto 0);
 signal byte_count, next_byte_count      	: unsigned(C_BYTE_COUNT_SIZE-1 downto 0);
 signal ack , next_ack            			: std_logic;
-signal ack_error, next_ack_error       		: std_logic;
-signal write_done, next_write_done     		: std_logic;
+signal ack_error, next_ack_error       	: std_logic;
+signal write_done, next_write_done     	: std_logic;
 
 
 -------------------------------------------------------------------------------

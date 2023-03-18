@@ -1,7 +1,8 @@
 -------------------------------------------
 -- Block code:  modulo_divider.vhd
--- History: 	4. Sept.2019 - 1st version (gelk)
+-- History: 	4. Sep.2019 - 1st version (gelk)
 --            	6. Dez.2021 - 2nd version (gelk)
+--					17.Mar.2023 - added 12 MHz clock (gerbedor)
 -- Function: modulo divider with generic width. Output MSB with 50% duty cycle.
 --	Can be used for clock-divider when no exact ratio required.
 -------------------------------------------

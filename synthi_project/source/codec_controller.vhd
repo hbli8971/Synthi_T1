@@ -13,7 +13,8 @@
 -- Change History
 -- Date     |Name      |Modification
 ------------|----------|--------------------------------------------
--- 6.03.19 | gelk     | Prepared template for students
+-- 06.03.19 | gelk     | Prepared template for students
+-- 18.03.23 | gerbedor | added codec control automat
 --------------------------------------------------------------------
 
 library ieee;
@@ -42,12 +43,72 @@ end codec_controller;
 architecture rtl of codec_controller is
 -- Signals & Constants Declaration
 -------------------------------------------
- 
+	type fsm_type is (st_idle, st_wait_write, st_end);
+	signal fsm_state, fsm_next_state: fsm_type;
+	codec_registers : out std_logic_vector(15 downto 0)
+	
 -- Begin Architecture
 -------------------------------------------
 begin
+-------------------------------------------
+-- Process for FlipFlops
+-------------------------------------------
+	flip_flops : process(all)
+		begin
+			if reset_n = '0' then
+				fsm_state <= st_idle;
 
+			elsif rising_edge(clk) then
+				fsm_state <= fsm_next_state;
 
+			end if;
+	end process flip_flops;
+  
+-------------------------------------------
+-- Process for Codec Control Automat (FSM)
+-------------------------------------------
+	Codec_Control_Automat : process(all)
+		begin
+	 -- default statements (hold current value)
+    next_fsm_state <= fsm_state; 
+
+			case fsm_state is
+				when st_idle =>
+					fsm_next_state <= st_wait_write;
+				when st_wait_write =>
+					if write_done_i then
+						if count<9 then
+							next_counter <= counter+1;
+							fsm_next_state <= st_idle;
+						else if count>=9 | ack_error_i then
+							fsm_next_state <= st_end;
+						end if;
+					end if;
+				when others => 
+					fsm_next_state <= fsm_state;
+			end case;
+		end process;
+		
+-------------------------------------------
+-- Process Output Codec Controller
+-------------------------------------------
+	 Codec_Control_Output : process(all)
+    begin
+        if mode = "001" then
+            codec_registers <= C_W8731_ANALOG_BYPASS;
+        elsif mode = "011" then
+            codec_registers <= C_W8731_ANALOG_MUTE_LEFT;
+        elsif mode = "101" then
+            codec_registers <= C_W8731_ANALOG_MUTE_RIGHT;
+        elsif mode = "111" then
+            codec_registers <= C_W8731_ANALOG_MUTE_BOTH;
+        elsif mode(0) = '0' then
+            codec_registers <= C_W8731_ADC_DAC_0DB_48K;
+        else
+            codec_registers <= (others => '0');
+        end if;
+    end process;
+	
 -- End Architecture 
 ------------------------------------------- 
 end rtl;
