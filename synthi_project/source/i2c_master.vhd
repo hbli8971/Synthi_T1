@@ -313,7 +313,7 @@ begin
             write_done      <= '0'; 
             
         elsif rising_edge(clk) then
-            fsm_state       <= next_fsm_state;     
+         fsm_state       <= next_fsm_state;     
     		clk_divider     <= next_clk_divider;   
     		clk_mask        <= next_clk_mask;      
     		clk_edge_mask   <= next_clk_edge_mask; 
@@ -324,7 +324,7 @@ begin
     		ack             <= next_ack;           
     		byte_count      <= next_byte_count;    
     		ack_error       <= next_ack_error;     
-			write_done		<= next_write_done;
+			write_done		 <= next_write_done;
         end if;
     end process; -- FFs
 
@@ -334,10 +334,10 @@ begin
     -----------------------------------------------------------------------
     -- two wire control interface (i2c)
 	scl_o				<= scl;
-	sda_io              <= 'Z' when sda = '1' else '0';
+	sda_io         <= 'Z' when sda = '1' else '0';
 	
 	-- status
-	ack_error_o         <= ack_error;
+	ack_error_o       <= ack_error;
 	write_done_o		<= write_done;	
 	-----------------------------------------------------------------------
      

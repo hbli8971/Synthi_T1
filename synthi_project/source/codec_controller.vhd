@@ -45,11 +45,31 @@ architecture rtl of codec_controller is
 -------------------------------------------
 	type fsm_type is (st_idle, st_wait_write, st_end);
 	signal fsm_state, fsm_next_state: fsm_type;
+	
 	codec_registers : out std_logic_vector(15 downto 0)
+	
+	output_data : out std_logic_vector(8 downto 0);
+	constant: CONSTANT_NAME: t_array_type :=
+	(
+		0 => "011001101"
+		1 => "111001101",
+		2 => "111001101",
+		3 => "111001101",
+		4 => "011001101",
+		5 => "011001101",
+		6 => "011001101",
+		7 => "011001101",
+		8 => "011001101",
+		9 => "011001101"
+	);
 	
 -- Begin Architecture
 -------------------------------------------
 begin
+-------------------------------------------
+-- Process for Counter
+-------------------------------------------
+
 -------------------------------------------
 -- Process for FlipFlops
 -------------------------------------------
@@ -59,6 +79,7 @@ begin
 				fsm_state <= st_idle;
 
 			elsif rising_edge(clk) then
+				next_counter <= count+1;
 				fsm_state <= fsm_next_state;
 
 			end if;
@@ -76,7 +97,7 @@ begin
 				when st_idle =>
 					fsm_next_state <= st_wait_write;
 				when st_wait_write =>
-					if write_done_i then
+					if write_done_i = 1 then
 						if count<9 then
 							next_counter <= counter+1;
 							fsm_next_state <= st_idle;
