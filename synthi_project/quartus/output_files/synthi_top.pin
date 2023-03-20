@@ -81,9 +81,9 @@ LEDR_0                       : A8        : output : 3.3-V LVTTL       :         
 LEDR_1                       : A9        : output : 3.3-V LVTTL       :         : 7         : Y              
 LEDR_2                       : A10       : output : 3.3-V LVTTL       :         : 7         : Y              
 LEDR_8                       : A11       : output : 3.3-V LVTTL       :         : 7         : Y              
-SW[4]                        : A12       : input  : 3.3-V LVTTL       :         : 7         : Y              
-SW[6]                        : A13       : input  : 3.3-V LVTTL       :         : 7         : Y              
-SW[7]                        : A14       : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A16       :        :                   :         : 7         :                
 HEX1[4]                      : A17       : output : 3.3-V LVTTL       :         : 7         : Y              
@@ -147,9 +147,9 @@ KEY_0                        : B8        : input  : 3.3 V Schmitt Trigger :     
 GND                          : B9        : gnd    :                   :         :           :                
 LEDR_3                       : B10       : output : 3.3-V LVTTL       :         : 7         : Y              
 LEDR_9                       : B11       : output : 3.3-V LVTTL       :         : 7         : Y              
-SW[5]                        : B12       : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
 GND                          : B13       : gnd    :                   :         :           :                
-SW[8]                        : B14       : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 7         :                
 HEX1[3]                      : B16       : output : 3.3-V LVTTL       :         : 7         : Y              
 HEX1[6]                      : B17       : output : 3.3-V LVTTL       :         : 7         : Y              
@@ -169,7 +169,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
 SW[0]                        : C10       : input  : 3.3-V LVTTL       :         : 7         : Y              
 SW[1]                        : C11       : input  : 3.3-V LVTTL       :         : 7         : Y              
-SW[3]                        : C12       : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 7         :                
 LEDR_5                       : C13       : output : 3.3-V LVTTL       :         : 7         : Y              
 HEX0[0]                      : C14       : output : 3.3-V LVTTL       :         : 7         : Y              
 HEX0[2]                      : C15       : output : 3.3-V LVTTL       :         : 7         : Y              
@@ -238,7 +238,7 @@ VCCIO8                       : F11       : power  :                   : 2.5V    
 VCCIO7                       : F12       : power  :                   : 3.3V    : 7         :                
 GND                          : F13       : gnd    :                   :         :           :                
 VCCIO7                       : F14       : power  :                   : 3.3V    : 7         :                
-SW[9]                        : F15       : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F17       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F18       :        :                   :         : 6         :                

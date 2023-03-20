@@ -6,7 +6,7 @@
 -- Author     : Hans-Joachim Gelke
 -- Company    : 
 -- Created    : 2018-03-08
--- Last update: 2023-03-15
+-- Last update: 2023-03-20
 -- Platform   : 
 -- Standard   : VHDL'08
 -------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ entity synthi_top is
     CLOCK_50 : in std_logic;            -- DE2 clock from xtal 50MHz
     KEY_0    : in std_logic;            -- DE2 low_active input buttons
     KEY_1    : in std_logic;            -- DE2 low_active input buttons
-    SW       : in std_logic_vector(9 downto 0);  -- DE2 input switches
+    SW       : in std_logic_vector(2 downto 0);  -- DE2 input switches
 
     USB_RXD : in std_logic;             -- USB (midi) serial_input
     USB_TXD : in std_logic;             -- USB (midi) serial_output
@@ -73,8 +73,17 @@ architecture struct of synthi_top is
 
   -----------------------------------------------------------------------------
   -- Internal signal declarations
-  -----------------------------------------------------------------------------;
- 
+  -----------------------------------------------------------------------------
+
+  signal clk_6m       : std_logic;
+  signal reset_n      : std_logic;
+  signal write        : std_logic;
+  signal write_data   : std_logic_vector(15 downto 0);
+  signal write_done   : std_logic;
+  signal ack_error    : std_logic;
+  signal write_done_o : std_logic;
+  signal ack_error_o  : std_logic;
+  SIGNAL serial_in    : STD_LOGIC;
 
   -----------------------------------------------------------------------------
   -- Component declarations
@@ -86,6 +95,7 @@ architecture struct of synthi_top is
       key_0        : in  STD_LOGIC;
       usb_txd      : in  STD_LOGIC;
       clk_6m       : out STD_LOGIC;
+		clk_12m		 : out STD_LOGIC;
       reset_n      : out STD_LOGIC;
       usb_txd_sync : out STD_LOGIC;
       ledr0        : out STD_LOGIC);
@@ -102,11 +112,29 @@ architecture struct of synthi_top is
       hex1        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
   end component uart_top;
   
-	SIGNAL clock_6m 			: STD_LOGIC;  
-	SIGNAL reset_n 			: STD_LOGIC;
-	SIGNAL rx_data_sig 		: STD_LOGIC_VECTOR(7 downto 0);
-	SIGNAL serial_in 			: STD_LOGIC;
-	SIGNAL rx_data_rdy_sig 	: STD_LOGIC;
+
+  component codec_controller is
+    port (
+      mode         : in  std_logic_vector(2 downto 0);
+      write_done_i : in  std_logic;
+      ack_error_i  : in  std_logic;
+      clk          : in  std_logic;
+      reset_n      : in  std_logic;
+      write_o      : out std_logic;
+      write_data_o : out std_logic_vector(15 downto 0));
+  end component codec_controller;
+
+  component i2c_master is
+    port (
+      clk          : in    std_logic;
+      reset_n      : in    std_logic;
+      write_i      : in    std_logic;
+      write_data_i : in    std_logic_vector(15 downto 0);
+      sda_io       : inout std_logic;
+      scl_o        : out   std_logic;
+      write_done_o : out   std_logic;
+      ack_error_o  : out   std_logic);
+  end component i2c_master;
 
 
   
@@ -122,7 +150,8 @@ begin
       clock_50     => CLOCK_50,
       key_0        => KEY_0,
       usb_txd      => USB_TXD,
-      clk_6m       => clock_6m,
+      clk_6m       => clk_6m,
+		clk_12m		 => AUD_XCK,
       reset_n      => reset_n,
       usb_txd_sync => serial_in,
       ledr0        => LEDR_0);
@@ -130,13 +159,34 @@ begin
   -- instance "uart_top_1"
   uart_top_1: uart_top
     port map (
-      clk_6m      => clock_6m,
+      clk_6m      => clk_6m,
       reset_n     => reset_n,
       serial_in   => serial_in,
-      rx_data     => rx_data_sig,
-      rx_data_rdy => rx_data_rdy_sig,
       hex0        => HEX0,
       hex1        => HEX1);
+
+  -- instance "codec_controller_1"
+  codec_controller_1: codec_controller
+    port map (
+      mode         => SW,
+      write_done_i => write_done,
+      ack_error_i  => ack_error,
+      clk          => clk_6m,
+      reset_n      => reset_n,
+      write_o      => write,
+      write_data_o => write_data);
+
+  -- instance "i2c_master_1"
+  i2c_master_1: i2c_master
+    port map (
+      clk          => clk_6m,
+      reset_n      => reset_n,
+      write_i      => write,
+      write_data_i => write_data,
+      sda_io       => AUD_SDAT,
+      scl_o        => AUD_SCLK,
+      write_done_o => write_done,
+      ack_error_o  => ack_error);
   
 
 end architecture struct;

@@ -3,32 +3,29 @@
 -- Project    : 
 -------------------------------------------------------------------------------
 -- File       : synthi_top.vhd
--- Author     :   <mine8@LAPTOP-G548OMQT>
+-- Author     : Hans-Joachim Gelke
 -- Company    : 
--- Created    : 2023-03-01
--- Last update: 2023-03-01
+-- Created    : 2018-03-08
+-- Last update: 2023-03-15
 -- Platform   : 
 -- Standard   : VHDL'08
 -------------------------------------------------------------------------------
--- Description: 
+-- Description: Top Level for Synthesizer
 -------------------------------------------------------------------------------
--- Copyright (c) 2023 
+-- Copyright (c) 2018 
 -------------------------------------------------------------------------------
 -- Revisions  :
 -- Date        Version  Author  Description
--- 2023-03-01  1.0      mine8	Created
+-- 2018-03-08  1.0      Hans-Joachim    Created
 -------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
+library work;
 use ieee.numeric_std.all;
-
 -------------------------------------------------------------------------------
 
 entity synthi_top is
-
-  generic (
-    );
 
   port (
     CLOCK_50 : in std_logic;            -- DE2 clock from xtal 50MHz
@@ -69,13 +66,15 @@ entity synthi_top is
 
 end entity synthi_top;
 
+
 -------------------------------------------------------------------------------
 
-architecture str of synthi_top is
+architecture struct of synthi_top is
 
   -----------------------------------------------------------------------------
   -- Internal signal declarations
-  -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------;
+ xy
 
   -----------------------------------------------------------------------------
   -- Component declarations
@@ -92,23 +91,54 @@ architecture str of synthi_top is
       ledr0        : out STD_LOGIC);
   end component infrastructure;
 
-begin  -- architecture str
+  component uart_top is
+    port (
+      clk_6m      : IN  STD_LOGIC;
+      reset_n     : IN  STD_LOGIC;
+      serial_in   : IN  STD_LOGIC;
+      rx_data     : OUT STD_LOGIC_VECTOR(7 downto 0);
+      rx_data_rdy : OUT STD_LOGIC;
+      hex0        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+      hex1        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
+  end component uart_top;
+  
+	SIGNAL clock_6m 			: STD_LOGIC;  
+	SIGNAL reset_n 			: STD_LOGIC;
+	SIGNAL rx_data_sig 		: STD_LOGIC_VECTOR(7 downto 0);
+	SIGNAL serial_in 			: STD_LOGIC;
+	SIGNAL rx_data_rdy_sig 	: STD_LOGIC;
 
-  -----------------------------------------------------------------------------
-  -- Component instantiations
-  -----------------------------------------------------------------------------
+
+  
+begin
+
+-----------------------------------------------------------------------------
+  -- Architecture Description
+-----------------------------------------------------------------------------
 
   -- instance "infrastructure_1"
   infrastructure_1: infrastructure
     port map (
-      clock_50     => clock_50,
-      key_0        => key_0,
-      usb_txd      => usb_txd,
-      clk_6m       => clk_6m,
+      clock_50     => CLOCK_50,
+      key_0        => KEY_0,
+      usb_txd      => USB_TXD,
+      clk_6m       => clock_6m,
       reset_n      => reset_n,
-      usb_txd_sync => usb_txd_sync,
-      ledr0        => ledr0);
+      usb_txd_sync => serial_in,
+      ledr0        => LEDR_0);
 
-end architecture str;
+  -- instance "uart_top_1"
+  uart_top_1: uart_top
+    port map (
+      clk_6m      => clock_6m,
+      reset_n     => reset_n,
+      serial_in   => serial_in,
+      rx_data     => rx_data_sig,
+      rx_data_rdy => rx_data_rdy_sig,
+      hex0        => HEX0,
+      hex1        => HEX1);
+  
+
+end architecture struct;
 
 -------------------------------------------------------------------------------

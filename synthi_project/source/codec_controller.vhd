@@ -43,7 +43,7 @@ end codec_controller;
 architecture rtl of codec_controller is
 -- Signals & Constants Declaration
 -------------------------------------------
-	type fsm_type is (st_idle, st_wait_write, st_end);
+/*	type fsm_type is (st_idle, st_wait_write, st_end);
 	signal fsm_state, fsm_next_state: fsm_type;
 	
 	codec_registers : out std_logic_vector(15 downto 0)
@@ -62,7 +62,7 @@ architecture rtl of codec_controller is
 		8 => "011001101",
 		9 => "011001101"
 	);
-	
+	*/
 -- Begin Architecture
 -------------------------------------------
 begin
@@ -73,7 +73,7 @@ begin
 -------------------------------------------
 -- Process for FlipFlops
 -------------------------------------------
-	flip_flops : process(all)
+/*	flip_flops : process(all)
 		begin
 			if reset_n = '0' then
 				fsm_state <= st_idle;
@@ -131,5 +131,7 @@ begin
     end process;
 	
 -- End Architecture 
+
+*/
 ------------------------------------------- 
 end rtl;

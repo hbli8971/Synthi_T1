@@ -31,6 +31,7 @@ entity infrastructure is
     key_0 : in STD_LOGIC;
     usb_txd : in STD_LOGIC;
     clk_6m : out STD_LOGIC;
+	 clk_12m: out STD_LOGIC;
     reset_n : out STD_LOGIC;
     usb_txd_sync : out STD_LOGIC;
     ledr0 : out STD_LOGIC
@@ -67,7 +68,8 @@ architecture str of infrastructure is
   component modulo_divider is
     port (
       clk    : IN  std_logic;
-      clk_6m : OUT std_logic);
+      clk_6m : OUT std_logic;
+		clk_12m : OUT std_logic);
   end component modulo_divider;
   
   SIGNAL	clk_6 :  STD_LOGIC;
@@ -97,7 +99,8 @@ begin  -- architecture str
   modulo_divider_1: modulo_divider
     port map (
       clk    => clock_50,
-      clk_6m => clk_6);
+      clk_6m => clk_6,
+		clk_12m => clk_12m);
 
   -- instance "clock_sync_2"
   clock_sync_2: clock_sync
