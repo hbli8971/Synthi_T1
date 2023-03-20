@@ -187,6 +187,8 @@ begin
       scl_o        => AUD_SCLK,
       write_done_o => write_done,
       ack_error_o  => ack_error);
+		
+	AUD_BCLK			<= clk_6m;
   
 
 end architecture struct;
