@@ -14,14 +14,14 @@
 -- Date     |Name      |Modification
 ------------|----------|--------------------------------------------
 -- 06.03.19 | gelk     | Prepared template for students
--- 18.03.23 | gerbedor | added codec control automat
+-- 21.03.23 | gerbedor | added codec control logic
 --------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 library work;
---use work.reg_table_pkg.all;
+use work.reg_table_pkg.all;
 
 
 entity codec_controller is
@@ -43,44 +43,24 @@ end codec_controller;
 architecture rtl of codec_controller is
 -- Signals & Constants Declaration
 -------------------------------------------
-/*	type fsm_type is (st_idle, st_wait_write, st_end);
-	signal fsm_state, fsm_next_state: fsm_type;
-	
-	codec_registers : out std_logic_vector(15 downto 0)
-	
-	output_data : out std_logic_vector(8 downto 0);
-	constant: CONSTANT_NAME: t_array_type :=
-	(
-		0 => "011001101"
-		1 => "111001101",
-		2 => "111001101",
-		3 => "111001101",
-		4 => "011001101",
-		5 => "011001101",
-		6 => "011001101",
-		7 => "011001101",
-		8 => "011001101",
-		9 => "011001101"
-	);
-	*/
+	type fsm_type is (st_idle, st_wait_write, st_end);
+	signal fsm_state, next_fsm_state: fsm_type;
+	signal count, next_count : integer;
+
 -- Begin Architecture
 -------------------------------------------
 begin
--------------------------------------------
--- Process for Counter
--------------------------------------------
 
 -------------------------------------------
 -- Process for FlipFlops
 -------------------------------------------
-/*	flip_flops : process(all)
+	flip_flops : process(all)
 		begin
 			if reset_n = '0' then
 				fsm_state <= st_idle;
 
 			elsif rising_edge(clk) then
-				next_counter <= count+1;
-				fsm_state <= fsm_next_state;
+				fsm_state <= next_fsm_state;
 
 			end if;
 	end process flip_flops;
@@ -90,48 +70,51 @@ begin
 -------------------------------------------
 	Codec_Control_Automat : process(all)
 		begin
-	 -- default statements (hold current value)
-    next_fsm_state <= fsm_state; 
+			-- default statements (hold current value)
+			next_fsm_state <= fsm_state;
+			count <= 0;
 
 			case fsm_state is
 				when st_idle =>
-					fsm_next_state <= st_wait_write;
+					next_fsm_state <= st_wait_write;
 				when st_wait_write =>
-					if write_done_i = 1 then
+					if write_done_i = '1' then
 						if count<9 then
-							next_counter <= counter+1;
-							fsm_next_state <= st_idle;
-						else if count>=9 | ack_error_i then
-							fsm_next_state <= st_end;
+							next_count <= count+1;
+							next_fsm_state <= st_idle;
+						elsif count>=9 or ack_error_i='1' then
+							next_fsm_state <= st_end;
 						end if;
 					end if;
 				when others => 
-					fsm_next_state <= fsm_state;
+					next_fsm_state <= fsm_state;
 			end case;
 		end process;
 		
 -------------------------------------------
 -- Process Output Codec Controller
 -------------------------------------------
-	 Codec_Control_Output : process(all)
-    begin
-        if mode = "001" then
-            codec_registers <= C_W8731_ANALOG_BYPASS;
-        elsif mode = "011" then
-            codec_registers <= C_W8731_ANALOG_MUTE_LEFT;
-        elsif mode = "101" then
-            codec_registers <= C_W8731_ANALOG_MUTE_RIGHT;
-        elsif mode = "111" then
-            codec_registers <= C_W8731_ANALOG_MUTE_BOTH;
-        elsif mode(0) = '0' then
-            codec_registers <= C_W8731_ADC_DAC_0DB_48K;
-        else
-            codec_registers <= (others => '0');
-        end if;
-    end process;
+	Codec_Control_Output : process(all)
+	begin
+		-- default statements
+		write_data_o(15 downto 0) <= "0000000000000000"; -- (others => '0');
+		write_o <= '0';
+	
+		case fsm_state is
+			when st_idle =>
+				write_o <= '1';
+			when st_wait_write =>
+				case mode is
+					when	"001" => write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ANALOG_BYPASS(count);		
+					when 	"011" => write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ANALOG_MUTE_LEFT(count);
+					when	"101" => write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ANALOG_MUTE_RIGHT(count);
+					when	"111"	=> write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ANALOG_MUTE_BOTH(count);
+					when others => write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ADC_DAC_0DB_48K(count);
+				end case;
+			when others => NULL;
+		end case;
+	end process Codec_Control_Output;
 	
 -- End Architecture 
-
-*/
-------------------------------------------- 
+-------------------------------------------
 end rtl;
