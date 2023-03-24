@@ -102,9 +102,14 @@ architecture struct of synthi_top_tb is
   signal LEDR_7      : std_logic;
   signal LEDR_8      : std_logic;
   signal LEDR_9      : std_logic;
+  signal gpi_signals : std_logic_vector(31 downto 0);
+  signal reg_data0 : std_logic_vector(31 downto 0);
+  signal reg_data1 : std_logic_vector(31 downto 0);
+  signal reg_data2 : std_logic_vector(31 downto 0);
 
   constant clock_freq   : natural := 50_000_000;
   constant clock_period : time    := 1000 ms/clock_freq;
+  
 
 begin  -- architecture struct
 
@@ -197,11 +202,30 @@ begin  -- architecture struct
       -------------------------------------
       -- Reset the circuit
       -------------------------------------
-
+      
       if cmd.all = "reset_target" then
         rst_sim(tv, key_0);
       elsif cmd.all = "run_simulation_for" then
         run_sim(tv);
+      elsif cmd.all = "uart_send_data" then
+        uar_sim(tv, USB_TXD); 
+      elsif cmd.all = "check_display_hex0" then
+        hex_chk(tv, hex0);
+      elsif cmd.all = "check_display_hex0" then
+        hex_chk(tv, hex0);
+      elsif cmd.all = "check_display_hex1" then
+        hex_chk(tv, hex1);
+      elsif cmd.all = "check_i2c_reg_0" then
+        gpo_chk(tv, reg_data0);
+      elsif cmd.all = "check_i2c_reg_1" then
+        gpo_chk(tv, reg_data1);
+      elsif cmd.all = "check_i2c_reg_1" then
+        gpo_chk(tv, reg_data2);
+      elsif cmd.all = "set_switches" then
+        gpi_sim(tv, gpi_signals);
+      
+
+
 
         -- add further test commands below here
 
@@ -231,7 +255,7 @@ begin  -- architecture struct
     wait for clock_period/2;
 
   end process clkgen;
-
+  SW(9 downto 0) <= gpi_signals(9 downto 0);
   
 
 end architecture struct;

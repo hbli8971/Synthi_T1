@@ -31,7 +31,7 @@ entity synthi_top is
     CLOCK_50 : in std_logic;            -- DE2 clock from xtal 50MHz
     KEY_0    : in std_logic;            -- DE2 low_active input buttons
     KEY_1    : in std_logic;            -- DE2 low_active input buttons
-    SW       : in std_logic_vector(2 downto 0);  -- DE2 input switches
+    SW       : in std_logic_vector(9 downto 0);  -- DE2 input switches
 
     USB_RXD : in std_logic;             -- USB (midi) serial_input
     USB_TXD : in std_logic;             -- USB (midi) serial_output
@@ -77,7 +77,7 @@ architecture struct of synthi_top is
 
   signal clk_6m       : std_logic;
   signal reset_n      : std_logic;
-  signal write        : std_logic;
+  signal write_intern        : std_logic;
   signal write_data   : std_logic_vector(15 downto 0);
   signal write_done   : std_logic;
   signal ack_error    : std_logic;
@@ -168,12 +168,12 @@ begin
   -- instance "codec_controller_1"
   codec_controller_1: codec_controller
     port map (
-      mode         => SW,
+      mode         => SW(2 downto 0),
       write_done_i => write_done,
       ack_error_i  => ack_error,
       clk          => clk_6m,
       reset_n      => reset_n,
-      write_o      => write,
+      write_o      => write_intern,
       write_data_o => write_data);
 
   -- instance "i2c_master_1"
@@ -181,7 +181,7 @@ begin
     port map (
       clk          => clk_6m,
       reset_n      => reset_n,
-      write_i      => write,
+      write_i      => write_intern,
       write_data_i => write_data,
       sda_io       => AUD_SDAT,
       scl_o        => AUD_SCLK,

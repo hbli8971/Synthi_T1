@@ -6,7 +6,7 @@ vcom -2008 -explicit -work work ../../support/simulation_pkg.vhd
 vcom -2008 -explicit -work work ../../support/standard_driver_pkg.vhd
 vcom -2008 -explicit -work work ../../support/user_driver_pkg.vhd
 
-vcom -2008 -explicit -work work ../../../source/uart_top.vhd
+
 vcom -2008 -explicit -work work ../../../source/modulo_divider.vhd
 vcom -2008 -explicit -work work ../../../source/clock_sync.vhd
 vcom -2008 -explicit -work work ../../../source/infrastructure.vhd
@@ -18,6 +18,19 @@ vcom -2008 -explicit -work work ../../../source/signal_checker.vhd
 vcom -2008 -explicit -work work ../../../source/shiftreg_uart.vhd
 vcom -2008 -explicit -work work ../../../source/output_register.vhd
 vcom -2008 -explicit -work work ../../../source/bit_counter.vhd
+vcom -2008 -explicit -work work ../../../source/uart_top.vhd
+
+
+
+# I2C
+vcom -2008 -explicit -work work ../../../source/reg_table_pkg.vhd
+vcom -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd
+vcom -2008 -explicit -work work ../../../source/codec_controller.vhd
+vcom -2008 -explicit -work work ../../../source/i2c_master.vhd
+vcom -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd
+# I2S
+
+
 
 
 

@@ -45,7 +45,7 @@ architecture rtl of codec_controller is
 -------------------------------------------
 	type fsm_type is (st_idle, st_wait_write, st_end);
 	signal fsm_state, next_fsm_state: fsm_type;
-	signal count, next_count : integer;
+	signal count, next_count : unsigned(3 downto 0);
 
 -- Begin Architecture
 -------------------------------------------
@@ -58,9 +58,11 @@ begin
 		begin
 			if reset_n = '0' then
 				fsm_state <= st_idle;
+				count <= to_unsigned(0,4);
 
 			elsif rising_edge(clk) then
 				fsm_state <= next_fsm_state;
+				count <= next_count;
 
 			end if;
 	end process flip_flops;
@@ -72,19 +74,19 @@ begin
 		begin
 			-- default statements (hold current value)
 			next_fsm_state <= fsm_state;
-			count <= 0;
+			next_count <= count;
+			write_o <= '0';
 
 			case fsm_state is
 				when st_idle =>
+					write_o <= '1';
 					next_fsm_state <= st_wait_write;
 				when st_wait_write =>
-					if write_done_i = '1' then
-						if count<9 then
-							next_count <= count+1;
-							next_fsm_state <= st_idle;
-						elsif count>=9 or ack_error_i='1' then
-							next_fsm_state <= st_end;
-						end if;
+					if (write_done_i = '1' and count<9) then
+						next_count <= count + to_unsigned(1,4);
+						next_fsm_state <= st_idle;
+					elsif ((write_done_i = '1' and count>=9) or ack_error_i='1') then
+						next_fsm_state <= st_end;
 					end if;
 				when others => 
 					next_fsm_state <= fsm_state;
@@ -97,22 +99,18 @@ begin
 	Codec_Control_Output : process(all)
 	begin
 		-- default statements
-		write_data_o(15 downto 0) <= "0000000000000000"; -- (others => '0');
-		write_o <= '0';
+		--write_data_o(15 downto 0) <= "0000000000000010"; -- (others => '0');
+		
 	
-		case fsm_state is
-			when st_idle =>
-				write_o <= '1';
-			when st_wait_write =>
-				case mode is
-					when	"001" => write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ANALOG_BYPASS(count);		
-					when 	"011" => write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ANALOG_MUTE_LEFT(count);
-					when	"101" => write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ANALOG_MUTE_RIGHT(count);
-					when	"111"	=> write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ANALOG_MUTE_BOTH(count);
-					when others => write_data_o <= "000" & std_logic_vector(to_unsigned(count, 4)) & C_W8731_ADC_DAC_0DB_48K(count);
-				end case;
-			when others => NULL;
+		
+		case mode is
+			when	"001" => write_data_o <= "000" & std_logic_vector(count) & C_W8731_ANALOG_BYPASS(to_integer(count));		
+			when 	"011" => write_data_o <= "000" & std_logic_vector(count) & C_W8731_ANALOG_MUTE_RIGHT(to_integer(count));
+			when	"101" => write_data_o <= "000" & std_logic_vector(count) & C_W8731_ANALOG_MUTE_LEFT(to_integer(count));
+			when	"111"	=> write_data_o <= "000" & std_logic_vector(count) & C_W8731_ANALOG_MUTE_BOTH(to_integer(count));
+			when others => write_data_o <= "000" & std_logic_vector(count) & C_W8731_ADC_DAC_0DB_48K(to_integer(count));
 		end case;
+		
 	end process Codec_Control_Output;
 	
 -- End Architecture 

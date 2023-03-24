@@ -6,7 +6,7 @@
 -- Author     :   <mine8@LAPTOP-G548OMQT>
 -- Company    : 
 -- Created    : 2023-03-15
--- Last update: 2023-03-15
+-- Last update: 2023-03-22
 -- Platform   : 
 -- Standard   : VHDL'08
 -------------------------------------------------------------------------------
@@ -102,9 +102,43 @@ architecture struct of synthi_top_tb is
   signal LEDR_7      : std_logic;
   signal LEDR_8      : std_logic;
   signal LEDR_9      : std_logic;
+  signal gpi_signals : std_logic_vector(31 downto 0);
+  signal reg_data0 : std_logic_vector(31 downto 0);
+  signal reg_data1 : std_logic_vector(31 downto 0);
+  signal reg_data2 : std_logic_vector(31 downto 0);
+  signal reg_data3 : std_logic_vector(31 downto 0);
+  signal reg_data4 : std_logic_vector(31 downto 0);
+  signal reg_data5 : std_logic_vector(31 downto 0);
+  signal reg_data6 : std_logic_vector(31 downto 0);
+  signal reg_data7 : std_logic_vector(31 downto 0);
+  signal reg_data8 : std_logic_vector(31 downto 0);
+  signal reg_data9 : std_logic_vector(31 downto 0);
+  signal I2C_SCLK  : std_logic;
+  signal I2C_SDAT  : std_logic;
+  
 
   constant clock_freq   : natural := 50_000_000;
   constant clock_period : time    := 1000 ms/clock_freq;
+
+  component i2c_slave_bfm is
+    generic (
+      verbose : boolean);
+    port (
+      AUD_XCK   : in    std_logic;
+      I2C_SDAT  : inout std_logic := 'H';
+      I2C_SCLK  : inout std_logic := 'H';
+      reg_data0 : out   std_logic_vector(31 downto 0);
+      reg_data1 : out   std_logic_vector(31 downto 0);
+      reg_data2 : out   std_logic_vector(31 downto 0);
+      reg_data3 : out   std_logic_vector(31 downto 0);
+      reg_data4 : out   std_logic_vector(31 downto 0);
+      reg_data5 : out   std_logic_vector(31 downto 0);
+      reg_data6 : out   std_logic_vector(31 downto 0);
+      reg_data7 : out   std_logic_vector(31 downto 0);
+      reg_data8 : out   std_logic_vector(31 downto 0);
+      reg_data9 : out   std_logic_vector(31 downto 0));
+  end component i2c_slave_bfm;
+  
 
 begin  -- architecture struct
 
@@ -126,8 +160,8 @@ begin  -- architecture struct
       AUD_DACLRCK => AUD_DACLRCK,
       AUD_ADCLRCK => AUD_ADCLRCK,
       AUD_ADCDAT  => AUD_ADCDAT,
-      AUD_SCLK    => AUD_SCLK,
-      AUD_SDAT    => AUD_SDAT,
+      AUD_SCLK    => I2C_SCLK,
+      AUD_SDAT    => I2C_SDAT,
       HEX0        => HEX0,
       HEX1        => HEX1,
       LEDR_0      => LEDR_0,
@@ -140,6 +174,25 @@ begin  -- architecture struct
       LEDR_7      => LEDR_7,
       LEDR_8      => LEDR_8,
       LEDR_9      => LEDR_9);
+
+  -- instance "i2c_slave_bfm_1"
+  i2c_slave_bfm_1: i2c_slave_bfm
+    generic map (
+      verbose => false)
+    port map (
+      AUD_XCK   => AUD_XCK,
+      I2C_SDAT  => I2C_SDAT,
+      I2C_SCLK  => I2C_SCLK,
+      reg_data0 => reg_data0,
+      reg_data1 => reg_data1,
+      reg_data2 => reg_data2,
+      reg_data3 => reg_data3,
+      reg_data4 => reg_data4,
+      reg_data5 => reg_data5,
+      reg_data6 => reg_data6,
+      reg_data7 => reg_data7,
+      reg_data8 => reg_data8,
+      reg_data9 => reg_data9);    
 
 
 
@@ -197,7 +250,7 @@ begin  -- architecture struct
       -------------------------------------
       -- Reset the circuit
       -------------------------------------
-
+      
       if cmd.all = "reset_target" then
         rst_sim(tv, key_0);
       elsif cmd.all = "run_simulation_for" then
@@ -210,6 +263,17 @@ begin  -- architecture struct
         hex_chk(tv, hex0);
       elsif cmd.all = "check_display_hex1" then
         hex_chk(tv, hex1);
+      elsif cmd.all = "check_i2c_reg_0" then
+        gpo_chk(tv, reg_data0);
+      elsif cmd.all = "check_i2c_reg_1" then
+        gpo_chk(tv, reg_data1);
+      elsif cmd.all = "check_i2c_reg_2" then
+        gpo_chk(tv, reg_data2);
+      elsif cmd.all = "set_switches" then
+        gpi_sim(tv, gpi_signals);
+      
+
+
 
         -- add further test commands below here
 
@@ -239,7 +303,9 @@ begin  -- architecture struct
     wait for clock_period/2;
 
   end process clkgen;
+  SW(9 downto 0) <= gpi_signals(9 downto 0);
 
+  
   
 
 end architecture struct;
