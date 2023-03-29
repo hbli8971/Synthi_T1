@@ -25,15 +25,14 @@ use ieee.std_logic_1164.all;
 -------------------------------------------------------------------------------
 
 entity path_ctrl is
-  generic (width : positive := 16);
   port (
-  dds_l_i		: IN std_logic_vector(width-1 downto 0);
-  dds_r_i		: IN std_logic_vector(width-1 downto 0);
-  adcdat_pl_i	: IN std_logic_vector(width-1 downto 0);
-  adcdat_pr_i  : IN std_logic_vector(width-1 downto 0);
+  dds_l_i		: IN std_logic;
+  dds_r_i		: IN std_logic;
+  adcdat_pl_i	: IN std_logic;
+  adcdat_pr_i  : IN std_logic;
   SW				: IN std_logic;
-  dacdat_pl_o	: OUT std_logic_vector(width-1 downto 0);
-  dacdat_pr_o  : OUT std_logic_vector(width-1 downto 0)
+  dacdat_pl_o	: OUT std_logic;
+  dacdat_pr_o  : OUT std_logic
     );
 
 end entity path_ctrl;
