@@ -72,20 +72,6 @@ end entity synthi_top;
 architecture struct of synthi_top is
 
   -----------------------------------------------------------------------------
-  -- Internal signal declarations
-  -----------------------------------------------------------------------------
-
-  signal clk_6m       : std_logic;
-  signal reset_n      : std_logic;
-  signal write_intern        : std_logic;
-  signal write_data   : std_logic_vector(15 downto 0);
-  signal write_done   : std_logic;
-  signal ack_error    : std_logic;
-  signal write_done_o : std_logic;
-  signal ack_error_o  : std_logic;
-  SIGNAL serial_in    : STD_LOGIC;
-
-  -----------------------------------------------------------------------------
   -- Component declarations
   -----------------------------------------------------------------------------
 
@@ -136,8 +122,59 @@ architecture struct of synthi_top is
       ack_error_o  : out   std_logic);
   end component i2c_master;
 
+  component i2s_master is
+  generic (width : positive := 16);
+		port 
+		(
+			dacdat_pr_i : IN  std_logic_vector(width-1 downto 0);
+			dacdat_pl_i : IN  std_logic_vector(width-1 downto 0);
+			clk_6m,reset: IN  std_logic;
+			adcdat_s_i	: IN  std_logic;
+			dacdat_s_o	: OUT std_logic;
+			step_o		: OUT std_logic;
+			ws_o			: OUT std_logic;
+			adcdat_pl_o	: OUT std_logic_vector(width-1 downto 0);
+			adcdat_pr_o	: OUT std_logic_vector(width-1 downto 0)
+		);
+	end component i2s_master;
+	
+	component path_ctrl is
+		generic (width : positive := 16);
+		port 
+		(
+			dds_l_i		: IN std_logic_vector(width-1 downto 0);
+			dds_r_i		: IN std_logic_vector(width-1 downto 0);
+			adcdat_pl_i	: IN std_logic_vector(width-1 downto 0);
+			adcdat_pr_i : IN std_logic_vector(width-1 downto 0);
+			SW				: IN std_logic;
+			dacdat_pl_o	: OUT std_logic_vector(width-1 downto 0);
+			dacdat_pr_o : OUT std_logic_vector(width-1 downto 0)
+		);
+	end component path_ctrl;
 
-  
+ -----------------------------------------------------------------------------
+ -- Internal signal declarations
+ -----------------------------------------------------------------------------
+
+ signal clk_6m       : std_logic;
+ signal reset_n      : std_logic;
+ signal write_intern : std_logic;
+ signal write_data   : std_logic_vector(15 downto 0);
+ signal write_done   : std_logic;
+ signal ack_error    : std_logic;
+ signal write_done_o : std_logic;
+ signal ack_error_o  : std_logic;
+ SIGNAL serial_in    : STD_LOGIC;
+ 
+ signal ws_i			: std_logic;
+ signal sig_adcdat_pl: std_logic_vector(15 downto 0);
+ signal sig_adcdat_pr: std_logic_vector(15 downto 0);
+ signal sig_dacdat_pl: std_logic_vector(15 downto 0);
+ signal sig_dacdat_pr: std_logic_vector(15 downto 0);
+ signal step_i			: std_logic;
+ signal dds_l_o		: std_logic_vector(15 downto 0);
+ signal dds_r_o		: std_logic_vector(15 downto 0);
+	
 begin
 
 -----------------------------------------------------------------------------
@@ -158,7 +195,7 @@ begin
 
   -- instance "uart_top_1"
   uart_top_1: uart_top
-    port map (
+    port map (	
       clk_6m      => clk_6m,
       reset_n     => reset_n,
       serial_in   => serial_in,
@@ -188,7 +225,39 @@ begin
       write_done_o => write_done,
       ack_error_o  => ack_error);
 		
-	AUD_BCLK			<= clk_6m;
+	
+	  inst_i2s_master : i2s_master
+		port map
+		(
+			dacdat_pr_i => sig_dacdat_pr,
+			dacdat_pl_i => sig_dacdat_pl,
+			clk_6m		=> clk_6m,
+			reset 		=> reset_n,
+			adcdat_s_i	=> AUD_ADCDAT,
+			dacdat_s_o	=> AUD_DACDAT,
+			step_o		=> step_i,
+			ws_o			=> ws_i,
+			adcdat_pl_o	=> sig_adcdat_pl,
+			adcdat_pr_o	=> sig_adcdat_pr
+		);
+	
+		inst_path_ctrl : path_ctrl
+		port map
+		(
+			dds_l_i		=> dds_l_o,
+			dds_r_i		=> dds_r_o,
+			adcdat_pl_i	=> sig_adcdat_pl,
+			adcdat_pr_i => sig_adcdat_pr,
+			SW				=> SW(3),
+			dacdat_pl_o	=> sig_dacdat_pl,
+			dacdat_pr_o => sig_dacdat_pr
+		);
+
+		
+	AUD_BCLK		<= clk_6m;
+	AUD_DACLRCK	<= ws_i;
+	AUD_ADCLRCK	<= ws_i;
+	
   
 
 end architecture struct;
