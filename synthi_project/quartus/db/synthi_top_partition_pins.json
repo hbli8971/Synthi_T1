@@ -8,7 +8,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "AUD_DACDAT",
+					"strict" : false
+				},
+				{
 					"name" : "AUD_BCLK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCLRCK",
 					"strict" : false
 				},
 				{
@@ -92,11 +104,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[1]",
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCDAT",
 					"strict" : false
 				},
 				{
 					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
 					"strict" : false
 				},
 				{

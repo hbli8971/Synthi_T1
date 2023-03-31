@@ -28,8 +28,14 @@ vcom -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd
 vcom -2008 -explicit -work work ../../../source/codec_controller.vhd
 vcom -2008 -explicit -work work ../../../source/i2c_master.vhd
 vcom -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd
-# I2S
 
+
+# I2S
+vcom -2008 -explicit -work work ../../../source/i2s/i2s_frame_generator.vhd
+vcom -2008 -explicit -work work ../../../source/i2s/i2s_master.vhd
+vcom -2008 -explicit -work work ../../../source/i2s/mux_2_1.vhd
+vcom -2008 -explicit -work work ../../../source/i2s/path_ctrl.vhd
+vcom -2008 -explicit -work work ../../../source/i2s/uni_shiftreg.vhd
 
 
 

@@ -46,7 +46,7 @@ begin
     -- Sequential logic for the shift register
     shift_routine : process(all)
     begin
-        if reset = '1' then   -- Reset the register to all 0's
+        if reset = '0' then   -- Reset the register to all 0's
             reg <= (others => '0');
         elsif rising_edge(clock) then
             if load = '1' then   -- Load parallel data into the register

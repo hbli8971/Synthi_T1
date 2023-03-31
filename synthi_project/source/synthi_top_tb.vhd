@@ -19,197 +19,188 @@
 -- 2023-03-15  1.0      mine8	Created
 -------------------------------------------------------------------------------
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use work.all;
-use std.textio.all;
-use work.simulation_pkg.all;
-use work.standard_driver_pkg.all;
-use work.user_driver_pkg.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+USE work.ALL;
+USE std.textio.ALL;
+USE work.simulation_pkg.ALL;
+USE work.standard_driver_pkg.ALL;
+USE work.user_driver_pkg.ALL;
+-------------------------------------------------------------------------------
 
+ENTITY synthi_top_tb IS
+
+END ENTITY synthi_top_tb;
 
 -------------------------------------------------------------------------------
 
-entity synthi_top_tb is
+ARCHITECTURE struct OF synthi_top_tb IS
 
-end entity synthi_top_tb;
-
--------------------------------------------------------------------------------
-
-architecture struct of synthi_top_tb is
-
-  component synthi_top is
-    port (
-      CLOCK_50    : in    std_logic;
-      KEY_0       : in    std_logic;
-      KEY_1       : in    std_logic;
-      SW          : in    std_logic_vector(9 downto 0);
-      USB_RXD     : in    std_logic;
-      USB_TXD     : in    std_logic;
-      BT_RXD      : in    std_logic;
-      BT_TXD      : in    std_logic;
-      BT_RST_N    : in    std_logic;
-      AUD_XCK     : out   std_logic;
-      AUD_DACDAT  : out   std_logic;
-      AUD_BCLK    : out   std_logic;
-      AUD_DACLRCK : out   std_logic;
-      AUD_ADCLRCK : out   std_logic;
-      AUD_ADCDAT  : in    std_logic;
-      AUD_SCLK    : out   std_logic;
-      AUD_SDAT    : inout std_logic;
-      HEX0        : out   std_logic_vector(6 downto 0);
-      HEX1        : out   std_logic_vector(6 downto 0);
-      LEDR_0      : out   std_logic;
-      LEDR_1      : out   std_logic;
-      LEDR_2      : out   std_logic;
-      LEDR_3      : out   std_logic;
-      LEDR_4      : out   std_logic;
-      LEDR_5      : out   std_logic;
-      LEDR_6      : out   std_logic;
-      LEDR_7      : out   std_logic;
-      LEDR_8      : out   std_logic;
-      LEDR_9      : out   std_logic);
-  end component synthi_top;
+  COMPONENT synthi_top IS
+    PORT (
+      CLOCK_50 : IN STD_LOGIC;
+      KEY_0 : IN STD_LOGIC;
+      KEY_1 : IN STD_LOGIC;
+      SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      USB_RXD : IN STD_LOGIC;
+      USB_TXD : IN STD_LOGIC;
+      BT_RXD : IN STD_LOGIC;
+      BT_TXD : IN STD_LOGIC;
+      BT_RST_N : IN STD_LOGIC;
+      AUD_XCK : OUT STD_LOGIC;
+      AUD_DACDAT : OUT STD_LOGIC;
+      AUD_BCLK : OUT STD_LOGIC;
+      AUD_DACLRCK : OUT STD_LOGIC;
+      AUD_ADCLRCK : OUT STD_LOGIC;
+      AUD_ADCDAT : IN STD_LOGIC;
+      AUD_SCLK : OUT STD_LOGIC;
+      AUD_SDAT : INOUT STD_LOGIC;
+      HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+      HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+      LEDR_0 : OUT STD_LOGIC;
+      LEDR_1 : OUT STD_LOGIC;
+      LEDR_2 : OUT STD_LOGIC;
+      LEDR_3 : OUT STD_LOGIC;
+      LEDR_4 : OUT STD_LOGIC;
+      LEDR_5 : OUT STD_LOGIC;
+      LEDR_6 : OUT STD_LOGIC;
+      LEDR_7 : OUT STD_LOGIC;
+      LEDR_8 : OUT STD_LOGIC;
+      LEDR_9 : OUT STD_LOGIC);
+  END COMPONENT synthi_top;
 
   -- component ports
-  signal CLOCK_50    : std_logic;
-  signal KEY_0       : std_logic;
-  signal KEY_1       : std_logic;
-  signal SW          : std_logic_vector(9 downto 0);
-  signal USB_RXD     : std_logic;
-  signal USB_TXD     : std_logic;
-  signal BT_RXD      : std_logic;
-  signal BT_TXD      : std_logic;
-  signal BT_RST_N    : std_logic;
-  signal AUD_XCK     : std_logic;
-  signal AUD_DACDAT  : std_logic;
-  signal AUD_BCLK    : std_logic;
-  signal AUD_DACLRCK : std_logic;
-  signal AUD_ADCLRCK : std_logic;
-  signal AUD_ADCDAT  : std_logic;
-  signal AUD_SCLK    : std_logic;
-  signal AUD_SDAT    : std_logic;
-  signal HEX0        : std_logic_vector(6 downto 0);
-  signal HEX1        : std_logic_vector(6 downto 0);
-  signal LEDR_0      : std_logic;
-  signal LEDR_1      : std_logic;
-  signal LEDR_2      : std_logic;
-  signal LEDR_3      : std_logic;
-  signal LEDR_4      : std_logic;
-  signal LEDR_5      : std_logic;
-  signal LEDR_6      : std_logic;
-  signal LEDR_7      : std_logic;
-  signal LEDR_8      : std_logic;
-  signal LEDR_9      : std_logic;
-  signal gpi_signals : std_logic_vector(31 downto 0);
-  signal reg_data0 : std_logic_vector(31 downto 0);
-  signal reg_data1 : std_logic_vector(31 downto 0);
-  signal reg_data2 : std_logic_vector(31 downto 0);
-  signal reg_data3 : std_logic_vector(31 downto 0);
-  signal reg_data4 : std_logic_vector(31 downto 0);
-  signal reg_data5 : std_logic_vector(31 downto 0);
-  signal reg_data6 : std_logic_vector(31 downto 0);
-  signal reg_data7 : std_logic_vector(31 downto 0);
-  signal reg_data8 : std_logic_vector(31 downto 0);
-  signal reg_data9 : std_logic_vector(31 downto 0);
-  signal I2C_SCLK  : std_logic;
-  signal I2C_SDAT  : std_logic;
-  
+  SIGNAL CLOCK_50 : STD_LOGIC;
+  SIGNAL KEY_0 : STD_LOGIC;
+  SIGNAL KEY_1 : STD_LOGIC;
+  SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
+  SIGNAL USB_RXD : STD_LOGIC;
+  SIGNAL USB_TXD : STD_LOGIC;
+  SIGNAL BT_RXD : STD_LOGIC;
+  SIGNAL BT_TXD : STD_LOGIC;
+  SIGNAL BT_RST_N : STD_LOGIC;
+  SIGNAL AUD_XCK : STD_LOGIC;
+  SIGNAL AUD_DACDAT : STD_LOGIC;
+  SIGNAL AUD_BCLK : STD_LOGIC;
+  SIGNAL AUD_DACLRCK : STD_LOGIC;
+  SIGNAL AUD_ADCLRCK : STD_LOGIC;
+  SIGNAL AUD_ADCDAT : STD_LOGIC;
+  SIGNAL AUD_SCLK : STD_LOGIC;
+  SIGNAL AUD_SDAT : STD_LOGIC;
+  SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+  SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+  SIGNAL LEDR_0 : STD_LOGIC;
+  SIGNAL LEDR_1 : STD_LOGIC;
+  SIGNAL LEDR_2 : STD_LOGIC;
+  SIGNAL LEDR_3 : STD_LOGIC;
+  SIGNAL LEDR_4 : STD_LOGIC;
+  SIGNAL LEDR_5 : STD_LOGIC;
+  SIGNAL LEDR_6 : STD_LOGIC;
+  SIGNAL LEDR_7 : STD_LOGIC;
+  SIGNAL LEDR_8 : STD_LOGIC;
+  SIGNAL LEDR_9 : STD_LOGIC;
+  SIGNAL gpi_signals : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data0 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data2 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data3 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data4 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data5 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data6 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data7 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data8 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL reg_data9 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL dacdat_check : std_logic_vector(31 downto 0);
+  SIGNAL I2C_SCLK : STD_LOGIC;
+  SIGNAL I2C_SDAT : STD_LOGIC;
+  CONSTANT clock_freq : NATURAL := 50_000_000;
+  CONSTANT clock_period : TIME := 1000 ms/clock_freq;
 
-  constant clock_freq   : natural := 50_000_000;
-  constant clock_period : time    := 1000 ms/clock_freq;
-
-  component i2c_slave_bfm is
-    generic (
-      verbose : boolean);
-    port (
-      AUD_XCK   : in    std_logic;
-      I2C_SDAT  : inout std_logic := 'H';
-      I2C_SCLK  : inout std_logic := 'H';
-      reg_data0 : out   std_logic_vector(31 downto 0);
-      reg_data1 : out   std_logic_vector(31 downto 0);
-      reg_data2 : out   std_logic_vector(31 downto 0);
-      reg_data3 : out   std_logic_vector(31 downto 0);
-      reg_data4 : out   std_logic_vector(31 downto 0);
-      reg_data5 : out   std_logic_vector(31 downto 0);
-      reg_data6 : out   std_logic_vector(31 downto 0);
-      reg_data7 : out   std_logic_vector(31 downto 0);
-      reg_data8 : out   std_logic_vector(31 downto 0);
-      reg_data9 : out   std_logic_vector(31 downto 0));
-  end component i2c_slave_bfm;
-  
-
-begin  -- architecture struct
+  COMPONENT i2c_slave_bfm IS
+    GENERIC (
+      verbose : BOOLEAN);
+    PORT (
+      AUD_XCK : IN STD_LOGIC;
+      I2C_SDAT : INOUT STD_LOGIC := 'H';
+      I2C_SCLK : INOUT STD_LOGIC := 'H';
+      reg_data0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reg_data1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reg_data2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reg_data3 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reg_data4 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reg_data5 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reg_data6 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reg_data7 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reg_data8 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reg_data9 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+  END COMPONENT i2c_slave_bfm;
+BEGIN -- architecture struct
 
   -- component instantiation
-  DUT: synthi_top
-    port map (
-      CLOCK_50    => CLOCK_50,
-      KEY_0       => KEY_0,
-      KEY_1       => KEY_1,
-      SW          => SW,
-      USB_RXD     => USB_RXD,
-      USB_TXD     => USB_TXD,
-      BT_RXD      => BT_RXD,
-      BT_TXD      => BT_TXD,
-      BT_RST_N    => BT_RST_N,
-      AUD_XCK     => AUD_XCK,
-      AUD_DACDAT  => AUD_DACDAT,
-      AUD_BCLK    => AUD_BCLK,
-      AUD_DACLRCK => AUD_DACLRCK,
-      AUD_ADCLRCK => AUD_ADCLRCK,
-      AUD_ADCDAT  => AUD_ADCDAT,
-      AUD_SCLK    => I2C_SCLK,
-      AUD_SDAT    => I2C_SDAT,
-      HEX0        => HEX0,
-      HEX1        => HEX1,
-      LEDR_0      => LEDR_0,
-      LEDR_1      => LEDR_1,
-      LEDR_2      => LEDR_2,
-      LEDR_3      => LEDR_3,
-      LEDR_4      => LEDR_4,
-      LEDR_5      => LEDR_5,
-      LEDR_6      => LEDR_6,
-      LEDR_7      => LEDR_7,
-      LEDR_8      => LEDR_8,
-      LEDR_9      => LEDR_9);
+  DUT : synthi_top
+  PORT MAP(
+    CLOCK_50 => CLOCK_50,
+    KEY_0 => KEY_0,
+    KEY_1 => KEY_1,
+    SW => SW,
+    USB_RXD => USB_RXD,
+    USB_TXD => USB_TXD,
+    BT_RXD => BT_RXD,
+    BT_TXD => BT_TXD,
+    BT_RST_N => BT_RST_N,
+    AUD_XCK => AUD_XCK,
+    AUD_DACDAT => AUD_DACDAT,
+    AUD_BCLK => AUD_BCLK,
+    AUD_DACLRCK => AUD_DACLRCK,
+    AUD_ADCLRCK => AUD_ADCLRCK,
+    AUD_ADCDAT => AUD_ADCDAT,
+    AUD_SCLK => I2C_SCLK,
+    AUD_SDAT => I2C_SDAT,
+    HEX0 => HEX0,
+    HEX1 => HEX1,
+    LEDR_0 => LEDR_0,
+    LEDR_1 => LEDR_1,
+    LEDR_2 => LEDR_2,
+    LEDR_3 => LEDR_3,
+    LEDR_4 => LEDR_4,
+    LEDR_5 => LEDR_5,
+    LEDR_6 => LEDR_6,
+    LEDR_7 => LEDR_7,
+    LEDR_8 => LEDR_8,
+    LEDR_9 => LEDR_9);
 
   -- instance "i2c_slave_bfm_1"
-  i2c_slave_bfm_1: i2c_slave_bfm
-    generic map (
-      verbose => false)
-    port map (
-      AUD_XCK   => AUD_XCK,
-      I2C_SDAT  => I2C_SDAT,
-      I2C_SCLK  => I2C_SCLK,
-      reg_data0 => reg_data0,
-      reg_data1 => reg_data1,
-      reg_data2 => reg_data2,
-      reg_data3 => reg_data3,
-      reg_data4 => reg_data4,
-      reg_data5 => reg_data5,
-      reg_data6 => reg_data6,
-      reg_data7 => reg_data7,
-      reg_data8 => reg_data8,
-      reg_data9 => reg_data9);    
+  i2c_slave_bfm_1 : i2c_slave_bfm
+  GENERIC MAP(
+    verbose => false)
+  PORT MAP(
+    AUD_XCK => AUD_XCK,
+    I2C_SDAT => I2C_SDAT,
+    I2C_SCLK => I2C_SCLK,
+    reg_data0 => reg_data0,
+    reg_data1 => reg_data1,
+    reg_data2 => reg_data2,
+    reg_data3 => reg_data3,
+    reg_data4 => reg_data4,
+    reg_data5 => reg_data5,
+    reg_data6 => reg_data6,
+    reg_data7 => reg_data7,
+    reg_data8 => reg_data8,
+    reg_data9 => reg_data9);
 
-
-
-  readcmd : process
+  readcmd : PROCESS
     -- This process loops through a file and reads one line
     -- at a time, parsing the line to get the values and
     -- expected result.
 
-    variable cmd          : line;  --stores test command
-    variable line_in      : line; --stores the to be processed line     
-    variable tv           : test_vect; --stores arguments 1 to 4
-    variable lincnt       : integer := 0;  --counts line number in testcase file
-    variable fail_counter : integer := 0;--counts failed tests
+    VARIABLE cmd : line; --stores test command
+    VARIABLE line_in : line; --stores the to be processed line     
+    VARIABLE tv : test_vect; --stores arguments 1 to 4
+    VARIABLE lincnt : INTEGER := 0; --counts line number in testcase file
+    VARIABLE fail_counter : INTEGER := 0;--counts failed tests
 
-
-
-  begin
+  BEGIN
     -------------------------------------
     -- Open the Input and output files
     -------------------------------------
@@ -219,95 +210,89 @@ begin  -- architecture struct
     -------------------------------------
     -- Start the loop
     -------------------------------------
-
-
-    loop
+    LOOP
 
       --------------------------------------------------------------------------
       -- Check for end of test file and print out results at the end
       --------------------------------------------------------------------------
-
-
-      if endfile(cmdfile) then          -- Check EOF
+      IF endfile(cmdfile) THEN -- Check EOF
         end_simulation(fail_counter);
-        exit;
-      end if;
+        EXIT;
+      END IF;
 
       --------------------------------------------------------------------------
       -- Read all the argumnents and commands
       --------------------------------------------------------------------------
 
-      readline(cmdfile, line_in);       -- Read a line from the file
+      readline(cmdfile, line_in); -- Read a line from the file
       lincnt := lincnt + 1;
-
-
-      next when line_in'length = 0;     -- Skip empty lines
-      next when line_in.all(1) = '#';   -- Skip lines starting with #
+      NEXT WHEN line_in'length = 0; -- Skip empty lines
+      NEXT WHEN line_in.ALL(1) = '#'; -- Skip lines starting with #
 
       read_arguments(lincnt, tv, line_in, cmd);
-      tv.clock_period := clock_period;  -- set clock period for driver calls
+      tv.clock_period := clock_period; -- set clock period for driver calls
 
       -------------------------------------
       -- Reset the circuit
       -------------------------------------
-      
-      if cmd.all = "reset_target" then
+
+      IF cmd.ALL = "reset_target" THEN
         rst_sim(tv, key_0);
-      elsif cmd.all = "run_simulation_for" then
+      ELSIF cmd.ALL = "run_simulation_for" THEN
         run_sim(tv);
-      elsif cmd.all = "uart_send_data" then
-        uar_sim(tv, USB_TXD); 
-      elsif cmd.all = "check_display_hex0" then
+      ELSIF cmd.ALL = "uart_send_data" THEN
+        uar_sim(tv, USB_TXD);
+      ELSIF cmd.ALL = "check_display_hex0" THEN
         hex_chk(tv, hex0);
-      elsif cmd.all = "check_display_hex0" then
+      ELSIF cmd.ALL = "check_display_hex0" THEN
         hex_chk(tv, hex0);
-      elsif cmd.all = "check_display_hex1" then
+      ELSIF cmd.ALL = "check_display_hex1" THEN
         hex_chk(tv, hex1);
-      elsif cmd.all = "check_i2c_reg_0" then
+      ELSIF cmd.ALL = "check_i2c_reg_0" THEN
         gpo_chk(tv, reg_data0);
-      elsif cmd.all = "check_i2c_reg_1" then
+      ELSIF cmd.ALL = "check_i2c_reg_1" THEN
         gpo_chk(tv, reg_data1);
-      elsif cmd.all = "check_i2c_reg_2" then
+      ELSIF cmd.ALL = "check_i2c_reg_2" THEN
         gpo_chk(tv, reg_data2);
-      elsif cmd.all = "set_switches" then
+      ELSIF cmd.ALL = "set_switches" THEN
         gpi_sim(tv, gpi_signals);
-      
-
-
-
         -- add further test commands below here
+       -- sw (3) <= gpi_signals(1);
+      ELSIF cmd.ALL = "send_i2s" THEN
+        i2s_sim(tv, AUD_ADCLRCK, AUD_BCLK, AUD_ADCDAT);
+      ELSIF cmd.ALL = "check_i2s" THEN
+        i2s_chk(tv,AUD_DACLRCK,AUD_BCLK,AUD_DACDAT,dacdat_check);
 
+      ELSE
+        ASSERT false
+        REPORT "NO MATCHING COMMAND FOUND IN 'testcase.dat' AT LINE: " & INTEGER'image(lincnt)
+          SEVERITY error;
+      END IF;
 
-      else
-        assert false
-          report "NO MATCHING COMMAND FOUND IN 'testcase.dat' AT LINE: "& integer'image(lincnt)
-          severity error;
-      end if;
-
-      if tv.fail_flag = true then --count failures in tests
+      IF tv.fail_flag = true THEN --count failures in tests
         fail_counter := fail_counter + 1;
-      else fail_counter := fail_counter;
-      end if;
+      ELSE
+        fail_counter := fail_counter;
+      END IF;
 
-    end loop; --finished processing command line
+    END LOOP; --finished processing command line
 
-    wait; -- to avoid infinite loop simulator warning
+    WAIT; -- to avoid infinite loop simulator warning
 
-  end process;
+  END PROCESS;
 
-  clkgen : process
-  begin
+  clkgen : PROCESS
+  BEGIN
     clock_50 <= '0';
-    wait for clock_period/2;
+    WAIT FOR clock_period/2;
     clock_50 <= '1';
-    wait for clock_period/2;
+    WAIT FOR clock_period/2;
 
-  end process clkgen;
-  SW(9 downto 0) <= gpi_signals(9 downto 0);
+  END PROCESS clkgen;
+  SW(9 DOWNTO 0) <= gpi_signals(9 DOWNTO 0);
 
   
-  
-
-end architecture struct;
+ 
+END ARCHITECTURE struct;
 
 -------------------------------------------------------------------------------
