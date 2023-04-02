@@ -159,7 +159,7 @@ LOW_intern <= '0';
       reset        => reset,--
       clock        => clk_6m,--
       serial_in    => adcdat_s_i,--
-      parallel_in  => dummy1,
+      parallel_in  => dummy1, --
       serial_out   => dummy3,--*
       parallel_out => adcdat_pl_o);--
 

@@ -174,6 +174,8 @@ architecture struct of synthi_top is
  signal step_i			: std_logic;
  signal dds_l_o		: std_logic_vector(15 downto 0);
  signal dds_r_o		: std_logic_vector(15 downto 0);
+ 
+ signal debug_jan    : std_logic;
 	
 begin
 
@@ -253,11 +255,13 @@ begin
 			dacdat_pr_o => sig_dacdat_pr
 		);
 
-		
+
+	LEDR_3 <= SW(3); -- debuging, to be removed later
 	AUD_BCLK		<= clk_6m;
 	AUD_DACLRCK	<= ws_i;
 	AUD_ADCLRCK	<= ws_i;
-	
+	dds_l_o <= "0000000000000000";
+	dds_r_o <= "0000000000000000";
   
 
 end architecture struct;

@@ -1,5 +1,5 @@
 Flow report for synthi_top
-Fri Mar 31 10:31:44 2023
+Sun Apr  2 16:19:20 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 31 10:31:41 2023       ;
+; Flow Status                        ; Successful - Sun Apr  2 16:19:14 2023       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; synthi_top                                  ;
 ; Top-level Entity Name              ; synthi_top                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 332 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 316 / 49,760 ( < 1 % )                      ;
+; Total logic elements               ; 326 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 314 / 49,760 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 200 / 49,760 ( < 1 % )                      ;
 ; Total registers                    ; 200                                         ;
 ; Total pins                         ; 50 / 360 ( 14 % )                           ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/31/2023 10:31:12 ;
+; Start date & time ; 04/02/2023 16:18:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; synthi_top          ;
 +-------------------+---------------------+
@@ -78,9 +78,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 220669440438384.168025147212532        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 79349043790999.168044511117508         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -97,11 +98,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4821 MB             ; 00:00:12                           ;
-; Fitter               ; 00:00:13     ; 1.1                     ; 5646 MB             ; 00:00:07                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4723 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4842 MB             ; 00:00:02                           ;
-; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4814 MB             ; 00:00:38                           ;
+; Fitter               ; 00:00:18     ; 1.1                     ; 5652 MB             ; 00:00:24                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4712 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 4838 MB             ; 00:00:04                           ;
+; Total                ; 00:00:42     ; --                      ; --                  ; 00:01:10                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,10 +111,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-0ARI068  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-0ARI068  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-0ARI068  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-0ARI068  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-G548OMQT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-G548OMQT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-G548OMQT  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-G548OMQT  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

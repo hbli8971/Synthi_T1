@@ -1,5 +1,5 @@
 Analysis & Synthesis report for synthi_top
-Fri Mar 31 10:31:22 2023
+Sun Apr  2 16:18:48 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -31,19 +31,20 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
  23. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3
  24. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4
  25. Parameter Settings for User Entity Instance: path_ctrl:inst_path_ctrl
- 26. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4"
- 27. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3"
- 28. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2"
- 29. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1"
- 30. Port Connectivity Checks: "i2s_master:inst_i2s_master"
- 31. Port Connectivity Checks: "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"
- 32. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst17"
- 33. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16"
- 34. Port Connectivity Checks: "uart_top:uart_top_1|shiftreg_uart:b2v_inst1"
- 35. Port Connectivity Checks: "uart_top:uart_top_1"
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
+ 26. Port Connectivity Checks: "path_ctrl:inst_path_ctrl"
+ 27. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4"
+ 28. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3"
+ 29. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2"
+ 30. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1"
+ 31. Port Connectivity Checks: "i2s_master:inst_i2s_master"
+ 32. Port Connectivity Checks: "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"
+ 33. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst17"
+ 34. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16"
+ 35. Port Connectivity Checks: "uart_top:uart_top_1|shiftreg_uart:b2v_inst1"
+ 36. Port Connectivity Checks: "uart_top:uart_top_1"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
 
 
 
@@ -70,13 +71,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 31 10:31:22 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr  2 16:18:48 2023       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; synthi_top                                  ;
 ; Top-level Entity Name              ; synthi_top                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 347                                         ;
-;     Total combinational functions  ; 315                                         ;
+; Total logic elements               ; 345                                         ;
+;     Total combinational functions  ; 313                                         ;
 ;     Dedicated logic registers      ; 200                                         ;
 ; Total registers                    ; 200                                         ;
 ; Total pins                         ; 50                                          ;
@@ -97,6 +98,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; synthi_top         ; synthi_top         ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
 ; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -193,33 +195,33 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
-+---------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                     ; Library ;
-+---------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
-; ../source/i2s/uni_shiftreg.vhd        ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd        ;         ;
-; ../source/i2s/path_ctrl.vhd           ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd           ;         ;
-; ../source/i2s/mux_2_1.vhd             ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd             ;         ;
-; ../source/i2s/i2s_master.vhd          ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd          ;         ;
-; ../source/i2s/i2s_frame_generator.vhd ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd ;         ;
-; ../source/reg_table_pkg.vhd           ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/reg_table_pkg.vhd           ;         ;
-; ../source/codec_controller.vhd        ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/codec_controller.vhd        ;         ;
-; ../source/i2c_master.vhd              ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2c_master.vhd              ;         ;
-; ../source/modulo_divider.vhd          ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/modulo_divider.vhd          ;         ;
-; ../source/clock_sync.vhd              ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/clock_sync.vhd              ;         ;
-; ../source/infrastructure.vhd          ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/infrastructure.vhd          ;         ;
-; ../source/flanken_detekt_vhdl.vhd     ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/flanken_detekt_vhdl.vhd     ;         ;
-; ../source/baud_tick.vhd               ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/baud_tick.vhd               ;         ;
-; ../source/vhdl_hex2sevseg.vhd         ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/vhdl_hex2sevseg.vhd         ;         ;
-; ../source/uart_controller_fsm.vhd     ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_controller_fsm.vhd     ;         ;
-; ../source/signal_checker.vhd          ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/signal_checker.vhd          ;         ;
-; ../source/shiftreg_uart.vhd           ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/shiftreg_uart.vhd           ;         ;
-; ../source/output_register.vhd         ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/output_register.vhd         ;         ;
-; ../source/bit_counter.vhd             ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/bit_counter.vhd             ;         ;
-; ../source/uart_top.vhd                ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd                ;         ;
-; ../source/synthi_top.vhd              ; yes             ; User VHDL File  ; C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd              ;         ;
-+---------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++---------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                         ; Library ;
++---------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
+; ../source/i2s/uni_shiftreg.vhd        ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd        ;         ;
+; ../source/i2s/path_ctrl.vhd           ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd           ;         ;
+; ../source/i2s/mux_2_1.vhd             ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd             ;         ;
+; ../source/i2s/i2s_master.vhd          ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd          ;         ;
+; ../source/i2s/i2s_frame_generator.vhd ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd ;         ;
+; ../source/reg_table_pkg.vhd           ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/reg_table_pkg.vhd           ;         ;
+; ../source/codec_controller.vhd        ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/codec_controller.vhd        ;         ;
+; ../source/i2c_master.vhd              ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c_master.vhd              ;         ;
+; ../source/modulo_divider.vhd          ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/modulo_divider.vhd          ;         ;
+; ../source/clock_sync.vhd              ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/clock_sync.vhd              ;         ;
+; ../source/infrastructure.vhd          ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/infrastructure.vhd          ;         ;
+; ../source/flanken_detekt_vhdl.vhd     ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/flanken_detekt_vhdl.vhd     ;         ;
+; ../source/baud_tick.vhd               ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/baud_tick.vhd               ;         ;
+; ../source/vhdl_hex2sevseg.vhd         ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/vhdl_hex2sevseg.vhd         ;         ;
+; ../source/uart_controller_fsm.vhd     ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_controller_fsm.vhd     ;         ;
+; ../source/signal_checker.vhd          ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/signal_checker.vhd          ;         ;
+; ../source/shiftreg_uart.vhd           ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/shiftreg_uart.vhd           ;         ;
+; ../source/output_register.vhd         ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/output_register.vhd         ;         ;
+; ../source/bit_counter.vhd             ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/bit_counter.vhd             ;         ;
+; ../source/uart_top.vhd                ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd                ;         ;
+; ../source/synthi_top.vhd              ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd              ;         ;
++---------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -227,16 +229,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                     ;
 +---------------------------------------------+---------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 347                                                                       ;
+; Estimated Total logic elements              ; 345                                                                       ;
 ;                                             ;                                                                           ;
-; Total combinational functions               ; 315                                                                       ;
+; Total combinational functions               ; 313                                                                       ;
 ; Logic element usage by number of LUT inputs ;                                                                           ;
-;     -- 4 input functions                    ; 118                                                                       ;
-;     -- 3 input functions                    ; 133                                                                       ;
+;     -- 4 input functions                    ; 149                                                                       ;
+;     -- 3 input functions                    ; 100                                                                       ;
 ;     -- <=2 input functions                  ; 64                                                                        ;
 ;                                             ;                                                                           ;
 ; Logic elements by mode                      ;                                                                           ;
-;     -- normal mode                          ; 276                                                                       ;
+;     -- normal mode                          ; 274                                                                       ;
 ;     -- arithmetic mode                      ; 39                                                                        ;
 ;                                             ;                                                                           ;
 ; Total registers                             ; 200                                                                       ;
@@ -249,8 +251,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                           ;
 ; Maximum fan-out node                        ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ;
 ; Maximum fan-out                             ; 165                                                                       ;
-; Total fan-out                               ; 1773                                                                      ;
-; Average fan-out                             ; 2.88                                                                      ;
+; Total fan-out                               ; 1799                                                                      ;
+; Average fan-out                             ; 2.93                                                                      ;
 +---------------------------------------------+---------------------------------------------------------------------------+
 
 
@@ -259,9 +261,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                              ; Entity Name         ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+---------------------+--------------+
-; |synthi_top                                       ; 315 (0)             ; 200 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 50   ; 0            ; 0          ; |synthi_top                                                                      ; synthi_top          ; work         ;
-;    |codec_controller:codec_controller_1|          ; 17 (17)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|codec_controller:codec_controller_1                                  ; codec_controller    ; work         ;
-;    |i2c_master:i2c_master_1|                      ; 99 (99)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2c_master:i2c_master_1                                              ; i2c_master          ; work         ;
+; |synthi_top                                       ; 313 (0)             ; 200 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 50   ; 0            ; 0          ; |synthi_top                                                                      ; synthi_top          ; work         ;
+;    |codec_controller:codec_controller_1|          ; 20 (20)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|codec_controller:codec_controller_1                                  ; codec_controller    ; work         ;
+;    |i2c_master:i2c_master_1|                      ; 94 (94)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2c_master:i2c_master_1                                              ; i2c_master          ; work         ;
 ;    |i2s_master:inst_i2s_master|                   ; 78 (0)              ; 71 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master                                           ; i2s_master          ; work         ;
 ;       |i2s_frame_generator:i2s_frame_generator_1| ; 9 (9)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1 ; i2s_frame_generator ; work         ;
 ;       |mux_2_1:mux_2_1_1|                         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1                         ; mux_2_1             ; work         ;
@@ -384,8 +386,8 @@ Encoding Type:  One-Hot
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4|reg[10]                  ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3|reg[14]                  ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst|count[3]                                 ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2|reg[5]                   ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1|reg[7]                   ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2|reg[5]                   ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1|reg[7]                   ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|byte_count[0]                                           ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|bit_count[2]                                            ;
 ; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[16]                                                ;
@@ -507,6 +509,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------+
+; Port Connectivity Checks: "path_ctrl:inst_path_ctrl" ;
++---------+-------+----------+-------------------------+
+; Port    ; Type  ; Severity ; Details                 ;
++---------+-------+----------+-------------------------+
+; dds_l_i ; Input ; Info     ; Stuck at GND            ;
+; dds_r_i ; Input ; Info     ; Stuck at GND            ;
++---------+-------+----------+-------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4"                                   ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -618,19 +630,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SCLR      ; 2                           ;
 ;     plain             ; 7                           ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 329                         ;
+; cycloneiii_lcell_comb ; 327                         ;
 ;     arith             ; 39                          ;
 ;         2 data inputs ; 32                          ;
 ;         3 data inputs ; 7                           ;
-;     normal            ; 290                         ;
+;     normal            ; 288                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 20                          ;
 ;         2 data inputs ; 25                          ;
-;         3 data inputs ; 126                         ;
-;         4 data inputs ; 118                         ;
+;         3 data inputs ; 93                          ;
+;         4 data inputs ; 149                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.60                        ;
-; Average LUT depth     ; 2.84                        ;
+; Average LUT depth     ; 2.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -639,7 +651,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -649,149 +661,144 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Mar 31 10:31:11 2023
+    Info: Processing started: Sun Apr  2 16:18:31 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/i2s/uni_shiftreg.vhd
-    Info (12022): Found design unit 1: uni_shiftreg-str File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 41
-    Info (12023): Found entity 1: uni_shiftreg File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 26
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/i2s/path_ctrl.vhd
-    Info (12022): Found design unit 1: path_ctrl-str File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 43
-    Info (12023): Found entity 1: path_ctrl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/i2s/mux_2_1.vhd
-    Info (12022): Found design unit 1: mux_2_1-str File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 38
-    Info (12023): Found entity 1: mux_2_1 File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/i2s/i2s_master.vhd
-    Info (12022): Found design unit 1: i2s_master-str File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 48
-    Info (12023): Found entity 1: i2s_master File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 28
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/i2s/i2s_frame_generator.vhd
-    Info (12022): Found design unit 1: i2s_frame_generator-str File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 43
-    Info (12023): Found entity 1: i2s_frame_generator File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 27
-Info (12021): Found 1 design units, including 0 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/reg_table_pkg.vhd
-    Info (12022): Found design unit 1: reg_table_pkg File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/reg_table_pkg.vhd Line: 26
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/i2c_slave_bfm.vhd
-    Info (12022): Found design unit 1: i2c_slave_bfm-bfm File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2c_slave_bfm.vhd Line: 32
-    Info (12023): Found entity 1: i2c_slave_bfm File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2c_slave_bfm.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/codec_controller.vhd
-    Info (12022): Found design unit 1: codec_controller-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/codec_controller.vhd Line: 43
-    Info (12023): Found entity 1: codec_controller File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/codec_controller.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/i2c_master.vhd
-    Info (12022): Found design unit 1: i2c_master-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2c_master.vhd Line: 40
-    Info (12023): Found entity 1: i2c_master File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2c_master.vhd Line: 22
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/modulo_divider.vhd
-    Info (12022): Found design unit 1: modulo_divider-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 29
-    Info (12023): Found entity 1: modulo_divider File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 19
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/clock_sync.vhd
-    Info (12022): Found design unit 1: clock_sync-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/clock_sync.vhd Line: 23
-    Info (12023): Found entity 1: clock_sync File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/clock_sync.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/infrastructure.vhd
-    Info (12022): Found design unit 1: infrastructure-str File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 44
-    Info (12023): Found entity 1: infrastructure File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 28
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/flanken_detekt_vhdl.vhd
-    Info (12022): Found design unit 1: flanken_detekt_vhdl-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/flanken_detekt_vhdl.vhd Line: 26
-    Info (12023): Found entity 1: flanken_detekt_vhdl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/flanken_detekt_vhdl.vhd Line: 15
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/baud_tick.vhd
-    Info (12022): Found design unit 1: baud_tick-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/baud_tick.vhd Line: 36
-    Info (12023): Found entity 1: baud_tick File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/baud_tick.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/vhdl_hex2sevseg.vhd
-    Info (12022): Found design unit 1: vhdl_hex2sevseg-comb File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/vhdl_hex2sevseg.vhd Line: 36
-    Info (12023): Found entity 1: vhdl_hex2sevseg File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/vhdl_hex2sevseg.vhd Line: 23
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/uart_controller_fsm.vhd
-    Info (12022): Found design unit 1: uart_controller_fsm-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_controller_fsm.vhd Line: 34
-    Info (12023): Found entity 1: uart_controller_fsm File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_controller_fsm.vhd Line: 18
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/signal_checker.vhd
-    Info (12022): Found design unit 1: signal_checker-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/signal_checker.vhd Line: 29
-    Info (12023): Found entity 1: signal_checker File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/signal_checker.vhd Line: 19
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/shiftreg_uart.vhd
-    Info (12022): Found design unit 1: shiftreg_uart-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/shiftreg_uart.vhd Line: 39
-    Info (12023): Found entity 1: shiftreg_uart File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/shiftreg_uart.vhd Line: 22
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/output_register.vhd
-    Info (12022): Found design unit 1: output_register-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/output_register.vhd Line: 41
-    Info (12023): Found entity 1: output_register File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/output_register.vhd Line: 26
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/bit_counter.vhd
-    Info (12022): Found design unit 1: bit_counter-rtl File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/bit_counter.vhd Line: 37
-    Info (12023): Found entity 1: bit_counter File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/bit_counter.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/uart_top.vhd
-    Info (12022): Found design unit 1: uart_top-bdf_type File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd Line: 38
-    Info (12023): Found entity 1: uart_top File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synologydrive/05_zhaw/fs23/pm2/github/synthi_t1/synthi_project/source/synthi_top.vhd
-    Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 72
-    Info (12023): Found entity 1: synthi_top File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/uni_shiftreg.vhd
+    Info (12022): Found design unit 1: uni_shiftreg-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 41
+    Info (12023): Found entity 1: uni_shiftreg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/path_ctrl.vhd
+    Info (12022): Found design unit 1: path_ctrl-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 43
+    Info (12023): Found entity 1: path_ctrl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/mux_2_1.vhd
+    Info (12022): Found design unit 1: mux_2_1-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 38
+    Info (12023): Found entity 1: mux_2_1 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/i2s_master.vhd
+    Info (12022): Found design unit 1: i2s_master-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 48
+    Info (12023): Found entity 1: i2s_master File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/i2s_frame_generator.vhd
+    Info (12022): Found design unit 1: i2s_frame_generator-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 43
+    Info (12023): Found entity 1: i2s_frame_generator File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 27
+Info (12021): Found 1 design units, including 0 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/reg_table_pkg.vhd
+    Info (12022): Found design unit 1: reg_table_pkg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/reg_table_pkg.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c_slave_bfm.vhd
+    Info (12022): Found design unit 1: i2c_slave_bfm-bfm File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c_slave_bfm.vhd Line: 32
+    Info (12023): Found entity 1: i2c_slave_bfm File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c_slave_bfm.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/codec_controller.vhd
+    Info (12022): Found design unit 1: codec_controller-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/codec_controller.vhd Line: 43
+    Info (12023): Found entity 1: codec_controller File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/codec_controller.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c_master.vhd
+    Info (12022): Found design unit 1: i2c_master-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c_master.vhd Line: 40
+    Info (12023): Found entity 1: i2c_master File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c_master.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/modulo_divider.vhd
+    Info (12022): Found design unit 1: modulo_divider-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 29
+    Info (12023): Found entity 1: modulo_divider File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/clock_sync.vhd
+    Info (12022): Found design unit 1: clock_sync-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/clock_sync.vhd Line: 23
+    Info (12023): Found entity 1: clock_sync File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/clock_sync.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/infrastructure.vhd
+    Info (12022): Found design unit 1: infrastructure-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 44
+    Info (12023): Found entity 1: infrastructure File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/flanken_detekt_vhdl.vhd
+    Info (12022): Found design unit 1: flanken_detekt_vhdl-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/flanken_detekt_vhdl.vhd Line: 26
+    Info (12023): Found entity 1: flanken_detekt_vhdl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/flanken_detekt_vhdl.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/baud_tick.vhd
+    Info (12022): Found design unit 1: baud_tick-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/baud_tick.vhd Line: 36
+    Info (12023): Found entity 1: baud_tick File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/baud_tick.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/vhdl_hex2sevseg.vhd
+    Info (12022): Found design unit 1: vhdl_hex2sevseg-comb File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/vhdl_hex2sevseg.vhd Line: 36
+    Info (12023): Found entity 1: vhdl_hex2sevseg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/vhdl_hex2sevseg.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/uart_controller_fsm.vhd
+    Info (12022): Found design unit 1: uart_controller_fsm-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_controller_fsm.vhd Line: 34
+    Info (12023): Found entity 1: uart_controller_fsm File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_controller_fsm.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/signal_checker.vhd
+    Info (12022): Found design unit 1: signal_checker-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/signal_checker.vhd Line: 29
+    Info (12023): Found entity 1: signal_checker File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/signal_checker.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/shiftreg_uart.vhd
+    Info (12022): Found design unit 1: shiftreg_uart-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/shiftreg_uart.vhd Line: 39
+    Info (12023): Found entity 1: shiftreg_uart File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/shiftreg_uart.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/output_register.vhd
+    Info (12022): Found design unit 1: output_register-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/output_register.vhd Line: 41
+    Info (12023): Found entity 1: output_register File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/output_register.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/bit_counter.vhd
+    Info (12022): Found design unit 1: bit_counter-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/bit_counter.vhd Line: 37
+    Info (12023): Found entity 1: bit_counter File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/bit_counter.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/uart_top.vhd
+    Info (12022): Found design unit 1: uart_top-bdf_type File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd Line: 38
+    Info (12023): Found entity 1: uart_top File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/synthi_top.vhd
+    Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 72
+    Info (12023): Found entity 1: synthi_top File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 28
 Info (12127): Elaborating entity "synthi_top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(56): used implicit default value for signal "LEDR_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 56
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(57): used implicit default value for signal "LEDR_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 57
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(58): used implicit default value for signal "LEDR_3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 58
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(59): used implicit default value for signal "LEDR_4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 59
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(60): used implicit default value for signal "LEDR_5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 60
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(61): used implicit default value for signal "LEDR_6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 61
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(62): used implicit default value for signal "LEDR_7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 62
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(63): used implicit default value for signal "LEDR_8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 63
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(64): used implicit default value for signal "LEDR_9" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 64
-Warning (10036): Verilog HDL or VHDL warning at synthi_top.vhd(174): object "step_i" assigned a value but never read File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 174
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(175): used implicit default value for signal "dds_l_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 175
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(176): used implicit default value for signal "dds_r_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 176
-Info (12128): Elaborating entity "infrastructure" for hierarchy "infrastructure:infrastructure_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 185
-Info (12128): Elaborating entity "clock_sync" for hierarchy "infrastructure:infrastructure_1|clock_sync:clock_sync_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 84
-Info (12128): Elaborating entity "signal_checker" for hierarchy "infrastructure:infrastructure_1|signal_checker:signal_checker_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 91
-Info (12128): Elaborating entity "modulo_divider" for hierarchy "infrastructure:infrastructure_1|modulo_divider:modulo_divider_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 99
-Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(32): used explicit default value for signal "width6" because signal was never assigned a value File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 32
-Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(33): used explicit default value for signal "width12" because signal was never assigned a value File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 33
-Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 197
-Info (12128): Elaborating entity "baud_tick" for hierarchy "uart_top:uart_top_1|baud_tick:b2v_inst" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd Line: 148
-Info (12128): Elaborating entity "shiftreg_uart" for hierarchy "uart_top:uart_top_1|shiftreg_uart:b2v_inst1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd Line: 157
-Info (12128): Elaborating entity "vhdl_hex2sevseg" for hierarchy "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd Line: 171
-Warning (10631): VHDL Process Statement warning at vhdl_hex2sevseg.vhd(51): inferring latch(es) for signal or variable "seg_o", which holds its previous value in one or more paths through the process File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/vhdl_hex2sevseg.vhd Line: 51
-Info (12128): Elaborating entity "flanken_detekt_vhdl" for hierarchy "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd Line: 186
-Info (12128): Elaborating entity "bit_counter" for hierarchy "uart_top:uart_top_1|bit_counter:b2v_inst6" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd Line: 193
-Info (12128): Elaborating entity "uart_controller_fsm" for hierarchy "uart_top:uart_top_1|uart_controller_fsm:b2v_inst7" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd Line: 203
-Info (12128): Elaborating entity "output_register" for hierarchy "uart_top:uart_top_1|output_register:b2v_inst8" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/uart_top.vhd Line: 215
-Info (12128): Elaborating entity "codec_controller" for hierarchy "codec_controller:codec_controller_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 206
-Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c_master_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 217
-Info (12128): Elaborating entity "i2s_master" for hierarchy "i2s_master:inst_i2s_master" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 229
-Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(101): object "dummy3" assigned a value but never read File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 101
-Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(102): object "dummy4" assigned a value but never read File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 102
-Info (12128): Elaborating entity "i2s_frame_generator" for hierarchy "i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 113
-Info (12128): Elaborating entity "uni_shiftreg" for hierarchy "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 125
-Info (12128): Elaborating entity "mux_2_1" for hierarchy "i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 181
-Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_ctrl" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 244
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(56): used implicit default value for signal "LEDR_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 56
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(57): used implicit default value for signal "LEDR_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 57
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(59): used implicit default value for signal "LEDR_4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 59
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(60): used implicit default value for signal "LEDR_5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 60
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(61): used implicit default value for signal "LEDR_6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 61
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(62): used implicit default value for signal "LEDR_7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 62
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(63): used implicit default value for signal "LEDR_8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 63
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(64): used implicit default value for signal "LEDR_9" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 64
+Warning (10036): Verilog HDL or VHDL warning at synthi_top.vhd(174): object "step_i" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 174
+Info (12128): Elaborating entity "infrastructure" for hierarchy "infrastructure:infrastructure_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 187
+Info (12128): Elaborating entity "clock_sync" for hierarchy "infrastructure:infrastructure_1|clock_sync:clock_sync_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 84
+Info (12128): Elaborating entity "signal_checker" for hierarchy "infrastructure:infrastructure_1|signal_checker:signal_checker_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 91
+Info (12128): Elaborating entity "modulo_divider" for hierarchy "infrastructure:infrastructure_1|modulo_divider:modulo_divider_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/infrastructure.vhd Line: 99
+Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(32): used explicit default value for signal "width6" because signal was never assigned a value File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 32
+Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(33): used explicit default value for signal "width12" because signal was never assigned a value File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 33
+Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 199
+Info (12128): Elaborating entity "baud_tick" for hierarchy "uart_top:uart_top_1|baud_tick:b2v_inst" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd Line: 148
+Info (12128): Elaborating entity "shiftreg_uart" for hierarchy "uart_top:uart_top_1|shiftreg_uart:b2v_inst1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd Line: 157
+Info (12128): Elaborating entity "vhdl_hex2sevseg" for hierarchy "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd Line: 171
+Warning (10631): VHDL Process Statement warning at vhdl_hex2sevseg.vhd(51): inferring latch(es) for signal or variable "seg_o", which holds its previous value in one or more paths through the process File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/vhdl_hex2sevseg.vhd Line: 51
+Info (12128): Elaborating entity "flanken_detekt_vhdl" for hierarchy "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd Line: 186
+Info (12128): Elaborating entity "bit_counter" for hierarchy "uart_top:uart_top_1|bit_counter:b2v_inst6" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd Line: 193
+Info (12128): Elaborating entity "uart_controller_fsm" for hierarchy "uart_top:uart_top_1|uart_controller_fsm:b2v_inst7" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd Line: 203
+Info (12128): Elaborating entity "output_register" for hierarchy "uart_top:uart_top_1|output_register:b2v_inst8" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/uart_top.vhd Line: 215
+Info (12128): Elaborating entity "codec_controller" for hierarchy "codec_controller:codec_controller_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 208
+Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c_master_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 219
+Info (12128): Elaborating entity "i2s_master" for hierarchy "i2s_master:inst_i2s_master" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 231
+Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(101): object "dummy3" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 101
+Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(102): object "dummy4" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 102
+Info (12128): Elaborating entity "i2s_frame_generator" for hierarchy "i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 113
+Info (12128): Elaborating entity "uni_shiftreg" for hierarchy "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 125
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 181
+Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_ctrl" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 246
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/i2c_master.vhd Line: 300
+Info (13000): Registers with preset signals will power-up high File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c_master.vhd Line: 300
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR_1" is stuck at GND File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 56
-    Warning (13410): Pin "LEDR_2" is stuck at GND File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 57
-    Warning (13410): Pin "LEDR_3" is stuck at GND File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 58
-    Warning (13410): Pin "LEDR_4" is stuck at GND File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 59
-    Warning (13410): Pin "LEDR_5" is stuck at GND File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 60
-    Warning (13410): Pin "LEDR_6" is stuck at GND File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 61
-    Warning (13410): Pin "LEDR_7" is stuck at GND File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 62
-    Warning (13410): Pin "LEDR_8" is stuck at GND File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 63
-    Warning (13410): Pin "LEDR_9" is stuck at GND File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 64
+    Warning (13410): Pin "LEDR_1" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 56
+    Warning (13410): Pin "LEDR_2" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 57
+    Warning (13410): Pin "LEDR_4" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 59
+    Warning (13410): Pin "LEDR_5" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 60
+    Warning (13410): Pin "LEDR_6" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 61
+    Warning (13410): Pin "LEDR_7" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 62
+    Warning (13410): Pin "LEDR_8" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 63
+    Warning (13410): Pin "LEDR_9" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 64
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY_1" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 33
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
-    Warning (15610): No output dependent on input pin "USB_RXD" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 36
-    Warning (15610): No output dependent on input pin "BT_RXD" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 39
-    Warning (15610): No output dependent on input pin "BT_TXD" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 40
-    Warning (15610): No output dependent on input pin "BT_RST_N" File: C:/Users/andri/SynologyDrive/05_ZHAW/FS23/PM2/github/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 41
-Info (21057): Implemented 400 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 33
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
+    Warning (15610): No output dependent on input pin "USB_RXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 36
+    Warning (15610): No output dependent on input pin "BT_RXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 39
+    Warning (15610): No output dependent on input pin "BT_TXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 40
+    Warning (15610): No output dependent on input pin "BT_RST_N" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 41
+Info (21057): Implemented 398 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 350 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Fri Mar 31 10:31:22 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:12
+    Info (21061): Implemented 348 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Sun Apr  2 16:18:48 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:38
 
 
