@@ -1,0 +1,88 @@
+-------------------------------------------------------------------------------
+-- Title      : dds
+-- Project    : 
+-------------------------------------------------------------------------------
+-- File       : dds.vhd
+-- Author     : 
+-- Company    : 
+-- Created    : 2023-04-03
+-- Last update: 2023-04-03
+-- Platform   : 
+-- Standard   : VHDL'08
+-------------------------------------------------------------------------------
+-- Description: 
+-------------------------------------------------------------------------------
+-- Copyright (c) 2023 
+-------------------------------------------------------------------------------
+-- Revisions  :
+-- Date        Version  Author  Description
+-- 2023-04-03  1.0      andri	Created
+-------------------------------------------------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.tone_gen_pkg.all;
+
+-------------------------------------------------------------------------------
+
+entity dds is
+
+  generic (
+
+    );
+
+  port (
+    clk_6m    : in std_logic;
+    reset_n   : in std_logic;
+    phi_incr  : in std_logic_vector(N_CUM-1 downto 0);
+    step      : in std_logic;
+    tone_on   : in std_logic;
+    attenu    : in std_logic_vector(3 downto 0);
+    dds_o     : out std_logic_vector(N_AUDIO-1 downto 0)
+    );
+
+end entity dds;
+
+-------------------------------------------------------------------------------
+
+architecture rtl of dds is
+
+SIGNAL 		count, next_count: 	unsigned(N_CUM-1 downto 0);
+
+
+begin  -- architecture str
+
+  counter_register : PROCESS(all)
+  BEGIN
+    IF (step = '1') THEN
+      next_count <= phi_incr;
+    
+      ELSE next_count <= count;
+    END IF;
+    
+  END PROCESS counter_register;
+
+
+
+  flip_flops : PROCESS(all)
+  BEGIN
+    IF reset_n = '0' THEN
+    count;
+    ELSIF rising_edge(clk) THEN
+    count <= next_count;
+    END IF;
+  END PROCESS flip_flops;
+
+  counter_register : process(all)
+    begin
+
+
+    end process;
+  -----------------------------------------------------------------------------
+  -- Component instantiations
+  -----------------------------------------------------------------------------
+
+end architecture rtl;
+
+-------------------------------------------------------------------------------
