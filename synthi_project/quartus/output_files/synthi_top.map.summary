@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Apr 12 10:19:00 2023
+Analysis & Synthesis Status : Successful - Wed Apr 12 10:57:38 2023
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : synthi_top
-Top-level Entity Name : tone_generator
+Top-level Entity Name : synthi_top
 Family : MAX 10
-Total logic elements : 449
-    Total combinational functions : 449
-    Dedicated logic registers : 19
-Total registers : 19
+Total logic elements : 649
+    Total combinational functions : 617
+    Dedicated logic registers : 219
+Total registers : 219
 Total pins : 50
 Total virtual pins : 0
 Total memory bits : 0

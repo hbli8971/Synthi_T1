@@ -4,187 +4,151 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "dds_l_o[0]",
+					"name" : "AUD_XCK",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[1]",
+					"name" : "AUD_DACDAT",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[2]",
+					"name" : "AUD_BCLK",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[3]",
+					"name" : "AUD_DACLRCK",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[4]",
+					"name" : "AUD_ADCLRCK",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[5]",
+					"name" : "AUD_SCLK",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[6]",
+					"name" : "HEX0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[7]",
+					"name" : "HEX0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[8]",
+					"name" : "HEX0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[9]",
+					"name" : "HEX0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[10]",
+					"name" : "HEX0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[11]",
+					"name" : "HEX0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[12]",
+					"name" : "HEX0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[13]",
+					"name" : "HEX1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[14]",
+					"name" : "HEX1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_l_o[15]",
+					"name" : "HEX1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[0]",
+					"name" : "HEX1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[1]",
+					"name" : "HEX1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[2]",
+					"name" : "HEX1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[3]",
+					"name" : "HEX1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[4]",
+					"name" : "LEDR_0",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[5]",
+					"name" : "LEDR_3",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[6]",
+					"name" : "AUD_SDAT",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[7]",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[8]",
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[9]",
+					"name" : "SW[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[10]",
+					"name" : "KEY_0",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[11]",
+					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[12]",
+					"name" : "SW[9]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[13]",
+					"name" : "USB_TXD",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[14]",
+					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
-					"name" : "dds_r_o[15]",
+					"name" : "SW[5]",
 					"strict" : false
 				},
 				{
-					"name" : "tone_on_i",
+					"name" : "SW[6]",
 					"strict" : false
 				},
 				{
-					"name" : "velocity_i[6]",
+					"name" : "AUD_ADCDAT",
 					"strict" : false
 				},
 				{
-					"name" : "velocity_i[4]",
+					"name" : "SW[2]",
 					"strict" : false
 				},
 				{
-					"name" : "velocity_i[5]",
+					"name" : "SW[1]",
 					"strict" : false
 				},
 				{
-					"name" : "clk_6m",
-					"strict" : false
-				},
-				{
-					"name" : "note_i[4]",
-					"strict" : false
-				},
-				{
-					"name" : "note_i[6]",
-					"strict" : false
-				},
-				{
-					"name" : "note_i[3]",
-					"strict" : false
-				},
-				{
-					"name" : "note_i[0]",
-					"strict" : false
-				},
-				{
-					"name" : "note_i[1]",
-					"strict" : false
-				},
-				{
-					"name" : "note_i[5]",
-					"strict" : false
-				},
-				{
-					"name" : "note_i[2]",
-					"strict" : false
-				},
-				{
-					"name" : "rst_n",
-					"strict" : false
-				},
-				{
-					"name" : "step_i",
+					"name" : "SW[0]",
 					"strict" : false
 				}
 			]
