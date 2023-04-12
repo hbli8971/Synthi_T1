@@ -51,6 +51,7 @@ BEGIN
 hex2seven : PROCESS (all) IS
 	BEGIN
 	rbo_n <= '0';
+	seg_o <= "0000000";
 	IF rbi_n = '1' OR data_in /= "0000" THEN rbo_n <= '1';
 	END IF;
 	IF blank_n = '1' THEN seg_o <= disp_8;

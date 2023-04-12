@@ -39,7 +39,7 @@ entity dds is
     phi_incr  : in std_logic_vector(N_CUM-1 downto 0);
     step      : in std_logic;
     tone_on   : in std_logic;
-    attenu_i  : in std_logic_vector(3 downto 0);
+    attenu_i  : in std_logic_vector(2 downto 0);
     dds_o     : out std_logic_vector(N_AUDIO-1 downto 0)
     );
 
@@ -49,8 +49,9 @@ end entity dds;
 
 architecture rtl of dds is
 
-SIGNAL 	 count, next_count: 	unsigned(N_CUM-1 downto 0);
+SIGNAL 	 count, next_count, count_o: 	unsigned(N_CUM-1 downto 0);
 SIGNAL    lut_val  :signed(N_AUDIO-1 downto 0);
+SIGNAL	gugus_intern : std_logic_vector(0 to 0);
 
 
 
@@ -64,10 +65,10 @@ begin  -- architecture str
     IF (step = '1') THEN
       next_count <= count + unsigned(phi_incr);
     
-      ELSE next_count <= count * unsigned(tone_on); 
+      ELSE next_count <= count;
     END IF;
     
-  lut_addr := to_integer(count(N_CUM-1 downto N_CUM - N_LUT));
+  lut_addr := to_integer(count_o(N_CUM-1 downto N_CUM - N_LUT));
   lut_val <= to_signed(LUT(lut_addr), N_AUDIO);
   END PROCESS counter_register;
 
@@ -100,6 +101,14 @@ begin  -- architecture str
     end case;
   END PROCESS attenuator;
 
+  output_logic : process(all)
+   begin
+		if tone_on = '1' then
+		  count_o <= count;
+     else
+      count_o <= (others => '0');
+    end if;
+ end process output_logic;
 
 end architecture rtl;
 
