@@ -6,7 +6,7 @@
 -- Author     : Hans-Joachim Gelke
 -- Company    : 
 -- Created    : 2018-03-08
--- Last update: 2023-03-20
+-- Last update: 2023-04-12
 -- Platform   : 
 -- Standard   : VHDL'08
 -------------------------------------------------------------------------------
@@ -23,6 +23,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 library work;
 use ieee.numeric_std.all;
+use work.tone_gen_pkg.all;
 -------------------------------------------------------------------------------
 
 entity synthi_top is
@@ -152,6 +153,19 @@ architecture struct of synthi_top is
 		);
 	end component path_ctrl;
 
+	component tone_generator is
+    generic (
+      width : positive);
+    port (
+      tone_on_i  : IN  std_logic;
+      note_l_i   : IN  std_logic_vector(6 downto 0);
+      step_i     : IN  std_logic;
+      velocity_i : IN  std_logic;
+      clk_6m     : IN  std_logic;
+      rst_n      : IN  std_logic;
+      dds_l_o    : OUT std_logic_vector(width-1 downto 0);
+      dds_r_o    : OUT std_logic_vector(width-1 downto 0));
+  end component tone_generator;
  -----------------------------------------------------------------------------
  -- Internal signal declarations
  -----------------------------------------------------------------------------
@@ -174,8 +188,15 @@ architecture struct of synthi_top is
  signal step_i			: std_logic;
  signal dds_l_o		: std_logic_vector(15 downto 0);
  signal dds_r_o		: std_logic_vector(15 downto 0);
+ signal note_signal  : std_logic_vector(6 downto 0);
+ signal velocity_signal: std_logic_vector(6 downto 0);
+ 
+ 
+ 
  
  signal debug_jan    : std_logic;
+
+  
 	
 begin
 
@@ -255,14 +276,28 @@ begin
 			dacdat_pr_o => sig_dacdat_pr
 		);
 
-
+  -- instance "tone_generator_1"
+  tone_generator_1: tone_generator
+    generic map (
+      width => width)
+    port map (
+      tone_on_i  => tone_on_i,
+      note_l_i   => note_l_i,
+      step_i     => step_i, --
+      velocity_i => velocity_i,
+      clk_6m     => clk_6m, --
+      rst_n      => reset_n,-- 
+      dds_l_o    => dds_l_o,
+      dds_r_o    => dds_r_o);
+  
 	LEDR_3 <= SW(3); -- debuging, to be removed later
 	AUD_BCLK		<= clk_6m;
 	AUD_DACLRCK	<= ws_i;
 	AUD_ADCLRCK	<= ws_i;
 	dds_l_o <= "0000000000000000";
 	dds_r_o <= "0000000000000000";
-  
+	note_signal <= sw(9 downto 8) & "00000";
+	velocity_signal <= sw(7 downto 5) & "0000";
 
 end architecture struct;
 
