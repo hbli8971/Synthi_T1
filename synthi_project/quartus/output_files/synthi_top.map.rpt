@@ -1,5 +1,5 @@
 Analysis & Synthesis report for synthi_top
-Mon Apr 10 15:59:11 2023
+Wed Apr 12 10:19:00 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -10,7 +10,15 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "dds:dds_1"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -37,22 +45,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Apr 10 15:59:11 2023           ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 12 10:19:00 2023       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; synthi_top                                  ;
-; Top-level Entity Name              ; dds                                         ;
+; Top-level Entity Name              ; tone_generator                              ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 449                                         ;
+;     Total combinational functions  ; 449                                         ;
+;     Dedicated logic registers      ; 19                                          ;
+; Total registers                    ; 19                                          ;
+; Total pins                         ; 50                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -62,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; dds                ; synthi_top         ;
+; Top-level entity name                                            ; tone_generator     ; synthi_top         ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
@@ -153,11 +161,132 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                          ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; ../source/dds/tone_generator.vhd ; yes             ; User VHDL File  ; C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_generator.vhd ;         ;
+; ../source/dds/tone_gen_pkg.vhd   ; yes             ; User VHDL File  ; C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_gen_pkg.vhd   ;         ;
+; ../source/dds/dds.vhd            ; yes             ; User VHDL File  ; C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/dds.vhd            ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 449                 ;
+;                                             ;                     ;
+; Total combinational functions               ; 449                 ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 364                 ;
+;     -- 3 input functions                    ; 68                  ;
+;     -- <=2 input functions                  ; 17                  ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 431                 ;
+;     -- arithmetic mode                      ; 18                  ;
+;                                             ;                     ;
+; Total registers                             ; 19                  ;
+;     -- Dedicated logic registers            ; 19                  ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 50                  ;
+;                                             ;                     ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; dds:dds_1|count[13] ;
+; Maximum fan-out                             ; 117                 ;
+; Total fan-out                               ; 1851                ;
+; Average fan-out                             ; 3.26                ;
++---------------------------------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name       ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+----------------+--------------+
+; |tone_generator            ; 449 (139)           ; 19 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 50   ; 0            ; 0          ; |tone_generator           ; tone_generator ; work         ;
+;    |dds:dds_1|             ; 310 (310)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |tone_generator|dds:dds_1 ; dds            ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 19    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 19    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tone_generator|dds:dds_1|Mux22 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tone_generator|dds:dds_1|Mux24 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "dds:dds_1"              ;
++------------------+-------+----------+--------------+
+; Port             ; Type  ; Severity ; Details      ;
++------------------+-------+----------+--------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND ;
++------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 50                          ;
+; cycloneiii_ff         ; 19                          ;
+;     ENA CLR           ; 19                          ;
+; cycloneiii_lcell_comb ; 449                         ;
+;     arith             ; 18                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 17                          ;
+;     normal            ; 431                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 51                          ;
+;         4 data inputs ; 364                         ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 6.88                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -166,11 +295,11 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Mon Apr 10 15:59:00 2023
+    Info: Processing started: Wed Apr 12 10:18:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synology/synologydrive/05_zhaw/fs23/pm2/github_/synthi_t1/synthi_project/source/dds/tone_generator.vhd
-    Info (12022): Found design unit 1: tone_generator-str File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 51
+    Info (12022): Found design unit 1: tone_generator-str File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 50
     Info (12023): Found entity 1: tone_generator File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 31
 Info (12021): Found 1 design units, including 0 entities, in source file /users/andri/synology/synologydrive/05_zhaw/fs23/pm2/github_/synthi_t1/synthi_project/source/dds/tone_gen_pkg.vhd
     Info (12022): Found design unit 1: tone_gen_pkg File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_gen_pkg.vhd Line: 25
@@ -242,11 +371,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/andri/synology/synologydrive/05_zhaw/fs23/pm2/github_/synthi_t1/synthi_project/source/synthi_top.vhd
     Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 72
     Info (12023): Found entity 1: synthi_top File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 28
-Error (10305): VHDL Type Conversion error at dds.vhd(67): cannot convert type "std_logic" to type "UNSIGNED" File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 67
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 0 warnings
-    Error: Peak virtual memory: 4795 megabytes
-    Error: Processing ended: Mon Apr 10 15:59:12 2023
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:16
+Info (12127): Elaborating entity "tone_generator" for the top level hierarchy
+Info (12128): Elaborating entity "dds" for hierarchy "dds:dds_1" File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 79
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "velocity_i[0]" File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 38
+    Warning (15610): No output dependent on input pin "velocity_i[1]" File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 38
+    Warning (15610): No output dependent on input pin "velocity_i[2]" File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 38
+    Warning (15610): No output dependent on input pin "velocity_i[3]" File: C:/Users/andri/Synology/SynologyDrive/05_ZHAW/FS23/PM2/github_/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 38
+Info (21057): Implemented 499 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 449 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Wed Apr 12 10:19:00 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:17
 
 
