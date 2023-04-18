@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+-- Title      : MIDI Processing
+-- Project    : Synthi top
+-------------------------------------------------------------------------------
+-- File       : MIDI.vhd
+-- Author     :   <gerbedor>
+-- Company    : 
+-- Created    : 2023-04-05
+-- Last update: 2023-04-05
+-- Platform   : 
+-- Standard   : VHDL'93/02
+-------------------------------------------------------------------------------
+-- Description: <cursor>
+-------------------------------------------------------------------------------
+-- Copyright (c) 2023 
+-------------------------------------------------------------------------------
+-- Revisions  :
+-- Date        Version  Author   Description
+-- 2023-04-05  1.0      gerbedor Created
+-------------------------------------------------------------------------------
+
+entity MIDI is
+  
+  port (
+    clk_6m      : in  std_logic;
+    reset_n     : in  std_logic;
+    rx_data     : in  std_logic_vector;
+    rx_data_rdy : in  std_logic;
+    note        : out std_logic_vector(6 downto 0);
+    velocity    : out std_logic_vector(6 downto 0);
+    note_valid  : out std_logic);
+
+end entity MIDI;
+architecture rtl of MIDI is
+
+begin  -- architecture rtl
+
+  flip_flop: process is
+  begin  -- process flip_flop
+    
+  end process flip_flop;
+
+  -- purpose: Proces for MIDI Automat (FSM)
+  -- type   : sequential
+  -- inputs : <clock>, <reset>
+  -- outputs: 
+  MIDI_Automat: process (<clock name>, <reset name>) is
+  begin  -- process MIDI_Automat
+    if <reset> = '0' then               -- asynchronous reset (active low)
+
+    elsif <clock>'event and <clock> = '1' then  -- rising clock edge
+      
+    end if;
+  end process MIDI_Automat;
+end architecture rtl;
+
+
+

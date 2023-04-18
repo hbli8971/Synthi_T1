@@ -183,7 +183,7 @@ architecture struct of synthi_top is
  signal sig_adcdat_pr: std_logic_vector(15 downto 0);
  signal sig_dacdat_pl: std_logic_vector(15 downto 0);
  signal sig_dacdat_pr: std_logic_vector(15 downto 0);
- signal step_i			: std_logic;
+ signal sig_step		: std_logic;
  signal dds_l_o		: std_logic_vector(15 downto 0);
  signal dds_r_o		: std_logic_vector(15 downto 0);
  signal note_signal  : std_logic_vector(6 downto 0);
@@ -256,7 +256,7 @@ begin
 			reset 		=> reset_n,
 			adcdat_s_i	=> AUD_ADCDAT,
 			dacdat_s_o	=> AUD_DACDAT,
-			step_o		=> step_i,
+			step_o		=> sig_step,
 			ws_o			=> ws_i,
 			adcdat_pl_o	=> sig_adcdat_pl,
 			adcdat_pr_o	=> sig_adcdat_pr
@@ -280,20 +280,24 @@ begin
 		(
 			tone_on_i  => SW(4),--
 			note_i     => note_signal,--
-			step_i     => step_i, --
+			step_i     => sig_step, --
 			velocity_i => velocity_signal,
 			clk_6m     => clk_6m, --
 			rst_n      => reset_n,-- 
 			dds_l_o    => dds_l_o,--
 			dds_r_o    => dds_r_o
-			);--
+		);
   
-	LEDR_3 <= SW(3); -- debuging, to be removed later
+	
 	AUD_BCLK		<= clk_6m;
 	AUD_DACLRCK	<= ws_i;
 	AUD_ADCLRCK	<= ws_i;
+	
+	-- Temporäre Verbindungen
+	LEDR_3 <= SW(3); -- debuging, to be removed later
 	note_signal <= sw(9 downto 8) & "00000";
 	velocity_signal <= sw(7 downto 5) & "0000";
+	
 
 end architecture struct;
 

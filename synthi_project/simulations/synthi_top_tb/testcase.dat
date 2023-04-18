@@ -19,8 +19,9 @@
 #-- 2021-02-13  1.0      Hans-Joachim    Created
 #-------------------------------------------------------------------------------
 reset_target 20
-set_switches 00 00 00 08
-send_i2s 12 34 12 34
-check_i2s 12 34 12 34
+set_switches 00 00 03 10
+run_simulation_for 00 FF FF FF
+#send_i2s 12 34 12 34
+#check_i2s 12 34 12 34
 
 

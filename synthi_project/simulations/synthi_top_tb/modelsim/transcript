@@ -1,1 +1,2633 @@
-cd C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/simulations/synthi_top_tb/modelsim
+do ../compile.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:11 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/simulation_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Compiling package simulation_pkg
+# -- Compiling package body simulation_pkg
+# -- Loading package simulation_pkg
+# End time: 17:22:11 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:11 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/standard_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package standard_driver_pkg
+# -- Compiling package body standard_driver_pkg
+# -- Loading package standard_driver_pkg
+# End time: 17:22:11 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:11 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/user_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package user_driver_pkg
+# -- Compiling package body user_driver_pkg
+# -- Loading package user_driver_pkg
+# End time: 17:22:12 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:12 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/modulo_divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity modulo_divider
+# -- Compiling architecture rtl of modulo_divider
+# ** Warning: ../../../source/modulo_divider.vhd(34): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width6".
+# ** Warning: ../../../source/modulo_divider.vhd(35): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width12".
+# End time: 17:22:12 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:12 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/clock_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_sync
+# -- Compiling architecture rtl of clock_sync
+# End time: 17:22:12 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:12 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/infrastructure.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity infrastructure
+# -- Compiling architecture str of infrastructure
+# End time: 17:22:12 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:13 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/flanken_detekt_vhdl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flanken_detekt_vhdl
+# -- Compiling architecture rtl of flanken_detekt_vhdl
+# End time: 17:22:13 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:13 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/baud_tick.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity baud_tick
+# -- Compiling architecture rtl of baud_tick
+# End time: 17:22:13 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:13 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/vhdl_hex2sevseg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vhdl_hex2sevseg
+# -- Compiling architecture comb of vhdl_hex2sevseg
+# End time: 17:22:13 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:13 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_controller_fsm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uart_controller_fsm
+# -- Compiling architecture rtl of uart_controller_fsm
+# End time: 17:22:14 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:14 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/signal_checker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signal_checker
+# -- Compiling architecture rtl of signal_checker
+# End time: 17:22:14 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:14 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/shiftreg_uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shiftreg_uart
+# -- Compiling architecture rtl of shiftreg_uart
+# End time: 17:22:14 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:14 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/output_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity output_register
+# -- Compiling architecture rtl of output_register
+# End time: 17:22:15 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:15 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/bit_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bit_counter
+# -- Compiling architecture rtl of bit_counter
+# End time: 17:22:15 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:15 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity uart_top
+# -- Compiling architecture bdf_type of uart_top
+# End time: 17:22:15 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:15 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/reg_table_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package reg_table_pkg
+# End time: 17:22:15 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:15 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 17:22:16 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:16 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/codec_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package reg_table_pkg
+# -- Compiling entity codec_controller
+# -- Compiling architecture rtl of codec_controller
+# End time: 17:22:16 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:16 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_master
+# -- Compiling architecture rtl of i2c_master
+# End time: 17:22:16 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:16 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 17:22:17 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:17 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_frame_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_frame_generator
+# -- Compiling architecture str of i2s_frame_generator
+# End time: 17:22:17 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:17 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_master
+# -- Compiling architecture str of i2s_master
+# End time: 17:22:17 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:17 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/mux_2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1
+# -- Compiling architecture str of mux_2_1
+# End time: 17:22:18 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/path_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity path_ctrl
+# -- Compiling architecture str of path_ctrl
+# End time: 17:22:18 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/uni_shiftreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uni_shiftreg
+# -- Compiling architecture str of uni_shiftreg
+# End time: 17:22:18 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_gen_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package tone_gen_pkg
+# End time: 17:22:18 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/dds.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity dds
+# -- Compiling architecture rtl of dds
+# End time: 17:22:19 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:19 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity tone_generator
+# -- Compiling architecture str of tone_generator
+# End time: 17:22:19 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:19 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity synthi_top
+# -- Compiling architecture struct of synthi_top
+# End time: 17:22:19 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:22:19 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Loading package standard_driver_pkg
+# -- Loading package user_driver_pkg
+# -- Compiling entity synthi_top_tb
+# -- Compiling architecture struct of synthi_top_tb
+# End time: 17:22:20 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -t 1ns -lib work work.synthi_top_tb 
+# Start time: 17:22:20 on Apr 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.simulation_pkg(body)
+# Loading work.standard_driver_pkg(body)
+# Loading work.user_driver_pkg(body)
+# Loading work.synthi_top_tb(struct)
+# Loading work.tone_gen_pkg
+# Loading work.synthi_top(struct)
+# Loading work.infrastructure(str)
+# Loading work.clock_sync(rtl)
+# Loading work.signal_checker(rtl)
+# Loading work.modulo_divider(rtl)
+# Loading work.uart_top(bdf_type)
+# Loading work.baud_tick(rtl)
+# Loading work.shiftreg_uart(rtl)
+# Loading work.vhdl_hex2sevseg(comb)
+# Loading work.flanken_detekt_vhdl(rtl)
+# Loading work.bit_counter(rtl)
+# Loading work.uart_controller_fsm(rtl)
+# Loading work.output_register(rtl)
+# Loading work.reg_table_pkg
+# Loading work.codec_controller(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.i2s_master(str)
+# Loading work.i2s_frame_generator(str)
+# Loading work.uni_shiftreg(str)
+# Loading work.mux_2_1(str)
+# Loading work.path_ctrl(str)
+# Loading work.tone_generator(str)
+# Loading work.dds(rtl)
+# Loading work.i2c_slave_bfm(bfm)
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_2 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_4 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_5 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_6 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_7 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_8 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_9 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mine8  Hostname: LAPTOP-G548OMQT  ProcessID: 15820
+#           Attempting to use alternate WLF file "./wlft7gmj6y".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7gmj6y
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/codec_controller_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# LOGIC HAS BEEN RESET FOR 640 ns
+# HEX VALUE 00000310 APPLIED to DUT
+add wave -position insertpoint  \
+sim:/synthi_top_tb/DUT/note_signal
+rerun
+# invalid command name "rerun"
+reload
+# invalid command name "reload"
+do ../compile.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:16 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/simulation_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Compiling package simulation_pkg
+# -- Compiling package body simulation_pkg
+# -- Loading package simulation_pkg
+# End time: 18:29:17 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:17 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/standard_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package standard_driver_pkg
+# -- Compiling package body standard_driver_pkg
+# -- Loading package standard_driver_pkg
+# End time: 18:29:17 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:17 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/user_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package user_driver_pkg
+# -- Compiling package body user_driver_pkg
+# -- Loading package user_driver_pkg
+# End time: 18:29:17 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:17 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/modulo_divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity modulo_divider
+# -- Compiling architecture rtl of modulo_divider
+# ** Warning: ../../../source/modulo_divider.vhd(34): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width6".
+# ** Warning: ../../../source/modulo_divider.vhd(35): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width12".
+# End time: 18:29:18 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/clock_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_sync
+# -- Compiling architecture rtl of clock_sync
+# End time: 18:29:18 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/infrastructure.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity infrastructure
+# -- Compiling architecture str of infrastructure
+# End time: 18:29:18 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/flanken_detekt_vhdl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flanken_detekt_vhdl
+# -- Compiling architecture rtl of flanken_detekt_vhdl
+# End time: 18:29:18 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/baud_tick.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity baud_tick
+# -- Compiling architecture rtl of baud_tick
+# End time: 18:29:19 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:19 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/vhdl_hex2sevseg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vhdl_hex2sevseg
+# -- Compiling architecture comb of vhdl_hex2sevseg
+# End time: 18:29:19 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:19 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_controller_fsm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uart_controller_fsm
+# -- Compiling architecture rtl of uart_controller_fsm
+# End time: 18:29:19 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:19 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/signal_checker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signal_checker
+# -- Compiling architecture rtl of signal_checker
+# End time: 18:29:20 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:20 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/shiftreg_uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shiftreg_uart
+# -- Compiling architecture rtl of shiftreg_uart
+# End time: 18:29:20 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:20 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/output_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity output_register
+# -- Compiling architecture rtl of output_register
+# End time: 18:29:20 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:20 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/bit_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bit_counter
+# -- Compiling architecture rtl of bit_counter
+# End time: 18:29:20 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:20 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity uart_top
+# -- Compiling architecture bdf_type of uart_top
+# End time: 18:29:21 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:21 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/reg_table_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package reg_table_pkg
+# End time: 18:29:21 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:21 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 18:29:21 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:21 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/codec_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package reg_table_pkg
+# -- Compiling entity codec_controller
+# -- Compiling architecture rtl of codec_controller
+# End time: 18:29:22 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:22 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_master
+# -- Compiling architecture rtl of i2c_master
+# End time: 18:29:22 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:22 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 18:29:22 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:22 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_frame_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_frame_generator
+# -- Compiling architecture str of i2s_frame_generator
+# End time: 18:29:22 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:22 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_master
+# -- Compiling architecture str of i2s_master
+# End time: 18:29:23 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:23 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/mux_2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1
+# -- Compiling architecture str of mux_2_1
+# End time: 18:29:23 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:23 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/path_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity path_ctrl
+# -- Compiling architecture str of path_ctrl
+# End time: 18:29:23 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:23 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/uni_shiftreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uni_shiftreg
+# -- Compiling architecture str of uni_shiftreg
+# End time: 18:29:24 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:24 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_gen_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package tone_gen_pkg
+# End time: 18:29:24 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:24 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/dds.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity dds
+# -- Compiling architecture rtl of dds
+# End time: 18:29:24 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:24 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity tone_generator
+# -- Compiling architecture str of tone_generator
+# End time: 18:29:24 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:24 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity synthi_top
+# -- Compiling architecture struct of synthi_top
+# End time: 18:29:25 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:29:25 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Loading package standard_driver_pkg
+# -- Loading package user_driver_pkg
+# -- Compiling entity synthi_top_tb
+# -- Compiling architecture struct of synthi_top_tb
+# End time: 18:29:25 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:29:26 on Apr 17,2023, Elapsed time: 1:07:06
+# Errors: 0, Warnings: 28
+# vsim -voptargs="+acc" -t 1ns -lib work work.synthi_top_tb 
+# Start time: 18:29:26 on Apr 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.simulation_pkg(body)
+# Loading work.standard_driver_pkg(body)
+# Loading work.user_driver_pkg(body)
+# Loading work.synthi_top_tb(struct)
+# Loading work.tone_gen_pkg
+# Loading work.synthi_top(struct)
+# Loading work.infrastructure(str)
+# Loading work.clock_sync(rtl)
+# Loading work.signal_checker(rtl)
+# Loading work.modulo_divider(rtl)
+# Loading work.uart_top(bdf_type)
+# Loading work.baud_tick(rtl)
+# Loading work.shiftreg_uart(rtl)
+# Loading work.vhdl_hex2sevseg(comb)
+# Loading work.flanken_detekt_vhdl(rtl)
+# Loading work.bit_counter(rtl)
+# Loading work.uart_controller_fsm(rtl)
+# Loading work.output_register(rtl)
+# Loading work.reg_table_pkg
+# Loading work.codec_controller(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.i2s_master(str)
+# Loading work.i2s_frame_generator(str)
+# Loading work.uni_shiftreg(str)
+# Loading work.mux_2_1(str)
+# Loading work.path_ctrl(str)
+# Loading work.tone_generator(str)
+# Loading work.dds(rtl)
+# Loading work.i2c_slave_bfm(bfm)
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_2 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_4 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_5 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_6 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_7 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_8 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_9 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mine8  Hostname: LAPTOP-G548OMQT  ProcessID: 15820
+#           Attempting to use alternate WLF file "./wlft1qzcgt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1qzcgt
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/codec_controller_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# LOGIC HAS BEEN RESET FOR 640 ns
+# HEX VALUE 00000310 APPLIED to DUT
+add wave -position insertpoint  \
+sim:/synthi_top_tb/DUT/inst_tone_generator/note_i
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/simulations/synthi_top_tb/modelsim/wave.do
+run
+do ../compile.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:16 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/simulation_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Compiling package simulation_pkg
+# -- Compiling package body simulation_pkg
+# -- Loading package simulation_pkg
+# End time: 19:04:17 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:17 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/standard_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package standard_driver_pkg
+# -- Compiling package body standard_driver_pkg
+# -- Loading package standard_driver_pkg
+# End time: 19:04:17 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:17 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/user_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package user_driver_pkg
+# -- Compiling package body user_driver_pkg
+# -- Loading package user_driver_pkg
+# End time: 19:04:17 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:17 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/modulo_divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity modulo_divider
+# -- Compiling architecture rtl of modulo_divider
+# ** Warning: ../../../source/modulo_divider.vhd(34): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width6".
+# ** Warning: ../../../source/modulo_divider.vhd(35): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width12".
+# End time: 19:04:18 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/clock_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_sync
+# -- Compiling architecture rtl of clock_sync
+# End time: 19:04:18 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/infrastructure.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity infrastructure
+# -- Compiling architecture str of infrastructure
+# End time: 19:04:18 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/flanken_detekt_vhdl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flanken_detekt_vhdl
+# -- Compiling architecture rtl of flanken_detekt_vhdl
+# End time: 19:04:18 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:18 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/baud_tick.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity baud_tick
+# -- Compiling architecture rtl of baud_tick
+# End time: 19:04:19 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:19 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/vhdl_hex2sevseg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vhdl_hex2sevseg
+# -- Compiling architecture comb of vhdl_hex2sevseg
+# End time: 19:04:19 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:19 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_controller_fsm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uart_controller_fsm
+# -- Compiling architecture rtl of uart_controller_fsm
+# End time: 19:04:19 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:19 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/signal_checker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signal_checker
+# -- Compiling architecture rtl of signal_checker
+# End time: 19:04:20 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:20 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/shiftreg_uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shiftreg_uart
+# -- Compiling architecture rtl of shiftreg_uart
+# End time: 19:04:20 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:20 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/output_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity output_register
+# -- Compiling architecture rtl of output_register
+# End time: 19:04:20 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:20 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/bit_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bit_counter
+# -- Compiling architecture rtl of bit_counter
+# End time: 19:04:20 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:20 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity uart_top
+# -- Compiling architecture bdf_type of uart_top
+# End time: 19:04:21 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:21 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/reg_table_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package reg_table_pkg
+# End time: 19:04:21 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:21 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 19:04:21 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:21 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/codec_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package reg_table_pkg
+# -- Compiling entity codec_controller
+# -- Compiling architecture rtl of codec_controller
+# End time: 19:04:22 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:22 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_master
+# -- Compiling architecture rtl of i2c_master
+# End time: 19:04:22 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:22 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 19:04:22 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:22 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_frame_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_frame_generator
+# -- Compiling architecture str of i2s_frame_generator
+# End time: 19:04:23 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:23 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_master
+# -- Compiling architecture str of i2s_master
+# End time: 19:04:23 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:23 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/mux_2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1
+# -- Compiling architecture str of mux_2_1
+# End time: 19:04:23 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:23 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/path_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity path_ctrl
+# -- Compiling architecture str of path_ctrl
+# End time: 19:04:23 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:23 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/uni_shiftreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uni_shiftreg
+# -- Compiling architecture str of uni_shiftreg
+# End time: 19:04:24 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:24 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_gen_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package tone_gen_pkg
+# End time: 19:04:24 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:24 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/dds.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity dds
+# -- Compiling architecture rtl of dds
+# End time: 19:04:24 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:24 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity tone_generator
+# -- Compiling architecture str of tone_generator
+# End time: 19:04:25 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:25 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity synthi_top
+# -- Compiling architecture struct of synthi_top
+# End time: 19:04:25 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:25 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Loading package standard_driver_pkg
+# -- Loading package user_driver_pkg
+# -- Compiling entity synthi_top_tb
+# -- Compiling architecture struct of synthi_top_tb
+# End time: 19:04:25 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:04:27 on Apr 17,2023, Elapsed time: 0:35:01
+# Errors: 0, Warnings: 28
+# vsim -voptargs="+acc" -t 1ns -lib work work.synthi_top_tb 
+# Start time: 19:04:27 on Apr 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.simulation_pkg(body)
+# Loading work.standard_driver_pkg(body)
+# Loading work.user_driver_pkg(body)
+# Loading work.synthi_top_tb(struct)
+# Loading work.tone_gen_pkg
+# Loading work.synthi_top(struct)
+# Loading work.infrastructure(str)
+# Loading work.clock_sync(rtl)
+# Loading work.signal_checker(rtl)
+# Loading work.modulo_divider(rtl)
+# Loading work.uart_top(bdf_type)
+# Loading work.baud_tick(rtl)
+# Loading work.shiftreg_uart(rtl)
+# Loading work.vhdl_hex2sevseg(comb)
+# Loading work.flanken_detekt_vhdl(rtl)
+# Loading work.bit_counter(rtl)
+# Loading work.uart_controller_fsm(rtl)
+# Loading work.output_register(rtl)
+# Loading work.reg_table_pkg
+# Loading work.codec_controller(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.i2s_master(str)
+# Loading work.i2s_frame_generator(str)
+# Loading work.uni_shiftreg(str)
+# Loading work.mux_2_1(str)
+# Loading work.path_ctrl(str)
+# Loading work.tone_generator(str)
+# Loading work.dds(rtl)
+# Loading work.i2c_slave_bfm(bfm)
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_2 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_4 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_5 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_6 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_7 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_8 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_9 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mine8  Hostname: LAPTOP-G548OMQT  ProcessID: 15820
+#           Attempting to use alternate WLF file "./wlft1dea1q".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1dea1q
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/codec_controller_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# LOGIC HAS BEEN RESET FOR 640 ns
+# HEX VALUE 00000110 APPLIED to DUT
+do ../compile.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:44 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/simulation_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Compiling package simulation_pkg
+# -- Compiling package body simulation_pkg
+# -- Loading package simulation_pkg
+# End time: 19:06:45 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:45 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/standard_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package standard_driver_pkg
+# -- Compiling package body standard_driver_pkg
+# -- Loading package standard_driver_pkg
+# End time: 19:06:45 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:45 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/user_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package user_driver_pkg
+# -- Compiling package body user_driver_pkg
+# -- Loading package user_driver_pkg
+# End time: 19:06:45 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:45 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/modulo_divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity modulo_divider
+# -- Compiling architecture rtl of modulo_divider
+# ** Warning: ../../../source/modulo_divider.vhd(34): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width6".
+# ** Warning: ../../../source/modulo_divider.vhd(35): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width12".
+# End time: 19:06:46 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:46 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/clock_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_sync
+# -- Compiling architecture rtl of clock_sync
+# End time: 19:06:46 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:46 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/infrastructure.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity infrastructure
+# -- Compiling architecture str of infrastructure
+# End time: 19:06:46 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:46 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/flanken_detekt_vhdl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flanken_detekt_vhdl
+# -- Compiling architecture rtl of flanken_detekt_vhdl
+# End time: 19:06:46 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:46 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/baud_tick.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity baud_tick
+# -- Compiling architecture rtl of baud_tick
+# End time: 19:06:47 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:47 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/vhdl_hex2sevseg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vhdl_hex2sevseg
+# -- Compiling architecture comb of vhdl_hex2sevseg
+# End time: 19:06:47 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:47 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_controller_fsm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uart_controller_fsm
+# -- Compiling architecture rtl of uart_controller_fsm
+# End time: 19:06:47 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:47 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/signal_checker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signal_checker
+# -- Compiling architecture rtl of signal_checker
+# End time: 19:06:48 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:48 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/shiftreg_uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shiftreg_uart
+# -- Compiling architecture rtl of shiftreg_uart
+# End time: 19:06:48 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:48 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/output_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity output_register
+# -- Compiling architecture rtl of output_register
+# End time: 19:06:48 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:48 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/bit_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bit_counter
+# -- Compiling architecture rtl of bit_counter
+# End time: 19:06:48 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:48 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity uart_top
+# -- Compiling architecture bdf_type of uart_top
+# End time: 19:06:49 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:49 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/reg_table_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package reg_table_pkg
+# End time: 19:06:49 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:49 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 19:06:49 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:49 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/codec_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package reg_table_pkg
+# -- Compiling entity codec_controller
+# -- Compiling architecture rtl of codec_controller
+# End time: 19:06:50 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:50 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_master
+# -- Compiling architecture rtl of i2c_master
+# End time: 19:06:50 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:50 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 19:06:50 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:50 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_frame_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_frame_generator
+# -- Compiling architecture str of i2s_frame_generator
+# End time: 19:06:51 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:51 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_master
+# -- Compiling architecture str of i2s_master
+# End time: 19:06:51 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:51 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/mux_2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1
+# -- Compiling architecture str of mux_2_1
+# End time: 19:06:51 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:51 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/path_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity path_ctrl
+# -- Compiling architecture str of path_ctrl
+# End time: 19:06:51 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:51 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/uni_shiftreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uni_shiftreg
+# -- Compiling architecture str of uni_shiftreg
+# End time: 19:06:52 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:52 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_gen_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package tone_gen_pkg
+# End time: 19:06:52 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:52 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/dds.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity dds
+# -- Compiling architecture rtl of dds
+# End time: 19:06:52 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:52 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity tone_generator
+# -- Compiling architecture str of tone_generator
+# End time: 19:06:53 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:53 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity synthi_top
+# -- Compiling architecture struct of synthi_top
+# End time: 19:06:53 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:53 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Loading package standard_driver_pkg
+# -- Loading package user_driver_pkg
+# -- Compiling entity synthi_top_tb
+# -- Compiling architecture struct of synthi_top_tb
+# End time: 19:06:53 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:06:54 on Apr 17,2023, Elapsed time: 0:02:27
+# Errors: 0, Warnings: 28
+# vsim -voptargs="+acc" -t 1ns -lib work work.synthi_top_tb 
+# Start time: 19:06:54 on Apr 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.simulation_pkg(body)
+# Loading work.standard_driver_pkg(body)
+# Loading work.user_driver_pkg(body)
+# Loading work.synthi_top_tb(struct)
+# Loading work.tone_gen_pkg
+# Loading work.synthi_top(struct)
+# Loading work.infrastructure(str)
+# Loading work.clock_sync(rtl)
+# Loading work.signal_checker(rtl)
+# Loading work.modulo_divider(rtl)
+# Loading work.uart_top(bdf_type)
+# Loading work.baud_tick(rtl)
+# Loading work.shiftreg_uart(rtl)
+# Loading work.vhdl_hex2sevseg(comb)
+# Loading work.flanken_detekt_vhdl(rtl)
+# Loading work.bit_counter(rtl)
+# Loading work.uart_controller_fsm(rtl)
+# Loading work.output_register(rtl)
+# Loading work.reg_table_pkg
+# Loading work.codec_controller(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.i2s_master(str)
+# Loading work.i2s_frame_generator(str)
+# Loading work.uni_shiftreg(str)
+# Loading work.mux_2_1(str)
+# Loading work.path_ctrl(str)
+# Loading work.tone_generator(str)
+# Loading work.dds(rtl)
+# Loading work.i2c_slave_bfm(bfm)
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_2 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_4 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_5 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_6 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_7 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_8 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_9 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mine8  Hostname: LAPTOP-G548OMQT  ProcessID: 15820
+#           Attempting to use alternate WLF file "./wlftdtf91t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdtf91t
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/codec_controller_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# LOGIC HAS BEEN RESET FOR 640 ns
+# HEX VALUE 00000210 APPLIED to DUT
+do ../compile.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:54 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/simulation_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Compiling package simulation_pkg
+# -- Compiling package body simulation_pkg
+# -- Loading package simulation_pkg
+# End time: 19:09:55 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:55 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/standard_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package standard_driver_pkg
+# -- Compiling package body standard_driver_pkg
+# -- Loading package standard_driver_pkg
+# End time: 19:09:55 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:55 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/user_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package user_driver_pkg
+# -- Compiling package body user_driver_pkg
+# -- Loading package user_driver_pkg
+# End time: 19:09:55 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:55 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/modulo_divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity modulo_divider
+# -- Compiling architecture rtl of modulo_divider
+# ** Warning: ../../../source/modulo_divider.vhd(34): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width6".
+# ** Warning: ../../../source/modulo_divider.vhd(35): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width12".
+# End time: 19:09:55 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:55 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/clock_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_sync
+# -- Compiling architecture rtl of clock_sync
+# End time: 19:09:56 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:56 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/infrastructure.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity infrastructure
+# -- Compiling architecture str of infrastructure
+# End time: 19:09:56 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:56 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/flanken_detekt_vhdl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flanken_detekt_vhdl
+# -- Compiling architecture rtl of flanken_detekt_vhdl
+# End time: 19:09:56 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:56 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/baud_tick.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity baud_tick
+# -- Compiling architecture rtl of baud_tick
+# End time: 19:09:57 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:57 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/vhdl_hex2sevseg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vhdl_hex2sevseg
+# -- Compiling architecture comb of vhdl_hex2sevseg
+# End time: 19:09:57 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:57 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_controller_fsm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uart_controller_fsm
+# -- Compiling architecture rtl of uart_controller_fsm
+# End time: 19:09:57 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:57 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/signal_checker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signal_checker
+# -- Compiling architecture rtl of signal_checker
+# End time: 19:09:57 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:57 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/shiftreg_uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shiftreg_uart
+# -- Compiling architecture rtl of shiftreg_uart
+# End time: 19:09:58 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:58 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/output_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity output_register
+# -- Compiling architecture rtl of output_register
+# End time: 19:09:58 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:58 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/bit_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bit_counter
+# -- Compiling architecture rtl of bit_counter
+# End time: 19:09:58 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:58 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity uart_top
+# -- Compiling architecture bdf_type of uart_top
+# End time: 19:09:59 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:59 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/reg_table_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package reg_table_pkg
+# End time: 19:09:59 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:59 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 19:09:59 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:09:59 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/codec_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package reg_table_pkg
+# -- Compiling entity codec_controller
+# -- Compiling architecture rtl of codec_controller
+# End time: 19:10:00 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:00 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_master
+# -- Compiling architecture rtl of i2c_master
+# End time: 19:10:00 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:00 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 19:10:00 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:00 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_frame_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_frame_generator
+# -- Compiling architecture str of i2s_frame_generator
+# End time: 19:10:00 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:00 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_master
+# -- Compiling architecture str of i2s_master
+# End time: 19:10:01 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:01 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/mux_2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1
+# -- Compiling architecture str of mux_2_1
+# End time: 19:10:01 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:01 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/path_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity path_ctrl
+# -- Compiling architecture str of path_ctrl
+# End time: 19:10:01 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:01 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/uni_shiftreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uni_shiftreg
+# -- Compiling architecture str of uni_shiftreg
+# End time: 19:10:02 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:02 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_gen_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package tone_gen_pkg
+# End time: 19:10:02 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:02 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/dds.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity dds
+# -- Compiling architecture rtl of dds
+# End time: 19:10:02 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:02 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity tone_generator
+# -- Compiling architecture str of tone_generator
+# End time: 19:10:03 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:03 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity synthi_top
+# -- Compiling architecture struct of synthi_top
+# End time: 19:10:03 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:10:03 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Loading package standard_driver_pkg
+# -- Loading package user_driver_pkg
+# -- Compiling entity synthi_top_tb
+# -- Compiling architecture struct of synthi_top_tb
+# End time: 19:10:03 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:10:10 on Apr 17,2023, Elapsed time: 0:03:16
+# Errors: 0, Warnings: 28
+# vsim -voptargs="+acc" -t 1ns -lib work work.synthi_top_tb 
+# Start time: 19:10:10 on Apr 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.simulation_pkg(body)
+# Loading work.standard_driver_pkg(body)
+# Loading work.user_driver_pkg(body)
+# Loading work.synthi_top_tb(struct)
+# Loading work.tone_gen_pkg
+# Loading work.synthi_top(struct)
+# Loading work.infrastructure(str)
+# Loading work.clock_sync(rtl)
+# Loading work.signal_checker(rtl)
+# Loading work.modulo_divider(rtl)
+# Loading work.uart_top(bdf_type)
+# Loading work.baud_tick(rtl)
+# Loading work.shiftreg_uart(rtl)
+# Loading work.vhdl_hex2sevseg(comb)
+# Loading work.flanken_detekt_vhdl(rtl)
+# Loading work.bit_counter(rtl)
+# Loading work.uart_controller_fsm(rtl)
+# Loading work.output_register(rtl)
+# Loading work.reg_table_pkg
+# Loading work.codec_controller(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.i2s_master(str)
+# Loading work.i2s_frame_generator(str)
+# Loading work.uni_shiftreg(str)
+# Loading work.mux_2_1(str)
+# Loading work.path_ctrl(str)
+# Loading work.tone_generator(str)
+# Loading work.dds(rtl)
+# Loading work.i2c_slave_bfm(bfm)
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_2 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_4 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_5 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_6 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_7 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_8 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_9 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mine8  Hostname: LAPTOP-G548OMQT  ProcessID: 15820
+#           Attempting to use alternate WLF file "./wlftcbnxin".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcbnxin
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/codec_controller_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# LOGIC HAS BEEN RESET FOR 640 ns
+# HEX VALUE 00000310 APPLIED to DUT
+add wave -position insertpoint  \
+sim:/synthi_top_tb/DUT/inst_tone_generator/step_i
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/simulations/synthi_top_tb/modelsim/wave.do
+run
+add wave -position insertpoint sim:/synthi_top_tb/DUT/inst_tone_generator/dds_1/count
+add wave -position insertpoint sim:/synthi_top_tb/DUT/inst_tone_generator/dds_1/next_count
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/simulations/synthi_top_tb/modelsim/wave.do
+run
+run
+run -all
+# SIMULATED FOR 00FFFFFF CLOCKS
+#  CONGRATULATIONS ALL TESTS PASS 
+# Break in Subprogram end_simulation at ../../support/simulation_pkg.vhd line 86
+do ../compile.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:50 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/simulation_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Compiling package simulation_pkg
+# -- Compiling package body simulation_pkg
+# -- Loading package simulation_pkg
+# End time: 19:25:50 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:50 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/standard_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package standard_driver_pkg
+# -- Compiling package body standard_driver_pkg
+# -- Loading package standard_driver_pkg
+# End time: 19:25:50 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:50 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../support/user_driver_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Compiling package user_driver_pkg
+# -- Compiling package body user_driver_pkg
+# -- Loading package user_driver_pkg
+# End time: 19:25:51 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:51 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/modulo_divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity modulo_divider
+# -- Compiling architecture rtl of modulo_divider
+# ** Warning: ../../../source/modulo_divider.vhd(34): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width6".
+# ** Warning: ../../../source/modulo_divider.vhd(35): (vcom-1013) Subtype of "ieee.NUMERIC_STD.UNSIGNED" depends on value of signal "width12".
+# End time: 19:25:51 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:51 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/clock_sync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_sync
+# -- Compiling architecture rtl of clock_sync
+# End time: 19:25:51 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:51 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/infrastructure.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity infrastructure
+# -- Compiling architecture str of infrastructure
+# End time: 19:25:52 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:52 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/flanken_detekt_vhdl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flanken_detekt_vhdl
+# -- Compiling architecture rtl of flanken_detekt_vhdl
+# End time: 19:25:52 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:52 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/baud_tick.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity baud_tick
+# -- Compiling architecture rtl of baud_tick
+# End time: 19:25:52 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:52 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/vhdl_hex2sevseg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity vhdl_hex2sevseg
+# -- Compiling architecture comb of vhdl_hex2sevseg
+# End time: 19:25:52 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:52 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_controller_fsm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uart_controller_fsm
+# -- Compiling architecture rtl of uart_controller_fsm
+# End time: 19:25:53 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:53 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/signal_checker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signal_checker
+# -- Compiling architecture rtl of signal_checker
+# End time: 19:25:53 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:53 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/shiftreg_uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shiftreg_uart
+# -- Compiling architecture rtl of shiftreg_uart
+# End time: 19:25:53 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:53 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/output_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity output_register
+# -- Compiling architecture rtl of output_register
+# End time: 19:25:54 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:54 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/bit_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bit_counter
+# -- Compiling architecture rtl of bit_counter
+# End time: 19:25:54 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:54 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/uart_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity uart_top
+# -- Compiling architecture bdf_type of uart_top
+# End time: 19:25:54 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:54 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/reg_table_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package reg_table_pkg
+# End time: 19:25:55 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:55 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 19:25:55 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:55 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/codec_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package reg_table_pkg
+# -- Compiling entity codec_controller
+# -- Compiling architecture rtl of codec_controller
+# End time: 19:25:55 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:55 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_master
+# -- Compiling architecture rtl of i2c_master
+# End time: 19:25:55 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:55 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2c_slave_bfm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2c_slave_bfm
+# -- Compiling architecture bfm of i2c_slave_bfm
+# End time: 19:25:56 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:56 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_frame_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_frame_generator
+# -- Compiling architecture str of i2s_frame_generator
+# End time: 19:25:56 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:56 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/i2s_master.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity i2s_master
+# -- Compiling architecture str of i2s_master
+# End time: 19:25:56 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:56 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/mux_2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1
+# -- Compiling architecture str of mux_2_1
+# End time: 19:25:57 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:57 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/path_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity path_ctrl
+# -- Compiling architecture str of path_ctrl
+# End time: 19:25:57 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:57 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/i2s/uni_shiftreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uni_shiftreg
+# -- Compiling architecture str of uni_shiftreg
+# End time: 19:25:57 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:57 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_gen_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package tone_gen_pkg
+# End time: 19:25:58 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:58 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/dds.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity dds
+# -- Compiling architecture rtl of dds
+# End time: 19:25:58 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:58 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/dds/tone_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity tone_generator
+# -- Compiling architecture str of tone_generator
+# End time: 19:25:58 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:58 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package tone_gen_pkg
+# -- Compiling entity synthi_top
+# -- Compiling architecture struct of synthi_top
+# End time: 19:25:59 on Apr 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:25:59 on Apr 17,2023
+# vcom -reportprogress 300 -2008 -explicit -work work ../../../source/synthi_top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ENV
+# -- Loading package simulation_pkg
+# -- Loading package standard_driver_pkg
+# -- Loading package user_driver_pkg
+# -- Compiling entity synthi_top_tb
+# -- Compiling architecture struct of synthi_top_tb
+# End time: 19:25:59 on Apr 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:26:01 on Apr 17,2023, Elapsed time: 0:15:51
+# Errors: 0, Warnings: 28
+# vsim -voptargs="+acc" -t 1ns -lib work work.synthi_top_tb 
+# Start time: 19:26:01 on Apr 17,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading std.env(body)
+# Loading work.simulation_pkg(body)
+# Loading work.standard_driver_pkg(body)
+# Loading work.user_driver_pkg(body)
+# Loading work.synthi_top_tb(struct)
+# Loading work.tone_gen_pkg
+# Loading work.synthi_top(struct)
+# Loading work.infrastructure(str)
+# Loading work.clock_sync(rtl)
+# Loading work.signal_checker(rtl)
+# Loading work.modulo_divider(rtl)
+# Loading work.uart_top(bdf_type)
+# Loading work.baud_tick(rtl)
+# Loading work.shiftreg_uart(rtl)
+# Loading work.vhdl_hex2sevseg(comb)
+# Loading work.flanken_detekt_vhdl(rtl)
+# Loading work.bit_counter(rtl)
+# Loading work.uart_controller_fsm(rtl)
+# Loading work.output_register(rtl)
+# Loading work.reg_table_pkg
+# Loading work.codec_controller(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.i2s_master(str)
+# Loading work.i2s_frame_generator(str)
+# Loading work.uni_shiftreg(str)
+# Loading work.mux_2_1(str)
+# Loading work.path_ctrl(str)
+# Loading work.tone_generator(str)
+# Loading work.dds(rtl)
+# Loading work.i2c_slave_bfm(bfm)
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_1 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_2 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_4 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_5 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_6 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_7 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_8 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /synthi_top_tb/DUT/LEDR_9 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mine8  Hostname: LAPTOP-G548OMQT  ProcessID: 15820
+#           Attempting to use alternate WLF file "./wlft9zijte".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9zijte
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/inst_i2s_master/i2s_frame_generator_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/codec_controller_1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /synthi_top_tb/DUT/infrastructure_1/signal_checker_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/inst_tone_generator/dds_1
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /synthi_top_tb/DUT/uart_top_1/b2v_inst
+# LOGIC HAS BEEN RESET FOR 640 ns
+# HEX VALUE 00000310 APPLIED to DUT
+env ..
+# sim:/synthi_top_tb
