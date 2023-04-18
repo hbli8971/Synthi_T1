@@ -20,10 +20,10 @@
 -------------------------------------------------------------------------------
 
 library ieee;
-use ieee.std_logic_1164.all;
+	use ieee.std_logic_1164.all;
 library work;
-use ieee.numeric_std.all;
-use work.tone_gen_pkg.all;
+	use ieee.numeric_std.all;
+	use work.tone_gen_pkg.all;
 -------------------------------------------------------------------------------
 
 entity synthi_top is

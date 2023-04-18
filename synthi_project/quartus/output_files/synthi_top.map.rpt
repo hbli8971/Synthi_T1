@@ -1,5 +1,5 @@
 Analysis & Elaboration report for synthi_top
-Mon Apr 17 18:06:27 2023
+Tue Apr 18 20:59:27 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                      ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Mon Apr 17 18:06:27 2023              ;
+; Analysis & Elaboration Status      ; Failed - Tue Apr 18 20:59:27 2023              ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; synthi_top                                     ;
 ; Top-level Entity Name              ; dds                                            ;
@@ -166,7 +166,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Apr 17 18:06:21 2023
+    Info: Processing started: Tue Apr 18 20:59:20 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/tone_generator.vhd
@@ -174,9 +174,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: tone_generator File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 31
 Info (12021): Found 1 design units, including 0 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/tone_gen_pkg.vhd
     Info (12022): Found design unit 1: tone_gen_pkg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_gen_pkg.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/dds.vhd
-    Info (12022): Found design unit 1: dds-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 44
-    Info (12023): Found entity 1: dds File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 30
+Error (10500): VHDL syntax error at dds.vhd(69) near text "lut_addr";  expecting "begin", or a declaration statement File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 69
+Info (12021): Found 0 design units, including 0 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/dds.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/uni_shiftreg.vhd
     Info (12022): Found design unit 1: uni_shiftreg-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 41
     Info (12023): Found entity 1: uni_shiftreg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 26
@@ -242,13 +241,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/synthi_top.vhd
     Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 73
     Info (12023): Found entity 1: synthi_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 29
-Error (10316): VHDL error at dds.vhd(112): character ''0'' used but not declared for type "natural" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 112
-Error (10346): VHDL error at dds.vhd(112): formal port or parameter "SIZE" must have actual or default value File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 112
-Error (10784): HDL error at numeric_std_vhdl1993.vhd(712): see declaration for object "SIZE" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/ieee/1993/numeric_std_vhdl1993.vhd Line: 712
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 3 errors, 0 warnings
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 0 warnings
     Error: Peak virtual memory: 4796 megabytes
-    Error: Processing ended: Mon Apr 17 18:06:27 2023
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:08
+    Error: Processing ended: Tue Apr 18 20:59:27 2023
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:07
 
 
