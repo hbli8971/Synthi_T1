@@ -1,5 +1,5 @@
 Fitter report for synthi_top
-Wed Apr 12 10:57:57 2023
+Wed Apr 19 08:27:31 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -70,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 12 10:57:57 2023       ;
+; Fitter Status                      ; Successful - Wed Apr 19 08:27:31 2023       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; synthi_top                                  ;
 ; Top-level Entity Name              ; synthi_top                                  ;
@@ -157,14 +157,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.16        ;
+; Average used               ; 1.09        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.3%      ;
-;     Processor 3            ;   5.3%      ;
-;     Processor 4            ;   5.3%      ;
+;     Processor 2            ;   2.9%      ;
+;     Processor 3            ;   2.9%      ;
+;     Processor 4            ;   2.9%      ;
 +----------------------------+-------------+
 
 
@@ -2355,14 +2355,14 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 32
+Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 32
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
-Info (176353): Automatically promoted node infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]  File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 56
+Info (176353): Automatically promoted node infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]  File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 56
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]~0 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/modulo_divider.vhd Line: 56
-        Info (176357): Destination node AUD_BCLK~output File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 46
-Info (176353): Automatically promoted node infrastructure:infrastructure_1|clock_sync:clock_sync_1|q_1  File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/clock_sync.vhd Line: 37
+        Info (176357): Destination node infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]~0 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 56
+        Info (176357): Destination node AUD_BCLK~output File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 46
+Info (176353): Automatically promoted node infrastructure:infrastructure_1|clock_sync:clock_sync_1|q_1  File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/clock_sync.vhd Line: 37
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -2696,41 +2696,41 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 4% of the available device resources in the region that extends from location X45_Y44 to location X55_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 0.89 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.86 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 20 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin KEY_1 uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 34
-    Info (169178): Pin USB_RXD uses I/O standard 3.3-V LVTTL at AB17 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 37
-    Info (169178): Pin BT_RXD uses I/O standard 3.3-V LVTTL at AB19 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 40
-    Info (169178): Pin BT_TXD uses I/O standard 3.3-V LVTTL at AA19 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 41
-    Info (169178): Pin BT_RST_N uses I/O standard 3.3-V LVTTL at Y19 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 42
-    Info (169178): Pin AUD_SDAT uses I/O standard 3.3-V LVTTL at AB7 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 52
-    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
-    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 32
-    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
-    Info (169178): Pin KEY_0 uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 33
-    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at B14 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
-    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
-    Info (169178): Pin USB_TXD uses I/O standard 3.3-V LVTTL at AA17 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 38
-    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
-    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
-    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
-    Info (169178): Pin AUD_ADCDAT uses I/O standard 3.3-V LVTTL at AA11 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 49
-    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
-    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
-    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/synthi_top.vhd Line: 35
+    Info (169178): Pin KEY_1 uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 34
+    Info (169178): Pin USB_RXD uses I/O standard 3.3-V LVTTL at AB17 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
+    Info (169178): Pin BT_RXD uses I/O standard 3.3-V LVTTL at AB19 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 40
+    Info (169178): Pin BT_TXD uses I/O standard 3.3-V LVTTL at AA19 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 41
+    Info (169178): Pin BT_RST_N uses I/O standard 3.3-V LVTTL at Y19 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 42
+    Info (169178): Pin AUD_SDAT uses I/O standard 3.3-V LVTTL at AB7 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 52
+    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
+    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 32
+    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
+    Info (169178): Pin KEY_0 uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 33
+    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at B14 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
+    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
+    Info (169178): Pin USB_TXD uses I/O standard 3.3-V LVTTL at AA17 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 38
+    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
+    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
+    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
+    Info (169178): Pin AUD_ADCDAT uses I/O standard 3.3-V LVTTL at AA11 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 49
+    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
+    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
+    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 35
 Info (144001): Generated suppressed messages file C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/quartus/output_files/synthi_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 322 warnings
     Info: Peak virtual memory: 5650 megabytes
-    Info: Processing ended: Wed Apr 12 10:57:58 2023
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Processing ended: Wed Apr 19 08:27:32 2023
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +----------------------------+
