@@ -77,6 +77,9 @@ begin  -- architecture rtl
   --------------------------
   -- default statements
   note_on <= '0';
+  data1_reg <= "0000000";
+  data2_reg <= "0000000";
+  next_fsm_state <= st_wait_status;
   --------------------------
   
 		case fsm_state is

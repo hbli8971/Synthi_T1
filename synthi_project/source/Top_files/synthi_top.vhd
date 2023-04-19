@@ -308,7 +308,7 @@ begin
 			dds_r_o    => dds_r_o
 		);
   
-	
+  -- instance "MIDI_1"
     MIDI_1: MIDI
     port map (
       clk_6m      => clk_6m,
@@ -329,7 +329,7 @@ begin
 	--note_signal <= sw(9 downto 8) & "00000";
 --	velocity_signal <= sw(7 downto 5) & "0000";
 
-  -- instance "MIDI_1"
+
 
 
 
