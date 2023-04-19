@@ -88,15 +88,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR_3",
-					"strict" : false
-				},
-				{
 					"name" : "AUD_SDAT",
-					"strict" : false
-				},
-				{
-					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
@@ -104,7 +96,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[4]",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
@@ -112,27 +104,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[8]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[9]",
-					"strict" : false
-				},
-				{
 					"name" : "USB_TXD",
-					"strict" : false
-				},
-				{
-					"name" : "SW[7]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[5]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[6]",
 					"strict" : false
 				},
 				{

@@ -6,7 +6,7 @@
 -- Author     : Hans-Joachim Gelke
 -- Company    : 
 -- Created    : 2018-03-08
--- Last update: 2023-04-12
+-- Last update: 2023-04-19
 -- Platform   : 
 -- Standard   : VHDL'08
 -------------------------------------------------------------------------------
@@ -22,6 +22,7 @@
 library ieee;
 	use ieee.std_logic_1164.all;
 library work;
+use IEEE.numeric_std.all;
 	use ieee.numeric_std.all;
 	use work.tone_gen_pkg.all;
 -------------------------------------------------------------------------------
@@ -82,7 +83,7 @@ architecture struct of synthi_top is
       key_0        : in  STD_LOGIC;
       usb_txd      : in  STD_LOGIC;
       clk_6m       : out STD_LOGIC;
-		clk_12m		 : out STD_LOGIC;
+		  clk_12m		 : out STD_LOGIC;
       reset_n      : out STD_LOGIC;
       usb_txd_sync : out STD_LOGIC;
       ledr0        : out STD_LOGIC);
@@ -164,6 +165,18 @@ architecture struct of synthi_top is
       dds_l_o    : OUT std_logic_vector(15 downto 0);
       dds_r_o    : OUT std_logic_vector(15 downto 0));
   end component tone_generator;
+
+  component MIDI is
+    port (
+      clk_6m      : in  std_logic;
+      reset_n     : in  std_logic;
+      rx_data     : in  std_logic_vector(7 downto 0);
+      rx_data_rdy : in  std_logic;
+      note        : out std_logic_vector(6 downto 0);
+      velocity    : out std_logic_vector(6 downto 0);
+      note_valid  : out std_logic);
+  end component MIDI;
+
  -----------------------------------------------------------------------------
  -- Internal signal declarations
  -----------------------------------------------------------------------------
@@ -188,11 +201,16 @@ architecture struct of synthi_top is
  signal dds_r_o		: std_logic_vector(15 downto 0);
  signal note_signal  : std_logic_vector(6 downto 0);
  signal velocity_signal: std_logic_vector(6 downto 0);
+
+ signal rx_data_sig    : std_logic_vector(7 downto 0);
+ signal rx_data_rdy_sig : std_logic;
+ signal tone_on_sig     : std_logic;
  
  
  
  
  signal debug_jan    : std_logic;
+
 
   
 	
@@ -209,7 +227,7 @@ begin
       key_0        => KEY_0,
       usb_txd      => USB_TXD,
       clk_6m       => clk_6m,
-		clk_12m		 => AUD_XCK,
+		  clk_12m		   => AUD_XCK,
       reset_n      => reset_n,
       usb_txd_sync => serial_in,
       ledr0        => LEDR_0);
@@ -221,7 +239,9 @@ begin
       reset_n     => reset_n,
       serial_in   => serial_in,
       hex0        => HEX0,
-      hex1        => HEX1);
+      hex1        => HEX1,
+      rx_data     => rx_data_sig,
+      rx_data_rdy => rx_data_rdy_sig);
 
   -- instance "codec_controller_1"
   codec_controller_1: codec_controller
@@ -269,7 +289,7 @@ begin
 			dds_r_i		=> dds_r_o,
 			adcdat_pl_i	=> sig_adcdat_pl,
 			adcdat_pr_i => sig_adcdat_pr,
-			SW				=> SW(3),
+			SW			  	=> SW(3),
 			dacdat_pl_o	=> sig_dacdat_pl,
 			dacdat_pr_o => sig_dacdat_pr
 		);
@@ -278,7 +298,7 @@ begin
       inst_tone_generator: tone_generator
 		port map 
 		(
-			tone_on_i  => SW(4),--
+			tone_on_i  => tone_on_sig,--
 			note_i     => note_signal,--
 			step_i     => sig_step, --
 			velocity_i => velocity_signal,
@@ -289,15 +309,29 @@ begin
 		);
   
 	
+    MIDI_1: MIDI
+    port map (
+      clk_6m      => clk_6m,
+      reset_n     => reset_n,
+      rx_data     => rx_data_sig,
+      rx_data_rdy => rx_data_rdy_sig,
+      note        => note_signal,
+      velocity    => velocity_signal,
+      note_valid  => tone_on_sig);
+
+
 	AUD_BCLK		<= clk_6m;
 	AUD_DACLRCK	<= ws_i;
 	AUD_ADCLRCK	<= ws_i;
 	
 	-- Temporäre Verbindungen
-	LEDR_3 <= SW(3); -- debuging, to be removed later
-	note_signal <= sw(9 downto 8) & "00000";
-	velocity_signal <= sw(7 downto 5) & "0000";
-	
+	--LEDR_3 <= SW(3); -- debuging, to be removed later
+	--note_signal <= sw(9 downto 8) & "00000";
+--	velocity_signal <= sw(7 downto 5) & "0000";
+
+  -- instance "MIDI_1"
+
+
 
 end architecture struct;
 

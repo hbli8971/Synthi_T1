@@ -1,4 +1,10 @@
 
+State Machine - |synthi_top|MIDI:MIDI_1|fsm_state
+Name fsm_state.st_wait_data2 fsm_state.st_wait_data1 fsm_state.st_wait_status 
+fsm_state.st_wait_status 0 0 0 
+fsm_state.st_wait_data1 0 1 1 
+fsm_state.st_wait_data2 1 0 1 
+
 State Machine - |synthi_top|i2c_master:i2c_master_1|fsm_state
 Name fsm_state.S_STOP fsm_state.S_WAIT_FOR_STOP fsm_state.S_ACK_BYTE fsm_state.S_SEND_BYTE fsm_state.S_WAIT_FOR_NEXT_BYTE fsm_state.S_START fsm_state.S_WAIT_FOR_START fsm_state.S_IDLE 
 fsm_state.S_IDLE 0 0 0 0 0 0 0 0 
