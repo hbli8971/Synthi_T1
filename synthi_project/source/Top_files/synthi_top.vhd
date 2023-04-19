@@ -201,6 +201,8 @@ architecture struct of synthi_top is
  signal dds_r_o		: std_logic_vector(15 downto 0);
  signal note_signal  : std_logic_vector(6 downto 0);
  signal velocity_signal: std_logic_vector(6 downto 0);
+ signal note_signal1  : std_logic_vector(6 downto 0);
+ signal velocity_signal1: std_logic_vector(6 downto 0);
 
  signal rx_data_sig    : std_logic_vector(7 downto 0);
  signal rx_data_rdy_sig : std_logic;
@@ -298,10 +300,10 @@ begin
       inst_tone_generator: tone_generator
 		port map 
 		(
-			tone_on_i  => tone_on_sig,--
-			note_i     => note_signal,--
+			tone_on_i  => '1',--
+			note_i     => note_signal1,--
 			step_i     => sig_step, --
-			velocity_i => velocity_signal,
+			velocity_i => velocity_signal1,
 			clk_6m     => clk_6m, --
 			rst_n      => reset_n,-- 
 			dds_l_o    => dds_l_o,--
@@ -326,8 +328,8 @@ begin
 	
 	-- Temporäre Verbindungen
 	--LEDR_3 <= SW(3); -- debuging, to be removed later
-	--note_signal <= sw(9 downto 8) & "00000";
---	velocity_signal <= sw(7 downto 5) & "0000";
+	note_signal1 <= sw(9 downto 8) & "00000";
+	velocity_signal1 <= sw(7 downto 5) & "0000";
 
 
 
