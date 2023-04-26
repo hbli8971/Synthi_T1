@@ -6,7 +6,7 @@
 -- Author     : Hans-Joachim Gelke
 -- Company    : 
 -- Created    : 2018-03-08
--- Last update: 2023-04-19
+-- Last update: 2023-04-26
 -- Platform   : 
 -- Standard   : VHDL'08
 -------------------------------------------------------------------------------
@@ -54,6 +54,8 @@ entity synthi_top is
 
     HEX0   : out std_logic_vector(6 downto 0);  -- output for HEX 0 display
     HEX1   : out std_logic_vector(6 downto 0);  -- output for HEX 0 display
+	 HEX2	  : out std_logic_vector(6 downto 0);
+	 HEX3	  : out std_logic_vector(6 downto 0);
     LEDR_0 : out std_logic;                     -- red LED
     LEDR_1 : out std_logic;                     -- red LED
     LEDR_2 : out std_logic;                     -- red LED
@@ -83,7 +85,7 @@ architecture struct of synthi_top is
       key_0        : in  STD_LOGIC;
       usb_txd      : in  STD_LOGIC;
       clk_6m       : out STD_LOGIC;
-		  clk_12m		 : out STD_LOGIC;
+		clk_12m		 : out STD_LOGIC;
       reset_n      : out STD_LOGIC;
       usb_txd_sync : out STD_LOGIC;
       ledr0        : out STD_LOGIC);
@@ -176,6 +178,16 @@ architecture struct of synthi_top is
       velocity    : out std_logic_vector(6 downto 0);
       note_valid  : out std_logic);
   end component MIDI;
+  
+  component vhdl_hex2sevseg is
+    port (
+      data_in : IN  std_logic_vector(3 downto 0);
+      seg_o   : OUT std_logic_vector(6 downto 0);
+      lt_n    : IN  std_logic;
+      blank_n : IN  std_logic;
+      rbo_n   : OUT std_logic;
+      rbi_n   : IN  std_logic);
+  end component vhdl_hex2sevseg;
 
  -----------------------------------------------------------------------------
  -- Internal signal declarations
@@ -210,8 +222,23 @@ architecture struct of synthi_top is
  
  
  
- 
+ signal jan2    : std_logic_vector(3 downto 0);
+ signal jan1    : std_logic_vector(3 downto 0);
  signal debug_jan    : std_logic;
+
+  component output_register is
+    generic (
+      width : positive);
+    port (
+      parallel_in : in  std_logic_vector(width-1 downto 0);
+      clk         : in  std_logic;
+      data_valid  : in  std_logic;
+      reset_n     : in  std_logic;
+      hex_lsb_out : out std_logic_vector(3 downto 0);
+      hex_msb_out : out std_logic_vector(3 downto 0));
+  end component output_register;
+
+  
 
 
   
@@ -229,7 +256,7 @@ begin
       key_0        => KEY_0,
       usb_txd      => USB_TXD,
       clk_6m       => clk_6m,
-		  clk_12m		   => AUD_XCK,
+		clk_12m		 => AUD_XCK,
       reset_n      => reset_n,
       usb_txd_sync => serial_in,
       ledr0        => LEDR_0);
@@ -300,10 +327,10 @@ begin
       inst_tone_generator: tone_generator
 		port map 
 		(
-			tone_on_i  => '1',--
-			note_i     => note_signal1,--
+			tone_on_i  => tone_on_sig,--
+			note_i     => note_signal,--
 			step_i     => sig_step, --
-			velocity_i => velocity_signal1,
+			velocity_i => velocity_signal,
 			clk_6m     => clk_6m, --
 			rst_n      => reset_n,-- 
 			dds_l_o    => dds_l_o,--
@@ -328,8 +355,37 @@ begin
 	
 	-- Temporäre Verbindungen
 	--LEDR_3 <= SW(3); -- debuging, to be removed later
-	note_signal1 <= sw(9 downto 8) & "00000";
-	velocity_signal1 <= sw(7 downto 5) & "0000";
+	--note_signal1 <= sw(9 downto 8) & "00000";
+	--velocity_signal1 <= sw(7 downto 5) & "0000";
+
+  -- instance "vhdl_hex2sevseg_1"
+ hdl_hex2sevseg_2: vhdl_hex2sevseg
+  port map (
+    data_in => jan1,
+    seg_o   => HEX2,
+    lt_n    => '0',
+    blank_n => '0',
+    rbi_n   => '0');
+
+vhdl_hex2sevseg_3: vhdl_hex2sevseg
+ port map (
+    data_in => jan2,
+    seg_o   => HEX3,
+    lt_n    => '0',
+    blank_n => '0',
+    --rbo_n   => ,
+    rbi_n   => '0');
+
+  -- instance "output_register_1"
+  output_register_1: output_register
+  GENERIC MAP(width => 10)
+    port map (
+      parallel_in => "00"& note_signal&'0',
+      clk         => clk_6m,
+      data_valid  => '1',
+      reset_n     => reset_n,
+      hex_lsb_out => jan1,
+      hex_msb_out => jan2);
 
 
 

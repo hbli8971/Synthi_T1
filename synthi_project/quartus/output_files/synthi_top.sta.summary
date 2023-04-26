@@ -3,12 +3,12 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : -5.693
-TNS   : -495.613
+Slack : -6.068
+TNS   : -584.499
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -3.930
-TNS   : -108.748
+Slack : -3.550
+TNS   : -105.419
 
 Type  : Slow 1200mV 85C Model Hold 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
 Slack : 0.329
@@ -19,11 +19,11 @@ Slack : 0.341
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : -2.188
-TNS   : -371.905
+Slack : -2.433
+TNS   : -454.277
 
 Type  : Slow 1200mV 85C Model Removal 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : 2.244
+Slack : 2.506
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
@@ -32,18 +32,18 @@ TNS   : -54.911
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
 Slack : -1.403
-TNS   : -255.346
+TNS   : -284.809
 
 Type  : Slow 1200mV 0C Model Setup 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : -5.188
-TNS   : -444.269
+Slack : -5.565
+TNS   : -522.782
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -3.546
-TNS   : -97.754
+Slack : -3.196
+TNS   : -94.261
 
 Type  : Slow 1200mV 0C Model Hold 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : 0.295
+Slack : 0.294
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
@@ -51,11 +51,11 @@ Slack : 0.306
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : -1.888
-TNS   : -320.679
+Slack : -2.141
+TNS   : -398.349
 
 Type  : Slow 1200mV 0C Model Removal 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : 2.038
+Slack : 2.261
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -64,38 +64,38 @@ TNS   : -54.911
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
 Slack : -1.403
-TNS   : -255.346
+TNS   : -284.809
 
 Type  : Fast 1200mV 0C Model Setup 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : -1.903
-TNS   : -117.837
+Slack : -2.096
+TNS   : -143.878
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -1.057
-TNS   : -26.884
+Slack : -0.891
+TNS   : -25.141
 
 Type  : Fast 1200mV 0C Model Hold 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
 Slack : 0.144
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.147
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : -0.585
-TNS   : -96.562
+Slack : -0.732
+TNS   : -132.874
 
 Type  : Fast 1200mV 0C Model Removal 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
-Slack : 1.113
+Slack : 1.246
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -46.653
+TNS   : -46.568
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2]'
 Slack : -1.000
-TNS   : -182.000
+TNS   : -203.000
 
 ------------------------------------------------------------

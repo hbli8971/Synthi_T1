@@ -44,9 +44,9 @@ architecture rtl of MIDI is
 -------------------------------------------
 	type fsm_type is (st_wait_status, st_wait_data1, st_wait_data2);
 	signal fsm_state, next_fsm_state: fsm_type;
-	signal data1_reg : std_logic_vector(6 downto 0);
-	signal data2_reg : std_logic_vector(6 downto 0);
-	signal note_on	  : std_logic;
+	signal data1_reg, next_data1_reg : std_logic_vector(6 downto 0);
+	signal data2_reg, next_data2_reg : std_logic_vector(6 downto 0);
+	signal note_on, next_note_on	  : std_logic;
 
 
 begin  -- architecture rtl
@@ -59,10 +59,15 @@ begin  -- architecture rtl
 		
 		if reset_n = '0' then
 			fsm_state <= st_wait_status;
+			data1_reg <= (others => '0');
+			data2_reg <= (others => '0');
+			note_on <= '0';
 			
 		elsif rising_edge(clk_6m) then
 			fsm_state <= next_fsm_state;
-			
+			data1_reg <= next_data1_reg;
+			data2_reg <= next_data2_reg;
+			note_on <= next_note_on;
 		end if;
 		
   end process flip_flop;
@@ -76,49 +81,57 @@ begin  -- architecture rtl
   
   --------------------------
   -- default statements
-  note_on <= '0';
-  data1_reg <= "0000000";
-  data2_reg <= "0000000";
-  next_fsm_state <= st_wait_status;
+  next_note_on <= note_on;
+  next_data1_reg <= data1_reg;
+  next_data2_reg <= data2_reg;
+  next_fsm_state <= fsm_state;
+  
   --------------------------
   
 		case fsm_state is
 		-------------------------------------------
 			when st_wait_status =>
-		-------------------------------------------
+		-------------------------------------------			
+	
+			if rx_data_rdy = '1' then
 				if rx_data(7) = '0' then -- MIDI in running status (no status byte)
-					data1_reg <= rx_data(6 downto 0);  -- write MIDI-data in data1 register
-					if rx_data_rdy = '1' then
+					next_data1_reg <= rx_data(6 downto 0);  -- write MIDI-data in data1 register
+					if rx_data_rdy = '1'then------------- FEHLER
 						next_fsm_state <= st_wait_data2;
 					end if;
 				else -- MIDI in normal mode (status, data1, data2)
 					if rx_data(6 downto 4) = "000" then -- if note off
-						note_on <= '0';
+						next_note_on <= '0';
 					elsif rx_data(6 downto 4) = "001" then -- if note on
-						note_on <= '1';
+						next_note_on <= '1';
 					end if;
-					if (rx_data_rdy = '1') then
+					if (rx_data_rdy = '1') then ---------- FEHLER
 						next_fsm_state <= st_wait_data1;
 					end if;
 				end if;
+			end if;
+			
+
 		-------------------------------------------
 			when st_wait_data1 =>
 		-------------------------------------------
-				data1_reg <= rx_data(6 downto 0);  -- write MIDI-data in data1 register
-				if (rx_data_rdy = '1') then
-					next_fsm_state <= st_wait_data2;
-				end if;
-		-------------------------------------------
-			when st_wait_data2 =>
-		-------------------------------------------
-				data2_reg <= rx_data(6 downto 0);  -- write MIDI-data in data2 register
 				
 				if (rx_data_rdy = '1') then
 					next_fsm_state <= st_wait_data2;
+					next_data1_reg <= rx_data(6 downto 0);  -- write MIDI-data in data1 register
+				end if;
+
+		-------------------------------------------
+			when st_wait_data2 =>
+		-------------------------------------------
+
+				if (rx_data_rdy = '1') then
+					next_fsm_state <= st_wait_status;
+					next_data2_reg <= rx_data(6 downto 0);  -- write MIDI-data in data2 register
 				end if;
 		-------------------------------------------
 			when others =>
-				next_fsm_state <= fsm_state;
+				next_fsm_state <= st_wait_status;
 		-------------------------------------------
 		end case;
   end process MIDI_Automat;
