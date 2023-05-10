@@ -53,6 +53,7 @@ architecture rtl of MIDI is
 	signal new_data_flag			: std_logic;
 	signal reg_note, next_reg_note	: t_tone_array;
 	signal reg_velocity, next_reg_velocity : t_tone_array;
+	signal output_velocity, output_note : t_tone_array;
 
 
 begin  -- architecture rtl
@@ -68,12 +69,22 @@ begin  -- architecture rtl
 			data1_reg <= (others => '0');
 			data2_reg <= (others => '0');
 			note_on <= '0';
+			reg_tone_on <= "0000000000";
+			for i in 0 to 9 loop
+				reg_note (i) <= "0000000";
+				reg_velocity(i) <= "0000000";
+			end loop;
 			
 		elsif rising_edge(clk_6m) then
 			fsm_state <= next_fsm_state;
 			data1_reg <= next_data1_reg;
 			data2_reg <= next_data2_reg;
 			note_on <= next_note_on;
+			reg_tone_on <= next_reg_tone_on;
+			for i in 0 to 9 loop
+				reg_note (i) <= next_reg_note(i);
+				reg_velocity(i) <= next_reg_velocity(i);
+			end loop;
 		end if;
 		
   end process flip_flop;
@@ -155,6 +166,9 @@ begin  -- architecture rtl
 	--default statements
 	next_reg_note		<= reg_note;
 	next_reg_velocity	<= reg_velocity;
+	next_reg_tone_on	<= reg_tone_on;
+
+	
 		if (new_data_flag) then
 			note_available := '0';
 			note_written   := '0';
@@ -171,6 +185,7 @@ begin  -- architecture rtl
 					end if;
 				end if;
 			end loop;
+			
 
 			if note_available='0' then --if there is not yet an entry for the note, look for an emty space and write it
 				for i in 0 to 9 loop
@@ -188,17 +203,19 @@ begin  -- architecture rtl
 		end if;
 	end process TEST;
   
-
-
 -------------------------------------------
 -- Process Output MIDI
 -------------------------------------------
 	MIDI_Output : process(all)
 	
 	begin	-- process MIDI_Output
+	for i in 0 to 9 loop
+	output_note(i) <= reg_note(i);
+	output_velocity(i) <= reg_velocity(i);
+	end loop;
 	
-		note			<= reg_note;
-		velocity 	<= reg_velocity;
+		note			<= output_note;
+		velocity 	<= output_velocity;
 		note_valid 	<= reg_tone_on;
 	
 	end process MIDI_Output;

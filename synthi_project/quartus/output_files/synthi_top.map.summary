@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed May 10 09:45:58 2023
+Analysis & Synthesis Status : Successful - Wed May 10 11:00:22 2023
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : synthi_top
-Top-level Entity Name : MIDI
+Top-level Entity Name : synthi_top
 Family : MAX 10
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 161
+Total logic elements : 345
+    Total combinational functions : 313
+    Dedicated logic registers : 200
+Total registers : 200
+Total pins : 64
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
