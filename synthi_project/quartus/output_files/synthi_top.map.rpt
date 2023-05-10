@@ -1,5 +1,5 @@
 Analysis & Synthesis report for synthi_top
-Wed May 10 11:26:12 2023
+Wed May 10 12:28:04 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -83,15 +83,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 10 11:26:12 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 10 12:28:04 2023       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; synthi_top                                  ;
 ; Top-level Entity Name              ; synthi_top                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 345                                         ;
-;     Total combinational functions  ; 313                                         ;
-;     Dedicated logic registers      ; 200                                         ;
-; Total registers                    ; 200                                         ;
+; Total logic elements               ; 5,197                                       ;
+;     Total combinational functions  ; 5,052                                       ;
+;     Dedicated logic registers      ; 533                                         ;
+; Total registers                    ; 533                                         ;
 ; Total pins                         ; 64                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -203,7 +203,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -245,20 +247,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                     ;
 +---------------------------------------------+---------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 345                                                                       ;
+; Estimated Total logic elements              ; 5,197                                                                     ;
 ;                                             ;                                                                           ;
-; Total combinational functions               ; 313                                                                       ;
+; Total combinational functions               ; 5052                                                                      ;
 ; Logic element usage by number of LUT inputs ;                                                                           ;
-;     -- 4 input functions                    ; 149                                                                       ;
-;     -- 3 input functions                    ; 100                                                                       ;
-;     -- <=2 input functions                  ; 64                                                                        ;
+;     -- 4 input functions                    ; 3808                                                                      ;
+;     -- 3 input functions                    ; 991                                                                       ;
+;     -- <=2 input functions                  ; 253                                                                       ;
 ;                                             ;                                                                           ;
 ; Logic elements by mode                      ;                                                                           ;
-;     -- normal mode                          ; 274                                                                       ;
-;     -- arithmetic mode                      ; 39                                                                        ;
+;     -- normal mode                          ; 4706                                                                      ;
+;     -- arithmetic mode                      ; 346                                                                       ;
 ;                                             ;                                                                           ;
-; Total registers                             ; 200                                                                       ;
-;     -- Dedicated logic registers            ; 200                                                                       ;
+; Total registers                             ; 533                                                                       ;
+;     -- Dedicated logic registers            ; 533                                                                       ;
 ;     -- I/O registers                        ; 0                                                                         ;
 ;                                             ;                                                                           ;
 ; I/O pins                                    ; 64                                                                        ;
@@ -266,9 +268,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0                                                                         ;
 ;                                             ;                                                                           ;
 ; Maximum fan-out node                        ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ;
-; Maximum fan-out                             ; 165                                                                       ;
-; Total fan-out                               ; 1812                                                                      ;
-; Average fan-out                             ; 2.82                                                                      ;
+; Maximum fan-out                             ; 498                                                                       ;
+; Total fan-out                               ; 20882                                                                     ;
+; Average fan-out                             ; 3.65                                                                      ;
 +---------------------------------------------+---------------------------------------------------------------------------+
 
 
@@ -277,23 +279,35 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                              ; Entity Name         ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+---------------------+--------------+
-; |synthi_top                                       ; 313 (0)             ; 200 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 64   ; 0            ; 0          ; |synthi_top                                                                      ; synthi_top          ; work         ;
+; |synthi_top                                       ; 5052 (0)            ; 533 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 64   ; 0            ; 0          ; |synthi_top                                                                      ; synthi_top          ; work         ;
+;    |MIDI:MIDI_2|                                  ; 98 (98)             ; 127 (127)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|MIDI:MIDI_2                                                          ; MIDI                ; work         ;
 ;    |codec_controller:codec_controller_1|          ; 20 (20)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|codec_controller:codec_controller_1                                  ; codec_controller    ; work         ;
-;    |i2c_master:i2c_master_1|                      ; 94 (94)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2c_master:i2c_master_1                                              ; i2c_master          ; work         ;
-;    |i2s_master:inst_i2s_master|                   ; 78 (0)              ; 71 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master                                           ; i2s_master          ; work         ;
-;       |i2s_frame_generator:i2s_frame_generator_1| ; 9 (9)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1 ; i2s_frame_generator ; work         ;
+;    |i2c_master:i2c_master_1|                      ; 84 (84)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2c_master:i2c_master_1                                              ; i2c_master          ; work         ;
+;    |i2s_master:inst_i2s_master|                   ; 81 (0)              ; 71 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master                                           ; i2s_master          ; work         ;
+;       |i2s_frame_generator:i2s_frame_generator_1| ; 12 (12)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1 ; i2s_frame_generator ; work         ;
 ;       |mux_2_1:mux_2_1_1|                         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1                         ; mux_2_1             ; work         ;
 ;       |uni_shiftreg:uni_shiftreg_1|               ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1               ; uni_shiftreg        ; work         ;
 ;       |uni_shiftreg:uni_shiftreg_2|               ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2               ; uni_shiftreg        ; work         ;
 ;       |uni_shiftreg:uni_shiftreg_3|               ; 16 (16)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3               ; uni_shiftreg        ; work         ;
 ;       |uni_shiftreg:uni_shiftreg_4|               ; 16 (16)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4               ; uni_shiftreg        ; work         ;
-;    |infrastructure:infrastructure_1|              ; 74 (0)              ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1                                      ; infrastructure      ; work         ;
+;    |infrastructure:infrastructure_1|              ; 72 (0)              ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1                                      ; infrastructure      ; work         ;
 ;       |clock_sync:clock_sync_1|                   ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|clock_sync:clock_sync_1              ; clock_sync          ; work         ;
 ;       |clock_sync:clock_sync_2|                   ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|clock_sync:clock_sync_2              ; clock_sync          ; work         ;
 ;       |modulo_divider:modulo_divider_1|           ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|modulo_divider:modulo_divider_1      ; modulo_divider      ; work         ;
-;       |signal_checker:signal_checker_1|           ; 71 (71)             ; 34 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1      ; signal_checker      ; work         ;
-;    |uart_top:uart_top_1|                          ; 47 (0)              ; 34 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1                                                  ; uart_top            ; work         ;
-;       |baud_tick:b2v_inst|                        ; 15 (15)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst                               ; baud_tick           ; work         ;
+;       |signal_checker:signal_checker_1|           ; 69 (69)             ; 34 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1      ; signal_checker      ; work         ;
+;    |tone_generator:tone_generator_1|              ; 4651 (1526)         ; 206 (16)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1                                      ; tone_generator      ; work         ;
+;       |dds:\dds_inst_gen:0:inst_dds|              ; 316 (316)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:1:inst_dds|              ; 314 (314)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:2:inst_dds|              ; 314 (314)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:3:inst_dds|              ; 314 (314)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:4:inst_dds|              ; 315 (315)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:5:inst_dds|              ; 303 (303)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:6:inst_dds|              ; 315 (315)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:7:inst_dds|              ; 310 (310)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:8:inst_dds|              ; 309 (309)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:9:inst_dds|              ; 315 (315)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds         ; dds                 ; work         ;
+;    |uart_top:uart_top_1|                          ; 46 (0)              ; 34 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1                                                  ; uart_top            ; work         ;
+;       |baud_tick:b2v_inst|                        ; 14 (14)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst                               ; baud_tick           ; work         ;
 ;       |bit_counter:b2v_inst6|                     ; 8 (8)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|bit_counter:b2v_inst6                            ; bit_counter         ; work         ;
 ;       |flanken_detekt_vhdl:b2v_inst18|            ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18                   ; flanken_detekt_vhdl ; work         ;
 ;       |output_register:b2v_inst8|                 ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|output_register:b2v_inst8                        ; output_register     ; work         ;
@@ -365,19 +379,14 @@ Encoding Type:  One-Hot
 ; Register name                                                             ; Reason for Removal                                                                            ;
 +---------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+
 ; output_register:output_register_1|data_reg[1..8]                          ; Stuck at GND due to stuck port data_in                                                        ;
-; tone_generator:tone_generator_1|sum_reg[1..15]                            ; Merged with tone_generator:tone_generator_1|sum_reg[0]                                        ;
-; tone_generator:tone_generator_1|sum_reg[0]                                ; Stuck at GND due to stuck port data_in                                                        ;
 ; i2c_master:i2c_master_1|clk_divider[0]                                    ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[0] ;
 ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[0] ; Merged with infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count12[0]        ;
 ; i2c_master:i2c_master_1|clk_divider[1]                                    ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[1] ;
 ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[1] ; Merged with infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count12[1]        ;
-; MIDI:MIDI_2|fsm_state.st_wait_status                                      ; Lost fanout                                                                                   ;
-; MIDI:MIDI_2|fsm_state.st_wait_data1                                       ; Lost fanout                                                                                   ;
-; MIDI:MIDI_2|fsm_state.st_wait_data2                                       ; Lost fanout                                                                                   ;
 ; i2c_master:i2c_master_1|clk_divider[2]                                    ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[2] ;
 ; i2c_master:i2c_master_1|clk_divider[3]                                    ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[3] ;
 ; i2c_master:i2c_master_1|clk_divider[4]                                    ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[4] ;
-; Total Number of Removed Registers = 34                                    ;                                                                                               ;
+; Total Number of Removed Registers = 15                                    ;                                                                                               ;
 +---------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+
 
 
@@ -386,12 +395,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 200   ;
-; Number of registers using Synchronous Clear  ; 2     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 193   ;
+; Total registers                              ; 533   ;
+; Number of registers using Synchronous Clear  ; 18    ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 526   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 113   ;
+; Number of registers using Clock Enable       ; 427   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -410,27 +419,48 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
-; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1|bit_count_i[16] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|bit_counter:b2v_inst6|count[0]                              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4|reg[5]                   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3|reg[10]                  ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst|count[5]                                 ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2|reg[11]                  ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1|reg[3]                   ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|byte_count[1]                                           ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|bit_count[0]                                            ;
-; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[16]                                                ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[12]                                                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|codec_controller:codec_controller_1|next_fsm_state                              ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector2                     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector30                                              ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector28                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
+; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1|bit_count_i[5] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|bit_counter:b2v_inst6|count[2]                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4|reg[3]                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3|reg[11]                 ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst|count[0]                                ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2|reg[1]                  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1|reg[5]                  ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |synthi_top|MIDI:MIDI_2|data1_reg[6]                                                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|byte_count[0]                                          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|bit_count[1]                                           ;
+; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[21]                                               ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[11]                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|codec_controller:codec_controller_1|next_fsm_state                             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux22             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux21             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux23             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux23             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux23             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux24             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector2                    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector26                                             ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector28                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------+
@@ -553,104 +583,94 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds"                                   ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dds_o            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds" ;
++------------------+-------+----------+----------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                            ;
++------------------+-------+----------+----------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                       ;
++------------------+-------+----------+----------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -773,25 +793,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 64                          ;
-; cycloneiii_ff         ; 200                         ;
-;     CLR               ; 80                          ;
-;     ENA CLR           ; 111                         ;
+; cycloneiii_ff         ; 533                         ;
+;     CLR               ; 81                          ;
+;     CLR SCLR          ; 16                          ;
+;     CLR SLD           ; 2                           ;
+;     ENA CLR           ; 395                         ;
 ;     ENA CLR SCLR      ; 2                           ;
+;     ENA CLR SLD       ; 30                          ;
 ;     plain             ; 7                           ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 328                         ;
-;     arith             ; 39                          ;
-;         2 data inputs ; 32                          ;
-;         3 data inputs ; 7                           ;
-;     normal            ; 289                         ;
+; cycloneiii_lcell_comb ; 5067                        ;
+;     arith             ; 346                         ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 304                         ;
+;     normal            ; 4721                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 25                          ;
-;         3 data inputs ; 93                          ;
-;         4 data inputs ; 149                         ;
+;         1 data inputs ; 30                          ;
+;         2 data inputs ; 194                         ;
+;         3 data inputs ; 687                         ;
+;         4 data inputs ; 3808                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.60                        ;
-; Average LUT depth     ; 2.83                        ;
+; Max LUT depth         ; 14.50                       ;
+; Average LUT depth     ; 9.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -800,7 +823,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:01:12     ;
 +----------------+--------------+
 
 
@@ -810,7 +833,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed May 10 11:25:57 2023
+    Info: Processing started: Wed May 10 12:26:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 0 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/reg_table_pkg.vhd
@@ -923,7 +946,7 @@ Info (12128): Elaborating entity "uni_shiftreg" for hierarchy "i2s_master:inst_i
 Info (12128): Elaborating entity "mux_2_1" for hierarchy "i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 181
 Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_ctrl" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 312
 Info (12128): Elaborating entity "MIDI" for hierarchy "MIDI:MIDI_2" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 365
-Warning (10620): VHDL warning at MIDI.vhd(184): comparison between unequal length operands always returns FALSE File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 184
+Warning (10620): VHDL warning at MIDI.vhd(190): comparison between unequal length operands always returns FALSE File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 190
 Info (12128): Elaborating entity "tone_generator" for hierarchy "tone_generator:tone_generator_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 376
 Info (12128): Elaborating entity "dds" for hierarchy "tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 82
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -954,7 +977,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR_8" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 68
     Warning (13410): Pin "LEDR_9" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 69
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 11 input pin(s) that do not drive logic
@@ -969,15 +991,15 @@ Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "BT_RXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 42
     Warning (15610): No output dependent on input pin "BT_TXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 43
     Warning (15610): No output dependent on input pin "BT_RST_N" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 44
-Info (21057): Implemented 412 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5265 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 44 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 348 logic cells
+    Info (21061): Implemented 5201 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 4818 megabytes
-    Info: Processing ended: Wed May 10 11:26:12 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Wed May 10 12:28:04 2023
+    Info: Elapsed time: 00:01:25
+    Info: Total CPU time (on all processors): 00:01:44
 
 

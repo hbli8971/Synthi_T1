@@ -45,6 +45,7 @@ architecture rtl of MIDI is
 -------------------------------------------
 	type fsm_type is (st_wait_status, st_wait_data1, st_wait_data2);
 	signal fsm_state, next_fsm_state: fsm_type;
+	signal status_reg, next_status_reg : std_logic_vector(7 downto 0);
 	signal data1_reg, next_data1_reg : std_logic_vector(6 downto 0);
 	signal data2_reg, next_data2_reg : std_logic_vector(6 downto 0);
 	signal note_on, next_note_on	  : std_logic;
@@ -68,6 +69,7 @@ begin  -- architecture rtl
 			fsm_state <= st_wait_status;
 			data1_reg <= (others => '0');
 			data2_reg <= (others => '0');
+			status_reg <= (others => '0');
 			note_on <= '0';
 			reg_tone_on <= "0000000000";
 			new_data_flag <= '0';
@@ -77,6 +79,7 @@ begin  -- architecture rtl
 			end loop;
 		elsif rising_edge(clk_6m) then
 			fsm_state <= next_fsm_state;
+			status_reg<= next_status_reg;
 			data1_reg <= next_data1_reg;
 			data2_reg <= next_data2_reg;
 			note_on <= next_note_on;
@@ -100,6 +103,7 @@ begin  -- architecture rtl
   --------------------------
   -- default statements
   next_note_on <= note_on;
+  next_status_reg 	<= status_reg;
   next_data1_reg <= data1_reg;
   next_data2_reg <= data2_reg;
   next_fsm_state <= fsm_state;
@@ -113,6 +117,7 @@ begin  -- architecture rtl
 		-------------------------------------------			
 	
 			if rx_data_rdy = '1' then
+				next_status_reg <= rx_data;
 				if rx_data(7) = '0' then -- MIDI in running status (no status byte)
 					next_data1_reg <= rx_data(6 downto 0);  -- write MIDI-data in data1 register
 					if rx_data_rdy = '1'then------------- FEHLER
@@ -168,6 +173,7 @@ begin  -- architecture rtl
 	next_reg_note		<= reg_note;
 	next_reg_velocity	<= reg_velocity;
 	next_reg_tone_on	<= reg_tone_on;
+	
 
 	
 		if (new_data_flag) then
@@ -179,9 +185,9 @@ begin  -- architecture rtl
 			for i in 0 to 9 loop
 				if reg_note(i) = data1_reg and reg_tone_on(i)='1' then  --found a matchung note
 					note_available := '1';
-					if rx_data(6 downto 4)= "000" then --note off
+					if status_reg(6 downto 4)= "000" then --note off
 						next_reg_tone_on(i) <= '0'; --turn note off
-					elsif rx_data(6 downto 0)="001" and data2_reg = "00000000" then
+					elsif status_reg(6 downto 0)="001" and data2_reg = "00000000" then
 						next_reg_tone_on(i)<='0'; -- turn off note if velocity is 0
 					end if;
 				end if;
@@ -192,7 +198,7 @@ begin  -- architecture rtl
 				for i in 0 to 9 loop
 					if note_written='0' then -- if the note already written, ignore the remaining loop runs
 
-						if(reg_tone_on(i)='0' or i=9) and rx_data(6 downto 4) = "001" then
+						if(reg_tone_on(i)='0' or i=9) and status_reg(6 downto 4) = "001" then
 							next_reg_note(i) <= data1_reg;
 							next_reg_velocity(i) <= data2_reg;
 							next_reg_tone_on(i) <= '1';

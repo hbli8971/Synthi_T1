@@ -106,9 +106,9 @@ begin
 			dds_sum_loop : for i in 0 to 9 loop
 				var_sum := var_sum + signed(dds_o_array(i));
 			end loop dds_sum_loop;
-			next_sum_reg <= sum_reg;
+			next_sum_reg <= unsigned(var_sum);
 		else
-			next_sum_reg <= sum_reg;
+			next_sum_reg <= unsigned(var_sum);
 		end if;
 	end process comb_sum_output;
 	
