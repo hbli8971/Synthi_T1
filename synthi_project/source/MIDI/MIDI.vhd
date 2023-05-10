@@ -50,7 +50,7 @@ architecture rtl of MIDI is
 	signal note_on, next_note_on	  : std_logic;
 	
 	signal reg_tone_on, next_reg_tone_on	: std_logic_vector(9 downto 0);
-	signal new_data_flag			: std_logic;
+	signal new_data_flag, next_new_data_flag: std_logic;
 	signal reg_note, next_reg_note	: t_tone_array;
 	signal reg_velocity, next_reg_velocity : t_tone_array;
 	signal output_velocity, output_note : t_tone_array;
@@ -70,16 +70,17 @@ begin  -- architecture rtl
 			data2_reg <= (others => '0');
 			note_on <= '0';
 			reg_tone_on <= "0000000000";
+			new_data_flag <= '0';
 			for i in 0 to 9 loop
 				reg_note (i) <= "0000000";
 				reg_velocity(i) <= "0000000";
 			end loop;
-			
 		elsif rising_edge(clk_6m) then
 			fsm_state <= next_fsm_state;
 			data1_reg <= next_data1_reg;
 			data2_reg <= next_data2_reg;
 			note_on <= next_note_on;
+			new_data_flag <= next_new_data_flag;
 			reg_tone_on <= next_reg_tone_on;
 			for i in 0 to 9 loop
 				reg_note (i) <= next_reg_note(i);
@@ -102,7 +103,7 @@ begin  -- architecture rtl
   next_data1_reg <= data1_reg;
   next_data2_reg <= data2_reg;
   next_fsm_state <= fsm_state;
-  new_data_flag  <= '0';
+  next_new_data_flag  <= '0';
   
   --------------------------
   
@@ -144,7 +145,7 @@ begin  -- architecture rtl
 		-------------------------------------------
 
 				if (rx_data_rdy = '1') then
-					new_data_flag <= '1';
+					next_new_data_flag <= '1';
 					next_fsm_state <= st_wait_status;
 					next_data2_reg <= rx_data(6 downto 0);  -- write MIDI-data in data2 register
 				end if;
