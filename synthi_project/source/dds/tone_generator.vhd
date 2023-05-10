@@ -20,10 +20,10 @@
 -------------------------------------------------------------------------------
 
 library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+	use ieee.std_logic_1164.all;
+	use ieee.numeric_std.all;
 library work;
-use work.tone_gen_pkg.all;
+	use work.tone_gen_pkg.all;
 
 
 -------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ architecture str of tone_generator is
   -----------------------------------------------------------------------------
 	type 		t_dds_o_array is array (0 to 9) of std_logic_vector(N_AUDIO-1 downto 0);
 	signal 	dds_o_array : t_dds_o_array;
-	SIGNAL	sum_reg, next_sum_reg:		unsigned(N_AUDIO-1 downto 0);
+	SIGNAL	sum_reg, next_sum_reg: signed(N_AUDIO-1 downto 0);
   -----------------------------------------------------------------------------
   -- Component declarations
   -----------------------------------------------------------------------------
@@ -106,23 +106,22 @@ begin
 			dds_sum_loop : for i in 0 to 9 loop
 				var_sum := var_sum + signed(dds_o_array(i));
 			end loop dds_sum_loop;
-			next_sum_reg <= unsigned(var_sum);
+			next_sum_reg <= var_sum;
 		else
-			next_sum_reg <= unsigned(var_sum);
+			next_sum_reg <= sum_reg;
 		end if;
 	end process comb_sum_output;
 	
-	reg_sum_output : process(clk_6m, rst_n)
+	
+	reg_sum_output : process(all)
  	begin
 		if rst_n = '0' then
 			sum_reg <= (others => '0');
 		elsif rising_edge(clk_6m) then
 			sum_reg <= next_sum_reg;
 		end if;
-	
-
-	
 	end process reg_sum_output;
+	
 	
 	dds_l_o <= std_logic_vector(sum_reg);
 	dds_r_o <= std_logic_vector(sum_reg);
