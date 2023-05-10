@@ -22,6 +22,7 @@
 library IEEE;
 	use IEEE.std_logic_1164.all;
 	use IEEE.numeric_std.all;
+	use work.tone_gen_pkg.all;
 
 entity MIDI is
   
@@ -30,9 +31,9 @@ entity MIDI is
     reset_n     : in  std_logic;
     rx_data     : in  std_logic_vector(7 downto 0);
     rx_data_rdy : in  std_logic;
-    note        : out std_logic_vector(6 downto 0);
-    velocity    : out std_logic_vector(6 downto 0);
-    note_valid	 : out std_logic
+    note        : out t_tone_array;
+    velocity    : out t_tone_array;
+    note_valid	 : out std_logic_vector(9 downto 0)
 	 );
 
 end entity MIDI;
@@ -47,6 +48,11 @@ architecture rtl of MIDI is
 	signal data1_reg, next_data1_reg : std_logic_vector(6 downto 0);
 	signal data2_reg, next_data2_reg : std_logic_vector(6 downto 0);
 	signal note_on, next_note_on	  : std_logic;
+	
+	signal reg_tone_on, next_reg_tone_on	: std_logic_vector(9 downto 0);
+	signal new_data_flag			: std_logic;
+	signal reg_note, next_reg_note	: t_tone_array;
+	signal reg_velocity, next_reg_velocity : t_tone_array;
 
 
 begin  -- architecture rtl
@@ -85,6 +91,7 @@ begin  -- architecture rtl
   next_data1_reg <= data1_reg;
   next_data2_reg <= data2_reg;
   next_fsm_state <= fsm_state;
+  new_data_flag  <= '0';
   
   --------------------------
   
@@ -126,6 +133,7 @@ begin  -- architecture rtl
 		-------------------------------------------
 
 				if (rx_data_rdy = '1') then
+					new_data_flag <= '1';
 					next_fsm_state <= st_wait_status;
 					next_data2_reg <= rx_data(6 downto 0);  -- write MIDI-data in data2 register
 				end if;
@@ -136,6 +144,52 @@ begin  -- architecture rtl
 		end case;
   end process MIDI_Automat;
   
+
+  TEST : process(all)
+	variable note_available : std_logic := '0';
+	variable note_written	: std_logic := '0';
+	
+
+ 	begin
+	
+	--default statements
+	next_reg_note		<= reg_note;
+	next_reg_velocity	<= reg_velocity;
+		if (new_data_flag) then
+			note_available := '0';
+			note_written   := '0';
+		-------------------------------------------
+		-- CKECK IF NOTE IS ALREADY ENTERED IN MIDI ARRAY
+		-------------------------------------------
+			for i in 0 to 9 loop
+				if reg_note(i) = data1_reg and reg_tone_on(i)='1' then  --found a matchung note
+					note_available := '1';
+					if rx_data(6 downto 4)= "000" then --note off
+						next_reg_tone_on(i) <= '0'; --turn note off
+					elsif rx_data(6 downto 0)="001" and data2_reg = "00000000" then
+						next_reg_tone_on(i)<='0'; -- turn off note if velocity is 0
+					end if;
+				end if;
+			end loop;
+
+			if note_available='0' then --if there is not yet an entry for the note, look for an emty space and write it
+				for i in 0 to 9 loop
+					if note_written='0' then -- if the note already written, ignore the remaining loop runs
+
+						if(reg_tone_on(i)='0' or i=9) and rx_data(6 downto 4) = "001" then
+							next_reg_note(i) <= data1_reg;
+							next_reg_velocity(i) <= data2_reg;
+							next_reg_tone_on(i) <= '1';
+							note_written := '1';
+						end if;
+					end if;
+				end loop;
+			end if;
+		end if;
+	end process TEST;
+  
+
+
 -------------------------------------------
 -- Process Output MIDI
 -------------------------------------------
@@ -143,9 +197,9 @@ begin  -- architecture rtl
 	
 	begin	-- process MIDI_Output
 	
-		note 			<= data1_reg;
-		velocity 	<= data2_reg;
-		note_valid 	<= note_on;
+		note			<= reg_note;
+		velocity 	<= reg_velocity;
+		note_valid 	<= reg_tone_on;
 	
 	end process MIDI_Output;
  

@@ -17,7 +17,7 @@
 -- Revisions  :
 -- Date        Version  Author  Description
 -- 2023-04-03  1.0      andri	  Created
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------- 
 
 library ieee;
 	use ieee.std_logic_1164.all;
@@ -45,6 +45,8 @@ architecture rtl of dds is
 
 	SIGNAL 	count, next_count, count_o: 	unsigned(N_CUM-1 downto 0);
 	SIGNAL   lut_val  :	signed(N_AUDIO-1 downto 0);
+	type		t_dds_o_array is array (0 to 9) of std_logic_vector(N_AUDIO-1 downto 0);
+
 
 
 begin
@@ -89,13 +91,13 @@ begin
 		atte := to_integer(unsigned(attenu_i));
 	
 		case atte is
-			when 7      => dds_o <= std_logic_vector(lut_val);
-			when 6      => dds_o <= std_logic_vector(shift_right(lut_val, 1));
-			when 5      => dds_o <= std_logic_vector(shift_right(lut_val, 2));
-			when 4      => dds_o <= std_logic_vector(shift_right(lut_val, 3));
-			when 3      => dds_o <= std_logic_vector(shift_right(lut_val, 4));
-			when 2      => dds_o <= std_logic_vector(shift_right(lut_val, 5));
-			when 1      => dds_o <= std_logic_vector(shift_right(lut_val, 6));
+			when 0      => dds_o <= std_logic_vector(lut_val);
+			when 1      => dds_o <= std_logic_vector(shift_right(lut_val, 1));
+			when 2      => dds_o <= std_logic_vector(shift_right(lut_val, 2));
+			when 3      => dds_o <= std_logic_vector(shift_right(lut_val, 3));
+			when 4      => dds_o <= std_logic_vector(shift_right(lut_val, 4));
+			when 5      => dds_o <= std_logic_vector(shift_right(lut_val, 5));
+			when 6      => dds_o <= std_logic_vector(shift_right(lut_val, 6));
 			when others => dds_o <= std_logic_vector(shift_right(lut_val, 7));
 		end case;
 		

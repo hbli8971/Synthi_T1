@@ -6,7 +6,7 @@
 -- Author     : Hans-Joachim Gelke
 -- Company    : 
 -- Created    : 2018-03-08
--- Last update: 2023-04-26
+-- Last update: 2023-05-10
 -- Platform   : 
 -- Standard   : VHDL'08
 -------------------------------------------------------------------------------
@@ -23,6 +23,7 @@ library ieee;
 	use ieee.std_logic_1164.all;
 library work;
 use IEEE.numeric_std.all;
+use work.tone_gen_pkg.all;
 	use ieee.numeric_std.all;
 	use work.tone_gen_pkg.all;
 -------------------------------------------------------------------------------
@@ -156,28 +157,6 @@ architecture struct of synthi_top is
 		);
 	end component path_ctrl;
 
-	component tone_generator is
-    port (
-      tone_on_i  : IN  std_logic;
-      note_i     : IN  std_logic_vector(6 downto 0);
-      step_i     : IN  std_logic;
-      velocity_i : IN  std_logic_vector(6 downto 0);
-      clk_6m     : IN  std_logic;
-      rst_n      : IN  std_logic;
-      dds_l_o    : OUT std_logic_vector(15 downto 0);
-      dds_r_o    : OUT std_logic_vector(15 downto 0));
-  end component tone_generator;
-
-  component MIDI is
-    port (
-      clk_6m      : in  std_logic;
-      reset_n     : in  std_logic;
-      rx_data     : in  std_logic_vector(7 downto 0);
-      rx_data_rdy : in  std_logic;
-      note        : out std_logic_vector(6 downto 0);
-      velocity    : out std_logic_vector(6 downto 0);
-      note_valid  : out std_logic);
-  end component MIDI;
   
   component vhdl_hex2sevseg is
     port (
@@ -188,6 +167,41 @@ architecture struct of synthi_top is
       rbo_n   : OUT std_logic;
       rbi_n   : IN  std_logic);
   end component vhdl_hex2sevseg;
+
+    component output_register is
+    generic (
+      width : positive);
+    port (
+      parallel_in : in  std_logic_vector(width-1 downto 0);
+      clk         : in  std_logic;
+      data_valid  : in  std_logic;
+      reset_n     : in  std_logic;
+      hex_lsb_out : out std_logic_vector(3 downto 0);
+      hex_msb_out : out std_logic_vector(3 downto 0));
+  end component output_register;
+
+  component MIDI is
+    port (
+      clk_6m      : in  std_logic;
+      reset_n     : in  std_logic;
+      rx_data     : in  std_logic_vector(7 downto 0);
+      rx_data_rdy : in  std_logic;
+      note        : out t_tone_array;
+      velocity    : out t_tone_array;
+      note_valid  : out std_logic_vector(9 downto 0));
+  end component MIDI;
+
+  component tone_generator is
+    port (
+      tone_on_i  : IN  std_logic_vector(9 downto 0);
+      note_i     : IN  t_tone_array;
+      step_i     : IN  std_logic;
+      velocity_i : IN  t_tone_array;
+      clk_6m     : IN  std_logic;
+      rst_n      : IN  std_logic;
+      dds_l_o    : OUT std_logic_vector(N_AUDIO-1 downto 0);
+      dds_r_o    : OUT std_logic_vector(N_AUDIO-1 downto 0));
+  end component tone_generator;
 
  -----------------------------------------------------------------------------
  -- Internal signal declarations
@@ -211,36 +225,20 @@ architecture struct of synthi_top is
  signal sig_step		: std_logic;
  signal dds_l_o		: std_logic_vector(15 downto 0);
  signal dds_r_o		: std_logic_vector(15 downto 0);
- signal note_signal  : std_logic_vector(6 downto 0);
- signal velocity_signal: std_logic_vector(6 downto 0);
+ signal note_signal  : t_tone_array;
+ signal velocity_signal: t_tone_array;
  signal note_signal1  : std_logic_vector(6 downto 0);
  signal velocity_signal1: std_logic_vector(6 downto 0);
 
  signal rx_data_sig    : std_logic_vector(7 downto 0);
  signal rx_data_rdy_sig : std_logic;
- signal tone_on_sig     : std_logic;
+ signal tone_on_sig     : std_logic_vector(9 downto 0);
  
  
  
  signal jan2    : std_logic_vector(3 downto 0);
  signal jan1    : std_logic_vector(3 downto 0);
  signal debug_jan    : std_logic;
-
-  component output_register is
-    generic (
-      width : positive);
-    port (
-      parallel_in : in  std_logic_vector(width-1 downto 0);
-      clk         : in  std_logic;
-      data_valid  : in  std_logic;
-      reset_n     : in  std_logic;
-      hex_lsb_out : out std_logic_vector(3 downto 0);
-      hex_msb_out : out std_logic_vector(3 downto 0));
-  end component output_register;
-
-  
-
-
   
 	
 begin
@@ -323,30 +321,6 @@ begin
 			dacdat_pr_o => sig_dacdat_pr
 		);
 
-  -- instance "tone_generator_1"
-      inst_tone_generator: tone_generator
-		port map 
-		(
-			tone_on_i  => tone_on_sig,--
-			note_i     => note_signal,--
-			step_i     => sig_step, --
-			velocity_i => velocity_signal,
-			clk_6m     => clk_6m, --
-			rst_n      => reset_n,-- 
-			dds_l_o    => dds_l_o,--
-			dds_r_o    => dds_r_o
-		);
-  
-  -- instance "MIDI_1"
-    MIDI_1: MIDI
-    port map (
-      clk_6m      => clk_6m,
-      reset_n     => reset_n,
-      rx_data     => rx_data_sig,
-      rx_data_rdy => rx_data_rdy_sig,
-      note        => note_signal,
-      velocity    => velocity_signal,
-      note_valid  => tone_on_sig);
 
 
 	AUD_BCLK		<= clk_6m;
@@ -377,17 +351,38 @@ vhdl_hex2sevseg_3: vhdl_hex2sevseg
     rbi_n   => '0');
 
   -- instance "output_register_1"
-  output_register_1: output_register
+ output_register_1: output_register
   GENERIC MAP(width => 10)
     port map (
-      parallel_in => "00"& note_signal&'0',
+      parallel_in => "0000000000",
       clk         => clk_6m,
       data_valid  => '1',
       reset_n     => reset_n,
       hex_lsb_out => jan1,
       hex_msb_out => jan2);
 
+  -- instance "MIDI_2"
+  MIDI_2: MIDI
+    port map (
+      clk_6m      => clk_6m,
+      reset_n     => reset_n,
+      rx_data     => rx_data_sig,
+      rx_data_rdy => rx_data_rdy_sig,
+      note        => note_signal,
+      velocity    => velocity_signal,
+      note_valid  => tone_on_sig);
 
+  -- instance "tone_generator_1"
+  tone_generator_1: tone_generator
+    port map (
+      tone_on_i  => tone_on_sig,
+      note_i     => note_signal,
+      step_i     => sig_step,
+      velocity_i => velocity_signal,
+      clk_6m     => clk_6m,
+      rst_n      => reset_n,
+      dds_l_o    => dds_l_o,
+      dds_r_o    => dds_r_o);
 
 
 
