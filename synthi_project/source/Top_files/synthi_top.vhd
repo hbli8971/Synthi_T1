@@ -6,7 +6,7 @@
 -- Author     : Hans-Joachim Gelke
 -- Company    : 
 -- Created    : 2018-03-08
--- Last update: 2023-05-10
+-- Last update: 2023-05-17
 -- Platform   : 
 -- Standard   : VHDL'08
 -------------------------------------------------------------------------------
@@ -190,7 +190,8 @@ architecture struct of synthi_top is
       rx_data_rdy : in  std_logic;
       note        : out t_tone_array;
       velocity    : out t_tone_array;
-      note_valid  : out std_logic_vector(9 downto 0));
+      note_valid  : out std_logic_vector(9 downto 0)
+		);
   end component MIDI;
 
   component tone_generator is
@@ -202,10 +203,11 @@ architecture struct of synthi_top is
       clk_6m     : IN  std_logic;
       rst_n      : IN  std_logic;
       dds_l_o    : OUT std_logic_vector(N_AUDIO-1 downto 0);
-      dds_r_o    : OUT std_logic_vector(N_AUDIO-1 downto 0));
+      dds_r_o    : OUT std_logic_vector(N_AUDIO-1 downto 0);
 		atte_f_eq  : IN std_logic_vector(4 downto 0);
 		atte_v_eq  : IN std_logic_vector(2 downto 0);
-		enable_e   : IN std_logic_vector;
+		enable_eq  : IN std_logic
+		);
   end component tone_generator;
 
  -----------------------------------------------------------------------------
@@ -239,17 +241,31 @@ architecture struct of synthi_top is
  signal rx_data_rdy_sig : std_logic;
  signal tone_on_sig     : std_logic_vector(9 downto 0);
  
+ signal atte_v_intern	: std_logic_vector(2 downto 0);
+ signal atte_f_intern	: std_logic_vector(4 downto 0);
+ signal enable_intern	: std_logic;
+ 
  
  
  signal jan2    : std_logic_vector(3 downto 0);
  signal jan1    : std_logic_vector(3 downto 0);
+
+  component EQ_top is
+    port (
+      Serial_in_BT  : IN  STD_LOGIC;
+      clk_6m        : IN  STD_LOGIC;
+      reset_n       : IN  STD_LOGIC;
+      atte_freqency : OUT STD_LOGIC_VECTOR(4 downto 0);
+      atte_value    : OUT STD_LOGIC_VECTOR(2 downto 0);
+      enable        : OUT STD_LOGIC);
+  end component EQ_top;
 
   
 	
 begin
 
 -----------------------------------------------------------------------------
-  -- Architecture Description
+  -- Architecture Description;
 -----------------------------------------------------------------------------
 
   -- instance "infrastructure_1"
@@ -381,16 +397,28 @@ begin
       clk_6m     => clk_6m,
       rst_n      => reset_n,
       dds_l_o    => dds_l_o,
-      dds_r_o    => dds_r_o
-		--atte_f_eq  =>;
-		--atte_v_eq  =>;
-		--enable_eq  =>;
+      dds_r_o    => dds_r_o,
+		atte_f_eq  => atte_f_intern,
+		atte_v_eq  => atte_v_intern,
+		enable_eq  => enable_intern
 	);
 
+
+  -- instance "EQ_top_1"
+  EQ_top_1: EQ_top
+    port map (
+      Serial_in_BT  => BT_TXD,
+      clk_6m        => clk_6m,
+      reset_n       => reset_n,
+      atte_freqency => atte_f_intern,
+      atte_value    => atte_v_intern,
+      enable        => enable_intern);
+		
 	AUD_BCLK		<= clk_6m;
 	AUD_DACLRCK	<= ws_i;
 	AUD_ADCLRCK	<= ws_i;
-	LEDR_5 <= GPIO_26;
+
+
 		
 end architecture struct;
 

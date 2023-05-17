@@ -15,10 +15,9 @@ SW[9] => ~NO_FANOUT~
 USB_RXD => ~NO_FANOUT~
 USB_TXD => ~NO_FANOUT~
 BT_RXD => ~NO_FANOUT~
-BT_TXD => ~NO_FANOUT~
+BT_TXD => EQ_top:EQ_top_1.Serial_in_BT
 BT_RST_N => ~NO_FANOUT~
 GPIO_26 => infrastructure:infrastructure_1.usb_txd
-GPIO_26 => LEDR_5.DATAIN
 AUD_XCK << infrastructure:infrastructure_1.clk_12m
 AUD_DACDAT << i2s_master:inst_i2s_master.dacdat_s_o
 AUD_BCLK << infrastructure:infrastructure_1.clk_6m
@@ -60,7 +59,7 @@ LEDR_1 << LEDR_1.DB_MAX_OUTPUT_PORT_TYPE
 LEDR_2 << LEDR_2.DB_MAX_OUTPUT_PORT_TYPE
 LEDR_3 << LEDR_3.DB_MAX_OUTPUT_PORT_TYPE
 LEDR_4 << LEDR_4.DB_MAX_OUTPUT_PORT_TYPE
-LEDR_5 << GPIO_26.DB_MAX_OUTPUT_PORT_TYPE
+LEDR_5 << LEDR_5.DB_MAX_OUTPUT_PORT_TYPE
 LEDR_6 << LEDR_6.DB_MAX_OUTPUT_PORT_TYPE
 LEDR_7 << LEDR_7.DB_MAX_OUTPUT_PORT_TYPE
 LEDR_8 << LEDR_8.DB_MAX_OUTPUT_PORT_TYPE
@@ -3486,6 +3485,15 @@ dds_r_o[12] <= sum_reg[12].DB_MAX_OUTPUT_PORT_TYPE
 dds_r_o[13] <= sum_reg[13].DB_MAX_OUTPUT_PORT_TYPE
 dds_r_o[14] <= sum_reg[14].DB_MAX_OUTPUT_PORT_TYPE
 dds_r_o[15] <= sum_reg[15].DB_MAX_OUTPUT_PORT_TYPE
+atte_f_eq[0] => ~NO_FANOUT~
+atte_f_eq[1] => ~NO_FANOUT~
+atte_f_eq[2] => ~NO_FANOUT~
+atte_f_eq[3] => ~NO_FANOUT~
+atte_f_eq[4] => ~NO_FANOUT~
+atte_v_eq[0] => ~NO_FANOUT~
+atte_v_eq[1] => ~NO_FANOUT~
+atte_v_eq[2] => ~NO_FANOUT~
+enable_eq => ~NO_FANOUT~
 
 
 |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds
@@ -4876,5 +4884,279 @@ dds_o[12] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 dds_o[13] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 dds_o[14] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 dds_o[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|synthi_top|EQ_top:EQ_top_1
+Serial_in_BT => EQ_uart_top:uart_top_1.serial_in
+clk_6m => EQ_uart_top:uart_top_1.clk_6m
+clk_6m => EQ_ctrl:EQ_ctrl_1.clk
+reset_n => EQ_uart_top:uart_top_1.reset_n
+reset_n => EQ_ctrl:EQ_ctrl_1.reset_n
+atte_freqency[0] <= atte_freqency[0].DB_MAX_OUTPUT_PORT_TYPE
+atte_freqency[1] <= atte_freqency[1].DB_MAX_OUTPUT_PORT_TYPE
+atte_freqency[2] <= atte_freqency[2].DB_MAX_OUTPUT_PORT_TYPE
+atte_freqency[3] <= atte_freqency[3].DB_MAX_OUTPUT_PORT_TYPE
+atte_freqency[4] <= atte_freqency[4].DB_MAX_OUTPUT_PORT_TYPE
+atte_value[0] <= atte_value[0].DB_MAX_OUTPUT_PORT_TYPE
+atte_value[1] <= atte_value[1].DB_MAX_OUTPUT_PORT_TYPE
+atte_value[2] <= atte_value[2].DB_MAX_OUTPUT_PORT_TYPE
+enable <= enable.DB_MAX_OUTPUT_PORT_TYPE
+RX_data_BT[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+RX_data_BT[1] <= RX_data_BT[1].DB_MAX_OUTPUT_PORT_TYPE
+RX_data_BT[2] <= RX_data_BT[2].DB_MAX_OUTPUT_PORT_TYPE
+RX_data_BT[3] <= RX_data_BT[3].DB_MAX_OUTPUT_PORT_TYPE
+RX_data_BT[4] <= RX_data_BT[4].DB_MAX_OUTPUT_PORT_TYPE
+RX_data_BT[5] <= RX_data_BT[5].DB_MAX_OUTPUT_PORT_TYPE
+RX_data_BT[6] <= RX_data_BT[6].DB_MAX_OUTPUT_PORT_TYPE
+RX_data_BT[7] <= RX_data_BT[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1
+clk_6m => EQ_baud_tick:b2v_inst.clk
+clk_6m => shiftreg_uart:b2v_inst1.clk
+clk_6m => flanken_detekt_vhdl:b2v_inst18.clk
+clk_6m => bit_counter:b2v_inst6.clk
+clk_6m => uart_controller_fsm:b2v_inst7.clk
+reset_n => EQ_baud_tick:b2v_inst.reset_n
+reset_n => shiftreg_uart:b2v_inst1.reset_n
+reset_n => flanken_detekt_vhdl:b2v_inst18.reset_n
+reset_n => bit_counter:b2v_inst6.reset_n
+reset_n => uart_controller_fsm:b2v_inst7.reset_n
+serial_in => shiftreg_uart:b2v_inst1.serial_in
+serial_in => flanken_detekt_vhdl:b2v_inst18.data_in
+rx_data[0] <= shiftreg_uart:b2v_inst1.parallel_out[1]
+rx_data[1] <= shiftreg_uart:b2v_inst1.parallel_out[2]
+rx_data[2] <= shiftreg_uart:b2v_inst1.parallel_out[3]
+rx_data[3] <= shiftreg_uart:b2v_inst1.parallel_out[4]
+rx_data[4] <= shiftreg_uart:b2v_inst1.parallel_out[5]
+rx_data[5] <= shiftreg_uart:b2v_inst1.parallel_out[6]
+rx_data[6] <= shiftreg_uart:b2v_inst1.parallel_out[7]
+rx_data[7] <= shiftreg_uart:b2v_inst1.parallel_out[8]
+rx_data_rdy <= uart_controller_fsm:b2v_inst7.data_valid
+
+
+|synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+reset_n => count[0].ACLR
+reset_n => count[1].ACLR
+reset_n => count[2].ACLR
+reset_n => count[3].ACLR
+reset_n => count[4].ACLR
+reset_n => count[5].ACLR
+start_bit => next_count[5].OUTPUTSELECT
+start_bit => next_count[4].OUTPUTSELECT
+start_bit => next_count[3].OUTPUTSELECT
+start_bit => next_count[2].OUTPUTSELECT
+start_bit => next_count[1].OUTPUTSELECT
+start_bit => next_count[0].OUTPUTSELECT
+baud_tick <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1
+clk => shiftreg[0].CLK
+clk => shiftreg[1].CLK
+clk => shiftreg[2].CLK
+clk => shiftreg[3].CLK
+clk => shiftreg[4].CLK
+clk => shiftreg[5].CLK
+clk => shiftreg[6].CLK
+clk => shiftreg[7].CLK
+clk => shiftreg[8].CLK
+clk => shiftreg[9].CLK
+reset_n => shiftreg[0].ACLR
+reset_n => shiftreg[1].ACLR
+reset_n => shiftreg[2].ACLR
+reset_n => shiftreg[3].ACLR
+reset_n => shiftreg[4].ACLR
+reset_n => shiftreg[5].ACLR
+reset_n => shiftreg[6].ACLR
+reset_n => shiftreg[7].ACLR
+reset_n => shiftreg[8].ACLR
+reset_n => shiftreg[9].ACLR
+parallel_in[0] => shiftreg[0].DATAB
+parallel_in[1] => shiftreg[1].DATAB
+parallel_in[2] => shiftreg[2].DATAB
+parallel_in[3] => shiftreg[3].DATAB
+parallel_in[4] => shiftreg[4].DATAB
+parallel_in[5] => shiftreg[5].DATAB
+parallel_in[6] => shiftreg[6].DATAB
+parallel_in[7] => shiftreg[7].DATAB
+parallel_in[8] => shiftreg[8].DATAB
+parallel_in[9] => shiftreg[9].DATAB
+parallel_out[0] <= shiftreg[0].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[1] <= shiftreg[1].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[2] <= shiftreg[2].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[3] <= shiftreg[3].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[4] <= shiftreg[4].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[5] <= shiftreg[5].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[6] <= shiftreg[6].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[7] <= shiftreg[7].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[8] <= shiftreg[8].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[9] <= shiftreg[9].DB_MAX_OUTPUT_PORT_TYPE
+serial_in => shiftreg[9].DATAB
+serial_out <= shiftreg[0].DB_MAX_OUTPUT_PORT_TYPE
+load_in => shiftreg[0].OUTPUTSELECT
+load_in => shiftreg[1].OUTPUTSELECT
+load_in => shiftreg[2].OUTPUTSELECT
+load_in => shiftreg[3].OUTPUTSELECT
+load_in => shiftreg[4].OUTPUTSELECT
+load_in => shiftreg[5].OUTPUTSELECT
+load_in => shiftreg[6].OUTPUTSELECT
+load_in => shiftreg[7].OUTPUTSELECT
+load_in => shiftreg[8].OUTPUTSELECT
+load_in => shiftreg[9].OUTPUTSELECT
+load_in => shift_dffs.IN0
+shift_enable => shift_dffs.IN1
+
+
+|synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18
+data_in => q_0.DATAIN
+clk => q_1.CLK
+clk => q_0.CLK
+reset_n => q_1.ACLR
+reset_n => q_0.ACLR
+rising_pulse <= rising_pulse.DB_MAX_OUTPUT_PORT_TYPE
+falling_pulse <= falling_pulse.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|bit_counter:b2v_inst6
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+reset_n => count[0].ACLR
+reset_n => count[1].ACLR
+reset_n => count[2].ACLR
+reset_n => count[3].ACLR
+start_bit => next_count[3].OUTPUTSELECT
+start_bit => next_count[2].OUTPUTSELECT
+start_bit => next_count[1].OUTPUTSELECT
+start_bit => next_count[0].OUTPUTSELECT
+baud_tick => comb_logic.IN1
+bit_count[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+bit_count[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+bit_count[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+bit_count[3] <= count[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|uart_controller_fsm:b2v_inst7
+clk => fsm_state~1.DATAIN
+reset_n => fsm_state~3.DATAIN
+falling_pulse => next_fsm_state.OUTPUTSELECT
+falling_pulse => next_fsm_state.OUTPUTSELECT
+falling_pulse => next_fsm_state.OUTPUTSELECT
+falling_pulse => next_fsm_state.OUTPUTSELECT
+falling_pulse => start_bit.DATAB
+baud_tick => state_logic.IN1
+baud_tick => shift_enable.DATAB
+bit_count[0] => Equal0.IN3
+bit_count[1] => Equal0.IN1
+bit_count[2] => Equal0.IN0
+bit_count[3] => Equal0.IN2
+parallel_data[0] => data_valid.OUTPUTSELECT
+parallel_data[1] => ~NO_FANOUT~
+parallel_data[2] => ~NO_FANOUT~
+parallel_data[3] => ~NO_FANOUT~
+parallel_data[4] => ~NO_FANOUT~
+parallel_data[5] => ~NO_FANOUT~
+parallel_data[6] => ~NO_FANOUT~
+parallel_data[7] => ~NO_FANOUT~
+parallel_data[8] => ~NO_FANOUT~
+parallel_data[9] => data_valid.DATAA
+shift_enable <= shift_enable.DB_MAX_OUTPUT_PORT_TYPE
+start_bit <= start_bit.DB_MAX_OUTPUT_PORT_TYPE
+data_valid <= data_valid.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|synthi_top|EQ_top:EQ_top_1|EQ_ctrl:EQ_ctrl_1
+rx_data[0] => ctrl_reg[0].DATAIN
+rx_data[0] => data1_reg[0].DATAIN
+rx_data[0] => data2_reg[0].DATAIN
+rx_data[1] => ctrl_reg[1].DATAIN
+rx_data[1] => data1_reg[1].DATAIN
+rx_data[1] => data2_reg[1].DATAIN
+rx_data[2] => ctrl_reg[2].DATAIN
+rx_data[2] => data1_reg[2].DATAIN
+rx_data[2] => data2_reg[2].DATAIN
+rx_data[3] => ctrl_reg[3].DATAIN
+rx_data[3] => data1_reg[3].DATAIN
+rx_data[4] => ctrl_reg[4].DATAIN
+rx_data[4] => data1_reg[4].DATAIN
+rx_data[5] => ctrl_reg[5].DATAIN
+rx_data[6] => ctrl_reg[6].DATAIN
+rx_data[7] => ctrl_reg[7].DATAIN
+rx_data_rdy => next_fsm_state.OUTPUTSELECT
+rx_data_rdy => next_fsm_state.OUTPUTSELECT
+rx_data_rdy => next_fsm_state.OUTPUTSELECT
+rx_data_rdy => next_fsm_state.OUTPUTSELECT
+rx_data_rdy => next_fsm_state.OUTPUTSELECT
+rx_data_rdy => next_fsm_state.OUTPUTSELECT
+rx_data_rdy => next_fsm_state.OUTPUTSELECT
+rx_data_rdy => next_fsm_state.OUTPUTSELECT
+rx_data_rdy => next_fsm_state.OUTPUTSELECT
+clk => data2_reg[0].CLK
+clk => data2_reg[1].CLK
+clk => data2_reg[2].CLK
+clk => data1_reg[0].CLK
+clk => data1_reg[1].CLK
+clk => data1_reg[2].CLK
+clk => data1_reg[3].CLK
+clk => data1_reg[4].CLK
+clk => ctrl_reg[0].CLK
+clk => ctrl_reg[1].CLK
+clk => ctrl_reg[2].CLK
+clk => ctrl_reg[3].CLK
+clk => ctrl_reg[4].CLK
+clk => ctrl_reg[5].CLK
+clk => ctrl_reg[6].CLK
+clk => ctrl_reg[7].CLK
+clk => atte_v[0].CLK
+clk => atte_v[1].CLK
+clk => atte_v[2].CLK
+clk => atte_f[0].CLK
+clk => atte_f[1].CLK
+clk => atte_f[2].CLK
+clk => atte_f[3].CLK
+clk => atte_f[4].CLK
+clk => fsm_state~1.DATAIN
+reset_n => data2_reg[0].ACLR
+reset_n => data2_reg[1].ACLR
+reset_n => data2_reg[2].ACLR
+reset_n => data1_reg[0].ACLR
+reset_n => data1_reg[1].ACLR
+reset_n => data1_reg[2].ACLR
+reset_n => data1_reg[3].ACLR
+reset_n => data1_reg[4].ACLR
+reset_n => ctrl_reg[0].ACLR
+reset_n => ctrl_reg[1].ACLR
+reset_n => ctrl_reg[2].ACLR
+reset_n => ctrl_reg[3].ACLR
+reset_n => ctrl_reg[4].ACLR
+reset_n => ctrl_reg[5].ACLR
+reset_n => ctrl_reg[6].ACLR
+reset_n => ctrl_reg[7].ACLR
+reset_n => atte_v[0].PRESET
+reset_n => atte_v[1].PRESET
+reset_n => atte_v[2].ACLR
+reset_n => atte_f[0].ACLR
+reset_n => atte_f[1].ACLR
+reset_n => atte_f[2].ACLR
+reset_n => atte_f[3].ACLR
+reset_n => atte_f[4].ACLR
+reset_n => fsm_state~3.DATAIN
+atte_freq[0] <= atte_f[0].DB_MAX_OUTPUT_PORT_TYPE
+atte_freq[1] <= atte_f[1].DB_MAX_OUTPUT_PORT_TYPE
+atte_freq[2] <= atte_f[2].DB_MAX_OUTPUT_PORT_TYPE
+atte_freq[3] <= atte_f[3].DB_MAX_OUTPUT_PORT_TYPE
+atte_freq[4] <= atte_f[4].DB_MAX_OUTPUT_PORT_TYPE
+atte_value[0] <= atte_v[0].DB_MAX_OUTPUT_PORT_TYPE
+atte_value[1] <= atte_v[1].DB_MAX_OUTPUT_PORT_TYPE
+atte_value[2] <= atte_v[2].DB_MAX_OUTPUT_PORT_TYPE
+enable <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 

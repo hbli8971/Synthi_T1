@@ -88,15 +88,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR_5",
-					"strict" : false
-				},
-				{
 					"name" : "AUD_SDAT",
-					"strict" : false
-				},
-				{
-					"name" : "GPIO_26",
 					"strict" : false
 				},
 				{
@@ -109,6 +101,10 @@
 				},
 				{
 					"name" : "KEY_0",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_26",
 					"strict" : false
 				},
 				{

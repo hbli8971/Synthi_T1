@@ -43,7 +43,7 @@ entity tone_generator is
 	 
 	 atte_f_eq	 : IN std_logic_vector(4 downto 0);
 	 atte_v_eq	 : IN std_logic_vector(2 downto 0);
-	 enable_eq	 : IN std_logic_vector
+	 enable_eq	 : IN std_logic
 
     );
 
@@ -59,6 +59,7 @@ architecture str of tone_generator is
 	type 		t_dds_o_array is array (0 to 9) of std_logic_vector(N_AUDIO-1 downto 0);
 	signal 	dds_o_array : t_dds_o_array;
 	SIGNAL	sum_reg, next_sum_reg: signed(N_AUDIO-1 downto 0);
+	signal   enable_eq_int, next_enable_eq : std_logic;
   -----------------------------------------------------------------------------
   -- Component declarations
   -----------------------------------------------------------------------------
@@ -121,8 +122,10 @@ begin
  	begin
 		if rst_n = '0' then
 			sum_reg <= (others => '0');
+			enable_eq_int <= '0';
 		elsif rising_edge(clk_6m) then
 			sum_reg <= next_sum_reg;
+			enable_eq_int <= next_enable_eq;
 		end if;
 	end process reg_sum_output;
 	

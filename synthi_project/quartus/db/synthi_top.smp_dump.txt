@@ -1,4 +1,19 @@
 
+State Machine - |synthi_top|EQ_top:EQ_top_1|EQ_ctrl:EQ_ctrl_1|fsm_state
+Name fsm_state.st_data_eval fsm_state.st_byte3 fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 0 0 
+fsm_state.st_byte1 0 0 0 1 1 
+fsm_state.st_byte2 0 0 1 0 1 
+fsm_state.st_byte3 0 1 0 0 1 
+fsm_state.st_data_eval 1 0 0 0 1 
+
+State Machine - |synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|fsm_state
+Name fsm_state.st_state3 fsm_state.st_wait_rx_byte fsm_state.st_state1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 0 
+fsm_state.st_state1 0 0 1 1 
+fsm_state.st_wait_rx_byte 0 1 0 1 
+fsm_state.st_state3 1 0 0 1 
+
 State Machine - |synthi_top|MIDI:MIDI_2|fsm_state
 Name fsm_state.st_wait_data2 fsm_state.st_wait_data1 fsm_state.st_wait_status 
 fsm_state.st_wait_status 0 0 0 
