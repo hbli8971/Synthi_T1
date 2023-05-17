@@ -1,5 +1,5 @@
 Analysis & Synthesis report for synthi_top
-Wed May 17 15:54:21 2023
+Wed May 17 16:26:38 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -43,30 +43,40 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
  35. Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"
  36. Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1"
  37. Port Connectivity Checks: "EQ_top:EQ_top_1"
- 38. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds"
- 39. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds"
- 40. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds"
- 41. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds"
- 42. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds"
- 43. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds"
- 44. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds"
- 45. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds"
- 46. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds"
- 47. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds"
- 48. Port Connectivity Checks: "output_register:output_register_1"
- 49. Port Connectivity Checks: "vhdl_hex2sevseg:vhdl_hex2sevseg_3"
- 50. Port Connectivity Checks: "vhdl_hex2sevseg:hdl_hex2sevseg_2"
- 51. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4"
- 52. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3"
- 53. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2"
- 54. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1"
- 55. Port Connectivity Checks: "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"
- 56. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst17"
- 57. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16"
- 58. Port Connectivity Checks: "uart_top:uart_top_1|shiftreg_uart:b2v_inst1"
- 59. Post-Synthesis Netlist Statistics for Top Partition
- 60. Elapsed Time Per Partition
- 61. Analysis & Synthesis Messages
+ 38. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ"
+ 39. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ"
+ 40. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ"
+ 41. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ"
+ 42. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ"
+ 43. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ"
+ 44. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ"
+ 45. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ"
+ 46. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ"
+ 47. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ"
+ 48. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds"
+ 49. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds"
+ 50. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds"
+ 51. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds"
+ 52. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds"
+ 53. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds"
+ 54. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds"
+ 55. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds"
+ 56. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds"
+ 57. Port Connectivity Checks: "tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds"
+ 58. Port Connectivity Checks: "output_register:output_register_1"
+ 59. Port Connectivity Checks: "vhdl_hex2sevseg:vhdl_hex2sevseg_3"
+ 60. Port Connectivity Checks: "vhdl_hex2sevseg:hdl_hex2sevseg_2"
+ 61. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4"
+ 62. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3"
+ 63. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2"
+ 64. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1"
+ 65. Port Connectivity Checks: "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"
+ 66. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst17"
+ 67. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16"
+ 68. Port Connectivity Checks: "uart_top:uart_top_1|shiftreg_uart:b2v_inst1"
+ 69. Post-Synthesis Netlist Statistics for Top Partition
+ 70. Elapsed Time Per Partition
+ 71. Analysis & Synthesis Messages
 
 
 
@@ -93,13 +103,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 17 15:54:21 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 17 16:26:38 2023       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; synthi_top                                  ;
 ; Top-level Entity Name              ; synthi_top                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 5,327                                       ;
-;     Total combinational functions  ; 5,182                                       ;
+; Total logic elements               ; 5,286                                       ;
+;     Total combinational functions  ; 5,141                                       ;
 ;     Dedicated logic registers      ; 535                                         ;
 ; Total registers                    ; 535                                         ;
 ; Total pins                         ; 65                                          ;
@@ -228,6 +238,7 @@ https://fpgasoftware.intel.com/eula.
 ; ../source/EQ/EQ_uart_top.vhd             ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_uart_top.vhd             ;         ;
 ; ../source/EQ/EQ_top.vhd                  ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd                  ;         ;
 ; ../source/EQ/EQ_ctrl.vhd                 ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd                 ;         ;
+; ../source/EQ/EQ.vhd                      ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ.vhd                      ;         ;
 ; ../source/i2c/reg_table_pkg.vhd          ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/reg_table_pkg.vhd          ;         ;
 ; ../source/i2c/i2c_master.vhd             ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd             ;         ;
 ; ../source/i2c/codec_controller.vhd       ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd       ;         ;
@@ -261,17 +272,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                     ;
 +---------------------------------------------+---------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 5,327                                                                     ;
+; Estimated Total logic elements              ; 5,286                                                                     ;
 ;                                             ;                                                                           ;
-; Total combinational functions               ; 5182                                                                      ;
+; Total combinational functions               ; 5141                                                                      ;
 ; Logic element usage by number of LUT inputs ;                                                                           ;
-;     -- 4 input functions                    ; 3931                                                                      ;
-;     -- 3 input functions                    ; 998                                                                       ;
-;     -- <=2 input functions                  ; 253                                                                       ;
+;     -- 4 input functions                    ; 3878                                                                      ;
+;     -- 3 input functions                    ; 1015                                                                      ;
+;     -- <=2 input functions                  ; 248                                                                       ;
 ;                                             ;                                                                           ;
 ; Logic elements by mode                      ;                                                                           ;
-;     -- normal mode                          ; 4834                                                                      ;
-;     -- arithmetic mode                      ; 348                                                                       ;
+;     -- normal mode                          ; 4795                                                                      ;
+;     -- arithmetic mode                      ; 346                                                                       ;
 ;                                             ;                                                                           ;
 ; Total registers                             ; 535                                                                       ;
 ;     -- Dedicated logic registers            ; 535                                                                       ;
@@ -283,7 +294,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                           ;
 ; Maximum fan-out node                        ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ;
 ; Maximum fan-out                             ; 500                                                                       ;
-; Total fan-out                               ; 21403                                                                     ;
+; Total fan-out                               ; 21232                                                                     ;
 ; Average fan-out                             ; 3.66                                                                      ;
 +---------------------------------------------+---------------------------------------------------------------------------+
 
@@ -293,10 +304,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                              ; Entity Name         ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+---------------------+--------------+
-; |synthi_top                                       ; 5182 (0)            ; 535 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 65   ; 0            ; 0          ; |synthi_top                                                                      ; synthi_top          ; work         ;
+; |synthi_top                                       ; 5141 (0)            ; 535 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 65   ; 0            ; 0          ; |synthi_top                                                                      ; synthi_top          ; work         ;
 ;    |MIDI:MIDI_2|                                  ; 98 (98)             ; 127 (127)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|MIDI:MIDI_2                                                          ; MIDI                ; work         ;
-;    |codec_controller:codec_controller_1|          ; 20 (20)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|codec_controller:codec_controller_1                                  ; codec_controller    ; work         ;
-;    |i2c_master:i2c_master_1|                      ; 84 (84)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2c_master:i2c_master_1                                              ; i2c_master          ; work         ;
+;    |codec_controller:codec_controller_1|          ; 16 (16)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|codec_controller:codec_controller_1                                  ; codec_controller    ; work         ;
+;    |i2c_master:i2c_master_1|                      ; 86 (86)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2c_master:i2c_master_1                                              ; i2c_master          ; work         ;
 ;    |i2s_master:inst_i2s_master|                   ; 81 (0)              ; 71 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master                                           ; i2s_master          ; work         ;
 ;       |i2s_frame_generator:i2s_frame_generator_1| ; 12 (12)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1 ; i2s_frame_generator ; work         ;
 ;       |mux_2_1:mux_2_1_1|                         ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1                         ; mux_2_1             ; work         ;
@@ -309,17 +320,17 @@ https://fpgasoftware.intel.com/eula.
 ;       |clock_sync:clock_sync_2|                   ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|clock_sync:clock_sync_2              ; clock_sync          ; work         ;
 ;       |modulo_divider:modulo_divider_1|           ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|modulo_divider:modulo_divider_1      ; modulo_divider      ; work         ;
 ;       |signal_checker:signal_checker_1|           ; 69 (69)             ; 34 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1      ; signal_checker      ; work         ;
-;    |tone_generator:tone_generator_1|              ; 4777 (1526)         ; 206 (16)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1                                      ; tone_generator      ; work         ;
-;       |dds:\dds_inst_gen:0:inst_dds|              ; 335 (335)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:1:inst_dds|              ; 330 (330)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:2:inst_dds|              ; 320 (320)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:3:inst_dds|              ; 330 (330)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds         ; dds                 ; work         ;
+;    |tone_generator:tone_generator_1|              ; 4738 (1524)         ; 206 (16)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1                                      ; tone_generator      ; work         ;
+;       |dds:\dds_inst_gen:0:inst_dds|              ; 331 (331)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:1:inst_dds|              ; 321 (321)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:2:inst_dds|              ; 326 (326)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:3:inst_dds|              ; 328 (328)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds         ; dds                 ; work         ;
 ;       |dds:\dds_inst_gen:4:inst_dds|              ; 322 (322)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:5:inst_dds|              ; 332 (332)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:6:inst_dds|              ; 322 (322)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:7:inst_dds|              ; 323 (323)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:8:inst_dds|              ; 325 (325)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:9:inst_dds|              ; 312 (312)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:5:inst_dds|              ; 312 (312)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:6:inst_dds|              ; 312 (312)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:7:inst_dds|              ; 326 (326)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:8:inst_dds|              ; 323 (323)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:9:inst_dds|              ; 313 (313)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds         ; dds                 ; work         ;
 ;    |uart_top:uart_top_1|                          ; 50 (0)              ; 36 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1                                                  ; uart_top            ; work         ;
 ;       |baud_tick:b2v_inst|                        ; 19 (19)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst                               ; baud_tick           ; work         ;
 ;       |bit_counter:b2v_inst6|                     ; 8 (8)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|bit_counter:b2v_inst6                            ; bit_counter         ; work         ;
@@ -420,10 +431,223 @@ Encoding Type:  One-Hot
 ; Register name                                                                                  ; Reason for Removal                                                                            ;
 +------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+
 ; output_register:output_register_1|data_reg[1..8]                                               ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_bass_deep[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_high_vhend[0]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_bass_low[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_bass_low[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_bass_mid[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_bass_mid[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_bass_high[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_bass_high[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_mid_low[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_mid_low[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_mid_mid[2]                      ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_mid_mid[0,1]                    ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_mid_high[2]                     ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_mid_high[0,1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_mid_vhigh[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_mid_vhigh[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_high_hend[2]                    ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_high_hend[0,1]                  ; Stuck at VCC due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_high_vhend[2]                   ; Stuck at GND due to stuck port data_in                                                        ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_high_vhend[1]                   ; Stuck at VCC due to stuck port data_in                                                        ;
 ; i2c_master:i2c_master_1|clk_divider[0]                                                         ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[0] ;
 ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[0]                      ; Merged with infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count12[0]        ;
 ; i2c_master:i2c_master_1|clk_divider[1]                                                         ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[1] ;
 ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[1]                      ; Merged with infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count12[1]        ;
+; i2c_master:i2c_master_1|clk_divider[2]                                                         ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[2] ;
+; i2c_master:i2c_master_1|clk_divider[3]                                                         ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[3] ;
+; i2c_master:i2c_master_1|clk_divider[4]                                                         ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[4] ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
+; tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ|atte_bass_deep[0,1]                  ; Lost fanout                                                                                   ;
 ; EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1|shiftreg[0,9]                   ; Lost fanout                                                                                   ;
 ; EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18|q_0                      ; Lost fanout                                                                                   ;
 ; EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18|q_1                      ; Lost fanout                                                                                   ;
@@ -439,10 +663,7 @@ Encoding Type:  One-Hot
 ; EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|fsm_state.st_state1       ; Lost fanout                                                                                   ;
 ; EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|fsm_state.st_wait_rx_byte ; Lost fanout                                                                                   ;
 ; EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|fsm_state.st_state3       ; Lost fanout                                                                                   ;
-; i2c_master:i2c_master_1|clk_divider[2]                                                         ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[2] ;
-; i2c_master:i2c_master_1|clk_divider[3]                                                         ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[3] ;
-; i2c_master:i2c_master_1|clk_divider[4]                                                         ; Merged with i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1|count_reg[4] ;
-; Total Number of Removed Registers = 46                                                         ;                                                                                               ;
+; Total Number of Removed Registers = 346                                                        ;                                                                                               ;
 +------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+
 
 
@@ -502,51 +723,52 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
-; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1|bit_count_i[10] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|bit_counter:b2v_inst6|count[2]           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|bit_counter:b2v_inst6|count[3]                              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4|reg[6]                   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3|reg[2]                   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst|count[1]           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst|count[0]                                 ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2|reg[7]                   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1|reg[9]                   ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |synthi_top|MIDI:MIDI_2|data1_reg[6]                                                        ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|byte_count[0]                                           ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|bit_count[2]                                            ;
-; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[17]                                                ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[12]                                                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|codec_controller:codec_controller_1|next_fsm_state                              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux22              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux21              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux21              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux21              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux22              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux22              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux21              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux21              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux21              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux22              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux24              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux24              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux23              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux24              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux24              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux24              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux24              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux23              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux24              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux23              ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector0  ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector0                     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector30                                              ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector31                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
+; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1|bit_count_i[7] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|bit_counter:b2v_inst6|count[2]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|bit_counter:b2v_inst6|count[3]                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4|reg[11]                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3|reg[4]                  ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst|count[0]          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst|count[0]                                ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2|reg[5]                  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1|reg[11]                 ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |synthi_top|MIDI:MIDI_2|data1_reg[0]                                                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|byte_count[0]                                          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|bit_count[0]                                           ;
+; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[20]                                               ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[6]                                                ;
+; 9:1                ; 20 bits   ; 120 LEs       ; 0 LEs                ; 120 LEs                ; Yes        ; |synthi_top|tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_deep[1]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|codec_controller:codec_controller_1|next_fsm_state                             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux22             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux22             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux22             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux21             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux23             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux23             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux23             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux23             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux23             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux23             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector2 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector2                    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector26                                             ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector28                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------+
@@ -737,6 +959,96 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; rx_data_bt ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------+
@@ -957,19 +1269,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SLD       ; 30                          ;
 ;     plain             ; 7                           ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 5197                        ;
-;     arith             ; 348                         ;
+; cycloneiii_lcell_comb ; 5156                        ;
+;     arith             ; 346                         ;
 ;         2 data inputs ; 44                          ;
-;         3 data inputs ; 304                         ;
-;     normal            ; 4849                        ;
+;         3 data inputs ; 302                         ;
+;     normal            ; 4810                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 29                          ;
-;         2 data inputs ; 193                         ;
-;         3 data inputs ; 694                         ;
-;         4 data inputs ; 3931                        ;
+;         2 data inputs ; 188                         ;
+;         3 data inputs ; 713                         ;
+;         4 data inputs ; 3878                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.50                       ;
-; Average LUT depth     ; 9.35                        ;
+; Average LUT depth     ; 9.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -978,7 +1290,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:24     ;
+; Top            ; 00:01:31     ;
 +----------------+--------------+
 
 
@@ -988,7 +1300,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed May 17 15:52:38 2023
+    Info: Processing started: Wed May 17 16:24:48 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/eq/eq_baud_tick.vhd
@@ -1001,10 +1313,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: EQ_top-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 46
     Info (12023): Found entity 1: EQ_top File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/eq/eq_ctrl.vhd
-    Info (12022): Found design unit 1: EQ_ctrl-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 45
+    Info (12022): Found design unit 1: EQ_ctrl-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 43
     Info (12023): Found entity 1: EQ_ctrl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/eq/eq.vhd
-    Info (12022): Found design unit 1: EQ-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ.vhd Line: 66
+    Info (12022): Found design unit 1: EQ-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ.vhd Line: 64
     Info (12023): Found entity 1: EQ File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ.vhd Line: 48
 Info (12021): Found 1 design units, including 0 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/reg_table_pkg.vhd
     Info (12022): Found design unit 1: reg_table_pkg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/reg_table_pkg.vhd Line: 26
@@ -1118,9 +1430,8 @@ Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_
 Info (12128): Elaborating entity "MIDI" for hierarchy "MIDI:MIDI_2" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 379
 Warning (10620): VHDL warning at MIDI.vhd(190): comparison between unequal length operands always returns FALSE File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 190
 Info (12128): Elaborating entity "tone_generator" for hierarchy "tone_generator:tone_generator_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 391
-Warning (10036): Verilog HDL or VHDL warning at tone_generator.vhd(62): object "enable_eq_int" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 62
-Warning (10541): VHDL Signal Declaration warning at tone_generator.vhd(62): used implicit default value for signal "next_enable_eq" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 62
-Info (12128): Elaborating entity "dds" for hierarchy "tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 87
+Info (12128): Elaborating entity "dds" for hierarchy "tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 104
+Info (12128): Elaborating entity "EQ" for hierarchy "tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 117
 Info (12128): Elaborating entity "EQ_top" for hierarchy "EQ_top:EQ_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 408
 Warning (10541): VHDL Signal Declaration warning at EQ_top.vhd(35): used implicit default value for signal "atte_freqency" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 35
 Warning (10541): VHDL Signal Declaration warning at EQ_top.vhd(36): used implicit default value for signal "atte_value" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 36
@@ -1132,7 +1443,7 @@ Warning (10036): Verilog HDL or VHDL warning at EQ_top.vhd(82): object "ENABLE_i
 Info (12128): Elaborating entity "EQ_uart_top" for hierarchy "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 91
 Info (12128): Elaborating entity "EQ_baud_tick" for hierarchy "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_uart_top.vhd Line: 119
 Info (12128): Elaborating entity "EQ_ctrl" for hierarchy "EQ_top:EQ_top_1|EQ_ctrl:EQ_ctrl_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 101
-Warning (10541): VHDL Signal Declaration warning at EQ_ctrl.vhd(38): used implicit default value for signal "enable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 38
+Warning (10541): VHDL Signal Declaration warning at EQ_ctrl.vhd(36): used implicit default value for signal "enable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 36
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 300
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -1161,7 +1472,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR_8" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 70
     Warning (13410): Pin "LEDR_9" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 71
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 31 registers lost all their fanouts during netlist optimizations.
+Info (17049): 51 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 12 input pin(s) that do not drive logic
@@ -1177,15 +1488,15 @@ Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "BT_RXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 42
     Warning (15610): No output dependent on input pin "BT_RST_N" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 44
     Warning (15610): No output dependent on input pin "BT_TXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 43
-Info (21057): Implemented 5397 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5356 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 44 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 5332 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
-    Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Wed May 17 15:54:21 2023
-    Info: Elapsed time: 00:01:43
-    Info: Total CPU time (on all processors): 00:02:06
+    Info (21061): Implemented 5291 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Wed May 17 16:26:38 2023
+    Info: Elapsed time: 00:01:50
+    Info: Total CPU time (on all processors): 00:02:15
 
 

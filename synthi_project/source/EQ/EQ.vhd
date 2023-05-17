@@ -46,17 +46,15 @@ use ieee.numeric_std.all;
 --------------------            -----------------------------------------------------------
 
 entity EQ is
-
-  generic (width : positive := 16);
   port (
-    sound_in	:	in		std_logic_vector(width-1 downto 0); -- audio_signal input				-- Internal
+    sound_in	:	in		std_logic_vector(15 downto 0); -- audio_signal input				-- Internal
     atte_v		:	in		std_logic_vector(2 downto 0);	-- level of attenuation for sound sig	--extern
 	atte_f		:	in		std_logic_vector(4 downto 0);	-- what freq gets what atte lvl			--extern
-    f_in		:	in  	std_logic_vector(18 downto 0);-- freq of audio in signal				--Internal
+    f_in			:	in  	std_logic_vector(18 downto 0);-- freq of audio in signal				--Internal
 	enable		:	in		std_logic;-- enable the EQ (1=on;0=off)									--extern
 	reset_n		:	in		std_logic;-- reset the EQ												--Internal
 	clk			:	in		std_logic;-- clk for flip flop											--Internal
-	sound_out	:	out	std_logic_vector(width-1 downto 0) -- audio_signal output					--Internal
+	sound_out	:	out	std_logic_vector(15 downto 0) -- audio_signal output					--Internal
     );
 
 end entity EQ;
@@ -105,16 +103,7 @@ begin  -- architecture str
     begin
 		freq_in := to_integer(unsigned(f_in));
 		
-		next_bass_deep		<=		atte_bass_deep	;
-		next_bass_low	   <=    atte_bass_low	;	
-		next_bass_mid	   <=    atte_bass_mid	;
-		next_bass_high	   <=    atte_bass_high	;
-		next_mid_low	   <=    atte_mid_low	;
-		next_mid_mid	   <=    atte_mid_mid	;
-		next_mid_high	   <=    atte_mid_high	;
-		next_mid_vhigh	   <=    atte_mid_vhigh	;
-		next_high_hend	   <=    atte_high_hend	;
-		next_high_vhend   <=    atte_high_vhend;
+		
 		
 		
 		
@@ -149,6 +138,16 @@ begin  -- architecture str
 	read_n_store_data_routine : process(all)
 	VARIABLE atte : integer range 0 to 10;
 	 begin
+		next_bass_deep		<=		atte_bass_deep	;
+		next_bass_low	   <=    atte_bass_low	;	
+		next_bass_mid	   <=    atte_bass_mid	;
+		next_bass_high	   <=    atte_bass_high	;
+		next_mid_low	   <=    atte_mid_low	;
+		next_mid_mid	   <=    atte_mid_mid	;
+		next_mid_high	   <=    atte_mid_high	;
+		next_mid_vhigh	   <=    atte_mid_vhigh	;
+		next_high_hend	   <=    atte_high_hend	;
+		next_high_vhend   <=    atte_high_vhend;
 		atte := to_integer(unsigned(atte_f));
 		case atte is
 			when 1 =>  next_bass_deep 		<= atte_v;

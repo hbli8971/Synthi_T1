@@ -26,8 +26,6 @@ use ieee.std_logic_1164.all;
 
 entity EQ_ctrl is
 
-  --generic ( );
-
   port (
 		rx_data		: IN STD_LOGIC_VECTOR(7 downto 0);
 		rx_data_rdy	: IN STD_LOGIC;

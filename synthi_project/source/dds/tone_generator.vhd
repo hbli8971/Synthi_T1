@@ -6,7 +6,7 @@
 -- Author     :   <andri@DESKTOP-03G9R51>
 -- Company    : 
 -- Created    : 2023-04-03
--- Last update: 2023-04-11
+-- Last update: 2023-05-17
 -- Platform   : 
 -- Standard   : VHDL'08
 -------------------------------------------------------------------------------
@@ -58,8 +58,11 @@ architecture str of tone_generator is
   -----------------------------------------------------------------------------
 	type 		t_dds_o_array is array (0 to 9) of std_logic_vector(N_AUDIO-1 downto 0);
 	signal 	dds_o_array : t_dds_o_array;
+	signal	dds_o_array_eq : t_dds_o_array;
 	SIGNAL	sum_reg, next_sum_reg: signed(N_AUDIO-1 downto 0);
 	signal   enable_eq_int, next_enable_eq : std_logic;
+	--signal   atte_f_intern : std_logic_vector(4 downto 0);
+	--signal	atte_v_intern : std_logic_vector(2 downto 0);
   -----------------------------------------------------------------------------
   -- Component declarations
   -----------------------------------------------------------------------------
@@ -74,10 +77,24 @@ architecture str of tone_generator is
       attenu_i   : in  std_logic_vector(2 downto 0);
       dds_o      : out std_logic_vector(N_AUDIO-1 downto 0));
   end component dds;
-
+  
+  
+	component EQ is
+    port (
+      sound_in  : in  std_logic_vector(15 downto 0);
+      atte_v    : in  std_logic_vector(2 downto 0);
+      atte_f    : in  std_logic_vector(4 downto 0);
+      f_in      : in  std_logic_vector(18 downto 0);
+      enable    : in  std_logic;
+      reset_n   : in  std_logic;
+      clk       : in  std_logic;
+      sound_out : out std_logic_vector(15 downto 0));
+  end component EQ;
 
 	 
 signal dds_o  : std_logic_vector(N_AUDIO-1 downto 0);
+
+  
 
 
 begin
@@ -93,11 +110,24 @@ begin
         tone_on  => tone_on_i(i),
         attenu_i => velocity_i(i)(6 downto 4),
         dds_o    => dds_o_array(i)
-
-        --dds_l_o <= dds_o;
-        --dds_r_o <= dds_o;
       );
   end generate dds_inst_gen;
+  
+  eq_inst_gen : for i in 0 to 9 generate
+	inst_EQ : EQ
+		port map(
+		sound_in  => dds_o_array(i),  
+		atte_v    => atte_v_eq,
+		atte_f    => atte_f_eq,
+		f_in      => LUT_midi2dds(to_integer(unsigned(note_i(i)))),
+		enable    => enable_eq,
+		reset_n   => rst_n,
+		clk       => clk_6m,
+		sound_out => dds_o_array_eq(i)
+		);
+	end generate eq_inst_gen;
+		
+		
   
 	-------------------------------
 	-- Output Process
@@ -109,7 +139,7 @@ begin
 		var_sum := (others => '0');
 		if step_i = '1' then
 			dds_sum_loop : for i in 0 to 9 loop
-				var_sum := var_sum + signed(dds_o_array(i));
+				var_sum := var_sum + signed(dds_o_array_eq(i));
 			end loop dds_sum_loop;
 			next_sum_reg <= var_sum;
 		else
@@ -122,14 +152,12 @@ begin
  	begin
 		if rst_n = '0' then
 			sum_reg <= (others => '0');
-			enable_eq_int <= '0';
+			--enable_eq_int <= '0';
 		elsif rising_edge(clk_6m) then
 			sum_reg <= next_sum_reg;
-			enable_eq_int <= next_enable_eq;
+			--enable_eq_int <= next_enable_eq;
 		end if;
 	end process reg_sum_output;
-	
-	
 	dds_l_o <= std_logic_vector(sum_reg);
 	dds_r_o <= std_logic_vector(sum_reg);
 
