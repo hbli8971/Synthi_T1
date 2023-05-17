@@ -39,7 +39,11 @@ entity tone_generator is
     clk_6m      : IN std_logic;
     rst_n       : IN std_logic;
     dds_l_o     : OUT std_logic_vector(N_AUDIO-1 downto 0);
-    dds_r_o     : OUT std_logic_vector(N_AUDIO-1 downto 0)
+    dds_r_o     : OUT std_logic_vector(N_AUDIO-1 downto 0);
+	 
+	 atte_f_eq	 : IN std_logic_vector(4 downto 0);
+	 atte_v_eq	 : IN std_logic_vector(2 downto 0);
+	 enable_eq	 : IN std_logic_vector
 
     );
 
