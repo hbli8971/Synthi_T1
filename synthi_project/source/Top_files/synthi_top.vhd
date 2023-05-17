@@ -255,6 +255,7 @@ begin
       clock_50     => CLOCK_50,
       key_0        => KEY_0,
       usb_txd      => GPIO_26,
+	--	usb_txd		 => USB_TXD, -- for PC
       clk_6m       => clk_6m,
 		clk_12m		 => AUD_XCK,
       reset_n      => reset_n,
