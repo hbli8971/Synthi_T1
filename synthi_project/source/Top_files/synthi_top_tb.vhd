@@ -43,6 +43,7 @@ ARCHITECTURE struct OF synthi_top_tb IS
       KEY_0       : IN    STD_LOGIC;
       KEY_1       : IN    STD_LOGIC;
       SW          : IN    STD_LOGIC_VECTOR(9 DOWNTO 0);
+      GPIO_26     : IN    STD_LOGIC;
       USB_RXD     : IN    STD_LOGIC;
       USB_TXD     : IN    STD_LOGIC;
       BT_RXD      : IN    STD_LOGIC;
@@ -116,6 +117,7 @@ ARCHITECTURE struct OF synthi_top_tb IS
   SIGNAL I2C_SDAT       : STD_LOGIC;
   CONSTANT clock_freq   : NATURAL := 50_000_000;
   CONSTANT clock_period : TIME    := 1000 ms/clock_freq;
+  SIGNAL GPIO_26        : STD_LOGIC;
 
   COMPONENT i2c_slave_bfm IS
     GENERIC (
@@ -168,7 +170,8 @@ BEGIN  -- architecture struct
     LEDR_6      => LEDR_6,
     LEDR_7      => LEDR_7,
     LEDR_8      => LEDR_8,
-    LEDR_9      => LEDR_9);
+    LEDR_9      => LEDR_9,
+    GPIO_26     => GPIO_26);
 
   -- instance "i2c_slave_bfm_1"
   i2c_slave_bfm_1 : i2c_slave_bfm
@@ -242,6 +245,8 @@ BEGIN  -- architecture struct
         run_sim(tv);
       ELSIF cmd.ALL = "uart_send_data" THEN
         uar_sim(tv, USB_TXD);
+      ELSIF cmd.ALL = "uart_midi" THEN
+        uar_sim(tv, GPIO_26);
       ELSIF cmd.ALL = "check_display_hex0" THEN
         hex_chk(tv, hex0);
       ELSIF cmd.ALL = "check_display_hex0" THEN

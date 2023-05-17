@@ -20,9 +20,9 @@
 #-------------------------------------------------------------------------------
 reset_target 20
 set_switches 00 00 00 00
-uart_send_data 90   #Status Byte
-uart_send_data 74   #Note Byte
-uart_send_data 00   #Velocity Byte
+uart_midi 90 01  
+uart_midi 77 01  
+uart_midi 66 01  
 run_simulation_for 00 FF FF FF
 # 1001 0000, 0001 0101, 0111 1111,0000 0000
 

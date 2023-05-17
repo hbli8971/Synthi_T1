@@ -146,7 +146,7 @@ rbi_sig<='0';
 
 
 b2v_inst : baud_tick
-GENERIC MAP(width => 6
+GENERIC MAP(width => 8
 			)
 PORT MAP(clk => clk_6m,
 		 reset_n => reset,

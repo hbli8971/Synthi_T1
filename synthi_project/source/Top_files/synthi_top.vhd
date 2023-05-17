@@ -42,6 +42,8 @@ entity synthi_top is
     BT_RXD   : in std_logic;            -- Bluetooth serial_input
     BT_TXD   : in std_logic;            -- Bluetooth serial_output
     BT_RST_N : in std_logic;            -- Bluetooth reset_n
+	 
+	 GPIO_26	 : in std_logic;
 
     AUD_XCK     : out std_logic;        -- master clock for Audio Codec
     AUD_DACDAT  : out std_logic;        -- audio serial data to Codec-DAC
@@ -238,7 +240,7 @@ architecture struct of synthi_top is
  
  signal jan2    : std_logic_vector(3 downto 0);
  signal jan1    : std_logic_vector(3 downto 0);
- signal debug_jan    : std_logic;
+
   
 	
 begin
@@ -252,7 +254,7 @@ begin
     port map (
       clock_50     => CLOCK_50,
       key_0        => KEY_0,
-      usb_txd      => USB_TXD,
+      usb_txd      => GPIO_26,
       clk_6m       => clk_6m,
 		clk_12m		 => AUD_XCK,
       reset_n      => reset_n,
@@ -294,87 +296,80 @@ begin
       ack_error_o  => ack_error);
 		
 	
-	  inst_i2s_master : i2s_master
-		port map
-		(
-			dacdat_pr_i => sig_dacdat_pr,
-			dacdat_pl_i => sig_dacdat_pl,
-			clk_6m		=> clk_6m,
-			reset 		=> reset_n,
-			adcdat_s_i	=> AUD_ADCDAT,
-			dacdat_s_o	=> AUD_DACDAT,
-			step_o		=> sig_step,
-			ws_o			=> ws_i,
-			adcdat_pl_o	=> sig_adcdat_pl,
-			adcdat_pr_o	=> sig_adcdat_pr
-		);
+	inst_i2s_master : i2s_master
+	port map
+	(
+		dacdat_pr_i => sig_dacdat_pr,
+		dacdat_pl_i => sig_dacdat_pl,
+		clk_6m		=> clk_6m,
+		reset 		=> reset_n,
+		adcdat_s_i	=> AUD_ADCDAT,
+		dacdat_s_o	=> AUD_DACDAT,
+		step_o		=> sig_step,
+		ws_o			=> ws_i,
+		adcdat_pl_o	=> sig_adcdat_pl,
+		adcdat_pr_o	=> sig_adcdat_pr
+	);
 	
-		inst_path_ctrl : path_ctrl
-		port map
-		(
-			dds_l_i		=> dds_l_o,
-			dds_r_i		=> dds_r_o,
-			adcdat_pl_i	=> sig_adcdat_pl,
-			adcdat_pr_i => sig_adcdat_pr,
-			SW			  	=> SW(3),
-			dacdat_pl_o	=> sig_dacdat_pl,
-			dacdat_pr_o => sig_dacdat_pr
-		);
+	inst_path_ctrl : path_ctrl
+	port map
+	(
+		dds_l_i		=> dds_l_o,
+		dds_r_i		=> dds_r_o,
+		adcdat_pl_i	=> sig_adcdat_pl,
+		adcdat_pr_i => sig_adcdat_pr,
+		SW			  	=> SW(3),
+		dacdat_pl_o	=> sig_dacdat_pl,
+		dacdat_pr_o => sig_dacdat_pr
+	);
 
+	-- instance "vhdl_hex2sevseg_1"
+	hdl_hex2sevseg_2: vhdl_hex2sevseg
+	port map (
+		data_in => jan1,
+		seg_o   => HEX2,
+		lt_n    => '0',
+		blank_n => '0',
+		rbi_n   => '0'
+	);
 
-
-	AUD_BCLK		<= clk_6m;
-	AUD_DACLRCK	<= ws_i;
-	AUD_ADCLRCK	<= ws_i;
-	
-	-- Temporäre Verbindungen
-	--LEDR_3 <= SW(3); -- debuging, to be removed later
-	--note_signal1 <= sw(9 downto 8) & "00000";
-	--velocity_signal1 <= sw(7 downto 5) & "0000";
-
-  -- instance "vhdl_hex2sevseg_1"
- hdl_hex2sevseg_2: vhdl_hex2sevseg
-  port map (
-    data_in => jan1,
-    seg_o   => HEX2,
-    lt_n    => '0',
-    blank_n => '0',
-    rbi_n   => '0');
-
-vhdl_hex2sevseg_3: vhdl_hex2sevseg
- port map (
-    data_in => jan2,
-    seg_o   => HEX3,
-    lt_n    => '0',
-    blank_n => '0',
-    --rbo_n   => ,
-    rbi_n   => '0');
+	vhdl_hex2sevseg_3: vhdl_hex2sevseg
+	port map (
+		data_in => jan2,
+		seg_o   => HEX3,
+		lt_n    => '0',
+		blank_n => '0',
+		--rbo_n   => ,
+		rbi_n   => '0'
+	);
 
   -- instance "output_register_1"
- output_register_1: output_register
-  GENERIC MAP(width => 10)
-    port map (
+	output_register_1: output_register
+	GENERIC MAP(width => 10)
+   port map (
       parallel_in => "0000000000",
       clk         => clk_6m,
       data_valid  => '1',
       reset_n     => reset_n,
       hex_lsb_out => jan1,
-      hex_msb_out => jan2);
+      hex_msb_out => jan2
+	);
 
   -- instance "MIDI_2"
-  MIDI_2: MIDI
-    port map (
+	MIDI_2: MIDI
+   port map (
       clk_6m      => clk_6m,
       reset_n     => reset_n,
       rx_data     => rx_data_sig,
       rx_data_rdy => rx_data_rdy_sig,
       note        => note_signal,
       velocity    => velocity_signal,
-      note_valid  => tone_on_sig);
+      note_valid  => tone_on_sig
+	);
 
   -- instance "tone_generator_1"
-  tone_generator_1: tone_generator
-    port map (
+	tone_generator_1: tone_generator
+   port map (
       tone_on_i  => tone_on_sig,
       note_i     => note_signal,
       step_i     => sig_step,
@@ -382,10 +377,14 @@ vhdl_hex2sevseg_3: vhdl_hex2sevseg
       clk_6m     => clk_6m,
       rst_n      => reset_n,
       dds_l_o    => dds_l_o,
-      dds_r_o    => dds_r_o);
+      dds_r_o    => dds_r_o
+	);
 
-
-
+	AUD_BCLK		<= clk_6m;
+	AUD_DACLRCK	<= ws_i;
+	AUD_ADCLRCK	<= ws_i;
+	LEDR_5 <= GPIO_26;
+		
 end architecture struct;
 
 -------------------------------------------------------------------------------

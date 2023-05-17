@@ -1,6 +1,6 @@
 Analysis & Synthesis report for synthi_top
-Wed May 10 15:38:15 2023
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Wed May 17 11:47:09 2023
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -63,7 +63,7 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -80,26 +80,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
-+------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 10 15:38:15 2023          ;
-; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                      ; synthi_top                                     ;
-; Top-level Entity Name              ; synthi_top                                     ;
-; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 5,197                                          ;
-;     Total combinational functions  ; 5,052                                          ;
-;     Dedicated logic registers      ; 533                                            ;
-; Total registers                    ; 533                                            ;
-; Total pins                         ; 64                                             ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
-; UFM blocks                         ; 0                                              ;
-; ADC blocks                         ; 0                                              ;
-+------------------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 17 11:47:09 2023       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                      ; synthi_top                                  ;
+; Top-level Entity Name              ; synthi_top                                  ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 5,327                                       ;
+;     Total combinational functions  ; 5,182                                       ;
+;     Dedicated logic registers      ; 535                                         ;
+; Total registers                    ; 535                                         ;
+; Total pins                         ; 65                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -195,56 +195,51 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
-+------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path         ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                        ; Library ;
-+------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; ../source/i2c/reg_table_pkg.vhd          ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/reg_table_pkg.vhd          ;         ;
-; ../source/i2c/i2c_master.vhd             ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd             ;         ;
-; ../source/i2c/codec_controller.vhd       ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd       ;         ;
-; ../source/dds/tone_generator.vhd         ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd         ;         ;
-; ../source/dds/tone_gen_pkg.vhd           ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_gen_pkg.vhd           ;         ;
-; ../source/dds/dds.vhd                    ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd                    ;         ;
-; ../source/i2s/uni_shiftreg.vhd           ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd           ;         ;
-; ../source/i2s/path_ctrl.vhd              ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd              ;         ;
-; ../source/i2s/mux_2_1.vhd                ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd                ;         ;
-; ../source/i2s/i2s_master.vhd             ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd             ;         ;
-; ../source/i2s/i2s_frame_generator.vhd    ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd    ;         ;
-; ../source/MIDI/MIDI.vhd                  ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd                  ;         ;
-; ../source/others/vhdl_hex2sevseg.vhd     ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd     ;         ;
-; ../source/others/uart_controller_fsm.vhd ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd ;         ;
-; ../source/others/signal_checker.vhd      ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/signal_checker.vhd      ;         ;
-; ../source/others/shiftreg_uart.vhd       ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd       ;         ;
-; ../source/others/output_register.vhd     ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/output_register.vhd     ;         ;
-; ../source/others/modulo_divider.vhd      ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd      ;         ;
-; ../source/others/infrastructure.vhd      ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd      ;         ;
-; ../source/others/flanken_detekt_vhdl.vhd ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd ;         ;
-; ../source/others/clock_sync.vhd          ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/clock_sync.vhd          ;         ;
-; ../source/others/bit_counter.vhd         ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/bit_counter.vhd         ;         ;
-; ../source/others/baud_tick.vhd           ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/baud_tick.vhd           ;         ;
-; ../source/Top_files/uart_top.vhd         ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd         ;         ;
-; ../source/Top_files/synthi_top.vhd       ; yes             ; User VHDL File  ; C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd       ;         ;
-+------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                            ; Library ;
++------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------+---------+
+; ../source/i2c/reg_table_pkg.vhd          ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/reg_table_pkg.vhd          ;         ;
+; ../source/i2c/i2c_master.vhd             ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd             ;         ;
+; ../source/i2c/codec_controller.vhd       ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd       ;         ;
+; ../source/dds/tone_generator.vhd         ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd         ;         ;
+; ../source/dds/tone_gen_pkg.vhd           ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_gen_pkg.vhd           ;         ;
+; ../source/dds/dds.vhd                    ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/dds.vhd                    ;         ;
+; ../source/i2s/uni_shiftreg.vhd           ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd           ;         ;
+; ../source/i2s/path_ctrl.vhd              ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd              ;         ;
+; ../source/i2s/mux_2_1.vhd                ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd                ;         ;
+; ../source/i2s/i2s_master.vhd             ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd             ;         ;
+; ../source/i2s/i2s_frame_generator.vhd    ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd    ;         ;
+; ../source/MIDI/MIDI.vhd                  ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd                  ;         ;
+; ../source/others/vhdl_hex2sevseg.vhd     ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd     ;         ;
+; ../source/others/uart_controller_fsm.vhd ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd ;         ;
+; ../source/others/signal_checker.vhd      ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/signal_checker.vhd      ;         ;
+; ../source/others/shiftreg_uart.vhd       ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd       ;         ;
+; ../source/others/output_register.vhd     ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/output_register.vhd     ;         ;
+; ../source/others/modulo_divider.vhd      ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd      ;         ;
+; ../source/others/infrastructure.vhd      ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd      ;         ;
+; ../source/others/flanken_detekt_vhdl.vhd ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd ;         ;
+; ../source/others/clock_sync.vhd          ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/clock_sync.vhd          ;         ;
+; ../source/others/bit_counter.vhd         ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/bit_counter.vhd         ;         ;
+; ../source/others/baud_tick.vhd           ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/baud_tick.vhd           ;         ;
+; ../source/Top_files/uart_top.vhd         ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd         ;         ;
+; ../source/Top_files/synthi_top.vhd       ; yes             ; User VHDL File  ; C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd       ;         ;
++------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -252,30 +247,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                     ;
 +---------------------------------------------+---------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 5,197                                                                     ;
+; Estimated Total logic elements              ; 5,327                                                                     ;
 ;                                             ;                                                                           ;
-; Total combinational functions               ; 5052                                                                      ;
+; Total combinational functions               ; 5182                                                                      ;
 ; Logic element usage by number of LUT inputs ;                                                                           ;
-;     -- 4 input functions                    ; 3808                                                                      ;
-;     -- 3 input functions                    ; 991                                                                       ;
+;     -- 4 input functions                    ; 3931                                                                      ;
+;     -- 3 input functions                    ; 998                                                                       ;
 ;     -- <=2 input functions                  ; 253                                                                       ;
 ;                                             ;                                                                           ;
 ; Logic elements by mode                      ;                                                                           ;
-;     -- normal mode                          ; 4706                                                                      ;
-;     -- arithmetic mode                      ; 346                                                                       ;
+;     -- normal mode                          ; 4834                                                                      ;
+;     -- arithmetic mode                      ; 348                                                                       ;
 ;                                             ;                                                                           ;
-; Total registers                             ; 533                                                                       ;
-;     -- Dedicated logic registers            ; 533                                                                       ;
+; Total registers                             ; 535                                                                       ;
+;     -- Dedicated logic registers            ; 535                                                                       ;
 ;     -- I/O registers                        ; 0                                                                         ;
 ;                                             ;                                                                           ;
-; I/O pins                                    ; 64                                                                        ;
+; I/O pins                                    ; 65                                                                        ;
 ;                                             ;                                                                           ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                         ;
 ;                                             ;                                                                           ;
 ; Maximum fan-out node                        ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ;
-; Maximum fan-out                             ; 498                                                                       ;
-; Total fan-out                               ; 20882                                                                     ;
-; Average fan-out                             ; 3.65                                                                      ;
+; Maximum fan-out                             ; 500                                                                       ;
+; Total fan-out                               ; 21404                                                                     ;
+; Average fan-out                             ; 3.66                                                                      ;
 +---------------------------------------------+---------------------------------------------------------------------------+
 
 
@@ -284,7 +279,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                              ; Entity Name         ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+---------------------+--------------+
-; |synthi_top                                       ; 5052 (0)            ; 533 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 64   ; 0            ; 0          ; |synthi_top                                                                      ; synthi_top          ; work         ;
+; |synthi_top                                       ; 5182 (0)            ; 535 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 65   ; 0            ; 0          ; |synthi_top                                                                      ; synthi_top          ; work         ;
 ;    |MIDI:MIDI_2|                                  ; 98 (98)             ; 127 (127)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|MIDI:MIDI_2                                                          ; MIDI                ; work         ;
 ;    |codec_controller:codec_controller_1|          ; 20 (20)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|codec_controller:codec_controller_1                                  ; codec_controller    ; work         ;
 ;    |i2c_master:i2c_master_1|                      ; 84 (84)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|i2c_master:i2c_master_1                                              ; i2c_master          ; work         ;
@@ -300,24 +295,24 @@ https://fpgasoftware.intel.com/eula.
 ;       |clock_sync:clock_sync_2|                   ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|clock_sync:clock_sync_2              ; clock_sync          ; work         ;
 ;       |modulo_divider:modulo_divider_1|           ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|modulo_divider:modulo_divider_1      ; modulo_divider      ; work         ;
 ;       |signal_checker:signal_checker_1|           ; 69 (69)             ; 34 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1      ; signal_checker      ; work         ;
-;    |tone_generator:tone_generator_1|              ; 4651 (1526)         ; 206 (16)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1                                      ; tone_generator      ; work         ;
-;       |dds:\dds_inst_gen:0:inst_dds|              ; 316 (316)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:1:inst_dds|              ; 314 (314)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:2:inst_dds|              ; 314 (314)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:3:inst_dds|              ; 314 (314)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:4:inst_dds|              ; 315 (315)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:5:inst_dds|              ; 303 (303)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:6:inst_dds|              ; 315 (315)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:7:inst_dds|              ; 310 (310)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:8:inst_dds|              ; 309 (309)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds         ; dds                 ; work         ;
-;       |dds:\dds_inst_gen:9:inst_dds|              ; 315 (315)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds         ; dds                 ; work         ;
-;    |uart_top:uart_top_1|                          ; 46 (0)              ; 34 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1                                                  ; uart_top            ; work         ;
-;       |baud_tick:b2v_inst|                        ; 14 (14)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst                               ; baud_tick           ; work         ;
+;    |tone_generator:tone_generator_1|              ; 4777 (1526)         ; 206 (16)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1                                      ; tone_generator      ; work         ;
+;       |dds:\dds_inst_gen:0:inst_dds|              ; 335 (335)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:1:inst_dds|              ; 330 (330)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:2:inst_dds|              ; 320 (320)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:3:inst_dds|              ; 330 (330)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:4:inst_dds|              ; 322 (322)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:5:inst_dds|              ; 332 (332)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:6:inst_dds|              ; 322 (322)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:7:inst_dds|              ; 323 (323)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:8:inst_dds|              ; 325 (325)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds         ; dds                 ; work         ;
+;       |dds:\dds_inst_gen:9:inst_dds|              ; 312 (312)           ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds         ; dds                 ; work         ;
+;    |uart_top:uart_top_1|                          ; 50 (0)              ; 36 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1                                                  ; uart_top            ; work         ;
+;       |baud_tick:b2v_inst|                        ; 19 (19)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst                               ; baud_tick           ; work         ;
 ;       |bit_counter:b2v_inst6|                     ; 8 (8)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|bit_counter:b2v_inst6                            ; bit_counter         ; work         ;
 ;       |flanken_detekt_vhdl:b2v_inst18|            ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18                   ; flanken_detekt_vhdl ; work         ;
 ;       |output_register:b2v_inst8|                 ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|output_register:b2v_inst8                        ; output_register     ; work         ;
 ;       |shiftreg_uart:b2v_inst1|                   ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|shiftreg_uart:b2v_inst1                          ; shiftreg_uart       ; work         ;
-;       |uart_controller_fsm:b2v_inst7|             ; 10 (10)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|uart_controller_fsm:b2v_inst7                    ; uart_controller_fsm ; work         ;
+;       |uart_controller_fsm:b2v_inst7|             ; 9 (9)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|uart_controller_fsm:b2v_inst7                    ; uart_controller_fsm ; work         ;
 ;       |vhdl_hex2sevseg:b2v_inst16|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16                       ; vhdl_hex2sevseg     ; work         ;
 ;       |vhdl_hex2sevseg:b2v_inst17|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |synthi_top|uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst17                       ; vhdl_hex2sevseg     ; work         ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------+---------------------+--------------+
@@ -400,10 +395,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 533   ;
+; Total registers                              ; 535   ;
 ; Number of registers using Synchronous Clear  ; 2     ;
 ; Number of registers using Synchronous Load   ; 32    ;
-; Number of registers using Asynchronous Clear ; 526   ;
+; Number of registers using Asynchronous Clear ; 528   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 443   ;
 ; Number of registers using Preset             ; 0     ;
@@ -429,40 +424,40 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
-; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1|bit_count_i[17] ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |synthi_top|infrastructure:infrastructure_1|signal_checker:signal_checker_1|bit_count_i[22] ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|bit_counter:b2v_inst6|count[3]                              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4|reg[14]                  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3|reg[10]                  ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst|count[4]                                 ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2|reg[8]                   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1|reg[5]                   ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |synthi_top|MIDI:MIDI_2|data1_reg[0]                                                        ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|byte_count[1]                                           ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|bit_count[2]                                            ;
-; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[18]                                                ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[5]                                                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4|reg[0]                   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3|reg[1]                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|uart_top:uart_top_1|baud_tick:b2v_inst|count[3]                                 ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2|reg[12]                  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |synthi_top|i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1|reg[3]                   ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 0 LEs                ; 21 LEs                 ; Yes        ; |synthi_top|MIDI:MIDI_2|data1_reg[3]                                                        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|byte_count[0]                                           ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |synthi_top|i2c_master:i2c_master_1|bit_count[0]                                            ;
+; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[8]                                                 ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |synthi_top|i2c_master:i2c_master_1|data[11]                                                ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|codec_controller:codec_controller_1|next_fsm_state                              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux21              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux22              ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux21              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux21              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux21              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux22              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux22              ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux22              ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux21              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux22              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux21              ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux22              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux22              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux21              ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux21              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux23              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux24              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux23              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux23              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux23              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux24              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux24              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux24              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux24              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux23              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux23              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux23              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux23              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux23              ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector2                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux24              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux24              ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector0                     ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector26                                              ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector28                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
@@ -473,7 +468,7 @@ Encoding Type:  One-Hot
 +----------------+-------+------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                       ;
 +----------------+-------+------------------------------------------------------------+
-; width          ; 6     ; Signed Integer                                             ;
+; width          ; 8     ; Signed Integer                                             ;
 +----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -797,28 +792,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 64                          ;
-; cycloneiii_ff         ; 533                         ;
-;     CLR               ; 81                          ;
+; boundary_port         ; 65                          ;
+; cycloneiii_ff         ; 535                         ;
+;     CLR               ; 83                          ;
 ;     CLR SLD           ; 2                           ;
 ;     ENA CLR           ; 411                         ;
 ;     ENA CLR SCLR      ; 2                           ;
 ;     ENA CLR SLD       ; 30                          ;
 ;     plain             ; 7                           ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 5067                        ;
-;     arith             ; 346                         ;
-;         2 data inputs ; 42                          ;
+; cycloneiii_lcell_comb ; 5197                        ;
+;     arith             ; 348                         ;
+;         2 data inputs ; 44                          ;
 ;         3 data inputs ; 304                         ;
-;     normal            ; 4721                        ;
+;     normal            ; 4849                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 30                          ;
-;         2 data inputs ; 194                         ;
-;         3 data inputs ; 687                         ;
-;         4 data inputs ; 3808                        ;
+;         1 data inputs ; 29                          ;
+;         2 data inputs ; 193                         ;
+;         3 data inputs ; 694                         ;
+;         4 data inputs ; 3931                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.50                       ;
-; Average LUT depth     ; 9.23                        ;
+; Average LUT depth     ; 9.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -827,7 +822,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:35     ;
+; Top            ; 00:01:10     ;
 +----------------+--------------+
 
 
@@ -836,174 +831,173 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed May 10 15:37:27 2023
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Wed May 17 11:45:27 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 0 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2c/reg_table_pkg.vhd
-    Info (12022): Found design unit 1: reg_table_pkg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/reg_table_pkg.vhd Line: 26
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2c/i2c_slave_bfm.vhd
-    Info (12022): Found design unit 1: i2c_slave_bfm-bfm File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_slave_bfm.vhd Line: 32
-    Info (12023): Found entity 1: i2c_slave_bfm File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_slave_bfm.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2c/i2c_master.vhd
-    Info (12022): Found design unit 1: i2c_master-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 40
-    Info (12023): Found entity 1: i2c_master File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 22
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2c/codec_controller.vhd
-    Info (12022): Found design unit 1: codec_controller-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd Line: 43
-    Info (12023): Found entity 1: codec_controller File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/tone_generator.vhd
-    Info (12022): Found design unit 1: tone_generator-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 50
-    Info (12023): Found entity 1: tone_generator File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 31
-Info (12021): Found 1 design units, including 0 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/tone_gen_pkg.vhd
-    Info (12022): Found design unit 1: tone_gen_pkg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_gen_pkg.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/dds.vhd
-    Info (12022): Found design unit 1: dds-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 44
-    Info (12023): Found entity 1: dds File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 30
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/uni_shiftreg.vhd
-    Info (12022): Found design unit 1: uni_shiftreg-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 41
-    Info (12023): Found entity 1: uni_shiftreg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 26
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/path_ctrl.vhd
-    Info (12022): Found design unit 1: path_ctrl-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 43
-    Info (12023): Found entity 1: path_ctrl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/mux_2_1.vhd
-    Info (12022): Found design unit 1: mux_2_1-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 38
-    Info (12023): Found entity 1: mux_2_1 File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/i2s_master.vhd
-    Info (12022): Found design unit 1: i2s_master-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 48
-    Info (12023): Found entity 1: i2s_master File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 28
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/i2s_frame_generator.vhd
-    Info (12022): Found design unit 1: i2s_frame_generator-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 43
-    Info (12023): Found entity 1: i2s_frame_generator File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/midi/midi.vhd
-    Info (12022): Found design unit 1: MIDI-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 41
-    Info (12023): Found entity 1: MIDI File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/vhdl_hex2sevseg.vhd
-    Info (12022): Found design unit 1: vhdl_hex2sevseg-comb File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd Line: 36
-    Info (12023): Found entity 1: vhdl_hex2sevseg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd Line: 23
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/uart_controller_fsm.vhd
-    Info (12022): Found design unit 1: uart_controller_fsm-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd Line: 34
-    Info (12023): Found entity 1: uart_controller_fsm File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd Line: 18
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/signal_checker.vhd
-    Info (12022): Found design unit 1: signal_checker-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/signal_checker.vhd Line: 29
-    Info (12023): Found entity 1: signal_checker File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/signal_checker.vhd Line: 19
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/shiftreg_uart.vhd
-    Info (12022): Found design unit 1: shiftreg_uart-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd Line: 39
-    Info (12023): Found entity 1: shiftreg_uart File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd Line: 22
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/output_register.vhd
-    Info (12022): Found design unit 1: output_register-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/output_register.vhd Line: 41
-    Info (12023): Found entity 1: output_register File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/output_register.vhd Line: 26
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/modulo_divider.vhd
-    Info (12022): Found design unit 1: modulo_divider-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 29
-    Info (12023): Found entity 1: modulo_divider File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 19
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/infrastructure.vhd
-    Info (12022): Found design unit 1: infrastructure-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 44
-    Info (12023): Found entity 1: infrastructure File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 28
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/flanken_detekt_vhdl.vhd
-    Info (12022): Found design unit 1: flanken_detekt_vhdl-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd Line: 26
-    Info (12023): Found entity 1: flanken_detekt_vhdl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd Line: 15
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/clock_sync.vhd
-    Info (12022): Found design unit 1: clock_sync-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/clock_sync.vhd Line: 23
-    Info (12023): Found entity 1: clock_sync File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/clock_sync.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/bit_counter.vhd
-    Info (12022): Found design unit 1: bit_counter-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/bit_counter.vhd Line: 37
-    Info (12023): Found entity 1: bit_counter File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/bit_counter.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/baud_tick.vhd
-    Info (12022): Found design unit 1: baud_tick-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/baud_tick.vhd Line: 36
-    Info (12023): Found entity 1: baud_tick File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/baud_tick.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/top_files/uart_top.vhd
-    Info (12022): Found design unit 1: uart_top-bdf_type File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 38
-    Info (12023): Found entity 1: uart_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/top_files/synthi_top.vhd
-    Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 77
-    Info (12023): Found entity 1: synthi_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 31
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 0 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/reg_table_pkg.vhd
+    Info (12022): Found design unit 1: reg_table_pkg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/reg_table_pkg.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/i2c_slave_bfm.vhd
+    Info (12022): Found design unit 1: i2c_slave_bfm-bfm File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_slave_bfm.vhd Line: 32
+    Info (12023): Found entity 1: i2c_slave_bfm File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_slave_bfm.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/i2c_master.vhd
+    Info (12022): Found design unit 1: i2c_master-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 40
+    Info (12023): Found entity 1: i2c_master File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/codec_controller.vhd
+    Info (12022): Found design unit 1: codec_controller-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd Line: 43
+    Info (12023): Found entity 1: codec_controller File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/dds/tone_generator.vhd
+    Info (12022): Found design unit 1: tone_generator-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 50
+    Info (12023): Found entity 1: tone_generator File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 31
+Info (12021): Found 1 design units, including 0 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/dds/tone_gen_pkg.vhd
+    Info (12022): Found design unit 1: tone_gen_pkg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_gen_pkg.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/dds/dds.vhd
+    Info (12022): Found design unit 1: dds-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 44
+    Info (12023): Found entity 1: dds File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 30
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/uni_shiftreg.vhd
+    Info (12022): Found design unit 1: uni_shiftreg-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 41
+    Info (12023): Found entity 1: uni_shiftreg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/path_ctrl.vhd
+    Info (12022): Found design unit 1: path_ctrl-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 43
+    Info (12023): Found entity 1: path_ctrl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/mux_2_1.vhd
+    Info (12022): Found design unit 1: mux_2_1-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 38
+    Info (12023): Found entity 1: mux_2_1 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/i2s_master.vhd
+    Info (12022): Found design unit 1: i2s_master-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 48
+    Info (12023): Found entity 1: i2s_master File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/i2s_frame_generator.vhd
+    Info (12022): Found design unit 1: i2s_frame_generator-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 43
+    Info (12023): Found entity 1: i2s_frame_generator File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/midi/midi.vhd
+    Info (12022): Found design unit 1: MIDI-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 41
+    Info (12023): Found entity 1: MIDI File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/vhdl_hex2sevseg.vhd
+    Info (12022): Found design unit 1: vhdl_hex2sevseg-comb File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd Line: 36
+    Info (12023): Found entity 1: vhdl_hex2sevseg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/uart_controller_fsm.vhd
+    Info (12022): Found design unit 1: uart_controller_fsm-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd Line: 34
+    Info (12023): Found entity 1: uart_controller_fsm File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/signal_checker.vhd
+    Info (12022): Found design unit 1: signal_checker-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/signal_checker.vhd Line: 29
+    Info (12023): Found entity 1: signal_checker File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/signal_checker.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/shiftreg_uart.vhd
+    Info (12022): Found design unit 1: shiftreg_uart-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd Line: 39
+    Info (12023): Found entity 1: shiftreg_uart File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/output_register.vhd
+    Info (12022): Found design unit 1: output_register-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/output_register.vhd Line: 41
+    Info (12023): Found entity 1: output_register File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/output_register.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/modulo_divider.vhd
+    Info (12022): Found design unit 1: modulo_divider-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 29
+    Info (12023): Found entity 1: modulo_divider File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/infrastructure.vhd
+    Info (12022): Found design unit 1: infrastructure-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 44
+    Info (12023): Found entity 1: infrastructure File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/flanken_detekt_vhdl.vhd
+    Info (12022): Found design unit 1: flanken_detekt_vhdl-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd Line: 26
+    Info (12023): Found entity 1: flanken_detekt_vhdl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/clock_sync.vhd
+    Info (12022): Found design unit 1: clock_sync-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/clock_sync.vhd Line: 23
+    Info (12023): Found entity 1: clock_sync File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/clock_sync.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/bit_counter.vhd
+    Info (12022): Found design unit 1: bit_counter-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/bit_counter.vhd Line: 37
+    Info (12023): Found entity 1: bit_counter File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/bit_counter.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/baud_tick.vhd
+    Info (12022): Found design unit 1: baud_tick-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/baud_tick.vhd Line: 36
+    Info (12023): Found entity 1: baud_tick File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/baud_tick.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/top_files/uart_top.vhd
+    Info (12022): Found design unit 1: uart_top-bdf_type File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 38
+    Info (12023): Found entity 1: uart_top File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/top_files/synthi_top.vhd
+    Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 79
+    Info (12023): Found entity 1: synthi_top File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 31
 Info (12127): Elaborating entity "synthi_top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(61): used implicit default value for signal "LEDR_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 61
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(62): used implicit default value for signal "LEDR_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 62
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(63): used implicit default value for signal "LEDR_3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 63
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(64): used implicit default value for signal "LEDR_4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 64
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(65): used implicit default value for signal "LEDR_5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 65
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(66): used implicit default value for signal "LEDR_6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 66
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(67): used implicit default value for signal "LEDR_7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 67
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(68): used implicit default value for signal "LEDR_8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 68
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(69): used implicit default value for signal "LEDR_9" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 69
-Info (12128): Elaborating entity "infrastructure" for hierarchy "infrastructure:infrastructure_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 251
-Info (12128): Elaborating entity "clock_sync" for hierarchy "infrastructure:infrastructure_1|clock_sync:clock_sync_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 84
-Info (12128): Elaborating entity "signal_checker" for hierarchy "infrastructure:infrastructure_1|signal_checker:signal_checker_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 91
-Info (12128): Elaborating entity "modulo_divider" for hierarchy "infrastructure:infrastructure_1|modulo_divider:modulo_divider_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 99
-Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(32): used explicit default value for signal "width6" because signal was never assigned a value File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 32
-Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(33): used explicit default value for signal "width12" because signal was never assigned a value File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 33
-Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 263
-Info (12128): Elaborating entity "baud_tick" for hierarchy "uart_top:uart_top_1|baud_tick:b2v_inst" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 148
-Info (12128): Elaborating entity "shiftreg_uart" for hierarchy "uart_top:uart_top_1|shiftreg_uart:b2v_inst1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 157
-Info (12128): Elaborating entity "vhdl_hex2sevseg" for hierarchy "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 171
-Info (12128): Elaborating entity "flanken_detekt_vhdl" for hierarchy "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 186
-Info (12128): Elaborating entity "bit_counter" for hierarchy "uart_top:uart_top_1|bit_counter:b2v_inst6" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 193
-Info (12128): Elaborating entity "uart_controller_fsm" for hierarchy "uart_top:uart_top_1|uart_controller_fsm:b2v_inst7" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 203
-Info (12128): Elaborating entity "output_register" for hierarchy "uart_top:uart_top_1|output_register:b2v_inst8" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 215
-Info (12128): Elaborating entity "codec_controller" for hierarchy "codec_controller:codec_controller_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 274
-Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c_master_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 285
-Info (12128): Elaborating entity "i2s_master" for hierarchy "i2s_master:inst_i2s_master" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 297
-Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(101): object "dummy3" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 101
-Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(102): object "dummy4" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 102
-Info (12128): Elaborating entity "i2s_frame_generator" for hierarchy "i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 113
-Info (12128): Elaborating entity "uni_shiftreg" for hierarchy "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 125
-Info (12128): Elaborating entity "mux_2_1" for hierarchy "i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 181
-Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_ctrl" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 312
-Info (12128): Elaborating entity "MIDI" for hierarchy "MIDI:MIDI_2" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 365
-Warning (10620): VHDL warning at MIDI.vhd(190): comparison between unequal length operands always returns FALSE File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 190
-Info (12128): Elaborating entity "tone_generator" for hierarchy "tone_generator:tone_generator_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 376
-Info (12128): Elaborating entity "dds" for hierarchy "tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 82
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(63): used implicit default value for signal "LEDR_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 63
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(64): used implicit default value for signal "LEDR_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 64
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(65): used implicit default value for signal "LEDR_3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 65
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(66): used implicit default value for signal "LEDR_4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 66
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(68): used implicit default value for signal "LEDR_6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 68
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(69): used implicit default value for signal "LEDR_7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 69
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(70): used implicit default value for signal "LEDR_8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 70
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(71): used implicit default value for signal "LEDR_9" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 71
+Info (12128): Elaborating entity "infrastructure" for hierarchy "infrastructure:infrastructure_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 253
+Info (12128): Elaborating entity "clock_sync" for hierarchy "infrastructure:infrastructure_1|clock_sync:clock_sync_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 84
+Info (12128): Elaborating entity "signal_checker" for hierarchy "infrastructure:infrastructure_1|signal_checker:signal_checker_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 91
+Info (12128): Elaborating entity "modulo_divider" for hierarchy "infrastructure:infrastructure_1|modulo_divider:modulo_divider_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 99
+Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(32): used explicit default value for signal "width6" because signal was never assigned a value File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 32
+Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(33): used explicit default value for signal "width12" because signal was never assigned a value File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 33
+Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 265
+Info (12128): Elaborating entity "baud_tick" for hierarchy "uart_top:uart_top_1|baud_tick:b2v_inst" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 148
+Info (12128): Elaborating entity "shiftreg_uart" for hierarchy "uart_top:uart_top_1|shiftreg_uart:b2v_inst1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 157
+Info (12128): Elaborating entity "vhdl_hex2sevseg" for hierarchy "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 171
+Info (12128): Elaborating entity "flanken_detekt_vhdl" for hierarchy "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 186
+Info (12128): Elaborating entity "bit_counter" for hierarchy "uart_top:uart_top_1|bit_counter:b2v_inst6" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 193
+Info (12128): Elaborating entity "uart_controller_fsm" for hierarchy "uart_top:uart_top_1|uart_controller_fsm:b2v_inst7" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 203
+Info (12128): Elaborating entity "output_register" for hierarchy "uart_top:uart_top_1|output_register:b2v_inst8" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 215
+Info (12128): Elaborating entity "codec_controller" for hierarchy "codec_controller:codec_controller_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 276
+Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c_master_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 287
+Info (12128): Elaborating entity "i2s_master" for hierarchy "i2s_master:inst_i2s_master" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 299
+Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(101): object "dummy3" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 101
+Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(102): object "dummy4" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 102
+Info (12128): Elaborating entity "i2s_frame_generator" for hierarchy "i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 113
+Info (12128): Elaborating entity "uni_shiftreg" for hierarchy "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 125
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 181
+Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_ctrl" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 314
+Info (12128): Elaborating entity "MIDI" for hierarchy "MIDI:MIDI_2" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 359
+Warning (10620): VHDL warning at MIDI.vhd(190): comparison between unequal length operands always returns FALSE File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 190
+Info (12128): Elaborating entity "tone_generator" for hierarchy "tone_generator:tone_generator_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 371
+Info (12128): Elaborating entity "dds" for hierarchy "tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 82
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 300
+Info (13000): Registers with preset signals will power-up high File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 300
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 58
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 58
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 58
-    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 58
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 58
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 58
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 58
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 59
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 59
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 59
-    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 59
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 59
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 59
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 59
-    Warning (13410): Pin "LEDR_1" is stuck at GND File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 61
-    Warning (13410): Pin "LEDR_2" is stuck at GND File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 62
-    Warning (13410): Pin "LEDR_3" is stuck at GND File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 63
-    Warning (13410): Pin "LEDR_4" is stuck at GND File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 64
-    Warning (13410): Pin "LEDR_5" is stuck at GND File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 65
-    Warning (13410): Pin "LEDR_6" is stuck at GND File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 66
-    Warning (13410): Pin "LEDR_7" is stuck at GND File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 67
-    Warning (13410): Pin "LEDR_8" is stuck at GND File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 68
-    Warning (13410): Pin "LEDR_9" is stuck at GND File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 69
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 60
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 60
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 60
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 60
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 60
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 60
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 60
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 61
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 61
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 61
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 61
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 61
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 61
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 61
+    Warning (13410): Pin "LEDR_1" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 63
+    Warning (13410): Pin "LEDR_2" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 64
+    Warning (13410): Pin "LEDR_3" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 65
+    Warning (13410): Pin "LEDR_4" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 66
+    Warning (13410): Pin "LEDR_6" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 68
+    Warning (13410): Pin "LEDR_7" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 69
+    Warning (13410): Pin "LEDR_8" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 70
+    Warning (13410): Pin "LEDR_9" is stuck at GND File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 71
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 36
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
-    Warning (15610): No output dependent on input pin "USB_RXD" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 39
-    Warning (15610): No output dependent on input pin "BT_RXD" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 42
-    Warning (15610): No output dependent on input pin "BT_TXD" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 43
-    Warning (15610): No output dependent on input pin "BT_RST_N" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 44
-Info (21057): Implemented 5265 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 19 input pins
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 37
+    Warning (15610): No output dependent on input pin "USB_RXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 39
+    Warning (15610): No output dependent on input pin "USB_TXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 40
+    Warning (15610): No output dependent on input pin "BT_RXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 42
+    Warning (15610): No output dependent on input pin "BT_TXD" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 43
+    Warning (15610): No output dependent on input pin "BT_RST_N" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 44
+Info (21057): Implemented 5397 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
     Info (21059): Implemented 44 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 5201 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 4900 megabytes
-    Info: Processing ended: Wed May 10 15:38:15 2023
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:00:41
+    Info (21061): Implemented 5332 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Wed May 17 11:47:09 2023
+    Info: Elapsed time: 00:01:42
+    Info: Total CPU time (on all processors): 00:01:45
 
 
