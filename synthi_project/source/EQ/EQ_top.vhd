@@ -71,7 +71,7 @@ architecture str of EQ_top is
       reset_n     : IN  STD_LOGIC;
       atte_freq   : OUT STD_LOGIC_VECTOR(4 downto 0);
       atte_value  : OUT STD_LOGIC_VECTOR(2 downto 0);
-      enable      : OUT STD_LOGIC);
+      enable_eq   : OUT STD_LOGIC);
   end component EQ_ctrl;
   
   
@@ -104,14 +104,11 @@ begin  -- architecture str
       rx_data_rdy => RX_DATA_RDY_intern,--
       clk         => clk_6m, --
       reset_n     => reset_n, --
-      atte_freq   => ATTE_FREQ_intern,--
-      atte_value  => ATTE_VALUE_intern,--
-      enable      => ENABLE_intern);--
+      atte_freq   => atte_freqency,--
+      atte_value  => atte_value,--
+      enable_eq   => enable);--
 		
-		
-		ATTE_VALUE_intern <= atte_value;
-		ATTE_FREQ_intern  <= atte_freqency;
-		ENABLE_intern		<= enable;
+		RX_data_BT 			<= RX_DATA_intern;
 
 
 end architecture str;

@@ -1,2 +1,2 @@
 restart -force
-run 30 ms
+run 5 ms

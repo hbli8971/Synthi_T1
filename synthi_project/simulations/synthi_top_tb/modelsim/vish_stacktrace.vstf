@@ -1,0 +1,24 @@
+# Current time Wed May 17 16:55:54 2023
+# Program = vish
+# Id = "2021.2"
+# Version = "2021.04"
+# Date = "Apr 14 2021"
+# Platform = win64
+
+Exception c0000005 has occurred at address dde65677. Traceback:
+# 0    0xdde65677: '<unknown (@0xdde65677)>'
+# 1    0xdde66aee: '<unknown (@0xdde66aee)>'
+# 2    0xdde8e1bd: '<unknown (@0xdde8e1bd)>'
+# 3    0x6b531f3d: 'Tcl_DeleteTimerHandler + 0x26d'
+# 4    0x6b4fa56d: 'Tcl_ServiceEvent + 0xed'
+# 5    0x6b4fa9e4: 'Tcl_DoOneEvent + 0x184'
+# 6    0x6b2caee5: 'Tk_MainLoop + 0x25'
+# 7    0x6b30d282: 'Tk_MainEx + 0x932'
+# 8    0x401abae2: 'Mtirpc_Init + 0x23662'
+# 9    0x401ae6c4: 'Mtirpc_Init + 0x26244'
+# 10   0x40775810: 'Tclsqlite3_Init + 0x1c000'
+# 11   0x574b7614: 'BaseThreadInitThunk + 0x14'
+# 12   0x58aa26a1: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+

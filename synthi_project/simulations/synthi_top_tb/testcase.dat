@@ -20,9 +20,17 @@
 #-------------------------------------------------------------------------------
 reset_target 20
 set_switches 00 00 00 00
+uart_bt   00
+uart_bt   AA
+uart_bt   BB
+
 uart_midi 90 01  
 uart_midi 77 01  
 uart_midi 66 01  
+
+uart_bt   01    
+uart_bt   08
+uart_bt   01
 run_simulation_for 00 FF FF FF
 # 1001 0000, 0001 0101, 0111 1111,0000 0000
 

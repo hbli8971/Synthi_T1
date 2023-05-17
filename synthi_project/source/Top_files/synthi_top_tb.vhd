@@ -247,8 +247,8 @@ BEGIN  -- architecture struct
         uar_sim(tv, USB_TXD);
       ELSIF cmd.ALL = "uart_midi" THEN
         uar_sim(tv, GPIO_26);
-      ELSIF cmd.ALL = "check_display_hex0" THEN
-        hex_chk(tv, hex0);
+      ELSIF cmd.ALL = "uart_bt" THEN
+        uar_sim(tv, BT_TXD);
       ELSIF cmd.ALL = "check_display_hex0" THEN
         hex_chk(tv, hex0);
       ELSIF cmd.ALL = "check_display_hex1" THEN

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for synthi_top
-Wed May 17 16:26:38 2023
+Wed May 17 17:28:53 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -103,7 +103,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 17 16:26:38 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 17 17:28:53 2023       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; synthi_top                                  ;
 ; Top-level Entity Name              ; synthi_top                                  ;
@@ -745,25 +745,26 @@ Encoding Type:  One-Hot
 ; 9:1                ; 20 bits   ; 120 LEs       ; 0 LEs                ; 120 LEs                ; Yes        ; |synthi_top|tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ|atte_bass_deep[1]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|codec_controller:codec_controller_1|next_fsm_state                             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux21             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux21             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux22             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux22             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux21             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux22             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux22             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux22             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux21             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux21             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux22             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux21             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:9:inst_dds|Mux24             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:8:inst_dds|Mux23             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:7:inst_dds|Mux23             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:6:inst_dds|Mux24             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:5:inst_dds|Mux23             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:4:inst_dds|Mux23             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:3:inst_dds|Mux23             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:2:inst_dds|Mux23             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:1:inst_dds|Mux23             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux23             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|tone_generator:tone_generator_1|dds:\dds_inst_gen:0:inst_dds|Mux24             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |synthi_top|EQ_top:EQ_top_1|EQ_ctrl:EQ_ctrl_1|Selector0                                    ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector2 ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |synthi_top|uart_top:uart_top_1|uart_controller_fsm:b2v_inst7|Selector2                    ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |synthi_top|i2c_master:i2c_master_1|Selector26                                             ;
@@ -928,7 +929,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 ; atte_freq  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; atte_value ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; enable     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; enable_eq  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1290,7 +1291,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:31     ;
+; Top            ; 00:01:22     ;
 +----------------+--------------+
 
 
@@ -1300,7 +1301,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed May 17 16:24:48 2023
+    Info: Processing started: Wed May 17 17:27:16 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/eq/eq_baud_tick.vhd
@@ -1436,14 +1437,12 @@ Info (12128): Elaborating entity "EQ_top" for hierarchy "EQ_top:EQ_top_1" File: 
 Warning (10541): VHDL Signal Declaration warning at EQ_top.vhd(35): used implicit default value for signal "atte_freqency" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 35
 Warning (10541): VHDL Signal Declaration warning at EQ_top.vhd(36): used implicit default value for signal "atte_value" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 36
 Warning (10541): VHDL Signal Declaration warning at EQ_top.vhd(37): used implicit default value for signal "enable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 37
-Warning (10541): VHDL Signal Declaration warning at EQ_top.vhd(38): used implicit default value for signal "RX_data_BT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 38
 Warning (10036): Verilog HDL or VHDL warning at EQ_top.vhd(78): object "ATTE_VALUE_intern" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 78
 Warning (10036): Verilog HDL or VHDL warning at EQ_top.vhd(79): object "ATTE_FREQ_intern" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 79
 Warning (10036): Verilog HDL or VHDL warning at EQ_top.vhd(82): object "ENABLE_intern" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 82
 Info (12128): Elaborating entity "EQ_uart_top" for hierarchy "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 91
 Info (12128): Elaborating entity "EQ_baud_tick" for hierarchy "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_uart_top.vhd Line: 119
 Info (12128): Elaborating entity "EQ_ctrl" for hierarchy "EQ_top:EQ_top_1|EQ_ctrl:EQ_ctrl_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 101
-Warning (10541): VHDL Signal Declaration warning at EQ_ctrl.vhd(36): used implicit default value for signal "enable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 36
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 300
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -1493,10 +1492,10 @@ Info (21057): Implemented 5356 device resources after synthesis - the final reso
     Info (21059): Implemented 44 output pins
     Info (21060): Implemented 1 bidirectional pins
     Info (21061): Implemented 5291 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
-    Info: Peak virtual memory: 4861 megabytes
-    Info: Processing ended: Wed May 17 16:26:38 2023
-    Info: Elapsed time: 00:01:50
-    Info: Total CPU time (on all processors): 00:02:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Wed May 17 17:28:53 2023
+    Info: Elapsed time: 00:01:37
+    Info: Total CPU time (on all processors): 00:01:52
 
 

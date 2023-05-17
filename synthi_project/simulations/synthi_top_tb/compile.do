@@ -43,6 +43,12 @@ vcom -2008 -explicit -work work ../../../source/dds/tone_generator.vhd
 # MIDI 
 vcom -2008 -explicit -work work ../../../source/MIDI/MIDI.vhd
 
+#EQ
+vcom -2008 -explicit -work work ../../../source/EQ/EQ.vhd
+vcom -2008 -explicit -work work ../../../source/EQ/EQ_baud_tick.vhd
+vcom -2008 -explicit -work work ../../../source/EQ/EQ_ctrl.vhd
+vcom -2008 -explicit -work work ../../../source/EQ/EQ_uart_top.vhd
+vcom -2008 -explicit -work work ../../../source/EQ/EQ_top.vhd
 
 
 # Top_files
@@ -55,4 +61,4 @@ vcom -2008 -explicit -work work ../../../source/Top_files/synthi_top_tb.vhd
 # .vhdl Datei ist, sondern der Name der Testbench Entity)
 vsim -voptargs=+acc -t 1ns -lib work work.synthi_top_tb
 do ./wave.do
-run 30 ms
+run 5 ms

@@ -33,7 +33,7 @@ entity EQ_ctrl is
 		reset_n		: IN STD_LOGIC;
 		atte_freq	: OUT STD_LOGIC_VECTOR(4 downto 0);
 		atte_value	: OUT STD_LOGIC_VECTOR(2 downto 0);
-		enable		: OUT STD_LOGIC
+		enable_eq	: OUT STD_LOGIC
     );
 
 end entity EQ_ctrl;
@@ -47,7 +47,7 @@ architecture str of EQ_ctrl is
 	signal ctrl_reg, data1_reg, next_ctrl_reg, next_data1_reg, data2_reg, next_data2_reg : STD_LOGIC_VECTOR(7 downto 0);
 	signal atte_f, next_atte_f : STD_LOGIC_VECTOR(4 downto 0);
 	signal atte_v, next_atte_v	: STD_LOGIC_VECTOR(2 downto 0);
-	signal data_rdy	: STD_LOGIC;
+	signal data_rdy, next_data_rdy	: STD_LOGIC;
 	signal enable_int, next_enable : std_logic;
 
   -----------------------------------------------------------------------------
@@ -64,21 +64,23 @@ begin  -- architecture str
   begin
     if reset_n = '0' then
       fsm_state 	<= st_idle;
-		atte_f 		<= "00000";
-		atte_v 		<= "011";
+		atte_freq 		<= "00000";
+		atte_value 		<= "011";
 		ctrl_reg 	<= "00000000";
 		data1_reg 	<= "00000000";
 		data2_reg 	<= "00000000";
-		enable_int 	<= '0';
+		enable_eq 	<= '0';
+		data_rdy		<= '0';
 		
     elsif rising_edge(clk) then
       fsm_state 	<= next_fsm_state;
 		ctrl_reg  	<= next_ctrl_reg;
 		data1_reg 	<= next_data1_reg;
 		data2_reg 	<= next_data2_reg;
-		atte_f 	 	<= next_atte_f;
-		atte_v	 	<= next_atte_v;
-		enable_int	<= next_enable;
+		atte_freq 	 	<= next_atte_f;
+		atte_value	 	<= next_atte_v;
+		enable_eq	<= next_enable;
+		data_rdy		<= next_data_rdy;
     end if;
   end process flip_flops;
   
@@ -89,30 +91,38 @@ begin  -- architecture str
 	 next_ctrl_reg <= ctrl_reg;
 	 next_data1_reg <= data1_reg;
 	 next_data2_reg <= data2_reg;
-
-	 data_rdy <= '0';
+	 next_data_rdy  <= data_rdy;
+	 if data_rdy = '1' then next_data_rdy <= '0'; end if;
+	 
 	 
     case fsm_state is
       when st_idle =>
-			if(rx_data_rdy) then next_fsm_state <= st_byte1;
+			if(rx_data_rdy) then
+			next_ctrl_reg <= rx_data;
+			next_fsm_state <= st_byte1;
 			end if;
        
       when st_byte1 => 
-			next_ctrl_reg <= rx_data;
-			if(rx_data_rdy) then next_fsm_state <= st_byte2;
+			
+			if(rx_data_rdy) then 
+			next_data1_reg <= rx_data;
+			next_fsm_state <= st_byte2;
 			end if;
           
 
       when st_byte2 =>
-			next_data1_reg <= rx_data;
-			if(rx_data_rdy) then next_fsm_state <= st_byte3;
+			
+			if(rx_data_rdy) then 
+			next_data2_reg <= rx_data;
+			next_fsm_state <= st_byte3;
 			end if;
 		
 		when st_byte3 =>
-			next_data2_reg <= rx_data;
-			data_rdy <= '1';
-			if(rx_data_rdy) then next_fsm_state <= st_idle;	
-			end if;
+			--next_data2_reg <= rx_data;
+			next_data_rdy <= '1';
+			--if(rx_data_rdy) then 
+			next_fsm_state <= st_idle;	
+			--end if;
 			
       when others =>
         next_fsm_state <= fsm_state;
@@ -124,9 +134,10 @@ begin  -- architecture str
   
  data_eval : process (all)
   begin
-  next_enable <= enable_int;
-  next_atte_f <= atte_f;
-  next_atte_v <= atte_v;
+  next_enable 	<= enable_eq;
+  next_atte_f 	<= atte_freq;
+  next_atte_v 	<= atte_value;
+  
   
   if (data_rdy = '1') then
 	if (ctrl_reg = "00000000") then
@@ -148,8 +159,9 @@ begin  -- architecture str
   -----------------------------------------------------------------------------
   -- Component instantiations
   -----------------------------------------------------------------------------
- atte_freq <= atte_f;
- atte_value <= atte_v;
+--	atte_freq <= atte_f;
+ -- atte_value <= atte_v;
+ -- enable_eq <= enable_int;
 end architecture str;
 
 -------------------------------------------------------------------------------
