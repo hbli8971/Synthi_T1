@@ -104,7 +104,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_26",
+					"name" : "USB_TXD",
+					"strict" : false
+				},
+				{
+					"name" : "BT_TXD",
 					"strict" : false
 				},
 				{

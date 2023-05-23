@@ -146,8 +146,8 @@ rbi_sig<='0';
 
 
 b2v_inst : baud_tick
-GENERIC MAP(width => 8)
---GENERIC MAP(width => 6) -- 4 PC
+--GENERIC MAP(width => 8)
+GENERIC MAP(width => 6) -- 4 PC
 PORT MAP(clk => clk_6m,
 		 reset_n => reset,
 		 start_bit => start_bit_sig,		
