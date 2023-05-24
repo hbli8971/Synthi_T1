@@ -204,6 +204,9 @@ architecture struct of synthi_top is
       rst_n      : IN  std_logic;
       dds_l_o    : OUT std_logic_vector(N_AUDIO-1 downto 0);
       dds_r_o    : OUT std_logic_vector(N_AUDIO-1 downto 0);
+		fm_ratio	  : IN  std_logic_vector(3 downto 0);
+		fm_depth	  : IN  std_logic_vector(2 downto 0);
+		algorithm_i: IN  std_logic_vector(1 downto 0);
 		atte_f_eq  : IN std_logic_vector(4 downto 0);
 		atte_v_eq  : IN std_logic_vector(2 downto 0);
 		enable_eq  : IN std_logic
@@ -273,8 +276,8 @@ begin
     port map (
       clock_50     => CLOCK_50,
       key_0        => KEY_0,
-   --   usb_txd      => GPIO_26,
-		usb_txd		 => USB_TXD, -- for PC
+      usb_txd      => GPIO_26,
+		--usb_txd		 => USB_TXD, -- for PC
       clk_6m       => clk_6m,
 		clk_12m		 => AUD_XCK,
       reset_n      => reset_n,
@@ -295,7 +298,7 @@ begin
   -- instance "codec_controller_1"
   codec_controller_1: codec_controller
     port map (
-      mode         => SW(2 downto 0),
+      mode         => "000",--SW(2 downto 0),
       write_done_i => write_done,
       ack_error_i  => ack_error,
       clk          => clk_6m,
@@ -398,6 +401,9 @@ begin
       rst_n      => reset_n,
       dds_l_o    => dds_l_o,
       dds_r_o    => dds_r_o,
+		fm_ratio	  	=> SW(7 downto 4),
+		fm_depth	  	=> SW(2 downto 0),
+		algorithm_i	=> SW(9 downto 8),
 		atte_f_eq  => atte_f_intern,
 		atte_v_eq  => atte_v_intern,
 		enable_eq  => enable_intern

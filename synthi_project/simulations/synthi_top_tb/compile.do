@@ -36,6 +36,7 @@ vcom -2008 -explicit -work work ../../../source/i2s/path_ctrl.vhd
 vcom -2008 -explicit -work work ../../../source/i2s/uni_shiftreg.vhd
 
 # DDS
+vcom -2008 -explicit -work work ../../../source/dds/FM_DDS.vhd
 vcom -2008 -explicit -work work ../../../source/dds/tone_gen_pkg.vhd
 vcom -2008 -explicit -work work ../../../source/dds/dds.vhd
 vcom -2008 -explicit -work work ../../../source/dds/tone_generator.vhd

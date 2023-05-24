@@ -40,6 +40,9 @@ entity tone_generator is
     rst_n       : IN std_logic;
     dds_l_o     : OUT std_logic_vector(N_AUDIO-1 downto 0);
     dds_r_o     : OUT std_logic_vector(N_AUDIO-1 downto 0);
+	 fm_ratio	 : IN std_logic_vector(3 downto 0);
+	 fm_depth	 : IN std_logic_vector(2 downto 0);
+	 algorithm_i : IN std_logic_vector(1 downto 0);
 	 
 	 atte_f_eq	 : IN std_logic_vector(4 downto 0);
 	 atte_v_eq	 : IN std_logic_vector(2 downto 0);
@@ -66,18 +69,18 @@ architecture str of tone_generator is
   -----------------------------------------------------------------------------
   -- Component declarations
   -----------------------------------------------------------------------------
-
-  component dds is
-    port (
-      clk_6m     : in  std_logic;
-      reset_n    : in  std_logic;
-      phi_incr   : in  std_logic_vector(N_CUM-1 downto 0);
-      step       : in  std_logic;
-      tone_on	  : in  std_logic;
-      attenu_i   : in  std_logic_vector(2 downto 0);
-      dds_o      : out std_logic_vector(N_AUDIO-1 downto 0));
-  end component dds;
-  
+--
+--  component dds is
+--    port (
+--      clk_6m     : in  std_logic;
+--      reset_n    : in  std_logic;
+--      phi_incr   : in  std_logic_vector(N_CUM-1 downto 0);
+--      step       : in  std_logic;
+--      tone_on	  : in  std_logic;
+--      attenu_i   : in  std_logic_vector(2 downto 0);
+--      dds_o      : out std_logic_vector(N_AUDIO-1 downto 0));
+--  end component dds;
+--  
   
 	component EQ is
     port (
@@ -101,7 +104,7 @@ begin
 
   -- instance "dds"
   dds_inst_gen : for i in 0 to 9 generate
-    inst_dds : dds
+    inst_dds : entity work.FM_DDS
       port map (
         clk_6m   => clk_6m,
         reset_n  => rst_n,
@@ -109,6 +112,9 @@ begin
         step     => step_i,
         tone_on  => tone_on_i(i),
         attenu_i => velocity_i(i)(6 downto 4),
+			fm_ratio => fm_ratio,
+			fm_depth => fm_depth,
+			algorithm_i => algorithm_i,
         dds_o    => dds_o_array(i)
       );
   end generate dds_inst_gen;

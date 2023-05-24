@@ -39,10 +39,10 @@ ARCHITECTURE rtl OF baud_tick IS
 --CONSTANT  	max_val					: unsigned(width-1 downto 0):= to_unsigned(4,width); -- convert integer value 4 to unsigned with 4bits
 SIGNAL 		count, next_count		: unsigned(width-1 downto 0);	 
 CONSTANT 	clock_freq 				: positive := 6_250_000; -- Clock/Hz
---CONSTANT 	baud_rate 				: positive := 31_250; -- Baude Rate/Hz
-CONSTANT 	baud_rate 				: positive := 115_200; -- for PC
-CONSTANT 	count_width 			: positive := 6; -- for PC
---CONSTANT 	count_width 			: positive := 8; -- FreqClock/FreqBaudRate = 6250000/115200 = 54.25... so need 6 bits
+CONSTANT 	baud_rate 				: positive := 31_250; -- Baude Rate/Hz
+--CONSTANT 	baud_rate 				: positive := 115_200; -- for PC
+--CONSTANT 	count_width 			: positive := 6; -- for PC
+CONSTANT 	count_width 			: positive := 8; -- FreqClock/FreqBaudRate = 6250000/115200 = 54.25... so need 6 bits
 CONSTANT 	one_period 				: unsigned(count_width - 1 downto 0):= to_unsigned(clock_freq / baud_rate ,count_width); --200
 CONSTANT 	half_period 			: unsigned(count_width - 1 downto 0):= to_unsigned(clock_freq/ baud_rate /2, count_width);
 
