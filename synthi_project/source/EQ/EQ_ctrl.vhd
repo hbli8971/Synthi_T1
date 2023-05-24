@@ -33,7 +33,11 @@ entity EQ_ctrl is
 		reset_n		: IN STD_LOGIC;
 		atte_freq	: OUT STD_LOGIC_VECTOR(4 downto 0);
 		atte_value	: OUT STD_LOGIC_VECTOR(2 downto 0);
-		enable_eq	: OUT STD_LOGIC
+		enable_eq	: OUT STD_LOGIC;
+		ctrl_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
+		data1_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
+		data2_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
+		rx_data_rdy_flag : OUT STD_LOGIC
     );
 
 end entity EQ_ctrl;
@@ -64,8 +68,8 @@ begin  -- architecture str
   begin
     if reset_n = '0' then
       fsm_state 	<= st_idle;
-		atte_freq 		<= "00000";
-		atte_value 		<= "011";
+		atte_freq 	<= "00000";
+		atte_value 	<= "011";
 		ctrl_reg 	<= "00000000";
 		data1_reg 	<= "00000000";
 		data2_reg 	<= "00000000";
@@ -137,6 +141,8 @@ begin  -- architecture str
   next_enable 	<= enable_eq;
   next_atte_f 	<= atte_freq;
   next_atte_v 	<= atte_value;
+
+  
   
   
   if (data_rdy = '1') then
@@ -151,7 +157,10 @@ begin  -- architecture str
 		
 	 end if;	
 	end if;
-  
+	ctrl_reg_out		<= ctrl_reg;
+	data1_reg_out		<= data1_reg;
+	data2_reg_out		<= data2_reg;
+	rx_data_rdy_flag	<= data_rdy;
   
   end process data_eval;
   

@@ -260,7 +260,11 @@ architecture struct of synthi_top is
       reset_n       : IN  STD_LOGIC;
       atte_freqency : OUT STD_LOGIC_VECTOR(4 downto 0);
       atte_value    : OUT STD_LOGIC_VECTOR(2 downto 0);
-      enable        : OUT STD_LOGIC);
+      enable        : OUT STD_LOGIC;
+		ctrl_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
+		data1_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
+		data2_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
+		rx_data_rdy_flag : OUT STD_LOGIC);
   end component EQ_top;
 
   
@@ -418,7 +422,12 @@ begin
       reset_n       => reset_n,
       atte_freqency => atte_f_intern,
       atte_value    => atte_v_intern,
-      enable        => enable_intern);
+      enable        => enable_intern
+		ctrl_reg_out	=>	dori;
+		data1_reg_out	=> dori;
+		data2_reg_out	=> dori;
+		rx_data_rdy_flag => dori; -- if rx_data_rdy_flag = 1 , read data at ctrl, data1, data2  
+		);
 		
 	AUD_BCLK		<= clk_6m;
 	AUD_DACLRCK	<= ws_i;
