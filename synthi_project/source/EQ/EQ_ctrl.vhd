@@ -81,8 +81,8 @@ begin  -- architecture str
 		ctrl_reg  	<= next_ctrl_reg;
 		data1_reg 	<= next_data1_reg;
 		data2_reg 	<= next_data2_reg;
-		atte_freq 	 	<= next_atte_f;
-		atte_value	 	<= next_atte_v;
+		atte_freq 	<= next_atte_f;
+		atte_value	<= next_atte_v;
 		enable_eq	<= next_enable;
 		data_rdy		<= next_data_rdy;
     end if;

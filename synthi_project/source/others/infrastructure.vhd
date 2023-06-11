@@ -34,7 +34,7 @@ entity infrastructure is
 	 clk_12m: out STD_LOGIC;
     reset_n : out STD_LOGIC;
     usb_txd_sync : out STD_LOGIC;
-    ledr0 : out STD_LOGIC
+	 ledr0 : out STD_LOGIC
     );
 
 end entity infrastructure;
@@ -93,7 +93,8 @@ begin  -- architecture str
       clk       => clock_50,
       reset_n   => key_0,
       data_in   => usb_txd,
-      led_blink => ledr0);
+      led_blink => ledr0
+	);
 
   -- instance "modulo_divider_1"
   modulo_divider_1: modulo_divider

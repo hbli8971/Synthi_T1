@@ -102,12 +102,12 @@ begin  -- architecture rtl
   
   --------------------------
   -- default statements
-  next_note_on <= note_on;
+  next_note_on 		<= note_on;
   next_status_reg 	<= status_reg;
-  next_data1_reg <= data1_reg;
-  next_data2_reg <= data2_reg;
-  next_fsm_state <= fsm_state;
-  next_new_data_flag  <= '0';
+  next_data1_reg 		<= data1_reg;
+  next_data2_reg 		<= data2_reg;
+  next_fsm_state 		<= fsm_state;
+  next_new_data_flag <= '0';
   
   --------------------------
   

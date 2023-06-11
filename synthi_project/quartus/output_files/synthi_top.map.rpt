@@ -1,6 +1,6 @@
 Analysis & Synthesis report for synthi_top
-Wed May 24 11:43:10 2023
-Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Sun Jun 11 15:12:58 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -10,64 +10,14 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Parameter Settings for User Entity Instance: uart_top:uart_top_1|baud_tick:b2v_inst
-  6. Parameter Settings for User Entity Instance: uart_top:uart_top_1|shiftreg_uart:b2v_inst1
-  7. Parameter Settings for User Entity Instance: uart_top:uart_top_1|bit_counter:b2v_inst6
-  8. Parameter Settings for User Entity Instance: uart_top:uart_top_1|output_register:b2v_inst8
-  9. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master
- 10. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1
- 11. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1
- 12. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2
- 13. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3
- 14. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4
- 15. Parameter Settings for User Entity Instance: path_ctrl:inst_path_ctrl
- 16. Parameter Settings for User Entity Instance: output_register:output_register_1
- 17. Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst
- 18. Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1
- 19. Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|bit_counter:b2v_inst6
- 20. Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"
- 21. Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1"
- 22. Port Connectivity Checks: "EQ_top:EQ_top_1"
- 23. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ"
- 24. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ"
- 25. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ"
- 26. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ"
- 27. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ"
- 28. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ"
- 29. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ"
- 30. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ"
- 31. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ"
- 32. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ"
- 33. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:9:inst_dds"
- 34. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:8:inst_dds"
- 35. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:7:inst_dds"
- 36. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:6:inst_dds"
- 37. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:5:inst_dds"
- 38. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:4:inst_dds"
- 39. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:3:inst_dds"
- 40. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:2:inst_dds"
- 41. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:1:inst_dds"
- 42. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:0:inst_dds"
- 43. Port Connectivity Checks: "output_register:output_register_1"
- 44. Port Connectivity Checks: "vhdl_hex2sevseg:vhdl_hex2sevseg_3"
- 45. Port Connectivity Checks: "vhdl_hex2sevseg:hdl_hex2sevseg_2"
- 46. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4"
- 47. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3"
- 48. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2"
- 49. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1"
- 50. Port Connectivity Checks: "codec_controller:codec_controller_1"
- 51. Port Connectivity Checks: "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"
- 52. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst17"
- 53. Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16"
- 54. Port Connectivity Checks: "uart_top:uart_top_1|shiftreg_uart:b2v_inst1"
- 55. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2021  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -84,26 +34,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 24 11:43:10 2023           ;
-; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
-; Revision Name                      ; synthi_top                                  ;
-; Top-level Entity Name              ; synthi_top                                  ;
-; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Sun Jun 11 15:12:58 2023              ;
+; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                      ; synthi_top                                     ;
+; Top-level Entity Name              ; synthi_top                                     ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
+; UFM blocks                         ; N/A until Partition Merge                      ;
+; ADC blocks                         ; N/A until Partition Merge                      ;
++------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -199,8 +149,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -210,650 +160,158 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart_top:uart_top_1|baud_tick:b2v_inst ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; width          ; 8     ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart_top:uart_top_1|shiftreg_uart:b2v_inst1 ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; width          ; 10    ; Signed Integer                                                  ;
-+----------------+-------+-----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart_top:uart_top_1|bit_counter:b2v_inst6 ;
-+----------------+-------+---------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                          ;
-+----------------+-------+---------------------------------------------------------------+
-; width          ; 4     ; Signed Integer                                                ;
-+----------------+-------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart_top:uart_top_1|output_register:b2v_inst8 ;
-+----------------+-------+-------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                              ;
-+----------------+-------+-------------------------------------------------------------------+
-; width          ; 10    ; Signed Integer                                                    ;
-+----------------+-------+-------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; width          ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1 ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                     ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                                           ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1 ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2 ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3 ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4 ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: path_ctrl:inst_path_ctrl ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; width          ; 16    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: output_register:output_register_1 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; width          ; 10    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst ;
-+----------------+-------+----------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                             ;
-+----------------+-------+----------------------------------------------------------------------------------+
-; width          ; 6     ; Signed Integer                                                                   ;
-+----------------+-------+----------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1 ;
-+----------------+-------+------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                               ;
-+----------------+-------+------------------------------------------------------------------------------------+
-; width          ; 10    ; Signed Integer                                                                     ;
-+----------------+-------+------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|bit_counter:b2v_inst6 ;
-+----------------+-------+----------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                             ;
-+----------------+-------+----------------------------------------------------------------------------------+
-; width          ; 4     ; Signed Integer                                                                   ;
-+----------------+-------+----------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"                      ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; rising_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1"                            ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; load_in     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; parallel_in ; Input  ; Info     ; Stuck at GND                                                                        ;
-; serial_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "EQ_top:EQ_top_1"                                                                                                              ;
-+------------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Port             ; Type    ; Severity         ; Details                                                                                                  ;
-+------------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; ctrl_reg_out     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; data1_reg_out    ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; data2_reg_out    ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; rx_data_rdy_flag ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; ctrl_byte        ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; data1_byte       ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; data2_byte       ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; data_rdy         ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ" ;
-+--------------+-------+----------+-----------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                             ;
-+--------------+-------+----------+-----------------------------------------------------+
-; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
-+--------------+-------+----------+-----------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:9:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:8:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:7:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:6:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:5:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:4:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:3:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:2:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:1:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:0:inst_dds" ;
-+------------------+-------+----------+-------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                               ;
-+------------------+-------+----------+-------------------------------------------------------+
-; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                          ;
-+------------------+-------+----------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------+
-; Port Connectivity Checks: "output_register:output_register_1" ;
-+-------------+-------+----------+------------------------------+
-; Port        ; Type  ; Severity ; Details                      ;
-+-------------+-------+----------+------------------------------+
-; parallel_in ; Input ; Info     ; Stuck at GND                 ;
-; data_valid  ; Input ; Info     ; Stuck at VCC                 ;
-+-------------+-------+----------+------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vhdl_hex2sevseg:vhdl_hex2sevseg_3"                                                     ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; lt_n    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; blank_n ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rbo_n   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rbi_n   ; Input  ; Info     ; Stuck at GND                                                                        ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vhdl_hex2sevseg:hdl_hex2sevseg_2"                                                      ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; lt_n    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; blank_n ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rbo_n   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rbi_n   ; Input  ; Info     ; Stuck at GND                                                                        ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4"                                   ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; serial_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3"                                   ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; serial_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2" ;
-+-----------+-------+----------+-----------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                             ;
-+-----------+-------+----------+-----------------------------------------------------+
-; serial_in ; Input ; Info     ; Stuck at GND                                        ;
-+-----------+-------+----------+-----------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" ;
-+-----------+-------+----------+-----------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                             ;
-+-----------+-------+----------+-----------------------------------------------------+
-; serial_in ; Input ; Info     ; Stuck at GND                                        ;
-+-----------+-------+----------+-----------------------------------------------------+
-
-
-+-----------------------------------------------------------------+
-; Port Connectivity Checks: "codec_controller:codec_controller_1" ;
-+------+-------+----------+---------------------------------------+
-; Port ; Type  ; Severity ; Details                               ;
-+------+-------+----------+---------------------------------------+
-; mode ; Input ; Info     ; Stuck at GND                          ;
-+------+-------+----------+---------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"                                         ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; rising_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst17"                                                             ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                  ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; lt_n    ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; blank_n ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; rbi_n   ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; rbo_n   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16"                                                             ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                  ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; lt_n    ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; blank_n ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; rbi_n   ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; rbo_n   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart_top:uart_top_1|shiftreg_uart:b2v_inst1"                                               ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; load_in     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; parallel_in ; Input  ; Info     ; Stuck at GND                                                                        ;
-; serial_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed May 24 11:42:51 2023
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sun Jun 11 15:12:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/dds/fm_dds.vhd
-    Info (12022): Found design unit 1: FM_DDS-YEET File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 46
-    Info (12023): Found entity 1: FM_DDS File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 30
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/eq/eq_baud_tick.vhd
-    Info (12022): Found design unit 1: EQ_baud_tick-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_baud_tick.vhd Line: 36
-    Info (12023): Found entity 1: EQ_baud_tick File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_baud_tick.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/eq/eq_uart_top.vhd
-    Info (12022): Found design unit 1: EQ_uart_top-bdf_type File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_uart_top.vhd Line: 36
-    Info (12023): Found entity 1: EQ_uart_top File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_uart_top.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/eq/eq_top.vhd
-    Info (12022): Found design unit 1: EQ_top-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 49
-    Info (12023): Found entity 1: EQ_top File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/eq/eq_ctrl.vhd
-    Info (12022): Found design unit 1: EQ_ctrl-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 47
-    Info (12023): Found entity 1: EQ_ctrl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/eq/eq.vhd
-    Info (12022): Found design unit 1: EQ-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ.vhd Line: 64
-    Info (12023): Found entity 1: EQ File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ.vhd Line: 48
-Info (12021): Found 1 design units, including 0 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/reg_table_pkg.vhd
-    Info (12022): Found design unit 1: reg_table_pkg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/reg_table_pkg.vhd Line: 26
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/i2c_slave_bfm.vhd
-    Info (12022): Found design unit 1: i2c_slave_bfm-bfm File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_slave_bfm.vhd Line: 32
-    Info (12023): Found entity 1: i2c_slave_bfm File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_slave_bfm.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/i2c_master.vhd
-    Info (12022): Found design unit 1: i2c_master-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 40
-    Info (12023): Found entity 1: i2c_master File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 22
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2c/codec_controller.vhd
-    Info (12022): Found design unit 1: codec_controller-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd Line: 43
-    Info (12023): Found entity 1: codec_controller File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/dds/tone_generator.vhd
-    Info (12022): Found design unit 1: tone_generator-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 57
-    Info (12023): Found entity 1: tone_generator File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 31
-Info (12021): Found 1 design units, including 0 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/dds/tone_gen_pkg.vhd
-    Info (12022): Found design unit 1: tone_gen_pkg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_gen_pkg.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/dds/dds.vhd
-    Info (12022): Found design unit 1: dds-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 44
-    Info (12023): Found entity 1: dds File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 30
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/uni_shiftreg.vhd
-    Info (12022): Found design unit 1: uni_shiftreg-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 41
-    Info (12023): Found entity 1: uni_shiftreg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 26
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/path_ctrl.vhd
-    Info (12022): Found design unit 1: path_ctrl-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 43
-    Info (12023): Found entity 1: path_ctrl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/mux_2_1.vhd
-    Info (12022): Found design unit 1: mux_2_1-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 38
-    Info (12023): Found entity 1: mux_2_1 File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/i2s_master.vhd
-    Info (12022): Found design unit 1: i2s_master-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 48
-    Info (12023): Found entity 1: i2s_master File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 28
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/i2s/i2s_frame_generator.vhd
-    Info (12022): Found design unit 1: i2s_frame_generator-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 43
-    Info (12023): Found entity 1: i2s_frame_generator File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/midi/midi.vhd
-    Info (12022): Found design unit 1: MIDI-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 41
-    Info (12023): Found entity 1: MIDI File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/vhdl_hex2sevseg.vhd
-    Info (12022): Found design unit 1: vhdl_hex2sevseg-comb File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd Line: 36
-    Info (12023): Found entity 1: vhdl_hex2sevseg File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd Line: 23
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/uart_controller_fsm.vhd
-    Info (12022): Found design unit 1: uart_controller_fsm-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd Line: 34
-    Info (12023): Found entity 1: uart_controller_fsm File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd Line: 18
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/signal_checker.vhd
-    Info (12022): Found design unit 1: signal_checker-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/signal_checker.vhd Line: 29
-    Info (12023): Found entity 1: signal_checker File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/signal_checker.vhd Line: 19
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/shiftreg_uart.vhd
-    Info (12022): Found design unit 1: shiftreg_uart-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd Line: 39
-    Info (12023): Found entity 1: shiftreg_uart File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd Line: 22
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/output_register.vhd
-    Info (12022): Found design unit 1: output_register-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/output_register.vhd Line: 41
-    Info (12023): Found entity 1: output_register File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/output_register.vhd Line: 26
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/modulo_divider.vhd
-    Info (12022): Found design unit 1: modulo_divider-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 29
-    Info (12023): Found entity 1: modulo_divider File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 19
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/infrastructure.vhd
-    Info (12022): Found design unit 1: infrastructure-str File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 44
-    Info (12023): Found entity 1: infrastructure File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 28
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/flanken_detekt_vhdl.vhd
-    Info (12022): Found design unit 1: flanken_detekt_vhdl-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd Line: 26
-    Info (12023): Found entity 1: flanken_detekt_vhdl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd Line: 15
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/clock_sync.vhd
-    Info (12022): Found design unit 1: clock_sync-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/clock_sync.vhd Line: 23
-    Info (12023): Found entity 1: clock_sync File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/clock_sync.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/bit_counter.vhd
-    Info (12022): Found design unit 1: bit_counter-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/bit_counter.vhd Line: 37
-    Info (12023): Found entity 1: bit_counter File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/bit_counter.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/others/baud_tick.vhd
-    Info (12022): Found design unit 1: baud_tick-rtl File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/baud_tick.vhd Line: 36
-    Info (12023): Found entity 1: baud_tick File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/baud_tick.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/top_files/uart_top.vhd
-    Info (12022): Found design unit 1: uart_top-bdf_type File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 38
-    Info (12023): Found entity 1: uart_top File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 25
-Info (12021): Found 2 design units, including 1 entities, in source file /users/mine8/onedrive/dokumente/github/synthi_t1/synthi_project/source/top_files/synthi_top.vhd
-    Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 79
-    Info (12023): Found entity 1: synthi_top File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 31
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/fm_bt_module.vhd
+    Info (12022): Found design unit 1: FM_BT_module-YEET File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_BT_module.vhd Line: 47
+    Info (12023): Found entity 1: FM_BT_module File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_BT_module.vhd Line: 29
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/fm_dds.vhd
+    Info (12022): Found design unit 1: FM_DDS-YEET File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 46
+    Info (12023): Found entity 1: FM_DDS File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 30
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/eq/eq_baud_tick.vhd
+    Info (12022): Found design unit 1: EQ_baud_tick-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_baud_tick.vhd Line: 36
+    Info (12023): Found entity 1: EQ_baud_tick File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_baud_tick.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/eq/eq_uart_top.vhd
+    Info (12022): Found design unit 1: EQ_uart_top-bdf_type File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_uart_top.vhd Line: 36
+    Info (12023): Found entity 1: EQ_uart_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_uart_top.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/eq/eq_top.vhd
+    Info (12022): Found design unit 1: EQ_top-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 50
+    Info (12023): Found entity 1: EQ_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/eq/eq_ctrl.vhd
+    Info (12022): Found design unit 1: EQ_ctrl-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 47
+    Info (12023): Found entity 1: EQ_ctrl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_ctrl.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/eq/eq.vhd
+    Info (12022): Found design unit 1: EQ-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ.vhd Line: 64
+    Info (12023): Found entity 1: EQ File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ.vhd Line: 48
+Info (12021): Found 1 design units, including 0 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2c/reg_table_pkg.vhd
+    Info (12022): Found design unit 1: reg_table_pkg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/reg_table_pkg.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2c/i2c_slave_bfm.vhd
+    Info (12022): Found design unit 1: i2c_slave_bfm-bfm File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_slave_bfm.vhd Line: 32
+    Info (12023): Found entity 1: i2c_slave_bfm File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_slave_bfm.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2c/i2c_master.vhd
+    Info (12022): Found design unit 1: i2c_master-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 40
+    Info (12023): Found entity 1: i2c_master File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/i2c_master.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2c/codec_controller.vhd
+    Info (12022): Found design unit 1: codec_controller-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd Line: 43
+    Info (12023): Found entity 1: codec_controller File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2c/codec_controller.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/tone_generator.vhd
+    Info (12022): Found design unit 1: tone_generator-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 57
+    Info (12023): Found entity 1: tone_generator File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 31
+Info (12021): Found 1 design units, including 0 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/tone_gen_pkg.vhd
+    Info (12022): Found design unit 1: tone_gen_pkg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_gen_pkg.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/dds.vhd
+    Info (12022): Found design unit 1: dds-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 44
+    Info (12023): Found entity 1: dds File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/dds.vhd Line: 30
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/uni_shiftreg.vhd
+    Info (12022): Found design unit 1: uni_shiftreg-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 41
+    Info (12023): Found entity 1: uni_shiftreg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/uni_shiftreg.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/path_ctrl.vhd
+    Info (12022): Found design unit 1: path_ctrl-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 43
+    Info (12023): Found entity 1: path_ctrl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/path_ctrl.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/mux_2_1.vhd
+    Info (12022): Found design unit 1: mux_2_1-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 38
+    Info (12023): Found entity 1: mux_2_1 File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/mux_2_1.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/i2s_master.vhd
+    Info (12022): Found design unit 1: i2s_master-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 48
+    Info (12023): Found entity 1: i2s_master File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/i2s/i2s_frame_generator.vhd
+    Info (12022): Found design unit 1: i2s_frame_generator-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 43
+    Info (12023): Found entity 1: i2s_frame_generator File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_frame_generator.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/midi/midi.vhd
+    Info (12022): Found design unit 1: MIDI-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 41
+    Info (12023): Found entity 1: MIDI File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/vhdl_hex2sevseg.vhd
+    Info (12022): Found design unit 1: vhdl_hex2sevseg-comb File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd Line: 37
+    Info (12023): Found entity 1: vhdl_hex2sevseg File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/vhdl_hex2sevseg.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/uart_controller_fsm.vhd
+    Info (12022): Found design unit 1: uart_controller_fsm-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd Line: 34
+    Info (12023): Found entity 1: uart_controller_fsm File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/uart_controller_fsm.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/signal_checker.vhd
+    Info (12022): Found design unit 1: signal_checker-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/signal_checker.vhd Line: 31
+    Info (12023): Found entity 1: signal_checker File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/signal_checker.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/shiftreg_uart.vhd
+    Info (12022): Found design unit 1: shiftreg_uart-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd Line: 39
+    Info (12023): Found entity 1: shiftreg_uart File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/shiftreg_uart.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/output_register.vhd
+    Info (12022): Found design unit 1: output_register-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/output_register.vhd Line: 41
+    Info (12023): Found entity 1: output_register File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/output_register.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/modulo_divider.vhd
+    Info (12022): Found design unit 1: modulo_divider-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 29
+    Info (12023): Found entity 1: modulo_divider File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/infrastructure.vhd
+    Info (12022): Found design unit 1: infrastructure-str File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 44
+    Info (12023): Found entity 1: infrastructure File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/flanken_detekt_vhdl.vhd
+    Info (12022): Found design unit 1: flanken_detekt_vhdl-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd Line: 26
+    Info (12023): Found entity 1: flanken_detekt_vhdl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/flanken_detekt_vhdl.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/clock_sync.vhd
+    Info (12022): Found design unit 1: clock_sync-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/clock_sync.vhd Line: 23
+    Info (12023): Found entity 1: clock_sync File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/clock_sync.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/bit_counter.vhd
+    Info (12022): Found design unit 1: bit_counter-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/bit_counter.vhd Line: 37
+    Info (12023): Found entity 1: bit_counter File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/bit_counter.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/others/baud_tick.vhd
+    Info (12022): Found design unit 1: baud_tick-rtl File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/baud_tick.vhd Line: 36
+    Info (12023): Found entity 1: baud_tick File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/baud_tick.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/top_files/uart_top.vhd
+    Info (12022): Found design unit 1: uart_top-bdf_type File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 38
+    Info (12023): Found entity 1: uart_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/top_files/synthi_top.vhd
+    Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 76
+    Info (12023): Found entity 1: synthi_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 30
 Info (12127): Elaborating entity "synthi_top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(63): used implicit default value for signal "LEDR_1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 63
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(64): used implicit default value for signal "LEDR_2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 64
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(65): used implicit default value for signal "LEDR_3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 65
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(66): used implicit default value for signal "LEDR_4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 66
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(67): used implicit default value for signal "LEDR_5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 67
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(68): used implicit default value for signal "LEDR_6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 68
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(69): used implicit default value for signal "LEDR_7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 69
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(70): used implicit default value for signal "LEDR_8" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 70
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(71): used implicit default value for signal "LEDR_9" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 71
-Info (12128): Elaborating entity "infrastructure" for hierarchy "infrastructure:infrastructure_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 279
-Info (12128): Elaborating entity "clock_sync" for hierarchy "infrastructure:infrastructure_1|clock_sync:clock_sync_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 84
-Info (12128): Elaborating entity "signal_checker" for hierarchy "infrastructure:infrastructure_1|signal_checker:signal_checker_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 91
-Info (12128): Elaborating entity "modulo_divider" for hierarchy "infrastructure:infrastructure_1|modulo_divider:modulo_divider_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 99
-Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(32): used explicit default value for signal "width6" because signal was never assigned a value File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 32
-Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(33): used explicit default value for signal "width12" because signal was never assigned a value File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 33
-Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 292
-Info (12128): Elaborating entity "baud_tick" for hierarchy "uart_top:uart_top_1|baud_tick:b2v_inst" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 148
-Info (12128): Elaborating entity "shiftreg_uart" for hierarchy "uart_top:uart_top_1|shiftreg_uart:b2v_inst1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 157
-Info (12128): Elaborating entity "vhdl_hex2sevseg" for hierarchy "uart_top:uart_top_1|vhdl_hex2sevseg:b2v_inst16" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 171
-Info (12128): Elaborating entity "flanken_detekt_vhdl" for hierarchy "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 186
-Info (12128): Elaborating entity "bit_counter" for hierarchy "uart_top:uart_top_1|bit_counter:b2v_inst6" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 193
-Info (12128): Elaborating entity "uart_controller_fsm" for hierarchy "uart_top:uart_top_1|uart_controller_fsm:b2v_inst7" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 203
-Info (12128): Elaborating entity "output_register" for hierarchy "uart_top:uart_top_1|output_register:b2v_inst8" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 215
-Info (12128): Elaborating entity "codec_controller" for hierarchy "codec_controller:codec_controller_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 303
-Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c_master_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 314
-Info (12128): Elaborating entity "i2s_master" for hierarchy "i2s_master:inst_i2s_master" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 326
-Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(101): object "dummy3" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 101
-Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(102): object "dummy4" assigned a value but never read File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 102
-Info (12128): Elaborating entity "i2s_frame_generator" for hierarchy "i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 113
-Info (12128): Elaborating entity "uni_shiftreg" for hierarchy "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 125
-Info (12128): Elaborating entity "mux_2_1" for hierarchy "i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 181
-Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_ctrl" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 341
-Info (12128): Elaborating entity "MIDI" for hierarchy "MIDI:MIDI_2" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 386
-Warning (10620): VHDL warning at MIDI.vhd(190): comparison between unequal length operands always returns FALSE File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 190
-Info (12128): Elaborating entity "tone_generator" for hierarchy "tone_generator:tone_generator_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 398
-Info (12128): Elaborating entity "FM_DDS" for hierarchy "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:0:inst_dds" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 107
-Info (12128): Elaborating entity "dds" for hierarchy "tone_generator:tone_generator_1|FM_DDS:\dds_inst_gen:0:inst_dds|dds:inst_dds_carrier" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 87
-Info (12128): Elaborating entity "EQ" for hierarchy "tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 123
-Info (12128): Elaborating entity "EQ_top" for hierarchy "EQ_top:EQ_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 418
-Info (12128): Elaborating entity "EQ_uart_top" for hierarchy "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 98
-Info (12128): Elaborating entity "EQ_baud_tick" for hierarchy "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_uart_top.vhd Line: 119
-Info (12128): Elaborating entity "EQ_ctrl" for hierarchy "EQ_top:EQ_top_1|EQ_ctrl:EQ_ctrl_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 108
-Error (12002): Port "ctrl_reg_out" does not exist in macrofunction "EQ_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 418
-Error (12002): Port "data1_reg_out" does not exist in macrofunction "EQ_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 418
-Error (12002): Port "data2_reg_out" does not exist in macrofunction "EQ_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 418
-Error (12002): Port "rx_data_rdy_flag" does not exist in macrofunction "EQ_top_1" File: C:/Users/mine8/OneDrive/Dokumente/GitHub/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 418
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 15 warnings
-    Error: Peak virtual memory: 4833 megabytes
-    Error: Processing ended: Wed May 24 11:43:10 2023
-    Error: Elapsed time: 00:00:19
-    Error: Total CPU time (on all processors): 00:00:44
+Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(59): used implicit default value for signal "LEDR_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 59
+Info (12128): Elaborating entity "infrastructure" for hierarchy "infrastructure:infrastructure_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 300
+Info (12128): Elaborating entity "clock_sync" for hierarchy "infrastructure:infrastructure_1|clock_sync:clock_sync_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 84
+Info (12128): Elaborating entity "signal_checker" for hierarchy "infrastructure:infrastructure_1|signal_checker:signal_checker_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 91
+Info (12128): Elaborating entity "modulo_divider" for hierarchy "infrastructure:infrastructure_1|modulo_divider:modulo_divider_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 100
+Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(32): used explicit default value for signal "width6" because signal was never assigned a value File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 32
+Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(33): used explicit default value for signal "width12" because signal was never assigned a value File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 33
+Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 313
+Warning (10036): Verilog HDL or VHDL warning at uart_top.vhd(133): object "LT_sig" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 133
+Warning (10036): Verilog HDL or VHDL warning at uart_top.vhd(134): object "blank_sig" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 134
+Warning (10036): Verilog HDL or VHDL warning at uart_top.vhd(135): object "rbi_sig" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 135
+Info (12128): Elaborating entity "baud_tick" for hierarchy "uart_top:uart_top_1|baud_tick:b2v_inst" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 148
+Info (12128): Elaborating entity "shiftreg_uart" for hierarchy "uart_top:uart_top_1|shiftreg_uart:b2v_inst1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 157
+Info (12128): Elaborating entity "flanken_detekt_vhdl" for hierarchy "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 186
+Info (12128): Elaborating entity "bit_counter" for hierarchy "uart_top:uart_top_1|bit_counter:b2v_inst6" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 193
+Info (12128): Elaborating entity "uart_controller_fsm" for hierarchy "uart_top:uart_top_1|uart_controller_fsm:b2v_inst7" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 203
+Info (12128): Elaborating entity "output_register" for hierarchy "uart_top:uart_top_1|output_register:b2v_inst8" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 215
+Info (12128): Elaborating entity "codec_controller" for hierarchy "codec_controller:codec_controller_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 324
+Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c_master_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 335
+Info (12128): Elaborating entity "i2s_master" for hierarchy "i2s_master:inst_i2s_master" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 347
+Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(101): object "dummy3" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 101
+Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(102): object "dummy4" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 102
+Info (12128): Elaborating entity "i2s_frame_generator" for hierarchy "i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 113
+Info (12128): Elaborating entity "uni_shiftreg" for hierarchy "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 125
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 181
+Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_ctrl" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 362
+Info (12128): Elaborating entity "vhdl_hex2sevseg" for hierarchy "vhdl_hex2sevseg:hdl_hex2sevseg_2" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 375
+Info (12128): Elaborating entity "MIDI" for hierarchy "MIDI:MIDI_2" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 395
+Warning (10620): VHDL warning at MIDI.vhd(190): comparison between unequal length operands always returns FALSE File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 190
+Info (12128): Elaborating entity "tone_generator" for hierarchy "tone_generator:tone_generator_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 407
+Info (12128): Elaborating entity "FM_DDS" for hierarchy "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 95
+Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(61): object "sig_OSC1_f" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(62): object "sig_OSC2_f" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 62
+Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(63): object "sig_OSC3_f" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 63
+Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(64): object "sig_OSC4_f" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 64
+Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(66): object "sig_OSC1_att" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 66
+Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(67): object "sig_OSC2_att" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 67
+Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(68): object "sig_OSC3_att" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 68
+Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(69): object "sig_OSC4_att" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 69
+Error (10344): VHDL expression error at FM_DDS.vhd(188): expression has 16 elements, but must have 19 elements File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 188
+Error (12152): Can't elaborate user hierarchy "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 95
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 17 warnings
+    Error: Peak virtual memory: 4827 megabytes
+    Error: Processing ended: Sun Jun 11 15:12:58 2023
+    Error: Elapsed time: 00:00:06
+    Error: Total CPU time (on all processors): 00:00:08
 
 

@@ -31,25 +31,25 @@ library work;
 entity tone_generator is
 
 
-  port (
-    tone_on_i   : IN std_logic_vector(9 downto 0);
-    note_i      : IN t_tone_array;
-    step_i      : IN std_logic;
-    velocity_i  : IN t_tone_array;
-    clk_6m      : IN std_logic;
-    rst_n       : IN std_logic;
-    dds_l_o     : OUT std_logic_vector(N_AUDIO-1 downto 0);
-    dds_r_o     : OUT std_logic_vector(N_AUDIO-1 downto 0);
-	 fm_ratio	 : IN std_logic_vector(3 downto 0);
-	 fm_depth	 : IN std_logic_vector(2 downto 0);
-	 algorithm_i : IN std_logic_vector(1 downto 0);
+	port (
+		tone_on_i   : IN std_logic_vector(9 downto 0);
+		note_i      : IN t_tone_array;
+		step_i      : IN std_logic;
+		velocity_i  : IN t_tone_array;
+		clk_6m      : IN std_logic;
+		rst_n       : IN std_logic;
+		dds_l_o     : OUT std_logic_vector(N_AUDIO-1 downto 0);
+		dds_r_o     : OUT std_logic_vector(N_AUDIO-1 downto 0);
+		-- EQ
+		atte_f_eq	: IN std_logic_vector(4 downto 0);
+		atte_v_eq	: IN std_logic_vector(2 downto 0);
+		enable_eq	: IN std_logic;
+		-- BT
+		rx_data		: IN STD_LOGIC_VECTOR(7 downto 0);
+		rx_data_rdy	: IN STD_LOGIC;
+		algo_mode	: OUT std_logic_vector(3 downto 0)
+	);
 	 
-	 atte_f_eq	 : IN std_logic_vector(4 downto 0);
-	 atte_v_eq	 : IN std_logic_vector(2 downto 0);
-	 enable_eq	 : IN std_logic
-
-    );
-
 end entity tone_generator;
 
 -------------------------------------------------------------------------------
@@ -59,29 +59,20 @@ architecture str of tone_generator is
   -----------------------------------------------------------------------------
   -- Internal signal declarations
   -----------------------------------------------------------------------------
-	type 		t_dds_o_array is array (0 to 9) of std_logic_vector(N_AUDIO-1 downto 0);
-	signal 	dds_o_array : t_dds_o_array;
-	signal	dds_o_array_eq : t_dds_o_array;
+	TYPE 		t_dds_o_array is array (0 to 9) of std_logic_vector(N_AUDIO-1 downto 0);
+	TYPE 		algo_array is array (0 to 9) of std_logic_vector(3 downto 0); -- Algorithm array 
+	SIGNAL 	dds_o_array : t_dds_o_array;
+	SIGNAL	dds_o_array_eq : t_dds_o_array;
 	SIGNAL	sum_reg, next_sum_reg: signed(N_AUDIO-1 downto 0);
-	signal   enable_eq_int, next_enable_eq : std_logic;
-	--signal   atte_f_intern : std_logic_vector(4 downto 0);
-	--signal	atte_v_intern : std_logic_vector(2 downto 0);
+	SIGNAL   enable_eq_int, next_enable_eq : std_logic;
+--	SIGNAL 	atte_f_intern : std_logic_vector(4 downto 0);
+--	SIGNAL	atte_v_intern : std_logic_vector(2 downto 0);
+	SIGNAL 	dds_o  : std_logic_vector(N_AUDIO-1 downto 0);
+	SIGNAL 	sig_algo_mode : algo_array;
+	
   -----------------------------------------------------------------------------
   -- Component declarations
-  -----------------------------------------------------------------------------
---
---  component dds is
---    port (
---      clk_6m     : in  std_logic;
---      reset_n    : in  std_logic;
---      phi_incr   : in  std_logic_vector(N_CUM-1 downto 0);
---      step       : in  std_logic;
---      tone_on	  : in  std_logic;
---      attenu_i   : in  std_logic_vector(2 downto 0);
---      dds_o      : out std_logic_vector(N_AUDIO-1 downto 0));
---  end component dds;
---  
-  
+  ----------------------------------------------------------------------------- 
 	component EQ is
     port (
       sound_in  : in  std_logic_vector(15 downto 0);
@@ -94,32 +85,29 @@ architecture str of tone_generator is
       sound_out : out std_logic_vector(15 downto 0));
   end component EQ;
 
-	 
-signal dds_o  : std_logic_vector(N_AUDIO-1 downto 0);
+begin -- architecture of tone_generator
+	
+	----------------------------------------------------
+	-- INSTANCES
+	----------------------------------------------------
 
-  
-
-
-begin
-
-  -- instance "dds"
-  dds_inst_gen : for i in 0 to 9 generate
-    inst_dds : entity work.FM_DDS
+  gen_inst_FM_DDS : for i in 0 to 9 generate -- generate 10 FM DDS instances
+    inst_FM_DDS : entity work.FM_DDS
       port map (
-        clk_6m   => clk_6m,
-        reset_n  => rst_n,
-        phi_incr => LUT_midi2dds(to_integer(unsigned(note_i(i)))),
-        step     => step_i,
-        tone_on  => tone_on_i(i),
-        attenu_i => velocity_i(i)(6 downto 4),
-			fm_ratio => fm_ratio,
-			fm_depth => fm_depth,
-			algorithm_i => algorithm_i,
-        dds_o    => dds_o_array(i)
+			clk_6m   => clk_6m,
+			reset_n  => rst_n,
+			phi_incr => LUT_midi2dds(to_integer(unsigned(note_i(i)))),
+			step     => step_i,
+			tone_on  => tone_on_i(i),
+			attenu_i => velocity_i(i)(6 downto 4),
+			data			=> rx_data,
+			data_rdy		=> rx_data_rdy,
+			algo_mode_o	=> sig_algo_mode(i),
+			dds_o    => dds_o_array(i)
       );
-  end generate dds_inst_gen;
+  end generate gen_inst_FM_DDS;
   
-  eq_inst_gen : for i in 0 to 9 generate
+  eq_inst_gen : for i in 0 to 9 generate -- generate 10 EQ instances
 	inst_EQ : EQ
 		port map(
 		sound_in  => dds_o_array(i),  
@@ -164,8 +152,10 @@ begin
 			--enable_eq_int <= next_enable_eq;
 		end if;
 	end process reg_sum_output;
+	
 	dds_l_o <= std_logic_vector(sum_reg);
 	dds_r_o <= std_logic_vector(sum_reg);
+	algo_mode <= sig_algo_mode(0);
 
 end architecture str;
 

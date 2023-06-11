@@ -14,6 +14,66 @@ fsm_state.st_state1 0 0 1 1
 fsm_state.st_wait_rx_byte 0 1 0 1 
 fsm_state.st_state3 1 0 0 1 
 
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:9:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:8:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:7:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:6:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:5:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:4:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:3:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:2:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:1:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
+State Machine - |synthi_top|tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS|FM_BT_module:inst_BT_mod|fsm_state
+Name fsm_state.st_byte2 fsm_state.st_byte1 fsm_state.st_idle 
+fsm_state.st_idle 0 0 0 
+fsm_state.st_byte1 0 1 1 
+fsm_state.st_byte2 1 0 1 
+
 State Machine - |synthi_top|MIDI:MIDI_2|fsm_state
 Name fsm_state.st_wait_data2 fsm_state.st_wait_data1 fsm_state.st_wait_status 
 fsm_state.st_wait_status 0 0 0 

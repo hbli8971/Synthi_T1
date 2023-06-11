@@ -35,11 +35,12 @@ entity EQ_top is
 		atte_freqency	:	OUT STD_LOGIC_VECTOR(4 downto 0); -- selects freq to be set 
 		atte_value		:	OUT STD_LOGIC_VECTOR(2 downto 0); -- sets selected freq
 		enable			:	OUT STD_LOGIC;	                   -- enables the EQ
-		Ctrl_byte      : OUT STD_LOGIC_VECTOR(7 downto 0);
-		data1_byte     : OUT STD_LOGIC_VECTOR(7 downto 0);
-		data2_byte     : OUT STD_LOGIC_VECTOR(7 downto 0);
-		Data_rdy       : OUT STD_LOGIC
-		
+--		ctrl_reg_out      : OUT STD_LOGIC_VECTOR(7 downto 0);
+--		data1_reg_out     : OUT STD_LOGIC_VECTOR(7 downto 0);
+--		data2_reg_out     : OUT STD_LOGIC_VECTOR(7 downto 0);
+--		rx_data_rdy_flag  : OUT STD_LOGIC
+		rx_data_o 		:  OUT  STD_LOGIC_VECTOR(7 downto 0);
+		rx_data_rdy_o	:	OUT  STD_LOGIC
     );
 
 end entity EQ_top;
@@ -68,17 +69,18 @@ architecture str of EQ_top is
 
   component EQ_ctrl is
     port (
-      rx_data     : IN  STD_LOGIC_VECTOR(7 downto 0);
-      rx_data_rdy : IN  STD_LOGIC;
-      clk         : IN  STD_LOGIC;
-      reset_n     : IN  STD_LOGIC;
-      atte_freq   : OUT STD_LOGIC_VECTOR(4 downto 0);
-      atte_value  : OUT STD_LOGIC_VECTOR(2 downto 0);
-      enable_eq   : OUT STD_LOGIC;   
-      ctrl_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
-		data1_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
-		data2_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
-		rx_data_rdy_flag : OUT STD_LOGIC);
+      rx_data     		: IN  STD_LOGIC_VECTOR(7 downto 0);
+      rx_data_rdy 		: IN  STD_LOGIC;
+      clk         		: IN  STD_LOGIC;
+      reset_n     		: IN  STD_LOGIC;
+      atte_freq   		: OUT STD_LOGIC_VECTOR(4 downto 0);
+      atte_value  		: OUT STD_LOGIC_VECTOR(2 downto 0);
+      enable_eq   		: OUT STD_LOGIC;   
+      ctrl_reg_out		: OUT STD_LOGIC_VECTOR(7 downto 0);
+		data1_reg_out		: OUT STD_LOGIC_VECTOR(7 downto 0);
+		data2_reg_out		: OUT STD_LOGIC_VECTOR(7 downto 0);
+		rx_data_rdy_flag 	: OUT STD_LOGIC
+	);
   end component EQ_ctrl;
   
   
@@ -113,13 +115,16 @@ begin  -- architecture str
       reset_n     => reset_n, --
       atte_freq   => atte_freqency,--
       atte_value  => atte_value,--
-      enable_eq   => enable,
-		ctrl_reg_out	=>	Ctrl_byte,
-		data1_reg_out	=> data1_byte,
-		data2_reg_out	=> data2_byte,
-		rx_data_rdy_flag => Data_rdy
+      enable_eq   => enable
+--		ctrl_reg_out	=>	ctrl_reg_out,
+--		data1_reg_out	=> data1_reg_out,
+--		data2_reg_out	=> data2_reg_out,
+--		rx_data_rdy_flag => rx_data_rdy_flag
 		);--
-
+		
+		
+	rx_data_o 		<= RX_DATA_intern;
+	rx_data_rdy_o 	<= RX_DATA_RDY_intern;
 
 end architecture str;
 

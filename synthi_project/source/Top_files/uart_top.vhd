@@ -29,9 +29,9 @@ ENTITY uart_top IS
 		reset_n :  IN  STD_LOGIC;
 		serial_in :  IN  STD_LOGIC;
 		rx_data :  OUT  STD_LOGIC_VECTOR(7 downto 0);
-		rx_data_rdy :  OUT  STD_LOGIC;
-		hex0 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
-		hex1 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0)
+		rx_data_rdy :  OUT  STD_LOGIC
+--		hex0 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0);
+--		hex1 :  OUT  STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
 END uart_top;
 
@@ -112,9 +112,9 @@ GENERIC (width : INTEGER
 	PORT(clk : IN STD_LOGIC;
 		 data_valid : IN STD_LOGIC;
 		 reset_n : IN STD_LOGIC;
-		 parallel_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-		 hex_lsb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		 hex_msb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		 parallel_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
+--		 hex_lsb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+--		 hex_msb_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
 
@@ -146,8 +146,8 @@ rbi_sig<='0';
 
 
 b2v_inst : baud_tick
-GENERIC MAP(width => 8)
---GENERIC MAP(width => 6) -- 4 PC
+--GENERIC MAP(width => 8) -- for external Keyboard
+GENERIC MAP(width => 6) -- for PC
 PORT MAP(clk => clk_6m,
 		 reset_n => reset,
 		 start_bit => start_bit_sig,		
@@ -168,20 +168,20 @@ PORT MAP(clk => clk_6m,
 
 
 
-b2v_inst16 : vhdl_hex2sevseg
-PORT MAP(data_in => SYNTHESIZED_WIRE_3,
-		 seg_o => hex0,
-		 lt_n => LT_sig,
-		 blank_n => blank_sig,
-		 rbi_n => rbi_sig);
-
-
-b2v_inst17 : vhdl_hex2sevseg
-PORT MAP(data_in => SYNTHESIZED_WIRE_4,
-		 seg_o => hex1,
-		 lt_n => LT_sig,
-		 blank_n => blank_sig,
-		 rbi_n => rbi_sig);
+--b2v_inst16 : vhdl_hex2sevseg
+--PORT MAP(data_in => SYNTHESIZED_WIRE_3,
+--		 seg_o => hex0,
+--		 lt_n => LT_sig,
+--		 blank_n => blank_sig,
+--		 rbi_n => rbi_sig);
+--
+--
+--b2v_inst17 : vhdl_hex2sevseg
+--PORT MAP(data_in => SYNTHESIZED_WIRE_4,
+--		 seg_o => hex1,
+--		 lt_n => LT_sig,
+--		 blank_n => blank_sig,
+--		 rbi_n => rbi_sig);
 
 b2v_inst18 : flanken_detekt_vhdl
 PORT MAP(data_in => serial_in,
@@ -218,9 +218,7 @@ GENERIC MAP(width => 10
 PORT MAP(clk => clk_6m,
 		 data_valid => data_ready,
 		 reset_n => reset,
-		 parallel_in => bit_data,
-		 hex_lsb_out => SYNTHESIZED_WIRE_4,
-		 hex_msb_out => SYNTHESIZED_WIRE_3);
+		 parallel_in => bit_data);
 
 
 

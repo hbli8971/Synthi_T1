@@ -21,11 +21,10 @@
 
 library ieee;
 	use ieee.std_logic_1164.all;
-library work;
-use IEEE.numeric_std.all;
-use work.tone_gen_pkg.all;
 	use ieee.numeric_std.all;
+library work;
 	use work.tone_gen_pkg.all;
+	
 -------------------------------------------------------------------------------
 
 entity synthi_top is
@@ -56,19 +55,17 @@ entity synthi_top is
     AUD_SDAT : inout std_logic;         -- data  from I2C master block
 
     HEX0   : out std_logic_vector(6 downto 0);  -- output for HEX 0 display
-    HEX1   : out std_logic_vector(6 downto 0);  -- output for HEX 0 display
-	 HEX2	  : out std_logic_vector(6 downto 0);
-	 HEX3	  : out std_logic_vector(6 downto 0);
-    LEDR_0 : out std_logic;                     -- red LED
-    LEDR_1 : out std_logic;                     -- red LED
-    LEDR_2 : out std_logic;                     -- red LED
-    LEDR_3 : out std_logic;                     -- red LED
-    LEDR_4 : out std_logic;                     -- red LED
-    LEDR_5 : out std_logic;                     -- red LED
-    LEDR_6 : out std_logic;                     -- red LED
-    LEDR_7 : out std_logic;                     -- red LED
-    LEDR_8 : out std_logic;                     -- red LED
-    LEDR_9 : out std_logic                      -- red LED
+
+    LEDR_0 : out std_logic;    -- red LED
+    LEDR_1 : out std_logic;    -- red LED
+    LEDR_2 : out std_logic;    -- red LED
+    LEDR_3 : out std_logic;    -- red LED
+    LEDR_4 : out std_logic;    -- red LED
+    LEDR_5 : out std_logic;    -- red LED
+    LEDR_6 : out std_logic;    -- red LED
+    LEDR_7 : out std_logic;    -- red LED
+    LEDR_8 : out std_logic;    -- red LED
+    LEDR_9 : out std_logic     -- red LED
     );
 
 end entity synthi_top;
@@ -90,8 +87,8 @@ architecture struct of synthi_top is
       clk_6m       : out STD_LOGIC;
 		clk_12m		 : out STD_LOGIC;
       reset_n      : out STD_LOGIC;
-      usb_txd_sync : out STD_LOGIC;
-      ledr0        : out STD_LOGIC);
+      usb_txd_sync : out STD_LOGIC);
+--      ledr0        : out STD_LOGIC);
   end component infrastructure;
 
   component uart_top is
@@ -100,9 +97,9 @@ architecture struct of synthi_top is
       reset_n     : IN  STD_LOGIC;
       serial_in   : IN  STD_LOGIC;
       rx_data     : OUT STD_LOGIC_VECTOR(7 downto 0);
-      rx_data_rdy : OUT STD_LOGIC;
-      hex0        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-      hex1        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
+      rx_data_rdy : OUT STD_LOGIC);
+--      hex0        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+--      hex1        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
   end component uart_top;
   
 
@@ -177,9 +174,10 @@ architecture struct of synthi_top is
       parallel_in : in  std_logic_vector(width-1 downto 0);
       clk         : in  std_logic;
       data_valid  : in  std_logic;
-      reset_n     : in  std_logic;
-      hex_lsb_out : out std_logic_vector(3 downto 0);
-      hex_msb_out : out std_logic_vector(3 downto 0));
+      reset_n     : in  std_logic
+--      hex_lsb_out : out std_logic_vector(3 downto 0);
+--      hex_msb_out : out std_logic_vector(3 downto 0)
+	);
   end component output_register;
 
   component MIDI is
@@ -195,23 +193,46 @@ architecture struct of synthi_top is
   end component MIDI;
 
   component tone_generator is
-    port (
-      tone_on_i  : IN  std_logic_vector(9 downto 0);
-      note_i     : IN  t_tone_array;
-      step_i     : IN  std_logic;
-      velocity_i : IN  t_tone_array;
-      clk_6m     : IN  std_logic;
-      rst_n      : IN  std_logic;
-      dds_l_o    : OUT std_logic_vector(N_AUDIO-1 downto 0);
-      dds_r_o    : OUT std_logic_vector(N_AUDIO-1 downto 0);
-		fm_ratio	  : IN  std_logic_vector(3 downto 0);
-		fm_depth	  : IN  std_logic_vector(2 downto 0);
-		algorithm_i: IN  std_logic_vector(1 downto 0);
-		atte_f_eq  : IN std_logic_vector(4 downto 0);
-		atte_v_eq  : IN std_logic_vector(2 downto 0);
-		enable_eq  : IN std_logic
-		);
+   port (
+      tone_on_i  	: IN  std_logic_vector(9 downto 0);
+      note_i     	: IN  t_tone_array;
+      step_i     	: IN  std_logic;
+      velocity_i 	: IN  t_tone_array;
+      clk_6m     	: IN  std_logic;
+      rst_n      	: IN  std_logic;
+      dds_l_o    	: OUT std_logic_vector(N_AUDIO-1 downto 0);
+      dds_r_o    	: OUT std_logic_vector(N_AUDIO-1 downto 0);
+--		fm_ratio	  	: IN  std_logic_vector(3 downto 0);
+--		fm_depth	  	: IN  std_logic_vector(2 downto 0);
+		atte_f_eq  	: IN std_logic_vector(4 downto 0);
+		atte_v_eq  	: IN std_logic_vector(2 downto 0);
+		enable_eq  	: IN std_logic;
+--		ctrl_reg		: in std_logic_vector(7 downto 0);
+--		data1_reg	: in std_logic_vector(7 downto 0);
+--		data2_reg	: in std_logic_vector(7 downto 0);
+--		data_flag	: in std_logic;
+		rx_data		: IN STD_LOGIC_VECTOR(7 downto 0);
+		rx_data_rdy	: IN STD_LOGIC;
+		algo_mode	: out std_logic_vector(3 downto 0)
+	);
   end component tone_generator;
+  
+  component EQ_top is
+	port (
+		Serial_in_BT  		: IN  STD_LOGIC;
+		clk_6m        		: IN  STD_LOGIC;
+		reset_n       		: IN  STD_LOGIC;
+		atte_freqency 		: OUT STD_LOGIC_VECTOR(4 downto 0);
+		atte_value    		: OUT STD_LOGIC_VECTOR(2 downto 0);
+		enable        		: OUT STD_LOGIC;
+--		ctrl_reg_out		: OUT STD_LOGIC_VECTOR(7 downto 0);
+--		data1_reg_out		: OUT STD_LOGIC_VECTOR(7 downto 0);
+--		data2_reg_out		: OUT STD_LOGIC_VECTOR(7 downto 0);
+--		rx_data_rdy_flag 	: OUT STD_LOGIC
+		rx_data_o 			: OUT  STD_LOGIC_VECTOR(7 downto 0);
+		rx_data_rdy_o		: OUT  STD_LOGIC
+	);
+  end component EQ_top;
 
  -----------------------------------------------------------------------------
  -- Internal signal declarations
@@ -244,35 +265,35 @@ architecture struct of synthi_top is
  signal rx_data_rdy_sig : std_logic;
  signal tone_on_sig     : std_logic_vector(9 downto 0);
  
- signal atte_v_intern	: std_logic_vector(2 downto 0);
- signal atte_f_intern	: std_logic_vector(4 downto 0);
- signal enable_intern	: std_logic;
+ signal atte_v_intern	: std_logic_vector(2 downto 0);	-- EQ
+ signal atte_f_intern	: std_logic_vector(4 downto 0);	-- EQ
+ signal enable_intern	: std_logic;							-- EQ
  
+ signal 	sig_rx_data		:  STD_LOGIC_VECTOR(7 downto 0); -- Bluetooth Data
+ signal 	sig_rx_data_rdy:  STD_LOGIC;							-- Bluetooth Data
  
- 
- signal jan2    : std_logic_vector(3 downto 0);
- signal jan1    : std_logic_vector(3 downto 0);
-
-  component EQ_top is
-    port (
-      Serial_in_BT  : IN  STD_LOGIC;
-      clk_6m        : IN  STD_LOGIC;
-      reset_n       : IN  STD_LOGIC;
-      atte_freqency : OUT STD_LOGIC_VECTOR(4 downto 0);
-      atte_value    : OUT STD_LOGIC_VECTOR(2 downto 0);
-      enable        : OUT STD_LOGIC;
-		ctrl_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
-		data1_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
-		data2_reg_out	: OUT STD_LOGIC_VECTOR(7 downto 0);
-		rx_data_rdy_flag : OUT STD_LOGIC);
-  end component EQ_top;
-
-  
+ signal sig_algo_mode    : std_logic_vector(3 downto 0); -- FM Algorithm Mode
 	
-begin
+begin -- architecture of synthi_top
+
+	AUD_BCLK		<= clk_6m;
+	AUD_DACLRCK	<= ws_i;
+	AUD_ADCLRCK	<= ws_i;
+	
+	-- set unused LEDs to 0
+	LEDR_1 <= '0';
+	LEDR_2 <= '0';
+	LEDR_3 <= '0';
+	LEDR_4 <= '0';
+	LEDR_5 <= '0';
+	LEDR_6 <= '0';
+	LEDR_7 <= '0';
+	LEDR_8 <= '0';
+	LEDR_9 <= '0';
+	
 
 -----------------------------------------------------------------------------
-  -- Architecture Description;
+  -- INSTANCES, Architecture Description
 -----------------------------------------------------------------------------
 
   -- instance "infrastructure_1"
@@ -280,13 +301,13 @@ begin
     port map (
       clock_50     => CLOCK_50,
       key_0        => KEY_0,
-      usb_txd      => GPIO_26,
-		--usb_txd		 => USB_TXD, -- for PC
+      --usb_txd      => GPIO_26, -- for external Keyboard
+		usb_txd		 => USB_TXD, -- for PC
       clk_6m       => clk_6m,
 		clk_12m		 => AUD_XCK,
       reset_n      => reset_n,
-      usb_txd_sync => serial_in,
-      ledr0        => LEDR_0);
+      usb_txd_sync => serial_in);
+--      ledr0        => LEDR_0);
 
   -- instance "uart_top_1"
   uart_top_1: uart_top
@@ -294,8 +315,8 @@ begin
       clk_6m      => clk_6m,
       reset_n     => reset_n,
       serial_in   => serial_in,
-      hex0        => HEX0,
-      hex1        => HEX1,
+--      hex0        => HEX0,
+--      hex1        => HEX1,
       rx_data     => rx_data_sig,
       rx_data_rdy => rx_data_rdy_sig);
 
@@ -351,23 +372,13 @@ begin
 	);
 
 	-- instance "vhdl_hex2sevseg_1"
-	hdl_hex2sevseg_2: vhdl_hex2sevseg
+	hdl_hex2sevseg_2: vhdl_hex2sevseg -- display algorithm mode 
 	port map (
-		data_in => jan1,
-		seg_o   => HEX2,
+		data_in => sig_algo_mode,
 		lt_n    => '0',
 		blank_n => '0',
-		rbi_n   => '0'
-	);
-
-	vhdl_hex2sevseg_3: vhdl_hex2sevseg
-	port map (
-		data_in => jan2,
-		seg_o   => HEX3,
-		lt_n    => '0',
-		blank_n => '0',
-		--rbo_n   => ,
-		rbi_n   => '0'
+		rbi_n   => '0',
+		seg_o   => HEX0
 	);
 
   -- instance "output_register_1"
@@ -377,9 +388,7 @@ begin
       parallel_in => "0000000000",
       clk         => clk_6m,
       data_valid  => '1',
-      reset_n     => reset_n,
-      hex_lsb_out => jan1,
-      hex_msb_out => jan2
+      reset_n     => reset_n
 	);
 
   -- instance "MIDI_2"
@@ -397,43 +406,45 @@ begin
   -- instance "tone_generator_1"
 	tone_generator_1: tone_generator
    port map (
-      tone_on_i  => tone_on_sig,
-      note_i     => note_signal,
-      step_i     => sig_step,
-      velocity_i => velocity_signal,
-      clk_6m     => clk_6m,
-      rst_n      => reset_n,
-      dds_l_o    => dds_l_o,
-      dds_r_o    => dds_r_o,
-		fm_ratio	  	=> SW(7 downto 4),
-		fm_depth	  	=> SW(2 downto 0),
-		algorithm_i	=> SW(9 downto 8),
-		atte_f_eq  => atte_f_intern,
-		atte_v_eq  => atte_v_intern,
-		enable_eq  => enable_intern
+      tone_on_i  	=> tone_on_sig,
+      note_i     	=> note_signal,
+      step_i     	=> sig_step,
+      velocity_i 	=> velocity_signal,
+      clk_6m     	=> clk_6m,
+      rst_n      	=> reset_n,
+      dds_l_o    	=> dds_l_o,
+      dds_r_o    	=> dds_r_o,
+		-- EQ
+		atte_f_eq  	=> atte_f_intern,
+		atte_v_eq  	=> atte_v_intern,
+		enable_eq  	=> enable_intern,
+		-- FM Bluetooth
+--		ctrl_reg		=> sig_BT_ctrl,
+--		data1_reg	=> sig_BT_data1,
+--		data2_reg	=> sig_BT_data2,
+--		data_flag	=>	sig_BT_flag,
+		rx_data 		=> sig_rx_data,
+		rx_data_rdy	=> sig_rx_data_rdy,
+		algo_mode	=> sig_algo_mode
 	);
 
 
   -- instance "EQ_top_1"
   EQ_top_1: EQ_top
     port map (
-      Serial_in_BT  => BT_TXD,
-      clk_6m        => clk_6m,
-      reset_n       => reset_n,
-      atte_freqency => atte_f_intern,
-      atte_value    => atte_v_intern,
-      enable        => enable_intern
-		ctrl_reg_out	=>	dori;
-		data1_reg_out	=> dori;
-		data2_reg_out	=> dori;
-		rx_data_rdy_flag => dori; -- if rx_data_rdy_flag = 1 , read data at ctrl, data1, data2  
-		);
-		
-	AUD_BCLK		<= clk_6m;
-	AUD_DACLRCK	<= ws_i;
-	AUD_ADCLRCK	<= ws_i;
-
-
+      Serial_in_BT  		=> BT_TXD,
+      clk_6m        		=> clk_6m,
+      reset_n       		=> reset_n,
+      atte_freqency 		=> atte_f_intern,
+      atte_value    		=> atte_v_intern,
+      enable        		=> enable_intern,
+--		ctrl_reg_out		=>	sig_BT_ctrl,
+--		data1_reg_out		=> sig_BT_data1,
+--		data2_reg_out		=> sig_BT_data2,
+--		rx_data_rdy_flag 	=> sig_BT_flag
+		rx_data_o 			=> sig_rx_data,
+		rx_data_rdy_o		=> sig_rx_data_rdy
+	);
 		
 end architecture struct;
 

@@ -18,10 +18,12 @@ use ieee.numeric_std.all;
 -------------------------------------------
 entity signal_checker is
 
-  port(clk, reset_n  : in  std_logic;
-       data_in     : in  std_logic;
-       led_blink     	: out  std_logic
-       );
+	port(
+		clk			: in  std_logic;
+		reset_n		: in  std_logic;
+      data_in  	: in  std_logic;
+      led_blink	: out  std_logic
+   );
 end signal_checker;
 
 -- Architecture Declaration
@@ -33,8 +35,8 @@ architecture rtl of signal_checker is
  constant width : positive := 22;
  signal bit_count_i, next_bit_count_i : unsigned(width downto 0);
  signal pulse_count, next_pulse_count : unsigned(7 downto 0);
-  signal sync_q1, sync_q2, sync_q3 : std_logic;
-  -- shifted into shift register
+ signal sync_q1, sync_q2, sync_q3 : std_logic;
+ -- shifted into shift register
 
 -- Begin Architecture
 -------------------------------------------
