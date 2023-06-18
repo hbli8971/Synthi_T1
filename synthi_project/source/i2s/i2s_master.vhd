@@ -98,8 +98,6 @@ architecture str of i2s_master is
   signal en_r_intern  : std_logic;
   signal dummy1		 : std_logic_vector(15 downto 0);
   signal dummy2		 : std_logic_vector(15 downto 0);
-  signal dummy3		 : std_logic;
-  signal dummy4		 : std_logic;
   
 begin  -- architecture str
 step_o <=load_intern;
@@ -160,7 +158,6 @@ LOW_intern <= '0';
       clock        => clk_6m,--
       serial_in    => adcdat_s_i,--
       parallel_in  => dummy1, --
-      serial_out   => dummy3,--*
       parallel_out => adcdat_pl_o);--
 
 		 -- instance "shift_register_4" sipo
@@ -174,7 +171,6 @@ LOW_intern <= '0';
       clock        => clk_6m,--
       serial_in    => adcdat_s_i,--
       parallel_in  => dummy2,
-      serial_out   => dummy4,--*
       parallel_out => adcdat_pr_o);--
 
   -- instance "mux_2_1_1"

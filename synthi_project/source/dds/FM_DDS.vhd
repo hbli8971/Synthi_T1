@@ -58,15 +58,15 @@ architecture YEET of FM_DDS is
 	signal sig_osc_3		: std_logic_vector(N_AUDIO-1 downto 0);
 	signal sig_osc_4		: std_logic_vector(N_AUDIO-1 downto 0);
 	
-	signal sig_OSC1_f		: std_logic_vector(7 downto 0);
-	signal sig_OSC2_f		: std_logic_vector(7 downto 0);
-	signal sig_OSC3_f		: std_logic_vector(7 downto 0);
-	signal sig_OSC4_f		: std_logic_vector(7 downto 0);
+	signal sig_OSC1_f		: std_logic_vector(3 downto 0);
+	signal sig_OSC2_f		: std_logic_vector(3 downto 0);
+	signal sig_OSC3_f		: std_logic_vector(3 downto 0);
+	signal sig_OSC4_f		: std_logic_vector(3 downto 0);
 	
-	signal sig_OSC1_att	: std_logic_vector(7 downto 0);
-	signal sig_OSC2_att	: std_logic_vector(7 downto 0);
-	signal sig_OSC3_att	: std_logic_vector(7 downto 0);
-	signal sig_OSC4_att	: std_logic_vector(7 downto 0);
+	signal sig_OSC1_att	: std_logic_vector(2 downto 0);
+	signal sig_OSC2_att	: std_logic_vector(2 downto 0);
+	signal sig_OSC3_att	: std_logic_vector(2 downto 0);
+	signal sig_OSC4_att	: std_logic_vector(2 downto 0);
 	
 	signal sig_algo_mode : std_logic_vector(3 downto 0);
 
@@ -99,7 +99,7 @@ architecture YEET of FM_DDS is
             phi_incr   => sig_phi_osc_1,
             step       => step,
             tone_on    => tone_on,
-            attenu_i   => attenu_i,
+            attenu_i   => sig_OSC1_att,
             dds_o      => sig_osc_1
         );
 		  
@@ -110,7 +110,7 @@ architecture YEET of FM_DDS is
             phi_incr   => sig_phi_osc_2,
             step       => step,
             tone_on    => tone_on,
-            attenu_i   => "000",
+            attenu_i   => sig_OSC2_att,
             dds_o      => sig_osc_2
         );
 		  
@@ -121,7 +121,7 @@ architecture YEET of FM_DDS is
             phi_incr   => sig_phi_osc_3,
             step       => step,
             tone_on    => tone_on,
-            attenu_i   => "000",
+            attenu_i   => sig_OSC3_att,
             dds_o      => sig_osc_3
         );
 
@@ -132,7 +132,7 @@ architecture YEET of FM_DDS is
             phi_incr   => sig_phi_osc_4,
             step       => step,
             tone_on    => tone_on,
-            attenu_i   => "000",
+            attenu_i   => sig_OSC4_att,
             dds_o      => sig_osc_4
         );
 
@@ -174,12 +174,12 @@ architecture YEET of FM_DDS is
 						-------------------------------------
 						-- BRASS (car1, mod1, mod2, mod3)
 						-------------------------------------
-						sig_phi_osc_1 <= sig_osc_2;
-						sig_phi_osc_2 <= sig_osc_3;
-						sig_phi_osc_3 <= std_logic_vector(shift_right(signed(sig_osc_4), 1));
-						sig_phi_osc_4 <= std_logic_vector(shift_left(signed(phi_incr), 2));
+						sig_phi_osc_1 <= std_logic_vector(shift_left(signed(phi_incr)+signed(sig_osc_2), to_integer(unsigned(sig_OSC1_f))));
+						sig_phi_osc_2 <= std_logic_vector(shift_left(signed(phi_incr)+signed(sig_osc_3), to_integer(unsigned(sig_OSC2_f))));
+						sig_phi_osc_3 <= std_logic_vector(signed(phi_incr) + shift_right(signed(sig_osc_4), to_integer(unsigned(sig_OSC3_f))));
+						sig_phi_osc_4 <= std_logic_vector(shift_left(signed(phi_incr), to_integer(unsigned(sig_OSC4_f))));
 						
-						dds_o <= sig_osc_1;
+						dds_o <= std_logic_vector(signed(sig_osc_1) + signed(sig_osc_2)); 
 						
 		         when 3  => -- FM Bluetooth					
 						-------------------------------------
@@ -193,11 +193,8 @@ architecture YEET of FM_DDS is
 						
 						dds_o <= sig_osc_1;
 
-					when others => -- sinus					
-
-						sig_phi_osc_2 <= std_logic_vector(shift_left(signed(phi_incr), 1));
-						sig_phi_osc_3 <= std_logic_vector(shift_left(signed(phi_incr), 2));
-						sig_phi_osc_4 <= std_logic_vector(shift_right(signed(phi_incr), 1));
+					when others => -- sinus	
+					
 						sig_phi_osc_1 <= phi_incr;
 						dds_o <= sig_osc_1;
 				end case;

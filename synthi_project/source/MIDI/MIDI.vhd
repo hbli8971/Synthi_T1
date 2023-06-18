@@ -187,7 +187,7 @@ begin  -- architecture rtl
 					note_available := '1';
 					if status_reg(6 downto 4)= "000" then --note off
 						next_reg_tone_on(i) <= '0'; --turn note off
-					elsif status_reg(6 downto 0)="001" and data2_reg = "00000000" then
+					elsif status_reg(6 downto 4) = "001" and data2_reg = "0000000" then
 						next_reg_tone_on(i)<='0'; -- turn off note if velocity is 0
 					end if;
 				end if;

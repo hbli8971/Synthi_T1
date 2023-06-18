@@ -130,9 +130,6 @@ SIGNAL	shift_enable :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_6 :  STD_LOGIC;
 SIGNAL 	bit_data : STD_LOGIC_VECTOR(9 downto 0);
 SIGNAL   data_ready : STD_LOGIC;
-SIGNAL	LT_sig:STD_LOGIC;
-SIGNAL	blank_sig:STD_LOGIC;
-SIGNAL	rbi_sig:STD_LOGIC;
 
 BEGIN 
 SYNTHESIZED_WIRE_1 <= '0';
@@ -140,9 +137,6 @@ SYNTHESIZED_WIRE_2 <= "0000000000";
 rx_data <= bit_data(8 downto 1);
 rx_data_rdy <= data_ready;
 reset <= reset_n;
-LT_sig<='0';
-blank_sig<='0';
-rbi_sig<='0';
 
 
 b2v_inst : baud_tick
@@ -164,24 +158,6 @@ PORT MAP(clk => clk_6m,
 		 shift_enable => shift_enable,
 		 parallel_in => SYNTHESIZED_WIRE_2,
 		 parallel_out => bit_data);
-
-
-
-
---b2v_inst16 : vhdl_hex2sevseg
---PORT MAP(data_in => SYNTHESIZED_WIRE_3,
---		 seg_o => hex0,
---		 lt_n => LT_sig,
---		 blank_n => blank_sig,
---		 rbi_n => rbi_sig);
---
---
---b2v_inst17 : vhdl_hex2sevseg
---PORT MAP(data_in => SYNTHESIZED_WIRE_4,
---		 seg_o => hex1,
---		 lt_n => LT_sig,
---		 blank_n => blank_sig,
---		 rbi_n => rbi_sig);
 
 b2v_inst18 : flanken_detekt_vhdl
 PORT MAP(data_in => serial_in,

@@ -17,6 +17,7 @@
 -- Revisions  :
 -- Date        Version  Author  Description
 -- 2018-03-08  1.0      Hans-Joachim    Created
+-- 11.06.2023 	2.0 		gerbedor, spulejan, ehrleand Überarbeitung für PM2
 -------------------------------------------------------------------------------
 
 library ieee;
@@ -42,7 +43,7 @@ entity synthi_top is
     BT_TXD   : in std_logic;            -- Bluetooth serial_output
     BT_RST_N : in std_logic;            -- Bluetooth reset_n
 	 
-	 GPIO_26	 : in std_logic;
+	 GPIO_26	 : in std_logic;				 -- MIDI
 
     AUD_XCK     : out std_logic;        -- master clock for Audio Codec
     AUD_DACDAT  : out std_logic;        -- audio serial data to Codec-DAC
@@ -54,18 +55,8 @@ entity synthi_top is
     AUD_SCLK : out   std_logic;         -- clock from I2C master block
     AUD_SDAT : inout std_logic;         -- data  from I2C master block
 
-    HEX0   : out std_logic_vector(6 downto 0);  -- output for HEX 0 display
+    HEX0   : out std_logic_vector(6 downto 0)  -- output for HEX 0 display
 
-    LEDR_0 : out std_logic;    -- red LED
-    LEDR_1 : out std_logic;    -- red LED
-    LEDR_2 : out std_logic;    -- red LED
-    LEDR_3 : out std_logic;    -- red LED
-    LEDR_4 : out std_logic;    -- red LED
-    LEDR_5 : out std_logic;    -- red LED
-    LEDR_6 : out std_logic;    -- red LED
-    LEDR_7 : out std_logic;    -- red LED
-    LEDR_8 : out std_logic;    -- red LED
-    LEDR_9 : out std_logic     -- red LED
     );
 
 end entity synthi_top;
@@ -88,7 +79,6 @@ architecture struct of synthi_top is
 		clk_12m		 : out STD_LOGIC;
       reset_n      : out STD_LOGIC;
       usb_txd_sync : out STD_LOGIC);
---      ledr0        : out STD_LOGIC);
   end component infrastructure;
 
   component uart_top is
@@ -98,8 +88,6 @@ architecture struct of synthi_top is
       serial_in   : IN  STD_LOGIC;
       rx_data     : OUT STD_LOGIC_VECTOR(7 downto 0);
       rx_data_rdy : OUT STD_LOGIC);
---      hex0        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
---      hex1        : OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
   end component uart_top;
   
 
@@ -175,8 +163,6 @@ architecture struct of synthi_top is
       clk         : in  std_logic;
       data_valid  : in  std_logic;
       reset_n     : in  std_logic
---      hex_lsb_out : out std_logic_vector(3 downto 0);
---      hex_msb_out : out std_logic_vector(3 downto 0)
 	);
   end component output_register;
 
@@ -202,15 +188,9 @@ architecture struct of synthi_top is
       rst_n      	: IN  std_logic;
       dds_l_o    	: OUT std_logic_vector(N_AUDIO-1 downto 0);
       dds_r_o    	: OUT std_logic_vector(N_AUDIO-1 downto 0);
---		fm_ratio	  	: IN  std_logic_vector(3 downto 0);
---		fm_depth	  	: IN  std_logic_vector(2 downto 0);
 		atte_f_eq  	: IN std_logic_vector(4 downto 0);
 		atte_v_eq  	: IN std_logic_vector(2 downto 0);
 		enable_eq  	: IN std_logic;
---		ctrl_reg		: in std_logic_vector(7 downto 0);
---		data1_reg	: in std_logic_vector(7 downto 0);
---		data2_reg	: in std_logic_vector(7 downto 0);
---		data_flag	: in std_logic;
 		rx_data		: IN STD_LOGIC_VECTOR(7 downto 0);
 		rx_data_rdy	: IN STD_LOGIC;
 		algo_mode	: out std_logic_vector(3 downto 0)
@@ -225,10 +205,6 @@ architecture struct of synthi_top is
 		atte_freqency 		: OUT STD_LOGIC_VECTOR(4 downto 0);
 		atte_value    		: OUT STD_LOGIC_VECTOR(2 downto 0);
 		enable        		: OUT STD_LOGIC;
---		ctrl_reg_out		: OUT STD_LOGIC_VECTOR(7 downto 0);
---		data1_reg_out		: OUT STD_LOGIC_VECTOR(7 downto 0);
---		data2_reg_out		: OUT STD_LOGIC_VECTOR(7 downto 0);
---		rx_data_rdy_flag 	: OUT STD_LOGIC
 		rx_data_o 			: OUT  STD_LOGIC_VECTOR(7 downto 0);
 		rx_data_rdy_o		: OUT  STD_LOGIC
 	);
@@ -246,8 +222,7 @@ architecture struct of synthi_top is
  signal ack_error    : std_logic;
  signal write_done_o : std_logic;
  signal ack_error_o  : std_logic;
- SIGNAL serial_in    : STD_LOGIC;
- 
+ signal serial_in    : STD_LOGIC;
  signal ws_i			: std_logic;
  signal sig_adcdat_pl: std_logic_vector(15 downto 0);
  signal sig_adcdat_pr: std_logic_vector(15 downto 0);
@@ -256,9 +231,9 @@ architecture struct of synthi_top is
  signal sig_step		: std_logic;
  signal dds_l_o		: std_logic_vector(15 downto 0);
  signal dds_r_o		: std_logic_vector(15 downto 0);
- signal note_signal  : t_tone_array;
- signal velocity_signal: t_tone_array;
- signal note_signal1  : std_logic_vector(6 downto 0);
+ signal note_signal  	: t_tone_array;
+ signal velocity_signal	: t_tone_array;
+ signal note_signal1  	: std_logic_vector(6 downto 0);
  signal velocity_signal1: std_logic_vector(6 downto 0);
 
  signal rx_data_sig    : std_logic_vector(7 downto 0);
@@ -280,17 +255,6 @@ begin -- architecture of synthi_top
 	AUD_DACLRCK	<= ws_i;
 	AUD_ADCLRCK	<= ws_i;
 	
-	-- set unused LEDs to 0
-	LEDR_1 <= '0';
-	LEDR_2 <= '0';
-	LEDR_3 <= '0';
-	LEDR_4 <= '0';
-	LEDR_5 <= '0';
-	LEDR_6 <= '0';
-	LEDR_7 <= '0';
-	LEDR_8 <= '0';
-	LEDR_9 <= '0';
-	
 
 -----------------------------------------------------------------------------
   -- INSTANCES, Architecture Description
@@ -302,12 +266,11 @@ begin -- architecture of synthi_top
       clock_50     => CLOCK_50,
       key_0        => KEY_0,
       --usb_txd      => GPIO_26, -- for external Keyboard
-		usb_txd		 => USB_TXD, -- for PC
+		usb_txd		 => USB_TXD, 	-- for PC keyboard
       clk_6m       => clk_6m,
 		clk_12m		 => AUD_XCK,
       reset_n      => reset_n,
       usb_txd_sync => serial_in);
---      ledr0        => LEDR_0);
 
   -- instance "uart_top_1"
   uart_top_1: uart_top
@@ -315,8 +278,6 @@ begin -- architecture of synthi_top
       clk_6m      => clk_6m,
       reset_n     => reset_n,
       serial_in   => serial_in,
---      hex0        => HEX0,
---      hex1        => HEX1,
       rx_data     => rx_data_sig,
       rx_data_rdy => rx_data_rdy_sig);
 
@@ -366,7 +327,7 @@ begin -- architecture of synthi_top
 		dds_r_i		=> dds_r_o,
 		adcdat_pl_i	=> sig_adcdat_pl,
 		adcdat_pr_i => sig_adcdat_pr,
-		SW			  	=> SW(3),
+		SW			  	=> '0',
 		dacdat_pl_o	=> sig_dacdat_pl,
 		dacdat_pr_o => sig_dacdat_pr
 	);
@@ -419,10 +380,6 @@ begin -- architecture of synthi_top
 		atte_v_eq  	=> atte_v_intern,
 		enable_eq  	=> enable_intern,
 		-- FM Bluetooth
---		ctrl_reg		=> sig_BT_ctrl,
---		data1_reg	=> sig_BT_data1,
---		data2_reg	=> sig_BT_data2,
---		data_flag	=>	sig_BT_flag,
 		rx_data 		=> sig_rx_data,
 		rx_data_rdy	=> sig_rx_data_rdy,
 		algo_mode	=> sig_algo_mode
@@ -438,10 +395,6 @@ begin -- architecture of synthi_top
       atte_freqency 		=> atte_f_intern,
       atte_value    		=> atte_v_intern,
       enable        		=> enable_intern,
---		ctrl_reg_out		=>	sig_BT_ctrl,
---		data1_reg_out		=> sig_BT_data1,
---		data2_reg_out		=> sig_BT_data2,
---		rx_data_rdy_flag 	=> sig_BT_flag
 		rx_data_o 			=> sig_rx_data,
 		rx_data_rdy_o		=> sig_rx_data_rdy
 	);

@@ -33,14 +33,14 @@ entity FM_BT_module is
 			rx_data		: in STD_LOGIC_VECTOR(7 downto 0); 	-- BT Data
 			rx_data_rdy	: in STD_LOGIC;
 			algo_mode_o	: out std_logic_vector(3 downto 0);
-			f_OSC1_o 	: out std_logic_vector(7 downto 0);
-			f_OSC2_o 	: out std_logic_vector(7 downto 0);
-			f_OSC3_o 	: out std_logic_vector(7 downto 0);
-			f_OSC4_o 	: out std_logic_vector(7 downto 0);
-			att_OSC1_o 	: out std_logic_vector(7 downto 0);
-			att_OSC2_o 	: out std_logic_vector(7 downto 0);
-			att_OSC3_o	: out std_logic_vector(7 downto 0);
-			att_OSC4_o 	: out std_logic_vector(7 downto 0)
+			f_OSC1_o 	: out std_logic_vector(3 downto 0);
+			f_OSC2_o 	: out std_logic_vector(3 downto 0);
+			f_OSC3_o 	: out std_logic_vector(3 downto 0);
+			f_OSC4_o 	: out std_logic_vector(3 downto 0);
+			att_OSC1_o 	: out std_logic_vector(2 downto 0);
+			att_OSC2_o 	: out std_logic_vector(2 downto 0);
+			att_OSC3_o	: out std_logic_vector(2 downto 0);
+			att_OSC4_o 	: out std_logic_vector(2 downto 0)
 	);
   end entity FM_BT_module;
 
@@ -56,8 +56,8 @@ architecture YEET of FM_BT_module is
 	signal data_rdy, next_data_rdy	: STD_LOGIC;
 	signal algo_mode, next_algo_mode : std_logic_vector(3 downto 0);
 	
-	signal f_OSC1, next_f_OSC1, f_OSC2, next_f_OSC2, f_OSC3, next_f_OSC3, f_OSC4, next_f_OSC4 : STD_LOGIC_VECTOR(7 downto 0); -- Osclillator frequencies
-	signal att_OSC1, next_att_OSC1, att_OSC2, next_att_OSC2, att_OSC3, next_att_OSC3, att_OSC4, next_att_OSC4 : STD_LOGIC_VECTOR(7 downto 0); -- Osclillator attenuate
+	signal f_OSC1, next_f_OSC1, f_OSC2, next_f_OSC2, f_OSC3, next_f_OSC3, f_OSC4, next_f_OSC4 : STD_LOGIC_VECTOR(3 downto 0); -- Osclillator frequencies
+	signal att_OSC1, next_att_OSC1, att_OSC2, next_att_OSC2, att_OSC3, next_att_OSC3, att_OSC4, next_att_OSC4 : STD_LOGIC_VECTOR(2 downto 0); -- Osclillator attenuate
 	
 	BEGIN -- architecture of FM_BT_module
 	
@@ -72,6 +72,14 @@ architecture YEET of FM_BT_module is
 			data1_reg 	<= x"00";
 			data2_reg 	<= x"00";
 			data_rdy		<= '0';
+			f_OSC1 <= X"0";
+			f_OSC2 <= X"0";
+			f_OSC3 <= X"0";
+			f_OSC4 <= X"0";
+			att_OSC1 <= "000";
+			att_OSC2 <= "000";
+			att_OSC3 <= "000";
+			att_OSC4 <= "000";
 		elsif rising_edge(clk) then
 			fsm_state 	<= next_fsm_state;
 			ctrl_reg  	<= next_ctrl_reg;
@@ -79,7 +87,14 @@ architecture YEET of FM_BT_module is
 			data2_reg 	<= next_data2_reg;
 			data_rdy		<= next_data_rdy;
 			algo_mode 	<= next_algo_mode;
-			
+			f_OSC1 		<= next_f_OSC1;
+			f_OSC2 		<= next_f_OSC2;
+         f_OSC3 		<= next_f_OSC3;
+			f_OSC4 		<= next_f_OSC4;
+			att_OSC1 	<= next_att_OSC1;
+			att_OSC2 	<= next_att_OSC2;
+			att_OSC3 	<= next_att_OSC3;
+			att_OSC4 	<= next_att_OSC4;
     end if;
   end process flip_flops;
   
@@ -98,7 +113,6 @@ architecture YEET of FM_BT_module is
 	if data_rdy = '1' then 
 		next_data_rdy <= '0'; 
 	end if;
-	 
 	 
 		case fsm_state is
 			when st_idle =>
@@ -145,38 +159,54 @@ architecture YEET of FM_BT_module is
 		next_att_OSC2 <= att_OSC2;
 		next_att_OSC3 <= att_OSC3;
 		next_att_OSC4 <= att_OSC4;
-
+		
+		next_f_OSC1 <= "0000";
+		next_f_OSC2 <= "0000";
+		next_f_OSC3 <= "0000";
+      next_f_OSC4 <= "0000";
+		next_att_OSC1 <= "000";
+		next_att_OSC2 <= "000";
+		next_att_OSC3 <= "000";
+		next_att_OSC4 <= "000";
 		
 		if (data_rdy = '1') then
 			case ctrl_reg is
 				when X"80" => -- select algorithm mode
 					next_algo_mode <= data1_reg(3 downto 0);
 					
-				when X"91" => -- select oscillator 1 frequency
-					f_OSC1 <= data1_reg;
+				when X"F1" => -- select oscillator 1 frequency
+					next_f_OSC1 <= data1_reg(3 downto 0);
 				
-				when X"92" => -- select oscillator 2 frequency
-					f_OSC2 <= data1_reg;
+				when X"F2" => -- select oscillator 2 frequency
+					next_f_OSC2 <= data1_reg(3 downto 0);
 					
-				when X"93" => -- select oscillator 3 frequency
-					f_OSC3 <= data1_reg;
+				when X"F3" => -- select oscillator 3 frequency
+					next_f_OSC3 <= data1_reg(3 downto 0);
 					
-				when X"94" => -- select oscillator 4 frequency
-					f_OSC4 <= data1_reg;
+				when X"F4" => -- select oscillator 4 frequency
+					next_f_OSC4 <= data1_reg(3 downto 0);
 					
 				when X"A1" => -- select oscillator 1 attenuate
-					att_OSC1 <= data1_reg;
+					next_att_OSC1 <= data1_reg(2 downto 0);
 					
 				when X"A2" => -- select oscillator 2 attenuate
-					att_OSC2 <= data1_reg;
+					next_att_OSC2 <= data1_reg(2 downto 0);
 					
 				when X"A3" => -- select oscillator 3 attenuate
-					att_OSC3 <= data1_reg;
+					next_att_OSC3 <= data1_reg(2 downto 0);
 					
 				when X"A4" => -- select oscillator 4 attenuate
-					att_OSC4 <= data1_reg;
+					next_att_OSC4 <= data1_reg(2 downto 0);
 				when others => 
-					
+					next_algo_mode <= algo_mode;
+					next_f_OSC1 <= f_OSC1;
+					next_f_OSC2 <= f_OSC2;
+					next_f_OSC3 <= f_OSC3;
+					next_f_OSC4 <= f_OSC4;
+					next_att_OSC1 <= att_OSC1;
+					next_att_OSC2 <= att_OSC2;
+					next_att_OSC3 <= att_OSC3;
+					next_att_OSC4 <= att_OSC4;
 			end case;
 		end if;
 		

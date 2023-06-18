@@ -29,15 +29,14 @@ END modulo_divider;
 ARCHITECTURE rtl OF modulo_divider IS
 -- Signals & Constants Declaration?
 -------------------------------------------
-signal width6 	: integer := 3;
-signal width12 : integer := 2;
+constant width6 	: integer := 3;
+constant width12  : integer := 2;
 signal count6, next_count6		: unsigned(width6-1 downto 0) := (others => '0');	 
 signal count12, next_count12	: unsigned(width12-1 downto 0) := (others => '0');	 
 
 -- Begin Architecture
 -------------------------------------------
 BEGIN
-
   --------------------------------------------------
   -- PROCESS FOR COMBINATORIAL LOGIC
   --------------------------------------------------

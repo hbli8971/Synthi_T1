@@ -65,8 +65,6 @@ architecture str of tone_generator is
 	SIGNAL	dds_o_array_eq : t_dds_o_array;
 	SIGNAL	sum_reg, next_sum_reg: signed(N_AUDIO-1 downto 0);
 	SIGNAL   enable_eq_int, next_enable_eq : std_logic;
---	SIGNAL 	atte_f_intern : std_logic_vector(4 downto 0);
---	SIGNAL	atte_v_intern : std_logic_vector(2 downto 0);
 	SIGNAL 	dds_o  : std_logic_vector(N_AUDIO-1 downto 0);
 	SIGNAL 	sig_algo_mode : algo_array;
 	
@@ -146,10 +144,8 @@ begin -- architecture of tone_generator
  	begin
 		if rst_n = '0' then
 			sum_reg <= (others => '0');
-			--enable_eq_int <= '0';
 		elsif rising_edge(clk_6m) then
 			sum_reg <= next_sum_reg;
-			--enable_eq_int <= next_enable_eq;
 		end if;
 	end process reg_sum_output;
 	

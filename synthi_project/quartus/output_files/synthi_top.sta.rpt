@@ -1,5 +1,5 @@
 Timing Analyzer report for synthi_top
-Sun Jun 11 15:02:02 2023
+Sun Jun 11 21:48:59 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -94,14 +94,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 4.80        ;
+; Average used               ; 5.21        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  27.9%      ;
-;     Processor 3            ;  25.3%      ;
-;     Processors 4-16        ;  25.1%      ;
+;     Processor 2            ;  30.6%      ;
+;     Processor 3            ;  28.5%      ;
+;     Processors 4-16        ;  27.8%      ;
 +----------------------------+-------------+
 
 
@@ -120,8 +120,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+---------------------------------------------------------------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                ; Note                                                          ;
 +------------+-----------------+---------------------------------------------------------------------------+---------------------------------------------------------------+
-; 33.13 MHz  ; 33.13 MHz       ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ;                                                               ;
-; 358.68 MHz ; 250.0 MHz       ; CLOCK_50                                                                  ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 32.77 MHz  ; 32.77 MHz       ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ;                                                               ;
+; 370.64 MHz ; 250.0 MHz       ; CLOCK_50                                                                  ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+---------------------------------------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -131,8 +131,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                     ; Slack   ; End Point TNS ;
 +---------------------------------------------------------------------------+---------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -29.188 ; -10215.465    ;
-; CLOCK_50                                                                  ; -1.836  ; -1.858        ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -29.512 ; -14204.508    ;
+; CLOCK_50                                                                  ; -2.126  ; -2.197        ;
 +---------------------------------------------------------------------------+---------+---------------+
 
 
@@ -142,7 +142,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
 ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 0.322 ; 0.000         ;
-; CLOCK_50                                                                  ; 0.339 ; 0.000         ;
+; CLOCK_50                                                                  ; 0.341 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -151,7 +151,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                     ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------+--------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -2.357 ; -2323.172     ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -2.567 ; -2586.709     ;
 +---------------------------------------------------------------------------+--------+---------------+
 
 
@@ -160,7 +160,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 2.340 ; 0.000         ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 2.536 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -170,7 +170,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock                                                                     ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------+--------+---------------+
 ; CLOCK_50                                                                  ; -3.000 ; -7.209        ;
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -1.403 ; -1635.898     ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -1.403 ; -1638.704     ;
 +---------------------------------------------------------------------------+--------+---------------+
 
 
@@ -186,8 +186,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------+-----------------+---------------------------------------------------------------------------+---------------------------------------------------------------+
 ; Fmax      ; Restricted Fmax ; Clock Name                                                                ; Note                                                          ;
 +-----------+-----------------+---------------------------------------------------------------------------+---------------------------------------------------------------+
-; 35.97 MHz ; 35.97 MHz       ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ;                                                               ;
-; 386.1 MHz ; 250.0 MHz       ; CLOCK_50                                                                  ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 35.51 MHz ; 35.51 MHz       ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ;                                                               ;
+; 400.0 MHz ; 250.0 MHz       ; CLOCK_50                                                                  ; limit due to minimum period restriction (max I/O toggle rate) ;
 +-----------+-----------------+---------------------------------------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -197,8 +197,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                     ; Slack   ; End Point TNS ;
 +---------------------------------------------------------------------------+---------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -26.803 ; -9300.349     ;
-; CLOCK_50                                                                  ; -1.597  ; -1.597        ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -27.164 ; -13018.968    ;
+; CLOCK_50                                                                  ; -1.850  ; -1.850        ;
 +---------------------------------------------------------------------------+---------+---------------+
 
 
@@ -207,8 +207,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 0.288 ; 0.000         ;
-; CLOCK_50                                                                  ; 0.305 ; 0.000         ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 0.289 ; 0.000         ;
+; CLOCK_50                                                                  ; 0.306 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -217,7 +217,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                     ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------+--------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -2.070 ; -2024.659     ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -2.262 ; -2268.405     ;
 +---------------------------------------------------------------------------+--------+---------------+
 
 
@@ -226,7 +226,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 2.109 ; 0.000         ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 2.286 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -236,7 +236,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock                                                                     ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------+--------+---------------+
 ; CLOCK_50                                                                  ; -3.000 ; -7.209        ;
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -1.403 ; -1635.898     ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -1.403 ; -1638.704     ;
 +---------------------------------------------------------------------------+--------+---------------+
 
 
@@ -252,8 +252,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                     ; Slack   ; End Point TNS ;
 +---------------------------------------------------------------------------+---------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -11.537 ; -3987.355     ;
-; CLOCK_50                                                                  ; -0.688  ; -0.688        ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -11.668 ; -5709.481     ;
+; CLOCK_50                                                                  ; -0.880  ; -0.880        ;
 +---------------------------------------------------------------------------+---------+---------------+
 
 
@@ -262,7 +262,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 0.140 ; 0.000         ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 0.139 ; 0.000         ;
 ; CLOCK_50                                                                  ; 0.147 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
@@ -272,7 +272,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                     ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------+--------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -0.714 ; -647.541      ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -0.788 ; -746.479      ;
 +---------------------------------------------------------------------------+--------+---------------+
 
 
@@ -281,7 +281,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 1.186 ; 0.000         ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 1.257 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -290,8 +290,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                     ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                  ; -3.000 ; -6.504        ;
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -1.000 ; -1166.000     ;
+; CLOCK_50                                                                  ; -3.000 ; -6.501        ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -1.000 ; -1168.000     ;
 +---------------------------------------------------------------------------+--------+---------------+
 
 
@@ -307,12 +307,12 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------------------------------------------------+------------+-------+-----------+---------+---------------------+
 ; Clock                                                                      ; Setup      ; Hold  ; Recovery  ; Removal ; Minimum Pulse Width ;
 +----------------------------------------------------------------------------+------------+-------+-----------+---------+---------------------+
-; Worst-case Slack                                                           ; -29.188    ; 0.140 ; -2.357    ; 1.186   ; -3.000              ;
-;  CLOCK_50                                                                  ; -1.836     ; 0.147 ; N/A       ; N/A     ; -3.000              ;
-;  infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -29.188    ; 0.140 ; -2.357    ; 1.186   ; -1.403              ;
-; Design-wide TNS                                                            ; -10217.323 ; 0.0   ; -2323.172 ; 0.0     ; -1643.107           ;
-;  CLOCK_50                                                                  ; -1.858     ; 0.000 ; N/A       ; N/A     ; -7.209              ;
-;  infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -10215.465 ; 0.000 ; -2323.172 ; 0.000   ; -1635.898           ;
+; Worst-case Slack                                                           ; -29.512    ; 0.139 ; -2.567    ; 1.257   ; -3.000              ;
+;  CLOCK_50                                                                  ; -2.126     ; 0.147 ; N/A       ; N/A     ; -3.000              ;
+;  infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -29.512    ; 0.139 ; -2.567    ; 1.257   ; -1.403              ;
+; Design-wide TNS                                                            ; -14206.705 ; 0.0   ; -2586.709 ; 0.0     ; -1645.913           ;
+;  CLOCK_50                                                                  ; -2.197     ; 0.000 ; N/A       ; N/A     ; -7.209              ;
+;  infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; -14204.508 ; 0.000 ; -2586.709 ; 0.000   ; -1638.704           ;
 +----------------------------------------------------------------------------+------------+-------+-----------+---------+---------------------+
 
 
@@ -334,16 +334,6 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; HEX0[4]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[5]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[6]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_0       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_1       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_2       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_3       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_4       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_5       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_6       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_7       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_8       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR_9       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; AUD_SDAT     ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
@@ -403,16 +393,6 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; HEX0[4]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; HEX0[5]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; HEX0[6]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_0       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_1       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_2       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_3       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_4       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_5       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_6       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_7       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_8       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; LEDR_9       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; AUD_SDAT     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0409 V           ; 0.21 V                               ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0409 V          ; 0.21 V                              ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -436,16 +416,6 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; HEX0[4]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; HEX0[5]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; HEX0[6]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_0       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_1       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_2       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_3       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_4       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_5       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_6       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_7       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_8       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; LEDR_9       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; AUD_SDAT     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0173 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.2e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0173 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.2e-10 s                  ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -469,16 +439,6 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; HEX0[4]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; HEX0[5]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; HEX0[6]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_0       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_1       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_2       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_3       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_4       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_5       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_6       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_7       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_8       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; LEDR_9       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; AUD_SDAT     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -513,7 +473,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                ; To Clock                                                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 1158     ; 0        ; 0        ; 0        ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 1160     ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -523,7 +483,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                ; To Clock                                                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
-; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 1158     ; 0        ; 0        ; 0        ;
+; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] ; 1160     ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -642,7 +602,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Sun Jun 11 15:01:55 2023
+    Info: Processing started: Sun Jun 11 21:48:50 2023
 Info: Command: quartus_sta synthi_top -c synthi_top
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -659,29 +619,29 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -29.188
+Info (332146): Worst-case setup slack is -29.512
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -29.188          -10215.465 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
-    Info (332119):    -1.836              -1.858 CLOCK_50 
+    Info (332119):   -29.512          -14204.508 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):    -2.126              -2.197 CLOCK_50 
 Info (332146): Worst-case hold slack is 0.322
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.322               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
-    Info (332119):     0.339               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is -2.357
+    Info (332119):     0.341               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is -2.567
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.357           -2323.172 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
-Info (332146): Worst-case removal slack is 2.340
+    Info (332119):    -2.567           -2586.709 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+Info (332146): Worst-case removal slack is 2.536
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.340               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):     2.536               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000              -7.209 CLOCK_50 
-    Info (332119):    -1.403           -1635.898 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):    -1.403           -1638.704 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1200mV 0C Model
@@ -689,65 +649,65 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -26.803
+Info (332146): Worst-case setup slack is -27.164
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -26.803           -9300.349 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
-    Info (332119):    -1.597              -1.597 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.288
+    Info (332119):   -27.164          -13018.968 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):    -1.850              -1.850 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.289
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.288               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
-    Info (332119):     0.305               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is -2.070
+    Info (332119):     0.289               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):     0.306               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is -2.262
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.070           -2024.659 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
-Info (332146): Worst-case removal slack is 2.109
+    Info (332119):    -2.262           -2268.405 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+Info (332146): Worst-case removal slack is 2.286
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.109               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):     2.286               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000              -7.209 CLOCK_50 
-    Info (332119):    -1.403           -1635.898 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):    -1.403           -1638.704 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -11.537
+Info (332146): Worst-case setup slack is -11.668
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.537           -3987.355 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
-    Info (332119):    -0.688              -0.688 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.140
+    Info (332119):   -11.668           -5709.481 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):    -0.880              -0.880 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.139
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.140               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):     0.139               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
     Info (332119):     0.147               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is -0.714
+Info (332146): Worst-case recovery slack is -0.788
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.714            -647.541 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
-Info (332146): Worst-case removal slack is 1.186
+    Info (332119):    -0.788            -746.479 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+Info (332146): Worst-case removal slack is 1.257
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.186               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):     1.257               0.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -6.504 CLOCK_50 
-    Info (332119):    -1.000           -1166.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
+    Info (332119):    -3.000              -6.501 CLOCK_50 
+    Info (332119):    -1.000           -1168.000 infrastructure:infrastructure_1|modulo_divider:modulo_divider_1|count6[2] 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5140 megabytes
-    Info: Processing ended: Sun Jun 11 15:02:02 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 5216 megabytes
+    Info: Processing ended: Sun Jun 11 21:48:59 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:35
 
 

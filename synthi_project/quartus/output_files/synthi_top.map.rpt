@@ -1,5 +1,5 @@
-Analysis & Synthesis report for synthi_top
-Sun Jun 11 15:12:58 2023
+Analysis & Elaboration report for synthi_top
+Sun Jun 11 22:16:26 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -7,10 +7,60 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: uart_top:uart_top_1|baud_tick:b2v_inst
+  5. Parameter Settings for User Entity Instance: uart_top:uart_top_1|shiftreg_uart:b2v_inst1
+  6. Parameter Settings for User Entity Instance: uart_top:uart_top_1|bit_counter:b2v_inst6
+  7. Parameter Settings for User Entity Instance: uart_top:uart_top_1|output_register:b2v_inst8
+  8. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master
+  9. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1
+ 10. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1
+ 11. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2
+ 12. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3
+ 13. Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4
+ 14. Parameter Settings for User Entity Instance: path_ctrl:inst_path_ctrl
+ 15. Parameter Settings for User Entity Instance: output_register:output_register_1
+ 16. Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst
+ 17. Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1
+ 18. Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|bit_counter:b2v_inst6
+ 19. Analysis & Elaboration Settings
+ 20. Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_ctrl:EQ_ctrl_1"
+ 21. Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"
+ 22. Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1"
+ 23. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ"
+ 24. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ"
+ 25. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ"
+ 26. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ"
+ 27. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ"
+ 28. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ"
+ 29. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ"
+ 30. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ"
+ 31. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ"
+ 32. Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ"
+ 33. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:9:inst_FM_DDS"
+ 34. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:8:inst_FM_DDS"
+ 35. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:7:inst_FM_DDS"
+ 36. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:6:inst_FM_DDS"
+ 37. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:5:inst_FM_DDS"
+ 38. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:4:inst_FM_DDS"
+ 39. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:3:inst_FM_DDS"
+ 40. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:2:inst_FM_DDS"
+ 41. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:1:inst_FM_DDS"
+ 42. Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS"
+ 43. Port Connectivity Checks: "output_register:output_register_1"
+ 44. Port Connectivity Checks: "vhdl_hex2sevseg:hdl_hex2sevseg_2"
+ 45. Port Connectivity Checks: "path_ctrl:inst_path_ctrl"
+ 46. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4"
+ 47. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3"
+ 48. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2"
+ 49. Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1"
+ 50. Port Connectivity Checks: "codec_controller:codec_controller_1"
+ 51. Port Connectivity Checks: "uart_top:uart_top_1|output_register:b2v_inst8"
+ 52. Port Connectivity Checks: "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"
+ 53. Port Connectivity Checks: "uart_top:uart_top_1|shiftreg_uart:b2v_inst1"
+ 54. Port Connectivity Checks: "infrastructure:infrastructure_1"
+ 55. Analysis & Elaboration Messages
 
 
 
@@ -35,9 +85,9 @@ https://fpgasoftware.intel.com/eula.
 
 
 +-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
+; Analysis & Elaboration Summary                                                      ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Jun 11 15:12:58 2023              ;
+; Analysis & Elaboration Status      ; Successful - Sun Jun 11 22:16:26 2023          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; synthi_top                                     ;
 ; Top-level Entity Name              ; synthi_top                                     ;
@@ -56,8 +106,174 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+------------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_top:uart_top_1|baud_tick:b2v_inst ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; width          ; 6     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_top:uart_top_1|shiftreg_uart:b2v_inst1 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; width          ; 10    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_top:uart_top_1|bit_counter:b2v_inst6 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; width          ; 4     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_top:uart_top_1|output_register:b2v_inst8 ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; width          ; 10    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; width          ; 16    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1 ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: path_ctrl:inst_path_ctrl ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; width          ; 16    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: output_register:output_register_1 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; width          ; 10    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; width          ; 6     ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1 ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; width          ; 10    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|bit_counter:b2v_inst6 ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; width          ; 4     ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -144,30 +360,352 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_ctrl:EQ_ctrl_1"                                                              ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; ctrl_reg_out     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data1_reg_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data2_reg_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rx_data_rdy_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"                      ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; rising_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|shiftreg_uart:b2v_inst1"                            ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; load_in     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; parallel_in ; Input  ; Info     ; Stuck at GND                                                                        ;
+; serial_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:9:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:8:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:7:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:6:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:5:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:4:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:3:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:2:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:1:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ" ;
++--------------+-------+----------+-----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                             ;
++--------------+-------+----------+-----------------------------------------------------+
+; f_in[18..17] ; Input ; Info     ; Stuck at GND                                        ;
++--------------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:9:inst_FM_DDS"                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; algo_mode_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:8:inst_FM_DDS"                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; algo_mode_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:7:inst_FM_DDS"                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; algo_mode_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:6:inst_FM_DDS"                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; algo_mode_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:5:inst_FM_DDS"                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; algo_mode_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:4:inst_FM_DDS"                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; algo_mode_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:3:inst_FM_DDS"                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; algo_mode_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:2:inst_FM_DDS"                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; algo_mode_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:1:inst_FM_DDS"                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; phi_incr[18..17] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; algo_mode_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS" ;
++------------------+-------+----------+-------------------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                                     ;
++------------------+-------+----------+-------------------------------------------------------------+
+; phi_incr[18..17] ; Input ; Info     ; Stuck at GND                                                ;
++------------------+-------+----------+-------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "output_register:output_register_1"                                                                              ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                  ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; parallel_in ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; data_valid  ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; hex_lsb_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; hex_msb_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vhdl_hex2sevseg:hdl_hex2sevseg_2"                                                      ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; lt_n    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; blank_n ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rbo_n   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rbi_n   ; Input  ; Info     ; Stuck at GND                                                                        ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "path_ctrl:inst_path_ctrl" ;
++------+-------+----------+----------------------------+
+; Port ; Type  ; Severity ; Details                    ;
++------+-------+----------+----------------------------+
+; sw   ; Input ; Info     ; Stuck at GND               ;
++------+-------+----------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_4"                                   ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; serial_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_3"                                   ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; serial_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_2" ;
++-----------+-------+----------+-----------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                             ;
++-----------+-------+----------+-----------------------------------------------------+
+; serial_in ; Input ; Info     ; Stuck at GND                                        ;
++-----------+-------+----------+-----------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" ;
++-----------+-------+----------+-----------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                             ;
++-----------+-------+----------+-----------------------------------------------------+
+; serial_in ; Input ; Info     ; Stuck at GND                                        ;
++-----------+-------+----------+-----------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "codec_controller:codec_controller_1" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; mode ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_top:uart_top_1|output_register:b2v_inst8"                                                                  ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                  ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; hex_lsb_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; hex_msb_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18"                                         ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; rising_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_top:uart_top_1|shiftreg_uart:b2v_inst1"                                               ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; load_in     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; parallel_in ; Input  ; Info     ; Stuck at GND                                                                        ;
+; serial_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "infrastructure:infrastructure_1"                                                                          ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; ledr0 ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Sun Jun 11 15:12:52 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top
+    Info: Processing started: Sun Jun 11 22:16:19 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synthi_top -c synthi_top --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/dds/fm_bt_module.vhd
     Info (12022): Found design unit 1: FM_BT_module-YEET File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_BT_module.vhd Line: 47
@@ -264,54 +802,43 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: uart_top-bdf_type File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 38
     Info (12023): Found entity 1: uart_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file /users/doria/onedrive/dokumente/github/synthi_t1_3/synthi_t1/synthi_project/source/top_files/synthi_top.vhd
-    Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 76
-    Info (12023): Found entity 1: synthi_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 30
+    Info (12022): Found design unit 1: synthi_top-struct File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 67
+    Info (12023): Found entity 1: synthi_top File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 31
 Info (12127): Elaborating entity "synthi_top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at synthi_top.vhd(59): used implicit default value for signal "LEDR_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 59
-Info (12128): Elaborating entity "infrastructure" for hierarchy "infrastructure:infrastructure_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 300
+Info (12128): Elaborating entity "infrastructure" for hierarchy "infrastructure:infrastructure_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 264
 Info (12128): Elaborating entity "clock_sync" for hierarchy "infrastructure:infrastructure_1|clock_sync:clock_sync_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 84
 Info (12128): Elaborating entity "signal_checker" for hierarchy "infrastructure:infrastructure_1|signal_checker:signal_checker_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 91
 Info (12128): Elaborating entity "modulo_divider" for hierarchy "infrastructure:infrastructure_1|modulo_divider:modulo_divider_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/infrastructure.vhd Line: 100
-Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(32): used explicit default value for signal "width6" because signal was never assigned a value File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 32
-Warning (10540): VHDL Signal Declaration warning at modulo_divider.vhd(33): used explicit default value for signal "width12" because signal was never assigned a value File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/others/modulo_divider.vhd Line: 33
-Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 313
-Warning (10036): Verilog HDL or VHDL warning at uart_top.vhd(133): object "LT_sig" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 133
-Warning (10036): Verilog HDL or VHDL warning at uart_top.vhd(134): object "blank_sig" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 134
-Warning (10036): Verilog HDL or VHDL warning at uart_top.vhd(135): object "rbi_sig" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 135
-Info (12128): Elaborating entity "baud_tick" for hierarchy "uart_top:uart_top_1|baud_tick:b2v_inst" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 148
-Info (12128): Elaborating entity "shiftreg_uart" for hierarchy "uart_top:uart_top_1|shiftreg_uart:b2v_inst1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 157
-Info (12128): Elaborating entity "flanken_detekt_vhdl" for hierarchy "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 186
-Info (12128): Elaborating entity "bit_counter" for hierarchy "uart_top:uart_top_1|bit_counter:b2v_inst6" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 193
-Info (12128): Elaborating entity "uart_controller_fsm" for hierarchy "uart_top:uart_top_1|uart_controller_fsm:b2v_inst7" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 203
-Info (12128): Elaborating entity "output_register" for hierarchy "uart_top:uart_top_1|output_register:b2v_inst8" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 215
-Info (12128): Elaborating entity "codec_controller" for hierarchy "codec_controller:codec_controller_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 324
-Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c_master_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 335
-Info (12128): Elaborating entity "i2s_master" for hierarchy "i2s_master:inst_i2s_master" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 347
-Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(101): object "dummy3" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 101
-Warning (10036): Verilog HDL or VHDL warning at i2s_master.vhd(102): object "dummy4" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 102
-Info (12128): Elaborating entity "i2s_frame_generator" for hierarchy "i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 113
-Info (12128): Elaborating entity "uni_shiftreg" for hierarchy "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 125
-Info (12128): Elaborating entity "mux_2_1" for hierarchy "i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 181
-Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_ctrl" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 362
-Info (12128): Elaborating entity "vhdl_hex2sevseg" for hierarchy "vhdl_hex2sevseg:hdl_hex2sevseg_2" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 375
-Info (12128): Elaborating entity "MIDI" for hierarchy "MIDI:MIDI_2" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 395
-Warning (10620): VHDL warning at MIDI.vhd(190): comparison between unequal length operands always returns FALSE File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/MIDI/MIDI.vhd Line: 190
-Info (12128): Elaborating entity "tone_generator" for hierarchy "tone_generator:tone_generator_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 407
-Info (12128): Elaborating entity "FM_DDS" for hierarchy "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 95
-Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(61): object "sig_OSC1_f" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 61
-Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(62): object "sig_OSC2_f" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 62
-Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(63): object "sig_OSC3_f" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 63
-Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(64): object "sig_OSC4_f" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 64
-Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(66): object "sig_OSC1_att" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 66
-Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(67): object "sig_OSC2_att" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 67
-Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(68): object "sig_OSC3_att" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 68
-Warning (10036): Verilog HDL or VHDL warning at FM_DDS.vhd(69): object "sig_OSC4_att" assigned a value but never read File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 69
-Error (10344): VHDL expression error at FM_DDS.vhd(188): expression has 16 elements, but must have 19 elements File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 188
-Error (12152): Can't elaborate user hierarchy "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 95
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 17 warnings
-    Error: Peak virtual memory: 4827 megabytes
-    Error: Processing ended: Sun Jun 11 15:12:58 2023
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:08
+Info (12128): Elaborating entity "uart_top" for hierarchy "uart_top:uart_top_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 276
+Info (12128): Elaborating entity "baud_tick" for hierarchy "uart_top:uart_top_1|baud_tick:b2v_inst" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 142
+Info (12128): Elaborating entity "shiftreg_uart" for hierarchy "uart_top:uart_top_1|shiftreg_uart:b2v_inst1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 151
+Info (12128): Elaborating entity "flanken_detekt_vhdl" for hierarchy "uart_top:uart_top_1|flanken_detekt_vhdl:b2v_inst18" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 162
+Info (12128): Elaborating entity "bit_counter" for hierarchy "uart_top:uart_top_1|bit_counter:b2v_inst6" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 169
+Info (12128): Elaborating entity "uart_controller_fsm" for hierarchy "uart_top:uart_top_1|uart_controller_fsm:b2v_inst7" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 179
+Info (12128): Elaborating entity "output_register" for hierarchy "uart_top:uart_top_1|output_register:b2v_inst8" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/uart_top.vhd Line: 191
+Info (12128): Elaborating entity "codec_controller" for hierarchy "codec_controller:codec_controller_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 285
+Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c_master_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 296
+Info (12128): Elaborating entity "i2s_master" for hierarchy "i2s_master:inst_i2s_master" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 308
+Info (12128): Elaborating entity "i2s_frame_generator" for hierarchy "i2s_master:inst_i2s_master|i2s_frame_generator:i2s_frame_generator_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 111
+Info (12128): Elaborating entity "uni_shiftreg" for hierarchy "i2s_master:inst_i2s_master|uni_shiftreg:uni_shiftreg_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 123
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "i2s_master:inst_i2s_master|mux_2_1:mux_2_1_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/i2s/i2s_master.vhd Line: 177
+Info (12128): Elaborating entity "path_ctrl" for hierarchy "path_ctrl:inst_path_ctrl" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 323
+Info (12128): Elaborating entity "vhdl_hex2sevseg" for hierarchy "vhdl_hex2sevseg:hdl_hex2sevseg_2" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 336
+Info (12128): Elaborating entity "MIDI" for hierarchy "MIDI:MIDI_2" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 356
+Info (12128): Elaborating entity "tone_generator" for hierarchy "tone_generator:tone_generator_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 368
+Info (12128): Elaborating entity "FM_DDS" for hierarchy "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 93
+Info (12128): Elaborating entity "FM_BT_module" for hierarchy "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS|FM_BT_module:inst_BT_mod" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 78
+Info (12128): Elaborating entity "dds" for hierarchy "tone_generator:tone_generator_1|FM_DDS:\gen_inst_FM_DDS:0:inst_FM_DDS|dds:inst_dds_carrier" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/FM_DDS.vhd Line: 95
+Info (12128): Elaborating entity "EQ" for hierarchy "tone_generator:tone_generator_1|EQ:\eq_inst_gen:0:inst_EQ" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/dds/tone_generator.vhd Line: 109
+Info (12128): Elaborating entity "EQ_top" for hierarchy "EQ_top:EQ_top_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/Top_files/synthi_top.vhd Line: 390
+Info (12128): Elaborating entity "EQ_uart_top" for hierarchy "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 100
+Info (12128): Elaborating entity "EQ_baud_tick" for hierarchy "EQ_top:EQ_top_1|EQ_uart_top:uart_top_1|EQ_baud_tick:b2v_inst" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_uart_top.vhd Line: 119
+Info (12128): Elaborating entity "EQ_ctrl" for hierarchy "EQ_top:EQ_top_1|EQ_ctrl:EQ_ctrl_1" File: C:/Users/doria/OneDrive/Dokumente/GitHub/Synthi_T1_3/Synthi_T1/synthi_project/source/EQ/EQ_top.vhd Line: 110
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Sun Jun 11 22:16:26 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 
